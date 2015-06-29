@@ -1,0 +1,15 @@
+%panel {
+  border-radius: $panel-border-radius;
+  padding: 0.5em;
+  @include shadow(1);
+}
+
+%panel-primary {
+  @extend %panel;
+  background-color: $panel-primary;
+}
+
+%panel-secondary {
+  @extend %panel;
+  background-color: $panel-secondary;
+}

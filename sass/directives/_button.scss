@@ -1,0 +1,150 @@
+%disabled {
+  color: $button-text-color-disabled;
+  border-color: $button-border-color-disabled;
+  background-color: transparent;
+}
+
+%button {
+  -webkit-font-smoothing: antialiased;
+  border-radius: $button-border-radius;
+  color: $base-button-text-color;
+  display: inline-block;
+  font-size: $base-button-font-size;
+  font-weight: bold;
+  line-height: $base-button-line-height;
+  padding: $base-button-vertical-padding $base-button-horizontal-padding;
+  text-decoration: none;
+  border: $base-button-border-size solid $base-button-border-color;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: top;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+  background-color: $base-button-color;
+
+  @include appearance(none);
+
+  &:hover {
+    background-color: $base-hover-button-color;
+    color: $base-hover-button-text-color;
+    border-color: $base-hover-button-border-color;
+  }
+
+  &:active {
+    background-color: $base-active-button-color;
+    color: $base-active-button-text-color;
+    border-color: $base-active-button-border-color;
+  }
+
+  &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
+    @extend %disabled;
+  }
+}
+
+// Button Types
+
+%primary-button {
+  background-color: $primary-button-color;
+  color: $primary-button-text-color;
+  border-color: $primary-button-border-color;
+
+  &:hover {
+    background-color: $primary-hover-button-color;
+    color: $primary-hover-button-text-color;
+    border-color: $primary-hover-button-border-color;
+  }
+
+  &:active {
+    background-color: $primary-active-button-color;
+    color: $primary-active-button-text-color;
+    border-color: $primary-active-button-border-color;
+  }
+
+  &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
+    @extend %disabled;
+  }
+}
+
+%secondary-button {
+  background-color: $secondary-button-color;
+  color: $secondary-button-text-color;
+  border-color: $secondary-button-border-color;
+
+  &:hover {
+    background-color: $secondary-hover-button-color;
+    color: $secondary-hover-button-text-color;
+    border-color: $secondary-hover-button-border-color;
+  }
+
+  &:active {
+    background-color: $secondary-active-button-color;
+    color: $secondary-active-button-text-color;
+    border-color: $secondary-active-button-border-color;
+  }
+
+  &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
+    @extend %disabled;
+  }
+}
+
+%success-button {
+  background-color: $success-button-color;
+  color: $success-button-text-color;
+  border-color: $success-button-border-color;
+
+  &:hover {
+    background-color: $success-hover-button-color;
+    color: $success-hover-button-text-color;
+    border-color: $success-hover-button-border-color;
+  }
+
+  &:active {
+    background-color: $success-active-button-color;
+    color: $success-active-button-text-color;
+    border-color: $success-active-button-border-color;
+  }
+
+  &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
+    @extend %disabled;
+  }
+}
+
+%warning-button {
+  background-color: $warning-button-color;
+  color: $warning-button-text-color;
+  border-color: $warning-button-border-color;
+
+  &:hover {
+    background-color: $warning-hover-button-color;
+    color: $warning-hover-button-text-color;
+    border-color: $warning-hover-button-border-color;
+  }
+
+  &:active {
+    background-color: $warning-active-button-color;
+    color: $warning-active-button-text-color;
+    border-color: $warning-active-button-border-color;
+  }
+
+  &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
+    @extend %disabled;
+  }
+}
+
+// Button Sizes
+
+%small-button {
+  font-size: $small-button-font-size;
+  padding: $small-button-vertical-padding $small-button-horizontal-padding;
+}
+
+%medium-button {
+  font-size: $medium-button-font-size;
+  padding: $medium-button-vertical-padding $medium-button-horizontal-padding;
+}
+
+%large-button {
+  font-size: $large-button-font-size;
+  padding: $large-button-vertical-padding $large-button-horizontal-padding;
+}

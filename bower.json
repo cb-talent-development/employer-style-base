@@ -1,0 +1,51 @@
+{
+  "name": "employer-style-base",
+  "version": "0.0.1",
+  "authors": [
+    "Content Enablement <ContentEnablementProductTeam@careerbuilder.com>"
+  ],
+  "description": "A stack-agnostic SASS library providing basic components and typography intended for the Employer experience",
+  "keywords": [
+    "cb",
+    "careerbuilder",
+    "employer",
+    "platform",
+    "style",
+    "styling",
+    "foundation",
+    "base",
+    "sass",
+    "css",
+    "components",
+    "typography"
+  ],
+  "private": true,
+  "main": [
+    "sass/_base.scss",
+    "sass/_buttons.scss",
+    "sass/_forms.scss",
+    "sass/_lists.scss",
+    "sass/_reset.scss",
+    "sass/_typography.scss",
+    "sass/directives/_accents.scss",
+    "sass/directives/_button.scss",
+    "sass/directives/_clearfix.scss",
+    "sass/directives/_ellipsis.scss",
+    "sass/directives/_flashes.scss",
+    "sass/directives/_groups.scss",
+    "sass/directives/_panels.scss",
+    "sass/directives/_visibility.scss",
+    "sass/variables/_colors.scss",
+    "sass/variables/_sizing.scss"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.3"
+  }
+}

@@ -1,0 +1,92 @@
+// Typography
+$source-sans-pro: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$open-sans: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+
+$base-font-family: $source-sans-pro;
+$header-font-family: $open-sans;
+$form-font-family: $base-font-family;
+
+// Font Sizes
+$base-font-size: 1em;
+$h1-font-size: $base-font-size * 3;
+$h2-font-size: $base-font-size * 2.25;
+$h3-font-size: $base-font-size * 1.875;
+$h4-font-size: $base-font-size * 1.5;
+$h5-font-size: $base-font-size * 1.125;
+$h6-font-size: $base-font-size;
+
+// Line height
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+
+// Other Sizes
+$base-border-radius: 5px;
+$button-border-radius: $base-border-radius;
+$panel-border-radius: 3px;
+$radio-border-radius: $base-border-radius * 10;
+$checkbox-border-radius: $panel-border-radius;
+$base-spacing: $base-line-height * 1em;
+$base-z-index: 0;
+
+// Forms
+$form-border-radius: $base-border-radius;
+$form-box-shadow: inset 0 1px 3px rgba($black, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-size: $base-font-size;
+$form-font-family: $base-font-family;
+
+// Input Sizes
+$base-input-font-size: $form-font-size;
+$base-input-vertical-padding: $base-input-font-size * 0.688;
+$base-input-horizontal-padding: $base-input-font-size * 0.625;
+$base-input-border-size: 1px;
+$base-input-line-height: $base-line-height;
+
+$medium-input-font-size: $base-input-font-size;
+$medium-input-vertical-padding: $base-input-vertical-padding;
+$medium-input-horizontal-padding: $base-input-horizontal-padding;
+
+$small-input-font-size: $base-input-font-size * 0.875;
+$small-input-vertical-padding: $base-input-font-size * 0.438;
+$small-input-horizontal-padding: $base-input-font-size * 0.625;
+
+$large-input-font-size: $base-input-font-size * 1.5;
+$large-input-vertical-padding: $base-input-font-size * 0.625;
+$large-input-horizontal-padding: $base-input-font-size * 0.938;
+
+// Button Sizes
+$base-button-font-size: $base-input-font-size;
+$base-button-vertical-padding: $base-input-font-size * 0.625;
+$base-button-horizontal-padding: $base-input-font-size * 1.438;
+$base-button-border-size: $base-input-border-size;
+$base-button-line-height: $base-input-line-height;
+
+$medium-button-font-size: $base-button-font-size;
+$medium-button-vertical-padding: $base-button-vertical-padding;
+$medium-button-horizontal-padding: $base-button-horizontal-padding;
+
+$small-button-font-size: $small-input-font-size;
+$small-button-vertical-padding: $base-input-font-size * 0.375;
+$small-button-horizontal-padding: $base-input-font-size * 1.188;
+
+$large-button-font-size: $base-button-font-size * 1.25;
+$large-button-vertical-padding: $base-input-font-size * 0.750;
+$large-button-horizontal-padding: $base-input-font-size * 1.563;
+
+// Header
+$header-padding: 15px;
+$header-accent-height: 10px;
+$header-height: 50px + $header-accent-height;
+$header-content-height: $header-height - ($header-padding * 2) - $header-accent-height;
+
+// Footer
+$footer-padding: $header-padding;
+$footer-margin: $base-spacing;
+$footer-height: $header-height;
+$footer-accent-height: $header-accent-height;
+
+// Form Elements
+$base-radio-box-shadow: 0 0 0 1px $grey-lighter inset, 0 0 0 9px $white inset, 0 0 0 10px $grey-lighter inset;
+$hover-radio-box-shadow: 0 0 0 1px $accent-active inset, 0 0 0 9px $white inset, 0 0 0 16px $accent-active inset;
+$checked-radio-box-shadow: 0 0 0 1px $grey-lighter inset, 0 0 0 9px $white inset, 0 0 0 16px $accent-primary inset;
+$active-radio-box-shadow: 0 0 0 8px $accent-active inset, 0 0 0 16px $white inset;

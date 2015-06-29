@@ -1,0 +1,34 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700|Source+Sans+Pro);
+
+// Variables
+@import "variables/colors";
+@import "variables/sizing";
+
+.employer-scope {
+  // Reset
+  @import 'reset';
+
+  // SASS Directives
+  @import "directives/accents";
+  @import "directives/button";
+  @import "directives/clearfix";
+  @import "directives/ellipsis";
+  @import "directives/flashes";
+  @import "directives/groups";
+  @import "directives/panels";
+  @import "directives/visibility";
+
+  // Typography and Elements
+  @include font-feature-settings("kern", "liga", "frac", "pnum");
+  -webkit-font-smoothing: antialiased;
+  background-color: $base-background-color;
+  color: $body-text-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+
+  @import "typography";
+  @import "forms";
+  @import "lists";
+  @import "buttons";
+}

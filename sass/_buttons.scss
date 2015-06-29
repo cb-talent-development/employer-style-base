@@ -1,0 +1,35 @@
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  @extend %button;
+}
+
+.primary-button {
+  @extend %button;
+  @extend %primary-button;
+}
+
+.secondary-button {
+  @extend %button;
+  @extend %secondary-button;
+}
+
+.success-button {
+  @extend %button;
+  @extend %success-button;
+}
+
+.warning-button {
+  @extend %button;
+  @extend %warning-button;
+}
+
+.disabled {
+  @extend %disabled;
+}
+
+.disabled:hover {
+  @extend %disabled;
+}

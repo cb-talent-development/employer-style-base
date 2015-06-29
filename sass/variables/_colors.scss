@@ -1,0 +1,140 @@
+// Basic Colors
+$black: #000000;
+$white: #FFFFFF;
+$blue: #477DCA;
+$light-red: #FBE3E4;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
+
+$grey-darkest: lighten($black, 20);
+$grey-darker: lighten($grey-darkest, 20);
+$grey-dark: lighten($grey-darker, 20);
+$grey-light: #BBBBBB;
+$grey-lighter: #CCCCCC;
+$grey-lightest: #EEEEEE;
+
+// Primary Palette
+$primary: #023658;
+$primary-dark: #02304F;
+$primary-darker: #012842;
+$primary-darkest: #011B2C;
+$primary-light: #1c4a69;
+$primary-lighter: #416882;
+$primary-lightest: #819bac;
+
+// Secondary Palette
+$secondary: #ff6600;
+$secondary-dark: #e55c00;
+$secondary-darker: #bf4c00;
+$secondary-darkest: #7f3300;
+$secondary-light: #ff761a;
+$secondary-lighter: #ff8c40;
+$secondary-lightest: #ffb380;
+
+// Primary Accent
+$accent-primary: #127AB3;
+$accent-primary-light: #89BDD9;
+$accent-primary-dark: #093D59;
+
+// Success Accent
+$accent-success: #6EA23D;
+$accent-success-light: #B7D19E;
+$accent-success-dark: #37511E;
+
+// Warning Accent
+$accent-warning: #FBC500;
+$accent-warning-light: #FDE280;
+$accent-warning-dark: #7d6200;
+
+// Danger Accent
+$accent-danger: #FF3C30;
+$accent-danger-light: #FF9E98;
+$accent-danger-dark: #7F1E18;
+
+// Active Accent
+$accent-active: #179FCA;
+
+// Backgrounds
+$base-background-color: $grey-lightest;
+$panel-primary: $white;
+$panel-secondary: #F9F9F9;
+
+// Font
+$body-text-color: $grey-darkest;
+$header-text-color: $primary;
+$base-accent-color: $accent-active;
+
+// Link
+$base-link-color: $accent-primary;
+$hover-link-color: $base-accent-color;
+
+// Border
+$base-border-color: $grey-light;
+$base-border: 1px solid $base-border-color;
+
+// Header/Footer
+$header-background-color: $primary;
+$header-accent-color: $primary-lightest;
+$footer-background-color: $header-background-color;
+$footer-accent-color: $header-accent-color;
+$footer-text-color: $white;
+$footer-link-color: $white;
+
+// Buttons
+$base-button-color: $base-link-color;
+$base-button-text-color: $white;
+$base-button-border-color: $base-button-color;
+$base-hover-button-color: $hover-link-color;
+$base-hover-button-text-color: $base-button-text-color;
+$base-hover-button-border-color: $base-hover-button-color;
+$base-active-button-color: $primary;
+$base-active-button-text-color: $base-button-text-color;
+$base-active-button-border-color: $base-active-button-color;
+
+$primary-button-color: $base-button-color;
+$primary-button-text-color: $base-button-text-color;
+$primary-button-border-color: $base-button-border-color;
+$primary-hover-button-color: $base-hover-button-color;
+$primary-hover-button-text-color: $base-hover-button-text-color;
+$primary-hover-button-border-color: $primary-hover-button-color;
+$primary-active-button-color: $primary;
+$primary-active-button-text-color: $base-active-button-text-color;
+$primary-active-button-border-color: $primary-active-button-color;
+
+$secondary-button-color: $base-background-color;
+$secondary-button-text-color: $base-button-color;
+$secondary-button-border-color: $grey-lighter;
+$secondary-hover-button-color: $secondary-button-color;
+$secondary-hover-button-text-color: $base-hover-button-color;
+$secondary-hover-button-border-color: $secondary-button-border-color;
+$secondary-active-button-color: $secondary-button-color;
+$secondary-active-button-text-color: $base-active-button-color;
+$secondary-active-button-border-color: $secondary-active-button-text-color;
+
+$success-button-color: $accent-success;
+$success-button-text-color: $base-button-text-color;
+$success-button-border-color: $success-button-color;
+$success-hover-button-color: $accent-success-light;
+$success-hover-button-text-color: $base-hover-button-text-color;
+$success-hover-button-border-color: $success-hover-button-color;
+$success-active-button-color: $accent-success-dark;
+$success-active-button-text-color: $base-active-button-text-color;
+$success-active-button-border-color: $success-active-button-color;
+
+$warning-button-color: $accent-warning;
+$warning-button-text-color: $base-button-text-color;
+$warning-button-border-color: $warning-button-color;
+$warning-hover-button-color: $accent-warning-light;
+$warning-hover-button-text-color: $base-hover-button-text-color;
+$warning-hover-button-border-color: $warning-hover-button-color;
+$warning-active-button-color: $accent-warning-dark;
+$warning-active-button-text-color: $base-active-button-text-color;
+$warning-active-button-border-color: $warning-active-button-color;
+
+$button-text-color-disabled: $grey-light;
+$button-border-color-disabled: $grey-lighter;
+
+// Form
+$form-border-color: $base-border-color;
+$form-border-color-hover: darken($base-border-color, 10);
+$form-border-color-focus: $base-accent-color;

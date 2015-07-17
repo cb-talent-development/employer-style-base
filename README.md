@@ -27,11 +27,11 @@ Now, import `sass/base` after [Bourbon](http://bourbon.io/), and before any grid
 @import 'my-app';
 ```
 
-You may now apply the styling to your application. Note that all styling is scoped with the `cortex-scope` class. We would have preferred leaving scoping up to the consuming application, but certain inflexibilites with SASS and some peculiar things this library is doing currently forbid this.
+You may now apply the styling to your application. Note that all styling is scoped with the `employer-scope` class. We would have preferred leaving scoping up to the consuming application, but certain inflexibilites with SASS and some peculiar things this library is doing currently forbid this.
 
 ### Using a Grid Framework
 
-You may use any grid framework of your choosing. We have, however, built a [Neat](http://neat.bourbon.io/)-based grid library intended for use with Cortex. You can read integration instructions at [employer-style-grid](https://github.com/cb-talent-development/employer-style-grid).
+You may use any grid framework of your choosing. We have, however, built a [Neat](http://neat.bourbon.io/)-based grid library intended for use with [Employer](https://github.com/cbdr/employer). You can read integration instructions at [employer-style-grid](https://github.com/cb-talent-development/employer-style-grid).
 
 ### What's included
 

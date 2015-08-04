@@ -13,7 +13,7 @@ $grey-light: #BBBBBB;
 $grey-lighter: #CCCCCC;
 $grey-lightest: #EEEEEE;
 
-// Primary Palette
+// Primary Palette (dark blue)
 $primary: #023658;
 $primary-dark: #02304F;
 $primary-darker: #012842;
@@ -22,8 +22,8 @@ $primary-light: #1c4a69;
 $primary-lighter: #416882;
 $primary-lightest: #819bac;
 
-// Secondary Palette
-$secondary: #ff6600;
+// Secondary Palette (turquoise)
+$secondary: #379f86;
 $secondary-dark: #e55c00;
 $secondary-darker: #bf4c00;
 $secondary-darkest: #7f3300;
@@ -32,9 +32,9 @@ $secondary-lighter: #ff8c40;
 $secondary-lightest: #ffb380;
 
 // Primary Accent
-$accent-primary: #127AB3;
-$accent-primary-light: #89BDD9;
-$accent-primary-dark: #093D59;
+$accent-primary: #09a0db;
+$accent-primary-light: #39b3e1;
+$accent-primary-dark: #0f6e9e;
 
 // Success Accent
 $accent-success: #6EA23D;
@@ -55,7 +55,7 @@ $accent-danger-dark: #7F1E18;
 $accent-active: #179FCA;
 
 // Backgrounds
-$base-background-color: $grey-lightest;
+$base-background-color: #f5f6f7;
 $panel-primary: $white;
 $panel-secondary: #F9F9F9;
 

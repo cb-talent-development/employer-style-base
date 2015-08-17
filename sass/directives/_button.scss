@@ -1,7 +1,6 @@
 %disabled {
-  color: $button-text-color-disabled;
-  border-color: $button-border-color-disabled;
-  background-color: transparent;
+  opacity: 0.4;
+  filter: alpha(opacity=40); /* IE8 */
 }
 
 %button {

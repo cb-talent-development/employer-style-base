@@ -13,28 +13,21 @@ $grey-light: #BBBBBB;
 $grey-lighter: #CCCCCC;
 $grey-lightest: #EEEEEE;
 
-// Primary Palette (dark blue)
-$primary: #023658;
-$primary-dark: #02304F;
-$primary-darker: #012842;
-$primary-darkest: #011B2C;
-$primary-light: #1c4a69;
-$primary-lighter: #416882;
-$primary-lightest: #819bac;
+// Primary Palette (Anchor Blue)
+$primary: #182642;
 
-// Secondary Palette (turquoise)
-$secondary: #379f86;
-$secondary-dark: #e55c00;
-$secondary-darker: #bf4c00;
-$secondary-darkest: #7f3300;
-$secondary-light: #ff761a;
-$secondary-lighter: #ff8c40;
-$secondary-lightest: #ffb380;
+// Secondary Palette (Emerald Green)
+$secondary: #379F86;
+$secondary-light: #00BD8D;
+$secondary-dark: #005C45;
 
-// Primary Accent
-$accent-primary: #09a0db;
-$accent-primary-light: #39b3e1;
-$accent-primary-dark: #0f6e9e;
+// Secondary Palette (Azure Blue)
+$tertiary: #287AB9;
+
+// Accent (Sky Blue)
+$accent: #09A0DB;
+$accent-light: #0FB4F5;
+$accent-dark: #06739D;
 
 // Success Accent
 $accent-success: #6EA23D;
@@ -65,8 +58,8 @@ $header-text-color: $primary;
 $base-accent-color: $accent-active;
 
 // Link
-$base-link-color: $accent-primary;
-$hover-link-color: $base-accent-color;
+$base-link-color: $accent;
+$hover-link-color: $accent-light;
 
 // Border
 $base-border-color: $grey-light;
@@ -74,8 +67,8 @@ $base-border: 1px solid $base-border-color;
 
 // Header/Footer
 $header-background-color: $primary;
-$header-accent-color: $primary-lightest;
-$footer-background-color: $header-background-color;
+$header-accent-color: $accent;
+$footer-background-color: $primary;
 $footer-accent-color: $header-accent-color;
 $footer-text-color: $white;
 $footer-link-color: $white;
@@ -87,52 +80,59 @@ $base-button-border-color: $base-button-color;
 $base-hover-button-color: $hover-link-color;
 $base-hover-button-text-color: $base-button-text-color;
 $base-hover-button-border-color: $base-hover-button-color;
-$base-active-button-color: $primary;
+$base-active-button-color: $accent-dark;
 $base-active-button-text-color: $base-button-text-color;
 $base-active-button-border-color: $base-active-button-color;
 
 $primary-button-color: $base-button-color;
 $primary-button-text-color: $base-button-text-color;
-$primary-button-border-color: $base-button-border-color;
+$primary-button-border-color: $primary-button-color;
 $primary-hover-button-color: $base-hover-button-color;
 $primary-hover-button-text-color: $base-hover-button-text-color;
 $primary-hover-button-border-color: $primary-hover-button-color;
-$primary-active-button-color: $primary;
+$primary-active-button-color: $base-active-button-color;
 $primary-active-button-text-color: $base-active-button-text-color;
 $primary-active-button-border-color: $primary-active-button-color;
 
-$secondary-button-color: $base-background-color;
-$secondary-button-text-color: $base-button-color;
-$secondary-button-border-color: $grey-lighter;
-$secondary-hover-button-color: $secondary-button-color;
-$secondary-hover-button-text-color: $base-hover-button-color;
-$secondary-hover-button-border-color: $secondary-button-border-color;
-$secondary-active-button-color: $secondary-button-color;
-$secondary-active-button-text-color: $base-active-button-color;
-$secondary-active-button-border-color: $secondary-active-button-text-color;
+$secondary-button-color: $secondary;
+$secondary-button-text-color: $white;
+$secondary-button-border-color: $secondary-button-color;
+$secondary-hover-button-color: $secondary-light;
+$secondary-hover-button-text-color: $secondary-button-text-color;
+$secondary-hover-button-border-color: $secondary-hover-button-color;
+$secondary-active-button-color: $secondary-dark;
+$secondary-active-button-text-color: $secondary-button-text-color;
+$secondary-active-button-border-color: $secondary-active-button-color;
 
-$success-button-color: $accent-success;
-$success-button-text-color: $base-button-text-color;
-$success-button-border-color: $success-button-color;
-$success-hover-button-color: $accent-success-light;
-$success-hover-button-text-color: $base-hover-button-text-color;
-$success-hover-button-border-color: $success-hover-button-color;
-$success-active-button-color: $accent-success-dark;
-$success-active-button-text-color: $base-active-button-text-color;
-$success-active-button-border-color: $success-active-button-color;
+$auxillary-inverse-button-color: $accent;
+$auxillary-button-text-color: $auxillary-button-color;
+$auxillary-button-border-color: $auxillary-button-color;
+$auxillary-hover-button-color: $auxillary-button-color;
+$auxillary-hover-button-text-color: $auxillary-hover-button-color;
+$auxillary-hover-button-border-color: $auxillary-hover-button-color;
+$auxillary-active-button-color: #0888BA;
+$auxillary-active-button-text-color: $white;
+$auxillary-active-button-color: $auxillary-active-button-color;
 
-$warning-button-color: $accent-warning;
-$warning-button-text-color: $base-button-text-color;
-$warning-button-border-color: $warning-button-color;
-$warning-hover-button-color: $accent-warning-light;
-$warning-hover-button-text-color: $base-hover-button-text-color;
-$warning-hover-button-border-color: $warning-hover-button-color;
-$warning-active-button-color: $accent-warning-dark;
-$warning-active-button-text-color: $base-active-button-text-color;
-$warning-active-button-border-color: $warning-active-button-color;
+$auxillary-inverse-button-color: $accent;
+$auxillary-inverse-button-text-color: $white;
+$auxillary-inverse-button-border-color: $white;
+$auxillary-inverse-hover-button-color: $auxillary-inverse-button-color;
+$auxillary-inverse-hover-button-text-color: $auxillary-inverse-hover-button-color;
+$auxillary-inverse-hover-button-border-color: $auxillary-inverse-hover-button-color;
+$auxillary-inverse-active-button-color: #0888BA;
+$auxillary-inverse-active-button-text-color: $white;
+$auxillary-inverse-active-button-color: $auxillary-inverse-active-button-color;
 
-$button-text-color-disabled: $grey-light;
-$button-border-color-disabled: $grey-lighter;
+$negative-button-color: #959595;
+$negative-button-text-color: $white;
+$negative-button-border-color: $negative-button-color;
+$negative-hover-button-color: #B5B5B5;
+$negative-hover-button-text-color: $negative-button-text-color;
+$negative-hover-button-border-color: $negative-hover-button-color;
+$negative-active-button-color: #757575;
+$negative-active-button-text-color: $negative-button-text-color;
+$negative-active-button-border-color: $negative-active-button-color;
 
 // Form
 $form-border-color: $base-border-color;

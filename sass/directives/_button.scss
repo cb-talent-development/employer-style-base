@@ -87,50 +87,6 @@
   }
 }
 
-%success-button {
-  background-color: $success-button-color;
-  color: $success-button-text-color;
-  border-color: $success-button-border-color;
-
-  &:hover {
-    background-color: $success-hover-button-color;
-    color: $success-hover-button-text-color;
-    border-color: $success-hover-button-border-color;
-  }
-
-  &:active {
-    background-color: $success-active-button-color;
-    color: $success-active-button-text-color;
-    border-color: $success-active-button-border-color;
-  }
-
-  &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
-  }
-}
-
-%warning-button {
-  background-color: $warning-button-color;
-  color: $warning-button-text-color;
-  border-color: $warning-button-border-color;
-
-  &:hover {
-    background-color: $warning-hover-button-color;
-    color: $warning-hover-button-text-color;
-    border-color: $warning-hover-button-border-color;
-  }
-
-  &:active {
-    background-color: $warning-active-button-color;
-    color: $warning-active-button-text-color;
-    border-color: $warning-active-button-border-color;
-  }
-
-  &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
-  }
-}
-
 // Button Sizes
 
 %small-button {

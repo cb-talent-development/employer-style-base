@@ -19,7 +19,7 @@
 
 %flash-primary {
   @extend %flash-base;
-  @include flash($accent-primary);
+  @include flash($accent);
 }
 
 %flash-success {

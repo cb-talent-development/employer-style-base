@@ -16,16 +16,6 @@ input[type="submit"] {
   @extend %secondary-button;
 }
 
-.success-button {
-  @extend %button;
-  @extend %success-button;
-}
-
-.warning-button {
-  @extend %button;
-  @extend %warning-button;
-}
-
 .disabled {
   @extend %disabled;
 }

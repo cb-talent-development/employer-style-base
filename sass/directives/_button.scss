@@ -87,6 +87,50 @@
   }
 }
 
+%primary-inverse-button {
+  background-color: $primary-inverse-button-color;
+  color: $primary-inverse-button-text-color;
+  border-color: $primary-inverse-button-border-color;
+
+  &:hover {
+    background-color: $primary-inverse-hover-button-color;
+    color: $primary-inverse-hover-button-text-color;
+    border-color: $primary-inverse-hover-button-border-color;
+  }
+
+  &:active {
+    background-color: $primary-inverse-active-button-color;
+    color: $primary-inverse-active-button-text-color;
+    border-color: $primary-inverse-active-button-border-color;
+  }
+
+  &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
+    @extend %disabled;
+  }
+}
+
+%secondary-secondary-button {
+  background-color: $secondary-inverse-button-color;
+  color: $secondary-inverse-button-text-color;
+  border-color: $secondary-inverse-button-border-color;
+
+  &:hover {
+    background-color: $secondary-inverse-hover-button-color;
+    color: $secondary-inverse-hover-button-text-color;
+    border-color: $secondary-inverse-hover-button-border-color;
+  }
+
+  &:active {
+    background-color: $secondary-inverse-active-button-color;
+    color: $secondary-inverse-active-button-text-color;
+    border-color: $secondary-inverse-active-button-border-color;
+  }
+
+  &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
+    @extend %disabled;
+  }
+}
+
 // Button Sizes
 
 %small-button {

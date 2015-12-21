@@ -27,6 +27,7 @@ $tertiary: #287AB9;
 // Accent (Sky Blue)
 $accent: #09A0DB;
 $accent-light: #0FB4F5;
+$accent-lighter: #6BC6E9;
 $accent-dark: #06739D;
 
 // Success Accent
@@ -60,6 +61,7 @@ $base-accent-color: $accent-active;
 // Link
 $base-link-color: $accent;
 $hover-link-color: $accent-light;
+$hover-link-color-light: $accent-lighter;
 
 // Border
 $base-border-color: $grey-light;

@@ -1,9 +1,8 @@
 // Typography
-$source-sans-pro: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-$open-sans: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$lato: Lato, 'Lato', Helvetica, Arial, sans-serif;
 
-$base-font-family: $source-sans-pro;
-$header-font-family: $open-sans;
+$base-font-family: $lato;
+$header-font-family: $lato;
 $form-font-family: $base-font-family;
 
 // Font Sizes
@@ -56,9 +55,9 @@ $large-input-horizontal-padding: $base-input-font-size * 0.938;
 
 // Button Sizes
 $base-button-font-size: $base-input-font-size;
-$base-button-vertical-padding: $base-input-font-size * 0.625;
-$base-button-horizontal-padding: $base-input-font-size * 1.438;
-$base-button-border-size: $base-input-border-size;
+$base-button-vertical-padding: $base-input-font-size * 0.375;
+$base-button-horizontal-padding: $base-input-font-size * 1.375;
+$base-button-border-size: 2px;
 $base-button-line-height: $base-input-line-height;
 
 $medium-button-font-size: $base-button-font-size;
@@ -67,11 +66,11 @@ $medium-button-horizontal-padding: $base-button-horizontal-padding;
 
 $small-button-font-size: $small-input-font-size;
 $small-button-vertical-padding: $base-input-font-size * 0.375;
-$small-button-horizontal-padding: $base-input-font-size * 1.188;
+$small-button-horizontal-padding: $base-input-font-size * 1.375;
 
 $large-button-font-size: $base-button-font-size * 1.25;
-$large-button-vertical-padding: $base-input-font-size * 0.750;
-$large-button-horizontal-padding: $base-input-font-size * 1.563;
+$large-button-vertical-padding: $base-input-font-size * 0.375;
+$large-button-horizontal-padding: $base-input-font-size * 1.375;
 
 // Header
 $header-padding: 15px;

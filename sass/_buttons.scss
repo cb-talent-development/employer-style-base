@@ -6,20 +6,34 @@ input[type="submit"] {
   @extend %button;
 }
 
-.primary-button {
-  @extend %button;
+.button.button--primary {
   @extend %primary-button;
 }
 
-.secondary-button {
-  @extend %button;
+.button.button--secondary {
+  @extend %primary-inverse-button;
+}
+
+.button.button--secondary.text--white {
+  @extend %secondary-secondary-button;
+}
+
+.button.button--tertiary {
   @extend %secondary-button;
+}
+
+.button.button--small {
+  @extend %small-button;
+}
+
+.button.button--large {
+  @extend %large-button;
 }
 
 .disabled {
   @extend %disabled;
-}
 
-.disabled:hover {
-  @extend %disabled;
+  &:hover {
+    @extend %disabled;
+  }
 }

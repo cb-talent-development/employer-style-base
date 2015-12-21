@@ -65,7 +65,7 @@ $hover-link-color-light: $accent-lighter;
 
 // Border
 $base-border-color: $grey-light;
-$base-border: 1px solid $base-border-color;
+$base-border: 2px solid $base-border-color;
 
 // Header/Footer
 $header-background-color: $primary;
@@ -96,6 +96,16 @@ $primary-active-button-color: $base-active-button-color;
 $primary-active-button-text-color: $base-active-button-text-color;
 $primary-active-button-border-color: $primary-active-button-color;
 
+$primary-inverse-button-color: transparent;
+$primary-inverse-button-text-color: $primary-button-color;
+$primary-inverse-button-border-color: $primary-button-color;
+$primary-inverse-hover-button-color: $primary-hover-button-color;
+$primary-inverse-hover-button-text-color: $primary-hover-button-text-color;
+$primary-inverse-hover-button-border-color: $primary-hover-button-color;
+$primary-inverse-active-button-color: $primary-active-button-color;
+$primary-inverse-active-button-text-color: $primary-active-button-text-color;
+$primary-inverse-active-button-border-color: $primary-active-button-color;
+
 $secondary-button-color: $secondary;
 $secondary-button-text-color: $white;
 $secondary-button-border-color: $secondary-button-color;
@@ -105,6 +115,16 @@ $secondary-hover-button-border-color: $secondary-hover-button-color;
 $secondary-active-button-color: $secondary-dark;
 $secondary-active-button-text-color: $secondary-button-text-color;
 $secondary-active-button-border-color: $secondary-active-button-color;
+
+$secondary-inverse-button-color: transparent;
+$secondary-inverse-button-text-color: $white;
+$secondary-inverse-button-border-color: $white;
+$secondary-inverse-hover-button-color: $white;
+$secondary-inverse-hover-button-text-color: $primary-hover-button-color;
+$secondary-inverse-hover-button-border-color: $white;
+$secondary-inverse-active-button-color: $white;
+$secondary-inverse-active-button-text-color: $primary-active-button-color;
+$secondary-inverse-active-button-border-color: $white;
 
 $auxillary-button-color: $accent;
 $auxillary-button-text-color: $auxillary-button-color;
@@ -125,7 +145,6 @@ $auxillary-inverse-hover-button-border-color: $auxillary-inverse-hover-button-co
 $auxillary-inverse-active-button-color: #0888BA;
 $auxillary-inverse-active-button-text-color: $white;
 $auxillary-inverse-active-button-border-color: $auxillary-inverse-active-button-color;
-
 
 $negative-button-color: #959595;
 $negative-button-text-color: $white;

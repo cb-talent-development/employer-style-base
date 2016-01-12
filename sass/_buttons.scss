@@ -26,8 +26,16 @@ input[type="submit"] {
   @extend %small-button;
 }
 
+.button.button--medium {
+  @extend %medium-button;
+}
+
 .button.button--large {
   @extend %large-button;
+}
+
+.button.button--massive {
+  @extend %massive-button;
 }
 
 .disabled {

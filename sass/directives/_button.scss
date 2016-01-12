@@ -103,3 +103,8 @@
   font-size: $large-button-font-size;
   padding: $large-button-vertical-padding $large-button-horizontal-padding;
 }
+
+%massive-button {
+  font-size: $massive-button-font-size;
+  padding: $massive-button-vertical-padding $massive-button-horizontal-padding;
+}

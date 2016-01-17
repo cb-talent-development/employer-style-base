@@ -1,0 +1,6 @@
+@mixin base-input {
+	font-size: $base-input-font-size;
+	padding: $base-input-vertical-padding $base-input-horizontal-padding;
+	border: $base-input-border-size;
+	line-height: $base-input-line-height;
+}

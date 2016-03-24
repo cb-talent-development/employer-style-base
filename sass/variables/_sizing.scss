@@ -20,8 +20,9 @@ $header-line-height: 1.25;
 
 // Other Sizes
 $base-border-radius: 5px;
-$button-border-radius: $base-border-radius;
-$panel-border-radius: 3px;
+$minor-border-radius: 3px;
+$button-border-radius: $minor-border-radius;
+$panel-border-radius: $minor-border-radius;
 $radio-border-radius: $base-border-radius * 10;
 $checkbox-border-radius: $panel-border-radius;
 $base-spacing: $base-line-height * 1em;

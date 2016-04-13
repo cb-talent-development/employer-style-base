@@ -2,20 +2,20 @@
 @import "variables/colors";
 @import "variables/sizing";
 
+// SASS Directives
+@import "directives/accents";
+@import "directives/aspect";
+@import "directives/button";
+@import "directives/clearfix";
+@import "directives/ellipsis";
+@import "directives/flashes";
+@import "directives/groups";
+@import "directives/panels";
+@import "directives/visibility";
+
 .employer-scope {
   // Reset
   // @import 'reset';
-
-  // SASS Directives
-  @import "directives/accents";
-  @import "directives/aspect";
-  @import "directives/button";
-  @import "directives/clearfix";
-  @import "directives/ellipsis";
-  @import "directives/flashes";
-  @import "directives/groups";
-  @import "directives/panels";
-  @import "directives/visibility";
 
   // Typography and Elements
   @include font-feature-settings("kern", "liga", "frac", "pnum");

@@ -1,6 +1,6 @@
 # employer-style-base
 
-A stack-agnostic SASS library providing basic components and typography intended for the Employer experience.
+A stack-agnostic Sass library providing basic components and typography intended for the Employer experience.
 
 **Status:** Basic styling completed:
 * Buttons (small, medium, large + primary, secondary)
@@ -27,7 +27,7 @@ Now, import `sass/base` after [Bourbon](http://bourbon.io/), and before any grid
 @import 'my-app';
 ```
 
-You may now apply the styling to your application. Note that all styling is scoped with the `employer-scope` class. We would have preferred leaving scoping up to the consuming application, but certain inflexibilites with SASS and some peculiar things this library is doing currently forbid this.
+You may now apply the styling to your application. Note that all styling is scoped with the `employer-scope` class. We would have preferred leaving scoping up to the consuming application, but certain inflexibilites with Sass and some peculiar things this library is doing currently forbid this.
 
 ### Using a Grid Framework
 
@@ -35,9 +35,9 @@ You may use any grid framework of your choosing. We have, however, built a [Neat
 
 ### What's included
 
-At the moment, only uncompiled SASS source files are available for consumption. That means your application will need to perform the precompilation, whether it be through Gulp, Grunt, Rails asset pipeline, etc. Do note that `employer-style-base` depends upon, and includes [Bourbon](http://bourbon.io/) for basic SASS mixins. Additionally, this library includes its own reset, scoped to `employer-scope`.
+At the moment, only uncompiled Sass source files are available for consumption. That means your application will need to perform the precompilation, whether it be through Gulp, Grunt, Rails asset pipeline, etc. Do note that `employer-style-base` depends upon, and includes [Bourbon](http://bourbon.io/) for basic Sass mixins. Additionally, this library includes its own reset, scoped to `employer-scope`.
 
-The current layout of this library is heavily inspired by [Bitters](http://bitters.bourbon.io/), a wonderful boilerplate of common-sense SASS conventions and structure. Our outline looks a little something like this:
+The current layout of this library is heavily inspired by [Bitters](http://bitters.bourbon.io/), a wonderful boilerplate of common-sense Sass conventions and structure. Our outline looks a little something like this:
 
 ```
 dist/
@@ -46,6 +46,12 @@ sass/ >> The bulk of the styling itself
 ├── directives/ >> Mixins and @extend-only selectors, AKA useful functions to build a site with
 └── variables/ >> Re-usable color and sizing variables
 ```
+
+### Contributing
+
+#### Adding Directives
+
+After adding a new directive to [`sass/directives/`](sass/directives/), `@import` it into the [`variables/_base.scss`](sass/_base.scss)
 
 ### Future
 

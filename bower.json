@@ -4,7 +4,7 @@
   "authors": [
     "Content Enablement <ContentEnablementProductTeam@careerbuilder.com>"
   ],
-  "description": "A stack-agnostic SASS library providing basic components and typography intended for the Employer experience",
+  "description": "A stack-agnostic Sass library providing basic components and typography intended for the Employer experience",
   "keywords": [
     "cb",
     "careerbuilder",
@@ -28,7 +28,7 @@
     "sass/_reset.scss",
     "sass/_typography.scss",
     "sass/directives/_accents.scss",
-    "sass/directives/_aspect_ratio.scss",
+    "sass/directives/_aspect.scss",
     "sass/directives/_button.scss",
     "sass/directives/_clearfix.scss",
     "sass/directives/_ellipsis.scss",

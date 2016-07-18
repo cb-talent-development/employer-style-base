@@ -43,14 +43,16 @@ $hover-link-color-light: $sky-blue-lighter;
 // Backgrounds
 $base-background-color: $grey-super-light;
 
-// Accents
-$accent-error: $red;
-$accent-success: $lime;
-
-
 // Header/Footer
 $footer-background-color: $anchor-blue;
 $header-mobile-icon-color: $anchor-blue;
+
+// Buttons
+$base-button-color: $lime;
+
+// Alerts
+$alert-error: $red;
+$alert-success: $lime;
 
 
 
@@ -133,7 +135,7 @@ $footer-text-color: $white;
 $footer-link-color: $white;
 
 // Buttons
-$base-button-color: $base-link-color;
+
 $base-button-text-color: $white;
 $base-button-border-color: $base-button-color;
 $base-hover-button-color: $hover-link-color;

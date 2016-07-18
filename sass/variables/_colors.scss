@@ -1,6 +1,63 @@
+// Color Definitions
+
+// CB Main Branding Colors
+$anchor-blue: #182642;
+$azure-two: #1280A1;
+$marigold: #FDB816;
+$emerald: #009B74;
+$sky-blue: #09A0DB;
+$lime: #85CE3F;
+
+// CB Secondary and Accent Colors
+$red: #DD4D39;
+$orange: #E78523;
+$teal: #63C0B9;
+$azure-blue: #287AB9;
+
+// CB Gradient
+$gradient-dark: #0A3A68;
+$gradient-medium: #0E759E;
+$gradient-light: #58A9A2;
+
 // Basic Colors
 $black: #000000;
 $white: #FFFFFF;
+$grey-light: #BBBBBB;
+$grey-super-light: #F4F4F4;
+
+// Non-style-guide colors
+$sky-blue-light: #0FB4F5;
+$sky-blue-lighter: #6BC6E9;
+
+// Color Usage
+
+// Font
+$body-text-color: $anchor-blue;
+$header-text-color: $anchor-blue;
+
+// Link
+$base-link-color: $sky-blue;
+$hover-link-color: $sky-blue-light;
+$hover-link-color-light: $sky-blue-lighter;
+
+// Backgrounds
+$base-background-color: $grey-super-light;
+
+// Accents
+$accent-error: $red;
+$accent-success: $lime;
+
+
+// Header/Footer
+$footer-background-color: $anchor-blue;
+$header-mobile-icon-color: $anchor-blue;
+
+
+
+
+
+//Colors to delete
+
 $blue: #477DCA;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
@@ -9,7 +66,6 @@ $light-green: #E6EFC2;
 $grey-darkest: lighten($black, 20);
 $grey-darker: lighten($grey-darkest, 20);
 $grey-dark: lighten($grey-darker, 20);
-$grey-light: #BBBBBB;
 $grey-lighter: #CCCCCC;
 $grey-lightest: #EEEEEE;
 
@@ -51,37 +107,30 @@ $accent-danger-dark: #7F1E18;
 $accent-active: #179FCA;
 
 // Backgrounds
-$base-background-color: #f5f6f7;
+
 $panel-primary: $white;
 $panel-secondary: #F9F9F9;
 
-// Backgrounds - CareerBuilder Gradient
-$gradient-dark: #0a3a68;
-$gradient-medium: #0e759e;
-$gradient-light: #58a9a2;
+
 
 // Font
-$body-text-color: $primary;
-$header-text-color: $primary;
 $base-accent-color: $accent-active;
 
-// Link
-$base-link-color: $accent;
-$hover-link-color: $accent-light;
-$hover-link-color-light: $accent-lighter;
+// // Link
+// $base-link-color: $accent;
+// $hover-link-color: $accent-light;
+// $hover-link-color-light: $accent-lighter;
 
-// Border
+// // Border
 $base-border-color: $grey-light;
-$base-border: 2px solid $base-border-color;
+// $base-border: 2px solid $base-border-color;
 
 // Header/Footer
 $header-background-color: $primary;
 $header-accent-color: $accent;
-$footer-background-color: $primary;
 $footer-accent-color: $header-accent-color;
 $footer-text-color: $white;
 $footer-link-color: $white;
-$mobile-nav-icon-color: $primary;
 
 // Buttons
 $base-button-color: $base-link-color;

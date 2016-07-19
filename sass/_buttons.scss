@@ -11,15 +11,19 @@ input[type="submit"] {
 }
 
 .button.button--secondary {
-  @extend %primary-inverse-button;
+  @extend %secondary-button;
 }
 
-.button.button--secondary.text--white {
-  @extend %secondary-secondary-button;
-}
+// .button.button--secondary.text--white {
+//   @extend %secondary-secondary-button;
+// }
 
 .button.button--tertiary {
-  @extend %secondary-button;
+  @extend %tertiary-button;
+}
+
+.button.button--negative {
+  @extend %negative-button;
 }
 
 .button.button--small {

@@ -2,7 +2,6 @@
 
 // CB Main Branding Colors
 $anchor-blue: #182642;
-$azure-two: #1280A1;
 $marigold: #FDB816;
 $emerald: #009B74;
 
@@ -16,6 +15,8 @@ $lime-light: #9DD865;
 $red: #DD4D39;
 $orange: #E78523;
 $teal: #63C0B9;
+
+$azure-two: #1280A1;
 $azure-blue: #287AB9;
 
 // CB Gradient
@@ -27,7 +28,6 @@ $gradient-light: #58A9A2;
 $black: #000000;
 $white: #FFFFFF;
 $grey-dark: #999999; // negative-button-color
-$grey-light: #BBBBBB; // TODO is this in use?
 $grey-lighter: #CCCCCC; // negative button hover color
 $grey-lightest: #EEEEEE; // base border
 $grey-super-light: #F4F4F4; // page backgrounds
@@ -35,6 +35,7 @@ $grey-super-light: #F4F4F4; // page backgrounds
 // Non-style-guide colors
 
 $sky-blue-lighter: #6BC6E9; // might need to use for links
+$grey-light: #BBBBBB; // TODO is this in use?
 
 // Color Usage
 
@@ -51,10 +52,14 @@ $hover-link-color-light: $sky-blue-lighter;
 $base-background-color: $grey-super-light;
 $panel-primary: $white;
 
+// Alerts
+$alert-error: $red;
+$alert-success: $lime;
+
 // Header/Footer
 $footer-background-color: $anchor-blue;
 $header-mobile-icon-color: $anchor-blue;
-// Will update header color assignments in EM-386
+// TODO Will update header color assignments in EM-386
 // $header-background-color: $white;
 // $header-accent-color: $accent;
 // $footer-accent-color: $header-accent-color;
@@ -111,10 +116,6 @@ $negative-hover-button-border-color: $grey-dark;
 $negative-active-button-color: $negative-hover-button-color;
 $negative-active-button-text-color: $negative-hover-button-text-color;
 $negative-active-button-border-color: $negative-hover-button-border-color;
-
-// Alerts
-$alert-error: $red;
-$alert-success: $lime;
 
 
 

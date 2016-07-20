@@ -2,14 +2,16 @@
 
 // CB Main Branding Colors
 $anchor-blue: #182642;
-$marigold: #FDB816;
-$emerald: #009B74;
+$anchor-blue-light:  #747D8E;
 
 $sky-blue: #09A0DB;
 $sky-blue-light: #39B3E1;
 
 $lime: #85CE3F;
 $lime-light: #9DD865;
+
+$marigold: #FDB816;
+$emerald: #009B74;
 
 // CB Secondary and Accent Colors
 $red: #DD4D39;
@@ -33,10 +35,6 @@ $grey-dark: #999999; // negative-button-color
 $grey-lighter: #CCCCCC; // negative button hover color
 $grey-lightest: #EEEEEE; // base border
 $grey-super-light: #F4F4F4; // page backgrounds
-
-// Non-style-guide colors
-
-// $grey-light: #BBBBBB; // TODO is this in use?
 
 // Color Usage
 
@@ -117,9 +115,15 @@ $negative-active-button-color: $negative-hover-button-color;
 $negative-active-button-text-color: $negative-hover-button-text-color;
 $negative-active-button-border-color: $negative-hover-button-border-color;
 
+// Tabs
+$active-tab-color: $anchor-blue;
+$inactive-tab-color: $anchor-blue-light;
 
-
-
+// Border
+$base-border-color: $grey-lighter; // TODO was #BBB grey-light, check style guide for a consistent border color
+$base-border-color-light: $grey-lightest;// TODO using card divider specs; look for any alternatives
+$base-border: 1px solid $base-border-color;
+$base-border-light: 1px solid $base-border-color-light;
 
 //Colors to delete
 
@@ -130,7 +134,7 @@ $negative-active-button-border-color: $negative-hover-button-border-color;
 
 // Primary Palette (Anchor Blue)
 $primary: #182642;
-$primary-light:  #747D8E;
+
 $primary-dark: #1C202A;
 
 // Secondary Palette (Emerald Green)
@@ -175,9 +179,7 @@ $panel-secondary: #F9F9F9;
 // $base-accent-color: $accent-active;
 
 
-// // Border
-$base-border-color: $grey-lightest;
-$base-border: 1px solid $base-border-color; // TODO using card divider specs; look for any alternatives
+//
 
 // Buttons
 

@@ -55,11 +55,15 @@ $alert-error: $red;
 $alert-success: $lime;
 
 // Header/Footer
-$footer-background-color: $anchor-blue;
-$header-mobile-icon-color: $anchor-blue;
 // TODO Will update header color assignments in EM-386
-// $header-background-color: $white;
-// $header-accent-color: $accent;
+$header-mobile-icon-color: $anchor-blue;
+$header-mobile-text-hover-color: $white;
+$header-text-color: $anchor-blue;
+$header-background-color: $white;
+$header-background-secondary-color: $grey-lightest;
+$header-flyout-color: $header-background-color;
+$header-subtitle-color: $grey-darker;
+$footer-background-color: $anchor-blue;
 // $footer-accent-color: $header-accent-color;
 // $footer-text-color: $white;
 // $footer-link-color: $white;

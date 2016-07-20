@@ -27,6 +27,8 @@ $gradient-light: #58A9A2;
 // Basic Colors
 $black: #000000;
 $white: #FFFFFF;
+$grey-darkest: lighten($black, 20); // Reading page and Home Resources border, Email form heading, h4 class color
+$grey-darker: lighten($grey-darkest, 20); // Home product block dividers, top-bar subtitle text, carousel dots, box progress bar, the grey text color that's going away
 $grey-dark: #999999; // negative-button-color
 $grey-lighter: #CCCCCC; // negative button hover color
 $grey-lightest: #EEEEEE; // base border
@@ -34,7 +36,7 @@ $grey-super-light: #F4F4F4; // page backgrounds
 
 // Non-style-guide colors
 
-$grey-light: #BBBBBB; // TODO is this in use?
+// $grey-light: #BBBBBB; // TODO is this in use?
 
 // Color Usage
 
@@ -122,8 +124,9 @@ $negative-active-button-border-color: $negative-hover-button-border-color;
 //Colors to delete
 
 
-$grey-darkest: lighten($black, 20);
-$grey-darker: lighten($grey-darkest, 20);
+
+
+
 
 // Primary Palette (Anchor Blue)
 $primary: #182642;

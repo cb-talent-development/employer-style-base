@@ -52,7 +52,10 @@ $base-background-color: $grey-super-light;
 $panel-primary: $white;
 
 // Alerts
-$alert-error: $red;
+$alert-primary: $sky-blue;
+$alert-primary-active: $sky-blue-light;
+$alert-danger: $red;
+$alert-warning: $marigold;
 $alert-success: $lime;
 
 // Header/Footer
@@ -162,33 +165,6 @@ $accent: #09A0DB;
 $accent-light: #0FB4F5;
 $accent-lighter: #6BC6E9;
 $accent-dark: #06739D;
-
-// Success Accent
-$accent-success: #85CE3F;
-$accent-success-light: #B6E28C;
-$accent-success-dark: #6FAC40;
-
-// Warning Accent
-$accent-warning: #FBC500;
-$accent-warning-light: #FDE280;
-$accent-warning-dark: #7d6200;
-
-// Danger Accent
-$accent-danger: #FF3C30;
-$accent-danger-light: #FF9E98;
-$accent-danger-dark: #7F1E18;
-
-// Active Accent
-$accent-active: #179FCA;
-
-// Backgrounds
-
-$panel-secondary: #F9F9F9;
-
-
-
-
-
 
 
 // Form

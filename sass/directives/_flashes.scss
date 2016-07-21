@@ -19,20 +19,20 @@
 
 %flash-primary {
   @extend %flash-base;
-  @include flash($accent);
+  @include flash($alert-primary);
 }
 
 %flash-success {
   @extend %flash-base;
-  @include flash($accent-success);
+  @include flash($alert-success);
 }
 
 %flash-warning {
   @extend %flash-base;
-  @include flash($accent-warning);
+  @include flash($alert-warning);
 }
 
 %flash-danger {
   @extend %flash-base;
-  @include flash($accent-danger);
+  @include flash($alert-danger);
 }

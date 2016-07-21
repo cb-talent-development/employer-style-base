@@ -109,6 +109,28 @@
   }
 }
 
+%tertiary-inverse-button {
+  background-color: $tertiary-inverse-button-color;
+  color: $tertiary-inverse-button-text-color;
+  border-color: $tertiary-inverse-button-border-color;
+
+  &:hover {
+    background-color: $tertiary-inverse-hover-button-color;
+    color: $tertiary-inverse-hover-button-text-color;
+    border-color: $tertiary-inverse-hover-button-border-color;
+  }
+
+  &:active {
+    background-color: $tertiary-inverse-active-button-color;
+    color: $tertiary-inverse-active-button-text-color;
+    border-color: $tertiary-inverse-active-button-border-color;
+  }
+
+  &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
+    @extend %disabled;
+  }
+}
+
 %negative-button {
   background-color: $negative-button-color;
   color: $negative-button-text-color;

@@ -34,13 +34,13 @@ $gradient-light: #58A9A2;
 // Basic Colors
 $black: #000000;
 $white: #FFFFFF;
-$grey-darkest: lighten($black, 20); // Reading page and Home Resources border, Email form heading, h4 class color
-$grey-darker: lighten($grey-darkest, 20); // Home product block dividers, top-bar subtitle text, carousel dots, box progress bar, the grey text color that's going away
-$grey-dark: #999999; // negative-button-color
-$grey-lighter: #CCCCCC; // negative button hover color
-$grey-new: #DDDDDD;
-$grey-lightest: #EEEEEE; // base border
-$grey-super-light: #F4F4F4; // page backgrounds
+$grey-darkest: lighten($black, 20);
+$grey-darker: lighten($grey-darkest, 20);
+$grey-dark: #999999;
+$grey: #CCCCCC;
+$grey-light: #DDDDDD;
+$grey-lighter: #EEEEEE;
+$grey-lightest: #F4F4F4;
 
 // Color Usage
 
@@ -54,7 +54,7 @@ $base-link-color: $sky-blue;
 $hover-link-color: $sky-blue-light;
 
 // Backgrounds
-$base-background-color: $grey-super-light;
+$base-background-color: $grey-lightest;
 $panel-primary: $white;
 
 // Alerts
@@ -70,7 +70,7 @@ $header-mobile-icon-color: $anchor-blue;
 $header-mobile-text-hover-color: $white;
 $header-text-color: $anchor-blue;
 $header-background-color: $white;
-$header-background-secondary-color: $grey-lightest;
+$header-background-secondary-color: $grey-lighter;
 $header-flyout-color: $header-background-color;
 $header-subtitle-color: $grey-darker;
 $footer-background-color: $anchor-blue;
@@ -132,7 +132,7 @@ $tertiary-inverse-active-button-border-color: $tertiary-inverse-active-button-co
 $negative-button-color: $grey-dark;
 $negative-button-text-color: $white;
 $negative-button-border-color: $negative-button-color;
-$negative-hover-button-color: $grey-lighter;
+$negative-hover-button-color: $grey;
 $negative-hover-button-text-color: $negative-button-text-color;
 $negative-hover-button-border-color: $grey-dark;
 $negative-active-button-color: $negative-hover-button-color;
@@ -144,8 +144,8 @@ $active-tab-color: $anchor-blue;
 $inactive-tab-color: $anchor-blue-light;
 
 // Border
-$base-border-color: $grey-lighter; // TODO was #BBB grey-light, check style guide for a consistent border color
-$base-border-color-light: $grey-lightest;// TODO using card divider specs; look for any alternatives
+$base-border-color: $grey; // TODO was #BBB grey-light, check style guide for a consistent border color
+$base-border-color-light: $grey-lighter;// TODO using card divider specs; look for any alternatives
 $base-border: 1px solid $base-border-color;
 $base-border-light: 1px solid $base-border-color-light;
 

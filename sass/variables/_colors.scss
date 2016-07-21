@@ -42,6 +42,7 @@ $grey-light: #DDDDDD;
 $grey-lighter: #EEEEEE;
 $grey-lightest: #F4F4F4;
 
+
 // Color Usage
 
 // Font
@@ -145,12 +146,12 @@ $active-tab-color: $anchor-blue;
 $inactive-tab-color: $anchor-blue-light;
 
 // Border
-$base-border-color: $grey; // TODO was #BBB grey-light, check style guide for a consistent border color
-$base-border-color-light: $grey-lighter;// TODO using card divider specs; look for any alternatives
-$base-border: 1px solid $base-border-color;
-$base-border-light: 1px solid $base-border-color-light;
+$base-border-primary-color: $grey-light;
+$base-border-secondary-color: $grey-lighter;
+$base-border: 1px solid $base-border-primary-color;
+$base-border-secondary: 1px solid $base-border-secondary-color;
 
 // Form
-$form-border-color: $base-border-color;
-$form-border-color-hover: darken($base-border-color, 10);
-$form-border-color-focus: $sky-blue;
+$form-border-color: $base-border-primary-color;
+$form-border-color-hover: darken($base-border-primary-color, 10);
+$form-border-color-focus: $alert-primary;

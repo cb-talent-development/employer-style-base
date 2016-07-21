@@ -143,15 +143,6 @@ $base-border-color-light: $grey-lightest;// TODO using card divider specs; look 
 $base-border: 1px solid $base-border-color;
 $base-border-light: 1px solid $base-border-color-light;
 
-//Colors to delete
-
-// Accent (Sky Blue)
-$accent: #09A0DB;
-$accent-light: #0FB4F5;
-$accent-lighter: #6BC6E9;
-$accent-dark: #06739D;
-
-
 // Form
 $form-border-color: $base-border-color;
 $form-border-color-hover: darken($base-border-color, 10);

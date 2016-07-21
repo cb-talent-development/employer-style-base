@@ -6,11 +6,16 @@ $anchor-blue-light:  #747D8E;
 
 $sky-blue: #09A0DB;
 $sky-blue-light: #39B3E1;
+$sky-blue-dark: #0F6E9E;
 
 $lime: #85CE3F;
 $lime-light: #9DD865;
+$lime-dark: #6FAC40;
 
 $marigold: #FDB816;
+$marigold-light: #FED473;
+$marigold-dark: #F79C25;
+
 $emerald: #009B74;
 
 // CB Secondary and Accent Colors
@@ -33,6 +38,7 @@ $grey-darkest: lighten($black, 20); // Reading page and Home Resources border, E
 $grey-darker: lighten($grey-darkest, 20); // Home product block dividers, top-bar subtitle text, carousel dots, box progress bar, the grey text color that's going away
 $grey-dark: #999999; // negative-button-color
 $grey-lighter: #CCCCCC; // negative button hover color
+$grey-new: #DDDDDD;
 $grey-lightest: #EEEEEE; // base border
 $grey-super-light: #F4F4F4; // page backgrounds
 

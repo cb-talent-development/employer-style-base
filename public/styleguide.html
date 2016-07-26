@@ -1,0 +1,1415 @@
+<!doctype html>
+<html id="sass/styleguide">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="livingstyleguide.org 2.0.0" name="generator">
+    <title>Employer Style Base Living Style Guide</title>
+    <script>
+      function selectElementRange(copyElementSelect) {
+  var range = document.createRange()
+  range.selectNode(copyElementSelect)
+  window.getSelection().removeAllRanges()
+  window.getSelection().addRange(range)
+  document.execCommand("copy")
+  if (copyElementSelect.classList.contains("lsg-remove")) {
+    document.body.removeChild(copyElementSelect)
+  }
+  window.getSelection().removeAllRanges()
+}
+function testCopy() {
+  try {
+    document.execCommand("copy")
+    return true
+  }
+  catch (error) {
+    return false
+  }
+}
+document.addEventListener("DOMContentLoaded", function() {
+  if (testCopy()) {
+    var code = document.getElementsByClassName("lsg-code")
+    for (var i = 0; i < code.length; i++) {
+      var newButton = createButton()
+      code[i].appendChild(newButton)
+      newButton.addEventListener("click", function(event) {
+        selectElementRange(this.parentNode)
+      })
+    }
+  }
+})
+function createButton(copyCodeSelect) {
+  var buttonCopy = document.createElement("button")
+  buttonCopy.className = "lsg-button"
+  return buttonCopy
+}
+document.addEventListener("DOMContentLoaded", function() {
+  if (testCopy()) {
+    var colorSwatches = document.getElementsByClassName("lsg-color-swatch")
+    for (var i = 0; i < colorSwatches.length; i++) {
+      if (!colorSwatches[i].classList.contains("lsg-empty")) {
+        colorSwatches[i].addEventListener("click", function(event) {
+          if (event.target == this.children[0]) {
+            selectElementRange(createDiv(this.children[0].innerHTML))
+          }
+          else {
+            var copyHexColors = window.getComputedStyle(this, "::after").getPropertyValue("content")
+            copyHexColors = copyHexColors.replace(/'|"/g, "")
+            selectElementRange(createDiv(copyHexColors))
+          }
+        })
+      }
+    }
+  }
+})
+function createDiv(copyHexColors) {
+  var divCopy = document.createElement("div")
+  divCopy.className = "lsg-remove"
+  divCopy.setAttribute("style", "opacity: 0; position: absolute; top: -10000px")
+  divCopy.appendChild(document.createTextNode(copyHexColors))
+  document.body.appendChild(divCopy)
+  return divCopy
+}
+(function(win) {
+  var getClasses = function(el) {
+    return el.className.split(/\s+/g);
+  };
+  var addClass = function(el, name) {
+    var classList = getClasses(el)
+    if (classList.indexOf(name) == -1) {
+      classList.push(name)
+      el.className = classList.join(" ")
+    }
+  }
+  var removeClass = function(el, name) {
+    var classList = getClasses(el)
+    classList[classList.indexOf(name)] = null
+    el.className = classList.join(" ")
+  }
+  var toggleClass = function(el, name) {
+    var classList = getClasses(el)
+    if (classList.indexOf(name) == -1) {
+      addClass(el, name)
+      return true
+    }
+    else {
+      removeClass(el, name)
+      return false
+    }
+  }
+  var html = document.getElementsByTagName("HTML")[0]
+  var hideCode = localStorage.getItem("lsg-hide-code")
+  if (hideCode == "true") {
+    addClass(html, "lsg-hide-code")
+  }
+  function toggleCode(event) {
+    event.preventDefault()
+    var hideCode = toggleClass(html, "lsg-hide-code")
+    localStorage.setItem("lsg-hide-code", hideCode)
+  }
+  document.addEventListener("DOMContentLoaded", function() {
+    var switches = document.getElementsByClassName("lsg-code-switch")
+    for (var i = 0; i < switches.length; i++) {
+      switches[i].addEventListener("click", toggleCode)
+    }
+  })
+})(window);
+    </script>
+    <style>
+      .button:disabled,
+button:disabled,
+input[type="button"]:disabled,
+input[type="reset"]:disabled,
+input[type="submit"]:disabled, [disabled].button:hover,
+button[disabled]:hover,
+input[disabled][type="button"]:hover,
+input[disabled][type="reset"]:hover,
+input[disabled][type="submit"]:hover, [disabled].button:active,
+button[disabled]:active,
+input[disabled][type="button"]:active,
+input[disabled][type="reset"]:active,
+input[disabled][type="submit"]:active, .disabled.button,
+button.disabled,
+input.disabled[type="button"],
+input.disabled[type="reset"],
+input.disabled[type="submit"], .disabled.button:hover,
+button.disabled:hover,
+input.disabled[type="button"]:hover,
+input.disabled[type="reset"]:hover,
+input.disabled[type="submit"]:hover, .disabled.button:active,
+button.disabled:active,
+input.disabled[type="button"]:active,
+input.disabled[type="reset"]:active,
+input.disabled[type="submit"]:active, .disabled, .disabled:hover {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  /* IE8 */ }
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-font-smoothing: antialiased;
+  border-radius: 3px;
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 0.375em 1.375em;
+  text-decoration: none;
+  border: 2px solid #85CE3F;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: top;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+  background-color: #85CE3F;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
+  .button:hover,
+  button:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover {
+    background-color: #9DD865;
+    color: #FFFFFF;
+    border-color: #9DD865; }
+  .button:active,
+  button:active,
+  input[type="button"]:active,
+  input[type="reset"]:active,
+  input[type="submit"]:active {
+    background-color: #9DD865;
+    color: #FFFFFF;
+    border-color: #9DD865; }
+.button.button--primary {
+  background-color: #85CE3F;
+  color: #FFFFFF;
+  border-color: #85CE3F; }
+  .button.button--primary:hover {
+    background-color: #9DD865;
+    color: #FFFFFF;
+    border-color: #9DD865; }
+  .button.button--primary:active {
+    background-color: #9DD865;
+    color: #FFFFFF;
+    border-color: #9DD865; }
+.button.button--secondary {
+  background-color: #09A0DB;
+  color: #FFFFFF;
+  border-color: #09A0DB; }
+  .button.button--secondary:hover {
+    background-color: #39B3E1;
+    color: #FFFFFF;
+    border-color: #39B3E1; }
+  .button.button--secondary:active {
+    background-color: #39B3E1;
+    color: #FFFFFF;
+    border-color: #39B3E1; }
+.button.button--tertiary {
+  background-color: transparent;
+  color: #09A0DB;
+  border-color: #09A0DB; }
+  .button.button--tertiary:hover {
+    background-color: #39B3E1;
+    color: #FFFFFF;
+    border-color: #39B3E1; }
+  .button.button--tertiary:active {
+    background-color: #39B3E1;
+    color: #FFFFFF;
+    border-color: #39B3E1; }
+.button.button--tertiary-inverse {
+  background-color: transparent;
+  color: #FFFFFF;
+  border-color: #FFFFFF; }
+  .button.button--tertiary-inverse:hover {
+    background-color: #FFFFFF;
+    color: #09A0DB;
+    border-color: #FFFFFF; }
+  .button.button--tertiary-inverse:active {
+    background-color: #FFFFFF;
+    color: #09A0DB;
+    border-color: #FFFFFF; }
+.button.button--negative {
+  background-color: #999999;
+  color: #FFFFFF;
+  border-color: #999999; }
+  .button.button--negative:hover {
+    background-color: #CCCCCC;
+    color: #FFFFFF;
+    border-color: #999999; }
+  .button.button--negative:active {
+    background-color: #CCCCCC;
+    color: #FFFFFF;
+    border-color: #999999; }
+.button.button--small {
+  font-size: 0.875em;
+  padding: 0.375em 1.375em; }
+.button.button--medium {
+  font-size: 1em;
+  padding: 0.375em 1.375em; }
+.button.button--large {
+  font-size: 1.25em;
+  padding: 0.375em 1.375em; }
+.button.button--massive {
+  font-size: 1.8em;
+  padding: 0.375em 2em; }
+.employer-scope {
+  -webkit-font-feature-settings: "kern", "liga", "frac", "pnum";
+  -moz-font-feature-settings: "kern", "liga", "frac", "pnum";
+  -ms-font-feature-settings: "kern", "liga", "frac", "pnum";
+  font-feature-settings: "kern", "liga", "frac", "pnum";
+  -webkit-font-smoothing: antialiased;
+  background-color: #F4F4F4;
+  color: #182642; }
+.button:disabled,
+button:disabled,
+input[type="button"]:disabled,
+input[type="reset"]:disabled,
+input[type="submit"]:disabled, [disabled].button:hover,
+button[disabled]:hover,
+input[disabled][type="button"]:hover,
+input[disabled][type="reset"]:hover,
+input[disabled][type="submit"]:hover, [disabled].button:active,
+button[disabled]:active,
+input[disabled][type="button"]:active,
+input[disabled][type="reset"]:active,
+input[disabled][type="submit"]:active, .disabled.button,
+button.disabled,
+input.disabled[type="button"],
+input.disabled[type="reset"],
+input.disabled[type="submit"], .disabled.button:hover,
+button.disabled:hover,
+input.disabled[type="button"]:hover,
+input.disabled[type="reset"]:hover,
+input.disabled[type="submit"]:hover, .disabled.button:active,
+button.disabled:active,
+input.disabled[type="button"]:active,
+input.disabled[type="reset"]:active,
+input.disabled[type="submit"]:active, .disabled, .disabled:hover {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  /* IE8 */ }
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-font-smoothing: antialiased;
+  border-radius: 3px;
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 0.375em 1.375em;
+  text-decoration: none;
+  border: 2px solid #85CE3F;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: top;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+  background-color: #85CE3F;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
+  .button:hover,
+  button:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover {
+    background-color: #9DD865;
+    color: #FFFFFF;
+    border-color: #9DD865; }
+  .button:active,
+  button:active,
+  input[type="button"]:active,
+  input[type="reset"]:active,
+  input[type="submit"]:active {
+    background-color: #9DD865;
+    color: #FFFFFF;
+    border-color: #9DD865; }
+.button.button--primary {
+  background-color: #85CE3F;
+  color: #FFFFFF;
+  border-color: #85CE3F; }
+  .button.button--primary:hover {
+    background-color: #9DD865;
+    color: #FFFFFF;
+    border-color: #9DD865; }
+  .button.button--primary:active {
+    background-color: #9DD865;
+    color: #FFFFFF;
+    border-color: #9DD865; }
+.button.button--secondary {
+  background-color: #09A0DB;
+  color: #FFFFFF;
+  border-color: #09A0DB; }
+  .button.button--secondary:hover {
+    background-color: #39B3E1;
+    color: #FFFFFF;
+    border-color: #39B3E1; }
+  .button.button--secondary:active {
+    background-color: #39B3E1;
+    color: #FFFFFF;
+    border-color: #39B3E1; }
+.button.button--tertiary {
+  background-color: transparent;
+  color: #09A0DB;
+  border-color: #09A0DB; }
+  .button.button--tertiary:hover {
+    background-color: #39B3E1;
+    color: #FFFFFF;
+    border-color: #39B3E1; }
+  .button.button--tertiary:active {
+    background-color: #39B3E1;
+    color: #FFFFFF;
+    border-color: #39B3E1; }
+.button.button--tertiary-inverse {
+  background-color: transparent;
+  color: #FFFFFF;
+  border-color: #FFFFFF; }
+  .button.button--tertiary-inverse:hover {
+    background-color: #FFFFFF;
+    color: #09A0DB;
+    border-color: #FFFFFF; }
+  .button.button--tertiary-inverse:active {
+    background-color: #FFFFFF;
+    color: #09A0DB;
+    border-color: #FFFFFF; }
+.button.button--negative {
+  background-color: #999999;
+  color: #FFFFFF;
+  border-color: #999999; }
+  .button.button--negative:hover {
+    background-color: #CCCCCC;
+    color: #FFFFFF;
+    border-color: #999999; }
+  .button.button--negative:active {
+    background-color: #CCCCCC;
+    color: #FFFFFF;
+    border-color: #999999; }
+.button.button--small {
+  font-size: 0.875em;
+  padding: 0.375em 1.375em; }
+.button.button--medium {
+  font-size: 1em;
+  padding: 0.375em 1.375em; }
+.button.button--large {
+  font-size: 1.25em;
+  padding: 0.375em 1.375em; }
+.button.button--massive {
+  font-size: 1.8em;
+  padding: 0.375em 2em; }
+.employer-scope {
+  -webkit-font-feature-settings: "kern", "liga", "frac", "pnum";
+  -moz-font-feature-settings: "kern", "liga", "frac", "pnum";
+  -ms-font-feature-settings: "kern", "liga", "frac", "pnum";
+  font-feature-settings: "kern", "liga", "frac", "pnum";
+  -webkit-font-smoothing: antialiased;
+  background-color: #F4F4F4;
+  color: #182642; }
+.lsg, .lsg-container, .lsg-footer, .lsg-logo, .lsg-paragraph,
+.lsg-code-block,
+.lsg-unordered-list,
+.lsg-ordered-list,
+.lsg-font-example, .lsg-unordered-list-item,
+.lsg-ordered-list-item, .lsg-page-title,
+.lsg-headline,
+.lsg-sub-headline,
+.lsg-sub-sub-headline, .lsg-anchor, .lsg-example, .lsg-font-example-text, .lsg-code, .lsg-code-span, .lsg-code-span kbd,
+.lsg-code-block kbd, .lsg-code-span em,
+.lsg-code-block em, .lsg-code-span b,
+.lsg-code-block b, .lsg-code-span i,
+.lsg-code-block i, .lsg-code-span q,
+.lsg-code-block q, .lsg-code-span var,
+.lsg-code-block var, .lsg-code-highlight, .lsg-code-highlight-block, .lsg-color-swatch, .lsg-color-swatch::before, .lsg-color-swatch-source, .lsg-color-swatch-value, .lsg-color-swatches {
+  background: transparent;
+  border: none;
+  border-collapse: collapse;
+  border-radius: 0;
+  border-spacing: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: inherit;
+  display: block;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  text-decoration: none;
+  vertical-align: baseline; }
+.lsg {
+  background: white;
+  display: block; }
+.lsg-container {
+  display: block;
+  min-height: 50vh; }
+.lsg-footer {
+  display: block;
+  margin: 40px auto;
+  max-width: 720px; }
+.lsg-logo {
+  color: transparent;
+  display: block;
+  font-size: 0;
+  height: 90px;
+  line-height: 90px;
+  margin: 0 auto 20px;
+  position: relative;
+  text-align: center;
+  width: 360px;
+  z-index: 2; }
+  .lsg-logo:hover {
+    color: black; }
+  .lsg-logo::before {
+    color: transparent;
+    content: "Made with The LivingStyleGuide Gem";
+    display: block;
+    font-family: helvetica neue, helvetica, sans-serif;
+    font-size: 14px;
+    transform: scale(0.5);
+    transition: all 0.1s;
+    white-space: nowrap; }
+  .lsg-logo:hover::before {
+    color: black;
+    transform: scale(1); }
+  .lsg-logo::after {
+    background: linear-gradient(to top, white, white), linear-gradient(to top, white, white), linear-gradient(to top, white, white), linear-gradient(to top, white, white), black;
+    background-position: 5px 5px, 5px 25px, 25px 5px, 25px 25px;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    content: "";
+    height: 45px;
+    left: 50%;
+    margin: -22.5px;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg);
+    transition: all 0.1s linear;
+    width: 45px;
+    z-index: -1; }
+  .lsg-logo:hover::after {
+    background-color: transparent;
+    background-position: 0 0, 0 22.5px, 22.5px 0, 22.5px 22.5px;
+    background-size: 25px 25px; }
+.lsg-paragraph,
+.lsg-code-block,
+.lsg-unordered-list,
+.lsg-ordered-list,
+.lsg-font-example {
+  color: black;
+  font-family: helvetica neue, helvetica, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  line-height: 20px;
+  margin: 20px auto;
+  max-width: 720px;
+  text-align: left; }
+.lsg-paragraph > a,
+.lsg-unordered-list-item > a,
+.lsg-ordered-list-item > a {
+  color: #333333; }
+.lsg-unordered-list-item,
+.lsg-ordered-list-item {
+  display: list-item;
+  list-style: disc;
+  margin: 5px 0 5px 20px; }
+.lsg-page-title,
+.lsg-headline,
+.lsg-sub-headline,
+.lsg-sub-sub-headline {
+  color: black;
+  display: block;
+  font-family: helvetica neue, helvetica, sans-serif;
+  font-size: 32px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  margin: 80px auto 20px;
+  max-width: 720px;
+  text-align: left; }
+.lsg-anchor {
+  color: inherit;
+  display: inline;
+  margin-left: -1.3em;
+  opacity: 0;
+  padding-right: 0.3em;
+  position: absolute;
+  text-align: right;
+  text-decoration: none;
+  width: 1.3em; }
+  .lsg-headline:hover .lsg-anchor, .lsg-sub-headline:hover .lsg-anchor, .lsg-sub-sub-headline:hover .lsg-anchor {
+    opacity: 0.5; }
+    .lsg-headline:hover .lsg-anchor:hover, .lsg-sub-headline:hover .lsg-anchor:hover, .lsg-sub-sub-headline:hover .lsg-anchor:hover {
+      opacity: 1; }
+  .lsg-anchor::before {
+    content: "#";
+    transition: transform 0.2s; }
+  .lsg-anchor:active::before {
+    transform: scale(0.8); }
+.lsg-page-title {
+  display: block;
+  font-size: 42px;
+  line-height: 60px; }
+.lsg-sub-headline {
+  display: block;
+  font-size: 21px;
+  line-height: 30px;
+  margin-top: 40px; }
+.lsg-sub-sub-headline {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 40px; }
+.lsg-example {
+  background: linear-gradient(to top left, whitesmoke 12%, white 0, 50%, whitesmoke 0, 62%, white 0) repeat 0 0/4px 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  display: block;
+  margin: 20px auto;
+  max-width: 720px;
+  overflow: hidden;
+  position: relative; }
+  .lsg-example.lsg-has-full-width {
+    border-radius: 0;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+    min-height: auto;
+    padding: 0;
+    width: 100%; }
+    .lsg-example.lsg-has-full-width .lsg-code-block {
+      z-index: 2; }
+      .lsg-example.lsg-has-full-width .lsg-code-block::before {
+        background-color: inherit;
+        bottom: 0;
+        content: "";
+        left: 50%;
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+        width: 100vw;
+        z-index: -1; }
+  .lsg-example.lsg-for-javascript {
+    display: none; }
+hr {
+  border: 0;
+  border-top: 1px #e6e6e6 solid;
+  margin: 80px 20px; }
+.lsg-html {
+  display: block;
+  padding: 10px; }
+.lsg-font-example {
+  display: block; }
+.lsg-font-example-text {
+  display: block;
+  margin-bottom: 20px; }
+  .lsg-font-example-text::first-line {
+    font-size: 5.716em; }
+.lsg-code {
+  font-family: andale mono, courier, courier new, monospace; }
+.lsg-code-span,
+.lsg-code-block {
+  background: whitesmoke;
+  border-radius: 0;
+  color: black;
+  display: inline;
+  font-size: 13px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-style: normal;
+  font-weight: normal;
+  padding: 0 3px; }
+  .lsg-code-span kbd,
+  .lsg-code-block kbd {
+    display: block;
+    font-weight: bold; }
+    .lsg-code-span kbd::before,
+    .lsg-code-block kbd::before {
+      content: "> "; }
+  .lsg-code-span em,
+  .lsg-code-block em {
+    color: #1a1a1a;
+    display: inline;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: underline;
+    vertical-align: baseline; }
+  .lsg-code-span b,
+  .lsg-code-block b {
+    color: #333333;
+    display: inline;
+    font-weight: bold;
+    vertical-align: baseline; }
+  .lsg-code-span i,
+  .lsg-code-block i {
+    color: #4d4d4d;
+    display: inline;
+    vertical-align: baseline; }
+  .lsg-code-span q,
+  .lsg-code-block q {
+    color: #4d4d4d;
+    display: inline;
+    vertical-align: baseline; }
+    .lsg-code-span q::before, .lsg-code-span q::after,
+    .lsg-code-block q::before,
+    .lsg-code-block q::after {
+      content: ""; }
+  .lsg-code-span var,
+  .lsg-code-block var {
+    display: inline;
+    text-decoration: underline;
+    vertical-align: baseline; }
+.lsg-code-block {
+  display: block;
+  line-height: 20px;
+  margin: auto;
+  max-width: 720px;
+  min-height: 30px;
+  -ms-overflow-style: none;
+  padding: 10px;
+  position: relative; }
+  .lsg-code-block::-webkit-scrollbar {
+    width: 0 !important; }
+.lsg-example + .lsg-code-block {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: 0; }
+.lsg-layout-example + .lsg-code-block {
+  background: whitesmoke;
+  border-radius: 0;
+  margin: 0 0 10px;
+  padding: 10px 0;
+  width: 100%; }
+  .lsg-layout-example + .lsg-code-block .lsg-code {
+    display: block;
+    margin: auto;
+    max-width: 720px; }
+.lsg-button {
+  background-color: black;
+  background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100%' height='100%' viewBox='0 0 512 512' enable-background='new 0 0 512 512' xml:space='preserve'> <path id='copy-6-icon' d='M360.277,151.999V50.001H50v310.137h102v101.861h310v-310H360.277z M90,320.138V90.001h230.277v61.998 H152v168.139H90z M421.5,421.499h-230V191.832h20.569c10.639,0,20.745,4.656,27.657,12.744l19.023,22.256H358l19.366-22.408 c6.911-7.996,16.958-12.592,27.528-12.592H421.5V421.499z M379.479,338.581h-145.99v-29h145.99V338.581z M379.479,286.249h-145.99 v-29h145.99V286.249z M233.488,361.999h146.023v29H233.488V361.999z' fill='white'/></svg>");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  border: 0;
+  border-radius: 50%;
+  bottom: 10px;
+  cursor: pointer;
+  height: 20px;
+  outline: 0;
+  position: absolute;
+  right: 10px;
+  transition: transform 0.2s;
+  visibility: hidden;
+  width: 20px; }
+  .lsg-button:hover {
+    background-color: #333333; }
+  .lsg-button:active {
+    transform: scale(0.9); }
+  .lsg-code-block:hover .lsg-button {
+    visibility: visible; }
+.lsg-code-highlight, .lsg-code-highlight-block {
+  background-color: black;
+  border-radius: 2px;
+  color: whitesmoke;
+  display: inline;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0 -1px;
+  padding: 0 1px;
+  text-decoration: inherit;
+  vertical-align: baseline; }
+  .lsg-code-highlight *, .lsg-code-highlight-block * {
+    color: inherit !important; }
+.lsg-code-highlight-block {
+  display: block; }
+.lsg-color-swatch {
+  color: black;
+  cursor: pointer;
+  float: left;
+  font-family: andale mono, courier, courier new, monospace;
+  font-size: 13px;
+  height: 5.716em;
+  line-height: 1.429em;
+  list-style: none;
+  margin: 0 10px 10px 0;
+  position: relative;
+  text-align: center;
+  transition: transform 0.2s; }
+  .lsg-color-swatch:hover {
+    z-index: 2; }
+  .lsg-color-swatch:active {
+    transform: scale(0.9); }
+  .lsg-color-swatch::before {
+    border-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1; }
+  .lsg-color-swatch:hover::before {
+    background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100%' height='100%' viewBox='0 0 512 512' enable-background='new 0 0 512 512' xml:space='preserve'> <path id='copy-6-icon' d='M360.277,151.999V50.001H50v310.137h102v101.861h310v-310H360.277z M90,320.138V90.001h230.277v61.998 H152v168.139H90z M421.5,421.499h-230V191.832h20.569c10.639,0,20.745,4.656,27.657,12.744l19.023,22.256H358l19.366-22.408 c6.911-7.996,16.958-12.592,27.528-12.592H421.5V421.499z M379.479,338.581h-145.99v-29h145.99V338.581z M379.479,286.249h-145.99 v-29h145.99V286.249z M233.488,361.999h146.023v29H233.488V361.999z' fill='white'/></svg>");
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    background-size: 20%;
+    color: black;
+    cursor: pointer; }
+  .lsg-color-swatch::after {
+    display: none; }
+  .lsg-color-swatch.lsg-empty {
+    cursor: default;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -119988px; }
+    .lsg-color-swatch.lsg-empty::before, .lsg-color-swatch.lsg-empty::after {
+      display: none; }
+.lsg-color-swatch-source {
+  display: block; }
+  .lsg-color-swatch-source:hover {
+    text-decoration: underline; }
+.lsg-color-swatch-value {
+  cursor: pointer;
+  display: block;
+  margin-top: 1.429em;
+  text-align: center; }
+  .lsg-color-swatch:hover .lsg-color-swatch-value {
+    text-decoration: underline; }
+  .lsg-color-swatch-source + .lsg-color-swatch-value {
+    margin-top: 0; }
+  .lsg-color-swatch-source:hover + .lsg-color-swatch-value {
+    text-decoration: none; }
+.lsg-color-swatches {
+  margin: 40px auto -10px;
+  max-width: 740px;
+  padding-left: 10px;
+  -webkit-user-select: none;
+  user-select: none; }
+  .lsg-color-swatches::after {
+    clear: both;
+    content: "";
+    display: table; }
+.lsg-color-swatches.lsg-1-columns .lsg-color-swatch {
+  height: 720px;
+  padding-top: 484px;
+  width: 720px; }
+.lsg-color-swatches.lsg-2-columns .lsg-color-swatch {
+  height: 355px;
+  padding-top: 228.5px;
+  width: 355px; }
+.lsg-color-swatches.lsg-3-columns .lsg-color-swatch {
+  height: 233px;
+  padding-top: 143.1px;
+  width: 233px; }
+.lsg-color-swatches.lsg-4-columns .lsg-color-swatch {
+  height: 172px;
+  padding-top: 100.4px;
+  width: 172px; }
+.lsg-color-swatches.lsg-5-columns .lsg-color-swatch {
+  height: 136px;
+  padding-top: 75.2px;
+  width: 136px; }
+.lsg-color-swatches.lsg-6-columns .lsg-color-swatch {
+  height: 111px;
+  padding-top: 57.7px;
+  width: 111px; }
+.lsg-color-swatches.lsg-7-columns .lsg-color-swatch {
+  height: 94px;
+  padding-top: 45.8px;
+  width: 94px; }
+.lsg-color-swatches.lsg-8-columns .lsg-color-swatch {
+  height: 81px;
+  padding-top: 36.7px;
+  width: 81px; }
+.lsg-color-swatches.lsg-9-columns .lsg-color-swatch {
+  height: 71px;
+  padding-top: 29.7px;
+  width: 71px; }
+.lsg-color-swatches.lsg-10-columns .lsg-color-swatch {
+  height: 63px;
+  padding-top: 24.1px;
+  width: 63px; }
+.lsg-color-swatches.lsg-11-columns .lsg-color-swatch {
+  height: 56px;
+  padding-top: 19.2px;
+  width: 56px; }
+.lsg-color-swatches.lsg-12-columns .lsg-color-swatch {
+  height: 50px;
+  padding-top: 15px;
+  width: 50px; }
+.lsg-color-a1aa0e7f {
+  color: white; }
+  .lsg-color-a1aa0e7f::before {
+    background-color: #182642; }
+  .lsg-color-a1aa0e7f::after {
+    content: "#182642"; }
+.lsg-color-5077a9d4 {
+  color: black; }
+  .lsg-color-5077a9d4::before {
+    background-color: #747D8E; }
+  .lsg-color-5077a9d4::after {
+    content: "#747D8E"; }
+.lsg-color-57fca7ff {
+  color: white; }
+  .lsg-color-57fca7ff::before {
+    background-color: #09A0DB; }
+  .lsg-color-57fca7ff::after {
+    content: "#09A0DB"; }
+.lsg-color-94ed3390 {
+  color: black; }
+  .lsg-color-94ed3390::before {
+    background-color: #39B3E1; }
+  .lsg-color-94ed3390::after {
+    content: "#39B3E1"; }
+.lsg-color-2893c1a9 {
+  color: white; }
+  .lsg-color-2893c1a9::before {
+    background-color: #0F6E9E; }
+  .lsg-color-2893c1a9::after {
+    content: "#0F6E9E"; }
+.lsg-color-bb202cc5 {
+  color: black; }
+  .lsg-color-bb202cc5::before {
+    background-color: #85CE3F; }
+  .lsg-color-bb202cc5::after {
+    content: "#85CE3F"; }
+.lsg-color-567c7524 {
+  color: black; }
+  .lsg-color-567c7524::before {
+    background-color: #9DD865; }
+  .lsg-color-567c7524::after {
+    content: "#9DD865"; }
+.lsg-color-4ac6fa55 {
+  color: white; }
+  .lsg-color-4ac6fa55::before {
+    background-color: #6FAC40; }
+  .lsg-color-4ac6fa55::after {
+    content: "#6FAC40"; }
+.lsg-color-7137620a {
+  color: black; }
+  .lsg-color-7137620a::before {
+    background-color: #FDB816; }
+  .lsg-color-7137620a::after {
+    content: "#FDB816"; }
+.lsg-color-76986b85 {
+  color: black; }
+  .lsg-color-76986b85::before {
+    background-color: #FED473; }
+  .lsg-color-76986b85::after {
+    content: "#FED473"; }
+.lsg-color-75109c15 {
+  color: black; }
+  .lsg-color-75109c15::before {
+    background-color: #F79C25; }
+  .lsg-color-75109c15::after {
+    content: "#F79C25"; }
+.lsg-color-b63ab980 {
+  color: white; }
+  .lsg-color-b63ab980::before {
+    background-color: #009B74; }
+  .lsg-color-b63ab980::after {
+    content: "#009B74"; }
+.lsg-color-681239f5 {
+  color: black; }
+  .lsg-color-681239f5::before {
+    background-color: #DD4D39; }
+  .lsg-color-681239f5::after {
+    content: "#DD4D39"; }
+.lsg-color-8fad6fd0 {
+  color: black; }
+  .lsg-color-8fad6fd0::before {
+    background-color: #E78523; }
+  .lsg-color-8fad6fd0::after {
+    content: "#E78523"; }
+.lsg-color-70efd8cf {
+  color: black; }
+  .lsg-color-70efd8cf::before {
+    background-color: #63C0B9; }
+  .lsg-color-70efd8cf::after {
+    content: "#63C0B9"; }
+.lsg-color-be0dbfa7 {
+  color: white; }
+  .lsg-color-be0dbfa7::before {
+    background-color: #1280A1; }
+  .lsg-color-be0dbfa7::after {
+    content: "#1280A1"; }
+.lsg-color-76eede96 {
+  color: white; }
+  .lsg-color-76eede96::before {
+    background-color: #287AB9; }
+  .lsg-color-76eede96::after {
+    content: "#287AB9"; }
+.lsg-color-4d0c1e40 {
+  color: white; }
+  .lsg-color-4d0c1e40::before {
+    background-color: #0A3A68; }
+  .lsg-color-4d0c1e40::after {
+    content: "#0A3A68"; }
+.lsg-color-0e7b288d {
+  color: white; }
+  .lsg-color-0e7b288d::before {
+    background-color: #0E759E; }
+  .lsg-color-0e7b288d::after {
+    content: "#0E759E"; }
+.lsg-color-14a47a80 {
+  color: black; }
+  .lsg-color-14a47a80::before {
+    background-color: #58A9A2; }
+  .lsg-color-14a47a80::after {
+    content: "#58A9A2"; }
+.lsg-color-b4d74c8d {
+  color: white; }
+  .lsg-color-b4d74c8d::before {
+    background-color: #000000; }
+  .lsg-color-b4d74c8d::after {
+    content: "#000000"; }
+.lsg-color-42a7f0c0 {
+  color: black; }
+  .lsg-color-42a7f0c0::before {
+    background-color: #FFFFFF; }
+  .lsg-color-42a7f0c0::after {
+    content: "#FFFFFF"; }
+.lsg-color-16a40e69 {
+  color: white; }
+  .lsg-color-16a40e69::before {
+    background-color: #333333; }
+  .lsg-color-16a40e69::after {
+    content: "#333333"; }
+.lsg-color-09c947a9 {
+  color: white; }
+  .lsg-color-09c947a9::before {
+    background-color: #666666; }
+  .lsg-color-09c947a9::after {
+    content: "#666666"; }
+.lsg-color-b1da5126 {
+  color: black; }
+  .lsg-color-b1da5126::before {
+    background-color: #999999; }
+  .lsg-color-b1da5126::after {
+    content: "#999999"; }
+.lsg-color-dc340cb7 {
+  color: black; }
+  .lsg-color-dc340cb7::before {
+    background-color: #CCCCCC; }
+  .lsg-color-dc340cb7::after {
+    content: "#CCCCCC"; }
+.lsg-color-a234a4f8 {
+  color: black; }
+  .lsg-color-a234a4f8::before {
+    background-color: #DDDDDD; }
+  .lsg-color-a234a4f8::after {
+    content: "#DDDDDD"; }
+.lsg-color-1fa8e062 {
+  color: black; }
+  .lsg-color-1fa8e062::before {
+    background-color: #EEEEEE; }
+  .lsg-color-1fa8e062::after {
+    content: "#EEEEEE"; }
+.lsg-color-063ba3e7 {
+  color: black; }
+  .lsg-color-063ba3e7::before {
+    background-color: #F4F4F4; }
+  .lsg-color-063ba3e7::after {
+    content: "#F4F4F4"; }
+.lsg-color-a1aa0e7f {
+  color: white; }
+  .lsg-color-a1aa0e7f::before {
+    background-color: #182642; }
+  .lsg-color-a1aa0e7f::after {
+    content: "#182642"; }
+.lsg-color-5077a9d4 {
+  color: black; }
+  .lsg-color-5077a9d4::before {
+    background-color: #747D8E; }
+  .lsg-color-5077a9d4::after {
+    content: "#747D8E"; }
+.lsg-color-57fca7ff {
+  color: white; }
+  .lsg-color-57fca7ff::before {
+    background-color: #09A0DB; }
+  .lsg-color-57fca7ff::after {
+    content: "#09A0DB"; }
+.lsg-color-94ed3390 {
+  color: black; }
+  .lsg-color-94ed3390::before {
+    background-color: #39B3E1; }
+  .lsg-color-94ed3390::after {
+    content: "#39B3E1"; }
+.lsg-color-2893c1a9 {
+  color: white; }
+  .lsg-color-2893c1a9::before {
+    background-color: #0F6E9E; }
+  .lsg-color-2893c1a9::after {
+    content: "#0F6E9E"; }
+.lsg-color-bb202cc5 {
+  color: black; }
+  .lsg-color-bb202cc5::before {
+    background-color: #85CE3F; }
+  .lsg-color-bb202cc5::after {
+    content: "#85CE3F"; }
+.lsg-color-567c7524 {
+  color: black; }
+  .lsg-color-567c7524::before {
+    background-color: #9DD865; }
+  .lsg-color-567c7524::after {
+    content: "#9DD865"; }
+.lsg-color-4ac6fa55 {
+  color: white; }
+  .lsg-color-4ac6fa55::before {
+    background-color: #6FAC40; }
+  .lsg-color-4ac6fa55::after {
+    content: "#6FAC40"; }
+.lsg-color-7137620a {
+  color: black; }
+  .lsg-color-7137620a::before {
+    background-color: #FDB816; }
+  .lsg-color-7137620a::after {
+    content: "#FDB816"; }
+.lsg-color-76986b85 {
+  color: black; }
+  .lsg-color-76986b85::before {
+    background-color: #FED473; }
+  .lsg-color-76986b85::after {
+    content: "#FED473"; }
+.lsg-color-75109c15 {
+  color: black; }
+  .lsg-color-75109c15::before {
+    background-color: #F79C25; }
+  .lsg-color-75109c15::after {
+    content: "#F79C25"; }
+.lsg-color-b63ab980 {
+  color: white; }
+  .lsg-color-b63ab980::before {
+    background-color: #009B74; }
+  .lsg-color-b63ab980::after {
+    content: "#009B74"; }
+.lsg-color-681239f5 {
+  color: black; }
+  .lsg-color-681239f5::before {
+    background-color: #DD4D39; }
+  .lsg-color-681239f5::after {
+    content: "#DD4D39"; }
+.lsg-color-8fad6fd0 {
+  color: black; }
+  .lsg-color-8fad6fd0::before {
+    background-color: #E78523; }
+  .lsg-color-8fad6fd0::after {
+    content: "#E78523"; }
+.lsg-color-70efd8cf {
+  color: black; }
+  .lsg-color-70efd8cf::before {
+    background-color: #63C0B9; }
+  .lsg-color-70efd8cf::after {
+    content: "#63C0B9"; }
+.lsg-color-be0dbfa7 {
+  color: white; }
+  .lsg-color-be0dbfa7::before {
+    background-color: #1280A1; }
+  .lsg-color-be0dbfa7::after {
+    content: "#1280A1"; }
+.lsg-color-76eede96 {
+  color: white; }
+  .lsg-color-76eede96::before {
+    background-color: #287AB9; }
+  .lsg-color-76eede96::after {
+    content: "#287AB9"; }
+.lsg-color-4d0c1e40 {
+  color: white; }
+  .lsg-color-4d0c1e40::before {
+    background-color: #0A3A68; }
+  .lsg-color-4d0c1e40::after {
+    content: "#0A3A68"; }
+.lsg-color-0e7b288d {
+  color: white; }
+  .lsg-color-0e7b288d::before {
+    background-color: #0E759E; }
+  .lsg-color-0e7b288d::after {
+    content: "#0E759E"; }
+.lsg-color-14a47a80 {
+  color: black; }
+  .lsg-color-14a47a80::before {
+    background-color: #58A9A2; }
+  .lsg-color-14a47a80::after {
+    content: "#58A9A2"; }
+.lsg-color-b4d74c8d {
+  color: white; }
+  .lsg-color-b4d74c8d::before {
+    background-color: #000000; }
+  .lsg-color-b4d74c8d::after {
+    content: "#000000"; }
+.lsg-color-42a7f0c0 {
+  color: black; }
+  .lsg-color-42a7f0c0::before {
+    background-color: #FFFFFF; }
+  .lsg-color-42a7f0c0::after {
+    content: "#FFFFFF"; }
+.lsg-color-16a40e69 {
+  color: white; }
+  .lsg-color-16a40e69::before {
+    background-color: #333333; }
+  .lsg-color-16a40e69::after {
+    content: "#333333"; }
+.lsg-color-09c947a9 {
+  color: white; }
+  .lsg-color-09c947a9::before {
+    background-color: #666666; }
+  .lsg-color-09c947a9::after {
+    content: "#666666"; }
+.lsg-color-b1da5126 {
+  color: black; }
+  .lsg-color-b1da5126::before {
+    background-color: #999999; }
+  .lsg-color-b1da5126::after {
+    content: "#999999"; }
+.lsg-color-dc340cb7 {
+  color: black; }
+  .lsg-color-dc340cb7::before {
+    background-color: #CCCCCC; }
+  .lsg-color-dc340cb7::after {
+    content: "#CCCCCC"; }
+.lsg-color-a234a4f8 {
+  color: black; }
+  .lsg-color-a234a4f8::before {
+    background-color: #DDDDDD; }
+  .lsg-color-a234a4f8::after {
+    content: "#DDDDDD"; }
+.lsg-color-1fa8e062 {
+  color: black; }
+  .lsg-color-1fa8e062::before {
+    background-color: #EEEEEE; }
+  .lsg-color-1fa8e062::after {
+    content: "#EEEEEE"; }
+.lsg-color-063ba3e7 {
+  color: black; }
+  .lsg-color-063ba3e7::before {
+    background-color: #F4F4F4; }
+  .lsg-color-063ba3e7::after {
+    content: "#F4F4F4"; }
+.lsg-code-switch {
+  background-color: white;
+  background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='1000' width='1000'><path d='M0 499.809q5.859 -48.825 64.449 -109.368 78.12 -80.073 175.77 -128.898 128.898 -60.543 259.749 -60.543 136.71 1.953 259.749 60.543 103.509 52.731 175.77 128.898 64.449 72.261 64.449 109.368 -5.859 48.825 -64.449 109.368 -78.12 80.073 -175.77 128.898 -128.898 60.543 -259.749 60.543 -136.71 -1.953 -259.749 -60.543 -103.509 -52.731 -175.77 -128.898 -64.449 -72.261 -64.449 -109.368zm263.655 0q0 93.744 69.332 159.169t166.982 65.425 166.982 -65.425 69.332 -159.169 -69.332 -159.169 -166.982 -65.425 -166.982 65.425 -69.332 159.169zm85.932 -.977q0 -59.567 43.943 -101.556t106.439 -41.989 106.439 41.989 43.943 101.556 -43.943 102.532 -106.439 42.966 -106.439 -42.966 -43.943 -102.532z' fill='white'/></svg>");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  border-radius: 0;
+  height: 20px;
+  width: 20px; }
+.lsg-hide-code .lsg-code-switch {
+  background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='1000' width='1000'><path d='M0 523.831q5.859 -48.825 64.449 -109.368 78.12 -80.073 175.77 -128.898 128.898 -60.543 259.749 -60.543 29.295 0 58.59 1.953l74.214 -128.898q9.765 -15.624 23.436 -17.577 3.906 0 7.812 1.953l50.778 31.248q17.577 7.812 1.953 33.201l-56.637 101.556 -46.872 78.12 -41.013 72.261 -144.522 249.984 -41.013 72.261 -46.872 80.073 -56.637 99.603q-15.624 25.389 -31.248 15.624l-52.731 -31.248q-15.624 -7.812 0 -33.201l48.825 -85.932 -7.812 -3.906q-103.509 -52.731 -175.77 -128.898 -64.449 -72.261 -64.449 -109.368zm263.655 0q0 74.214 46.872 132.804l48.825 -83.979q-9.765 -23.436 -9.765 -48.825 0 -50.778 34.178 -90.815t84.956 -49.802l48.825 -83.979l-17.577 0q-97.65 0 -166.982 65.425t-69.332 159.169zm177.723 294.903l41.013 -70.308l17.577 0q97.65 0 166.982 -65.425t69.332 -159.169q0 -74.214 -46.872 -132.804l62.496 -109.368q1.953 1.953 3.906 2.929t3.906 .977q103.509 52.731 175.77 128.898 64.449 72.261 64.449 109.368 -5.859 48.825 -64.449 109.368 -78.12 80.073 -175.77 128.898 -128.898 60.543 -259.749 60.543 -25.389 0 -58.59 -3.906zm89.838 -154.287l109.368 -189.441q9.765 25.389 9.765 48.825 0 50.778 -34.178 89.838t-84.956 50.778z' fill='white'/></svg>"); }
+.lsg-hide-code .lsg-code-block {
+  display: none; }
+.lsg-search-box {
+  -webkit-appearance: none;
+  background: whitesmoke;
+  border: 0;
+  border-radius: 0;
+  color: black;
+  display: block;
+  font-family: helvetica neue, helvetica, sans-serif;
+  font-size: 21px;
+  line-height: inherit;
+  margin: 20px auto;
+  max-width: 720px;
+  outline: 0;
+  padding: 10px;
+  width: 100%; }
+  .lsg-search-box::-moz-placeholder {
+    color: #a4a4a4; }
+  .lsg-search-box::-webkit-input-placeholder {
+    color: #a4a4a4; }
+  .lsg-search-box:-ms-input-placeholder {
+    color: #a4a4a4; }
+  .lsg-search-box::placeholder {
+    color: #a4a4a4; }
+    </style>
+    
+  </head>
+  <body class="lsg">
+    
+    
+    <article class="lsg-container">
+      <div>
+<section id="sass/buttons">
+    <h2 class="lsg-headline" id="buttons"><a class="lsg-anchor" href="#buttons"></a>Buttons</h2>
+  <section class="lsg-example lsg-html-example" id="buttons-1">
+    <div class="lsg-html">
+      <button class="button button" href="#">Base Button</button>
+    </div>
+    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>button</em></b> <b>class</b>=&quot;button button&quot; <b>href</b>=&quot;#&quot;<b>&gt;</b>Base Button<b>&lt;/<em>button</em>&gt;</b></code></pre>
+  </section>
+  <section class="lsg-example lsg-html-example" id="buttons-2">
+    <div class="lsg-html">
+      <button class="button button--primary" href="#">Primary Button</button>
+    </div>
+    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>button</em></b> <b>class</b>=&quot;button button--primary&quot; <b>href</b>=&quot;#&quot;<b>&gt;</b>Primary Button<b>&lt;/<em>button</em>&gt;</b></code></pre>
+  </section>
+  <section class="lsg-example lsg-html-example" id="buttons-3">
+    <div class="lsg-html">
+      <button class="button button--secondary">Secondary button</button>
+    </div>
+    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>button</em></b> <b>class</b>=&quot;button button--secondary&quot;<b>&gt;</b>Secondary button<b>&lt;/<em>button</em>&gt;</b></code></pre>
+  </section>
+  <section class="lsg-example lsg-html-example" id="buttons-4">
+    <div class="lsg-html">
+      <button class="button button--tertiary">Tertiary button</button>
+    </div>
+    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>button</em></b> <b>class</b>=&quot;button button--tertiary&quot;<b>&gt;</b>Tertiary button<b>&lt;/<em>button</em>&gt;</b></code></pre>
+  </section>
+  <section class="lsg-example lsg-html-example" id="buttons-5">
+    <div class="lsg-html">
+      <button class="button button--tertiary-inverse">Tertiary Inverse button</button>
+    </div>
+    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>button</em></b> <b>class</b>=&quot;button button--tertiary-inverse&quot;<b>&gt;</b>Tertiary Inverse button<b>&lt;/<em>button</em>&gt;</b></code></pre>
+  </section>
+  <section class="lsg-example lsg-html-example" id="buttons-6">
+    <div class="lsg-html">
+      <button class="button button--negative">Negative button</button>
+    </div>
+    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>button</em></b> <b>class</b>=&quot;button button--negative&quot;<b>&gt;</b>Negative button<b>&lt;/<em>button</em>&gt;</b></code></pre>
+  </section>
+  <section class="lsg-example lsg-html-example" id="buttons-7">
+    <div class="lsg-html">
+      <button class="button button--small">Small button</button>
+    </div>
+    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>button</em></b> <b>class</b>=&quot;button button--small&quot;<b>&gt;</b>Small button<b>&lt;/<em>button</em>&gt;</b></code></pre>
+  </section>
+  <section class="lsg-example lsg-html-example" id="buttons-8">
+    <div class="lsg-html">
+      <button class="button button--medium">Medium button</button>
+    </div>
+    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>button</em></b> <b>class</b>=&quot;button button--medium&quot;<b>&gt;</b>Medium button<b>&lt;/<em>button</em>&gt;</b></code></pre>
+  </section>
+  <section class="lsg-example lsg-html-example" id="buttons-9">
+    <div class="lsg-html">
+      <button class="button button--large">Large button</button>
+    </div>
+    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>button</em></b> <b>class</b>=&quot;button button--large&quot;<b>&gt;</b>Large button<b>&lt;/<em>button</em>&gt;</b></code></pre>
+  </section>
+  <section class="lsg-example lsg-html-example" id="buttons-10">
+    <div class="lsg-html">
+      <button class="button button--massive">Massive button</button>
+    </div>
+    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>button</em></b> <b>class</b>=&quot;button button--massive&quot;<b>&gt;</b>Massive button<b>&lt;/<em>button</em>&gt;</b></code></pre>
+  </section>
+  </section>
+  
+</div>
+<div>
+<section id="sass/styleguide">
+    <h2 class="lsg-headline" id="cb-main-branding-colors"><a class="lsg-anchor" href="#cb-main-branding-colors"></a>CB Main Branding Colors</h2>
+  <ul class="lsg-color-swatches lsg-3-columns">
+  <li class="lsg-color-swatch lsg-empty"></li>
+  <li class="lsg-color-swatch lsg-color-a1aa0e7f"><span class="lsg-color-swatch-source">$anchor-blue</span><span class="lsg-color-swatch-value lsg-color-a1aa0e7f"></span></li>
+  <li class="lsg-color-swatch lsg-color-5077a9d4"><span class="lsg-color-swatch-source">$anchor-blue-light</span><span class="lsg-color-swatch-value lsg-color-5077a9d4"></span></li>
+  <li class="lsg-color-swatch lsg-color-57fca7ff"><span class="lsg-color-swatch-source">$sky-blue</span><span class="lsg-color-swatch-value lsg-color-57fca7ff"></span></li>
+  <li class="lsg-color-swatch lsg-color-94ed3390"><span class="lsg-color-swatch-source">$sky-blue-light</span><span class="lsg-color-swatch-value lsg-color-94ed3390"></span></li>
+  <li class="lsg-color-swatch lsg-color-2893c1a9"><span class="lsg-color-swatch-source">$sky-blue-dark</span><span class="lsg-color-swatch-value lsg-color-2893c1a9"></span></li>
+  <li class="lsg-color-swatch lsg-color-bb202cc5"><span class="lsg-color-swatch-source">$lime</span><span class="lsg-color-swatch-value lsg-color-bb202cc5"></span></li>
+  <li class="lsg-color-swatch lsg-color-567c7524"><span class="lsg-color-swatch-source">$lime-light</span><span class="lsg-color-swatch-value lsg-color-567c7524"></span></li>
+  <li class="lsg-color-swatch lsg-color-4ac6fa55"><span class="lsg-color-swatch-source">$lime-dark</span><span class="lsg-color-swatch-value lsg-color-4ac6fa55"></span></li>
+  <li class="lsg-color-swatch lsg-color-7137620a"><span class="lsg-color-swatch-source">$marigold</span><span class="lsg-color-swatch-value lsg-color-7137620a"></span></li>
+  <li class="lsg-color-swatch lsg-color-76986b85"><span class="lsg-color-swatch-source">$marigold-light</span><span class="lsg-color-swatch-value lsg-color-76986b85"></span></li>
+  <li class="lsg-color-swatch lsg-color-75109c15"><span class="lsg-color-swatch-source">$marigold-dark</span><span class="lsg-color-swatch-value lsg-color-75109c15"></span></li>
+  <li class="lsg-color-swatch lsg-color-b63ab980"><span class="lsg-color-swatch-source">$emerald</span><span class="lsg-color-swatch-value lsg-color-b63ab980"></span></li>
+  </ul>
+  <h2 class="lsg-headline" id="cb-secondary-and-accent-colors"><a class="lsg-anchor" href="#cb-secondary-and-accent-colors"></a>CB Secondary and Accent Colors</h2>
+  <ul class="lsg-color-swatches lsg-3-columns">
+  <li class="lsg-color-swatch lsg-color-681239f5"><span class="lsg-color-swatch-source">$red</span><span class="lsg-color-swatch-value lsg-color-681239f5"></span></li>
+  <li class="lsg-color-swatch lsg-color-8fad6fd0"><span class="lsg-color-swatch-source">$orange</span><span class="lsg-color-swatch-value lsg-color-8fad6fd0"></span></li>
+  <li class="lsg-color-swatch lsg-color-70efd8cf"><span class="lsg-color-swatch-source">$teal</span><span class="lsg-color-swatch-value lsg-color-70efd8cf"></span></li>
+  <li class="lsg-color-swatch lsg-color-be0dbfa7"><span class="lsg-color-swatch-source">$azure-two</span><span class="lsg-color-swatch-value lsg-color-be0dbfa7"></span></li>
+  <li class="lsg-color-swatch lsg-color-76eede96"><span class="lsg-color-swatch-source">$azure-blue</span><span class="lsg-color-swatch-value lsg-color-76eede96"></span></li>
+  </ul>
+  <h2 class="lsg-headline" id="cb-gradient"><a class="lsg-anchor" href="#cb-gradient"></a>CB Gradient</h2>
+  <ul class="lsg-color-swatches lsg-3-columns">
+  <li class="lsg-color-swatch lsg-color-4d0c1e40"><span class="lsg-color-swatch-source">$gradient-dark</span><span class="lsg-color-swatch-value lsg-color-4d0c1e40"></span></li>
+  <li class="lsg-color-swatch lsg-color-0e7b288d"><span class="lsg-color-swatch-source">$gradient-medium</span><span class="lsg-color-swatch-value lsg-color-0e7b288d"></span></li>
+  <li class="lsg-color-swatch lsg-color-14a47a80"><span class="lsg-color-swatch-source">$gradient-light</span><span class="lsg-color-swatch-value lsg-color-14a47a80"></span></li>
+  </ul>
+  <h2 class="lsg-headline" id="basic-colors"><a class="lsg-anchor" href="#basic-colors"></a>Basic Colors</h2>
+  <ul class="lsg-color-swatches lsg-3-columns">
+  <li class="lsg-color-swatch lsg-color-b4d74c8d"><span class="lsg-color-swatch-source">$black</span><span class="lsg-color-swatch-value lsg-color-b4d74c8d"></span></li>
+  <li class="lsg-color-swatch lsg-color-42a7f0c0"><span class="lsg-color-swatch-source">$white</span><span class="lsg-color-swatch-value lsg-color-42a7f0c0"></span></li>
+  <li class="lsg-color-swatch lsg-color-16a40e69"><span class="lsg-color-swatch-source">$grey-darkest</span><span class="lsg-color-swatch-value lsg-color-16a40e69"></span></li>
+  <li class="lsg-color-swatch lsg-color-09c947a9"><span class="lsg-color-swatch-source">$grey-darker</span><span class="lsg-color-swatch-value lsg-color-09c947a9"></span></li>
+  <li class="lsg-color-swatch lsg-color-b1da5126"><span class="lsg-color-swatch-source">$grey-dark</span><span class="lsg-color-swatch-value lsg-color-b1da5126"></span></li>
+  <li class="lsg-color-swatch lsg-empty"></li>
+  <li class="lsg-color-swatch lsg-color-dc340cb7"><span class="lsg-color-swatch-source">$grey</span><span class="lsg-color-swatch-value lsg-color-dc340cb7"></span></li>
+  <li class="lsg-color-swatch lsg-color-a234a4f8"><span class="lsg-color-swatch-source">$grey-light</span><span class="lsg-color-swatch-value lsg-color-a234a4f8"></span></li>
+  <li class="lsg-color-swatch lsg-color-1fa8e062"><span class="lsg-color-swatch-source">$grey-lighter</span><span class="lsg-color-swatch-value lsg-color-1fa8e062"></span></li>
+  <li class="lsg-color-swatch lsg-color-063ba3e7"><span class="lsg-color-swatch-source">$grey-lightest</span><span class="lsg-color-swatch-value lsg-color-063ba3e7"></span></li>
+  </ul>
+  </section>
+  
+</div>
+<h2 class="lsg-headline" id="cb-main-branding-colors"><a class="lsg-anchor" href="#cb-main-branding-colors"></a>CB Main Branding Colors</h2>
+<ul class="lsg-color-swatches lsg-3-columns">
+<li class="lsg-color-swatch lsg-empty"></li>
+<li class="lsg-color-swatch lsg-color-a1aa0e7f"><span class="lsg-color-swatch-source">$anchor-blue</span><span class="lsg-color-swatch-value lsg-color-a1aa0e7f"></span></li>
+<li class="lsg-color-swatch lsg-color-5077a9d4"><span class="lsg-color-swatch-source">$anchor-blue-light</span><span class="lsg-color-swatch-value lsg-color-5077a9d4"></span></li>
+<li class="lsg-color-swatch lsg-color-57fca7ff"><span class="lsg-color-swatch-source">$sky-blue</span><span class="lsg-color-swatch-value lsg-color-57fca7ff"></span></li>
+<li class="lsg-color-swatch lsg-color-94ed3390"><span class="lsg-color-swatch-source">$sky-blue-light</span><span class="lsg-color-swatch-value lsg-color-94ed3390"></span></li>
+<li class="lsg-color-swatch lsg-color-2893c1a9"><span class="lsg-color-swatch-source">$sky-blue-dark</span><span class="lsg-color-swatch-value lsg-color-2893c1a9"></span></li>
+<li class="lsg-color-swatch lsg-color-bb202cc5"><span class="lsg-color-swatch-source">$lime</span><span class="lsg-color-swatch-value lsg-color-bb202cc5"></span></li>
+<li class="lsg-color-swatch lsg-color-567c7524"><span class="lsg-color-swatch-source">$lime-light</span><span class="lsg-color-swatch-value lsg-color-567c7524"></span></li>
+<li class="lsg-color-swatch lsg-color-4ac6fa55"><span class="lsg-color-swatch-source">$lime-dark</span><span class="lsg-color-swatch-value lsg-color-4ac6fa55"></span></li>
+<li class="lsg-color-swatch lsg-color-7137620a"><span class="lsg-color-swatch-source">$marigold</span><span class="lsg-color-swatch-value lsg-color-7137620a"></span></li>
+<li class="lsg-color-swatch lsg-color-76986b85"><span class="lsg-color-swatch-source">$marigold-light</span><span class="lsg-color-swatch-value lsg-color-76986b85"></span></li>
+<li class="lsg-color-swatch lsg-color-75109c15"><span class="lsg-color-swatch-source">$marigold-dark</span><span class="lsg-color-swatch-value lsg-color-75109c15"></span></li>
+<li class="lsg-color-swatch lsg-color-b63ab980"><span class="lsg-color-swatch-source">$emerald</span><span class="lsg-color-swatch-value lsg-color-b63ab980"></span></li>
+</ul>
+<h2 class="lsg-headline" id="cb-secondary-and-accent-colors"><a class="lsg-anchor" href="#cb-secondary-and-accent-colors"></a>CB Secondary and Accent Colors</h2>
+<ul class="lsg-color-swatches lsg-3-columns">
+<li class="lsg-color-swatch lsg-color-681239f5"><span class="lsg-color-swatch-source">$red</span><span class="lsg-color-swatch-value lsg-color-681239f5"></span></li>
+<li class="lsg-color-swatch lsg-color-8fad6fd0"><span class="lsg-color-swatch-source">$orange</span><span class="lsg-color-swatch-value lsg-color-8fad6fd0"></span></li>
+<li class="lsg-color-swatch lsg-color-70efd8cf"><span class="lsg-color-swatch-source">$teal</span><span class="lsg-color-swatch-value lsg-color-70efd8cf"></span></li>
+<li class="lsg-color-swatch lsg-color-be0dbfa7"><span class="lsg-color-swatch-source">$azure-two</span><span class="lsg-color-swatch-value lsg-color-be0dbfa7"></span></li>
+<li class="lsg-color-swatch lsg-color-76eede96"><span class="lsg-color-swatch-source">$azure-blue</span><span class="lsg-color-swatch-value lsg-color-76eede96"></span></li>
+</ul>
+<h2 class="lsg-headline" id="cb-gradient"><a class="lsg-anchor" href="#cb-gradient"></a>CB Gradient</h2>
+<ul class="lsg-color-swatches lsg-3-columns">
+<li class="lsg-color-swatch lsg-color-4d0c1e40"><span class="lsg-color-swatch-source">$gradient-dark</span><span class="lsg-color-swatch-value lsg-color-4d0c1e40"></span></li>
+<li class="lsg-color-swatch lsg-color-0e7b288d"><span class="lsg-color-swatch-source">$gradient-medium</span><span class="lsg-color-swatch-value lsg-color-0e7b288d"></span></li>
+<li class="lsg-color-swatch lsg-color-14a47a80"><span class="lsg-color-swatch-source">$gradient-light</span><span class="lsg-color-swatch-value lsg-color-14a47a80"></span></li>
+</ul>
+<h2 class="lsg-headline" id="basic-colors"><a class="lsg-anchor" href="#basic-colors"></a>Basic Colors</h2>
+<ul class="lsg-color-swatches lsg-3-columns">
+<li class="lsg-color-swatch lsg-color-b4d74c8d"><span class="lsg-color-swatch-source">$black</span><span class="lsg-color-swatch-value lsg-color-b4d74c8d"></span></li>
+<li class="lsg-color-swatch lsg-color-42a7f0c0"><span class="lsg-color-swatch-source">$white</span><span class="lsg-color-swatch-value lsg-color-42a7f0c0"></span></li>
+<li class="lsg-color-swatch lsg-color-16a40e69"><span class="lsg-color-swatch-source">$grey-darkest</span><span class="lsg-color-swatch-value lsg-color-16a40e69"></span></li>
+<li class="lsg-color-swatch lsg-color-09c947a9"><span class="lsg-color-swatch-source">$grey-darker</span><span class="lsg-color-swatch-value lsg-color-09c947a9"></span></li>
+<li class="lsg-color-swatch lsg-color-b1da5126"><span class="lsg-color-swatch-source">$grey-dark</span><span class="lsg-color-swatch-value lsg-color-b1da5126"></span></li>
+<li class="lsg-color-swatch lsg-empty"></li>
+<li class="lsg-color-swatch lsg-color-dc340cb7"><span class="lsg-color-swatch-source">$grey</span><span class="lsg-color-swatch-value lsg-color-dc340cb7"></span></li>
+<li class="lsg-color-swatch lsg-color-a234a4f8"><span class="lsg-color-swatch-source">$grey-light</span><span class="lsg-color-swatch-value lsg-color-a234a4f8"></span></li>
+<li class="lsg-color-swatch lsg-color-1fa8e062"><span class="lsg-color-swatch-source">$grey-lighter</span><span class="lsg-color-swatch-value lsg-color-1fa8e062"></span></li>
+<li class="lsg-color-swatch lsg-color-063ba3e7"><span class="lsg-color-swatch-source">$grey-lightest</span><span class="lsg-color-swatch-value lsg-color-063ba3e7"></span></li>
+</ul>
+    </article>
+    
+    
+    <a class="lsg-logo" href="https://livingstyleguide.org">
+  Made with The LivingStyleGuide Gem
+</a>
+  </body>
+</html>

@@ -2,6 +2,7 @@ node_modules/
 bower_components/*/
 .sass-cache/
 .idea/
+sass/bourbon/
 
 .env
 .DS_Store

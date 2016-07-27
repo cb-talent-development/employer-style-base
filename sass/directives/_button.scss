@@ -1,6 +1,6 @@
 %disabled {
-  opacity: 0.4;
-  filter: alpha(opacity=40); /* IE8 */
+  opacity: 0.3;
+  filter: alpha(opacity=30); /* IE8 */
 }
 
 %button {
@@ -87,21 +87,21 @@
   }
 }
 
-%primary-inverse-button {
-  background-color: $primary-inverse-button-color;
-  color: $primary-inverse-button-text-color;
-  border-color: $primary-inverse-button-border-color;
+%tertiary-button {
+  background-color: $tertiary-button-color;
+  color: $tertiary-button-text-color;
+  border-color: $tertiary-button-border-color;
 
   &:hover {
-    background-color: $primary-inverse-hover-button-color;
-    color: $primary-inverse-hover-button-text-color;
-    border-color: $primary-inverse-hover-button-border-color;
+    background-color: $tertiary-hover-button-color;
+    color: $tertiary-hover-button-text-color;
+    border-color: $tertiary-hover-button-border-color;
   }
 
   &:active {
-    background-color: $primary-inverse-active-button-color;
-    color: $primary-inverse-active-button-text-color;
-    border-color: $primary-inverse-active-button-border-color;
+    background-color: $tertiary-active-button-color;
+    color: $tertiary-active-button-text-color;
+    border-color: $tertiary-active-button-border-color;
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
@@ -109,27 +109,93 @@
   }
 }
 
-%secondary-secondary-button {
-  background-color: $secondary-inverse-button-color;
-  color: $secondary-inverse-button-text-color;
-  border-color: $secondary-inverse-button-border-color;
+%tertiary-inverse-button {
+  background-color: $tertiary-inverse-button-color;
+  color: $tertiary-inverse-button-text-color;
+  border-color: $tertiary-inverse-button-border-color;
 
   &:hover {
-    background-color: $secondary-inverse-hover-button-color;
-    color: $secondary-inverse-hover-button-text-color;
-    border-color: $secondary-inverse-hover-button-border-color;
+    background-color: $tertiary-inverse-hover-button-color;
+    color: $tertiary-inverse-hover-button-text-color;
+    border-color: $tertiary-inverse-hover-button-border-color;
   }
 
   &:active {
-    background-color: $secondary-inverse-active-button-color;
-    color: $secondary-inverse-active-button-text-color;
-    border-color: $secondary-inverse-active-button-border-color;
+    background-color: $tertiary-inverse-active-button-color;
+    color: $tertiary-inverse-active-button-text-color;
+    border-color: $tertiary-inverse-active-button-border-color;
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
     @extend %disabled;
   }
 }
+
+%negative-button {
+  background-color: $negative-button-color;
+  color: $negative-button-text-color;
+  border-color: $negative-button-border-color;
+
+  &:hover {
+    background-color: $negative-hover-button-color;
+    color: $negative-hover-button-text-color;
+    border-color: $negative-hover-button-border-color;
+  }
+
+  &:active {
+    background-color: $negative-active-button-color;
+    color: $negative-active-button-text-color;
+    border-color: $negative-active-button-border-color;
+  }
+
+  &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
+    @extend %disabled;
+  }
+}
+
+// %primary-inverse-button {
+//   background-color: $primary-inverse-button-color;
+//   color: $primary-inverse-button-text-color;
+//   border-color: $primary-inverse-button-border-color;
+//
+//   &:hover {
+//     background-color: $primary-inverse-hover-button-color;
+//     color: $primary-inverse-hover-button-text-color;
+//     border-color: $primary-inverse-hover-button-border-color;
+//   }
+//
+//   &:active {
+//     background-color: $primary-inverse-active-button-color;
+//     color: $primary-inverse-active-button-text-color;
+//     border-color: $primary-inverse-active-button-border-color;
+//   }
+//
+//   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
+//     @extend %disabled;
+//   }
+// }
+
+// %secondary-secondary-button {
+//   background-color: $secondary-inverse-button-color;
+//   color: $secondary-inverse-button-text-color;
+//   border-color: $secondary-inverse-button-border-color;
+//
+//   &:hover {
+//     background-color: $secondary-inverse-hover-button-color;
+//     color: $secondary-inverse-hover-button-text-color;
+//     border-color: $secondary-inverse-hover-button-border-color;
+//   }
+//
+//   &:active {
+//     background-color: $secondary-inverse-active-button-color;
+//     color: $secondary-inverse-active-button-text-color;
+//     border-color: $secondary-inverse-active-button-border-color;
+//   }
+//
+//   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
+//     @extend %disabled;
+//   }
+// }
 
 // Button Sizes
 

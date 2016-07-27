@@ -90,7 +90,7 @@ $footer-height: $header-height;
 $footer-accent-height: $header-accent-height;
 
 // Form Elements
-$base-radio-box-shadow: 0 0 0 1px $grey-lighter inset, 0 0 0 9px $white inset, 0 0 0 10px $grey-lighter inset;
-$hover-radio-box-shadow: 0 0 0 1px $accent-active inset, 0 0 0 9px $white inset, 0 0 0 16px $accent-active inset;
-$checked-radio-box-shadow: 0 0 0 1px $grey-lighter inset, 0 0 0 9px $white inset, 0 0 0 16px $accent inset;
-$active-radio-box-shadow: 0 0 0 8px $accent-active inset, 0 0 0 16px $white inset;
+$base-radio-box-shadow: 0 0 0 1px $grey inset, 0 0 0 9px $white inset, 0 0 0 10px $grey inset;
+$hover-radio-box-shadow: 0 0 0 1px $alert-primary-active inset, 0 0 0 9px $white inset, 0 0 0 16px $alert-primary-active inset;
+$checked-radio-box-shadow: 0 0 0 1px $grey inset, 0 0 0 9px $white inset, 0 0 0 16px $alert-primary inset;
+$active-radio-box-shadow: 0 0 0 8px $alert-primary-active inset, 0 0 0 16px $white inset;

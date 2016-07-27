@@ -68,7 +68,7 @@ picture {
 }
 
 blockquote {
-  border-left: 2px solid $base-border-color;
+  border-left: 2px solid $base-border-primary-color;
   color: lighten($body-text-color, 15);
   margin: $base-spacing 0;
   padding-left: $base-spacing / 2;

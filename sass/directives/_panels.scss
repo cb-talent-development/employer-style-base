@@ -9,7 +9,8 @@
   background-color: $panel-primary;
 }
 
-%panel-secondary {
-  @extend %panel;
-  background-color: $panel-secondary;
-}
+// TODO Not currently using secondary panels, review style guide, rename panel-primary?
+// %panel-secondary {
+//   @extend %panel;
+//   background-color: $panel-secondary;
+// }

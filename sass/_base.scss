@@ -15,6 +15,9 @@
 @import "directives/panels";
 @import "directives/visibility";
 
+@import "typography";
+@import "buttons";
+
 .employer-scope {
   // Reset
   // @import 'reset';
@@ -27,8 +30,7 @@
   // font-size: $base-font-size;
   // line-height: $base-line-height;
 
-  @import "typography";
+
   // @import "forms";
   // @import "lists";
-  @import "buttons";
 }

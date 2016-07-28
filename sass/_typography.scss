@@ -1,3 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+// Typography
+$lato: Lato, 'Lato', Helvetica, Arial, sans-serif;
+
+$base-font-family: $lato;
+$header-font-family: $lato;
+$form-font-family: $base-font-family;
+
 h1,
 h2,
 h3,

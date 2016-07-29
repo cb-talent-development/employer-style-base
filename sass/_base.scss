@@ -25,10 +25,13 @@
   // Typography and Elements
   @include font-feature-settings("kern", "liga", "frac", "pnum");
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-color: $base-background-color;
   color: $body-text-color;
-  // font-size: $base-font-size;
-  // line-height: $base-line-height;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: 400;
 
 
   // @import "forms";

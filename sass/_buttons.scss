@@ -11,7 +11,7 @@ input[type="submit"] {
 }
 
 .button.button--secondary {
-  @extend %secondary-button;
+  @extend %tertiary-button;
 }
 
 // .button.button--secondary.text--white {

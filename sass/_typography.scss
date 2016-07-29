@@ -45,7 +45,9 @@ h6 {
 }
 
 p {
+  font-size: $base-font-size;
   margin: 0 0 ($base-spacing / 2);
+  line-height: $base-line-height;
 }
 
 a {

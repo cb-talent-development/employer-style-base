@@ -11,20 +11,21 @@ $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 
+$base-bottom-margin: $base-spacing / 2;
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-.text--headline,
-.text--headline a {
+h6 {
   font-family: $header-font-family;
   line-height: $header-line-height;
   font-weight: $font-weight-bold;
   color: $header-text-color;
   text-decoration: none;
   margin: 0;
+  margin-bottom: $base-bottom-margin;
 }
 
 h1,
@@ -59,7 +60,7 @@ h6,
 
 p {
   font-size: $base-font-size;
-  margin-bottom: ($base-spacing / 2);
+  margin-bottom: $base-bottom-margin;
   line-height: $base-line-height;
 
   &:last-child {

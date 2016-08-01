@@ -11,6 +11,14 @@ $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 
+.light {
+  font-weight: $font-weight-light;
+}
+
+.heavy {
+  font-weight: $font-weight-bold;
+}
+
 $base-bottom-margin: $base-spacing / 2;
 
 h1,

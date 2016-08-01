@@ -7,47 +7,64 @@ $base-font-family: $lato;
 $header-font-family: $lato;
 $form-font-family: $base-font-family;
 
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  color: $header-text-color;
+h6,
+.text--headline,
+.text--headline a {
   font-family: $header-font-family;
   line-height: $header-line-height;
-  font-weight: 700;
+  font-weight: $font-weight-bold;
+  color: $header-text-color;
+  text-decoration: none;
   margin: 0;
 }
 
-h1 {
+h1,
+.text--headline-1 {
   font-size: $h1-font-size;
 }
 
-h2 {
+h2,
+.text--headline-2 {
   font-size: $h2-font-size;
 }
 
-h3 {
+h3,
+.text--headline-3 {
   font-size: $h3-font-size;
 }
 
-h4 {
+h4,
+.text--headline-4 {
   font-size: $h4-font-size;
 }
 
-h5 {
+h5,
+.text--headline-5 {
   font-size: $h5-font-size;
 }
 
-h6 {
+h6,
+.text--headline-6 {
   font-size: $h6-font-size;
 }
 
 p {
   font-size: $base-font-size;
-  margin: 0 0 ($base-spacing / 2);
+  margin-bottom: ($base-spacing / 2);
   line-height: $base-line-height;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 a {
@@ -62,10 +79,8 @@ hr {
   margin: $base-spacing 0;
 }
 
-img,
-picture {
-  margin: 0;
-  max-width: 100%;
+ul.list--body {
+  margin-left: 20px;
 }
 
 blockquote {
@@ -82,4 +97,17 @@ cite {
   &:before {
     content: "\2014 \00A0";
   }
+}
+
+// UX Style guide does not specify these styles, but this class is also not currently in use. Consult with UX if using.
+.text--caption {
+  font-weight: $font-weight-normal;
+  font-size: $caption-font-size;
+  line-height: $base-line-height;
+}
+
+.text--details {
+  font-weight: $font-weight-normal;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
 }

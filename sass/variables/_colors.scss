@@ -22,6 +22,7 @@ $emerald: #009B74;
 $red: #DD4D39;
 $orange: #E78523;
 $teal: #63C0B9;
+$purple: #662d91;
 
 $azure-two: #1280A1;
 $azure-blue: #287AB9;
@@ -60,6 +61,7 @@ $base-accent-color: $emerald;
 // Links
 $base-link-color: $sky-blue;
 $hover-link-color: $sky-blue-light;
+$visited-link-color: $purple;
 
 // Backgrounds
 $base-background-color: $grey-lightest;
@@ -167,3 +169,8 @@ $base-border-secondary: 1px solid $base-border-secondary-color;
 $form-border-color: $base-border-primary-color;
 $form-border-color-hover: darken($base-border-primary-color, 10);
 $form-border-color-focus: $alert-primary;
+
+// TODO Adding links here for EM-384. Can remove and use typography.scss with EM-386
+a {
+  @extend %link;
+}

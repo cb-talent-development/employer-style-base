@@ -77,7 +77,6 @@ $alert-warning: $marigold;
 $alert-success: $lime;
 
 // Header/Footer
-// TODO Will update header color assignments in EM-386
 $header-mobile-icon-color: $anchor-blue;
 $header-mobile-text-hover-color: $white;
 $header-text-color: $anchor-blue;
@@ -161,9 +160,7 @@ $inactive-carousel-button-color: $grey-lighter;
 
 // Border
 $base-border-primary-color: $grey-light;
-$base-border-secondary-color: $grey-lighter;
 $base-border: 1px solid $base-border-primary-color;
-$base-border-secondary: 1px solid $base-border-secondary-color;
 
 // Form
 $form-border-color: $base-border-primary-color;

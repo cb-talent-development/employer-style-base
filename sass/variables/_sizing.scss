@@ -7,6 +7,7 @@ $form-font-family: $base-font-family;
 
 // Font Sizes
 $base-font-size: 1em;
+$top-bar--nav-font: 13px;
 $h1-font-size: $base-font-size * 3;
 $h2-font-size: $base-font-size * 2.25;
 $h3-font-size: $base-font-size * 1.875;
@@ -78,16 +79,10 @@ $massive-button-vertical-padding: $base-input-font-size * 0.375;
 $massive-button-horizontal-padding: $base-input-font-size * 2;
 
 // Header
-$header-padding: 15px;
-$header-accent-height: 10px;
-$header-height: 50px + $header-accent-height;
-$header-content-height: $header-height - ($header-padding * 2) - $header-accent-height;
-
-// Footer
-$footer-padding: $header-padding;
-$footer-margin: $base-spacing;
-$footer-height: $header-height;
-$footer-accent-height: $header-accent-height;
+$top-bar--height: 60px;
+$top-bar--height--mobile: 42px;
+$top-bar--logo-width: 192px;
+$top-bar--logo-height: 32px;
 
 // Form Elements
 $base-radio-box-shadow: 0 0 0 1px $grey inset, 0 0 0 9px $white inset, 0 0 0 10px $grey inset;

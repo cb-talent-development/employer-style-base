@@ -39,18 +39,7 @@ p {
 }
 
 a {
-  @include transition(color 0.1s linear);
-  color: $base-link-color;
-  text-decoration: none;
-
-  &:hover {
-    color: $hover-link-color;
-  }
-
-  &:active, &:focus {
-    color: $hover-link-color;
-    outline: none;
-  }
+  @extend %link;
 }
 
 hr {

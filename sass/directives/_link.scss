@@ -1,0 +1,19 @@
+%link {
+  @include transition(color 0.1s linear);
+  color: $base-link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $visited-link-color;
+  }
+
+  &:active, &:focus {
+    outline: none;
+  }
+}

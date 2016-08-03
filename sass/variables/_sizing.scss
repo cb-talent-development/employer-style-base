@@ -31,6 +31,10 @@ $base-spacing: $base-line-height * 1em;
 $base-z-index: 0;
 $base-bottom-margin: $base-spacing / 2;
 
+// UI components
+$direction-arrow-size: 2em;
+$close-x-size: 18px;
+
 // Forms
 $form-border-radius: $base-border-radius;
 $form-box-shadow: inset 0 1px 3px rgba($black, 0.06);

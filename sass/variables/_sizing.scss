@@ -1,7 +1,6 @@
 // Font Sizes
 $base-font-size: 1em;
-
-$top-bar--nav-font: 13px;
+$small-font-size: 13px;
 
 // TODO used in footer copyright and on email form error messages. No guidance in UX style guide. Undecided on whether we need variables
 $text-smaller: 80%;
@@ -15,7 +14,7 @@ $h5-font-size: $base-font-size * 0.83;
 $h6-font-size: $base-font-size * 0.67;
 
 $subhead-font-size: $base-font-size * 1.5;
-$caption-font-size: $base-font-size * 0.83;
+$caption-font-size: $small-font-size;
 
 // Line height
 $base-line-height: 1.5;
@@ -84,6 +83,7 @@ $top-bar--height: 60px;
 $top-bar--height--mobile: 42px;
 $top-bar--logo-width: 192px;
 $top-bar--logo-height: 32px;
+$top-bar-font-size: $small-font-size;
 
 // Form Elements
 $base-radio-box-shadow: 0 0 0 1px $grey inset, 0 0 0 9px $white inset, 0 0 0 10px $grey inset;

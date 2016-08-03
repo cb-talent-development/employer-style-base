@@ -1,0 +1,41 @@
+.tile {
+  float: left;
+  text-align: center;
+  margin: 6px;
+  padding-bottom: 15px;
+  background-color: white;
+  border-bottom: $base-border;
+  box-shadow: $component-box-shadow;
+  border-radius: $minor-border-radius;
+
+  &:hover {
+    box-shadow: $component-box-shadow-hover;
+
+    .color_strip {
+      height: $small-strip-height + 0.1rem;
+    }
+  }
+}
+
+.color_strip {
+  height: $small-strip-height;
+  margin-bottom: 15px;
+  border-top-right-radius: $minor-border-radius;
+  border-top-left-radius: $minor-border-radius;
+}
+
+.orange {
+  background-color: $branding-candidate-marketplace;
+}
+
+.green {
+  background-color: $branding-sourcing-technologies;
+}
+
+.blue {
+  background-color: $branding-recruitment-software;
+}
+
+.teal {
+  background-color: $branding-recruitment-analytics;
+}

@@ -3,24 +3,17 @@
 // Typography
 $lato: Lato, 'Lato', Helvetica, Arial, sans-serif;
 
+// Typefaces
 $base-font-family: $lato;
 $header-font-family: $lato;
 $form-font-family: $base-font-family;
 
+// Font Weights
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 
-.light {
-  font-weight: $font-weight-light;
-}
-
-.heavy {
-  font-weight: $font-weight-bold;
-}
-
-$base-bottom-margin: $base-spacing / 2;
-
+// Headers
 h1,
 h2,
 h3,
@@ -119,4 +112,12 @@ cite {
   font-weight: $font-weight-normal;
   font-size: $base-font-size;
   line-height: $base-line-height;
+}
+
+.light {
+  font-weight: $font-weight-light;
+}
+
+.heavy {
+  font-weight: $font-weight-bold;
 }

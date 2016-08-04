@@ -6,6 +6,7 @@ select {
 
 label {
   margin-bottom: $base-spacing / 4;
+  font-weight: $font-weight-bold;
 
   &.required:after {
     // TODO: Make this an icon on an input field, instead

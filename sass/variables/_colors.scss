@@ -166,8 +166,3 @@ $base-border: 1px solid $base-border-primary-color;
 $form-border-color: $base-border-primary-color;
 $form-border-color-hover: darken($base-border-primary-color, 10);
 $form-border-color-focus: $alert-primary;
-
-// TODO Adding links here for EM-384. Can remove and use typography.scss with EM-386
-a {
-  @extend %link;
-}

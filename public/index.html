@@ -117,8 +117,157 @@ function createDiv(copyHexColors) {
 })(window);
     </script>
     <style>
-      @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+      .button:disabled,
+button:disabled,
+input[type="button"]:disabled,
+input[type="reset"]:disabled,
+input[type="submit"]:disabled, [disabled].button:hover,
+button[disabled]:hover,
+input[disabled][type="button"]:hover,
+input[disabled][type="reset"]:hover,
+input[disabled][type="submit"]:hover, [disabled].button:active,
+button[disabled]:active,
+input[disabled][type="button"]:active,
+input[disabled][type="reset"]:active,
+input[disabled][type="submit"]:active, .disabled.button,
+button.disabled,
+input.disabled[type="button"],
+input.disabled[type="reset"],
+input.disabled[type="submit"], .disabled.button:hover,
+button.disabled:hover,
+input.disabled[type="button"]:hover,
+input.disabled[type="reset"]:hover,
+input.disabled[type="submit"]:hover, .disabled.button:active,
+button.disabled:active,
+input.disabled[type="button"]:active,
+input.disabled[type="reset"]:active,
+input.disabled[type="submit"]:active, .disabled, .disabled:hover {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  /* IE8 */ }
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-font-smoothing: antialiased;
+  border-radius: 3px;
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 0.375em 1.375em;
+  text-decoration: none;
+  border: 2px solid #85CE3F;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: top;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+  background-color: #85CE3F;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
+  .button:hover,
+  button:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover {
+    background-color: #9DD865;
+    color: #FFFFFF;
+    border-color: #9DD865; }
+  .button:active,
+  button:active,
+  input[type="button"]:active,
+  input[type="reset"]:active,
+  input[type="submit"]:active {
+    background-color: #9DD865;
+    color: #FFFFFF;
+    border-color: #9DD865; }
+.button.button--primary {
+  background-color: #85CE3F;
+  color: #FFFFFF;
+  border-color: #85CE3F; }
+  .button.button--primary:hover {
+    background-color: #9DD865;
+    color: #FFFFFF;
+    border-color: #9DD865; }
+  .button.button--primary:active {
+    background-color: #9DD865;
+    color: #FFFFFF;
+    border-color: #9DD865; }
+.button.button--secondary {
+  background-color: #09A0DB;
+  color: #FFFFFF;
+  border-color: #09A0DB; }
+  .button.button--secondary:hover {
+    background-color: #39B3E1;
+    color: #FFFFFF;
+    border-color: #39B3E1; }
+  .button.button--secondary:active {
+    background-color: #39B3E1;
+    color: #FFFFFF;
+    border-color: #39B3E1; }
+.button.button--tertiary {
+  background-color: transparent;
+  color: #09A0DB;
+  border-color: #09A0DB; }
+  .button.button--tertiary:hover {
+    background-color: #39B3E1;
+    color: #FFFFFF;
+    border-color: #39B3E1; }
+  .button.button--tertiary:active {
+    background-color: #39B3E1;
+    color: #FFFFFF;
+    border-color: #39B3E1; }
+.button.button--tertiary-inverse {
+  background-color: transparent;
+  color: #FFFFFF;
+  border-color: #FFFFFF; }
+  .button.button--tertiary-inverse:hover {
+    background-color: #FFFFFF;
+    color: #09A0DB;
+    border-color: #FFFFFF; }
+  .button.button--tertiary-inverse:active {
+    background-color: #FFFFFF;
+    color: #09A0DB;
+    border-color: #FFFFFF; }
+.button.button--negative {
+  background-color: #999999;
+  color: #FFFFFF;
+  border-color: #999999; }
+  .button.button--negative:hover {
+    background-color: #CCCCCC;
+    color: #FFFFFF;
+    border-color: #999999; }
+  .button.button--negative:active {
+    background-color: #CCCCCC;
+    color: #FFFFFF;
+    border-color: #999999; }
+.button.button--small {
+  font-size: 0.875em;
+  padding: 0.375em 1.375em; }
+.button.button--medium {
+  font-size: 1em;
+  padding: 0.375em 1.375em; }
+.button.button--large {
+  font-size: 1.25em;
+  padding: 0.375em 1.375em; }
+.button.button--massive {
+  font-size: 1.8em;
+  padding: 0.375em 2em; }
+.employer-scope {
+  -webkit-font-feature-settings: "kern", "liga", "frac", "pnum";
+  -moz-font-feature-settings: "kern", "liga", "frac", "pnum";
+  -ms-font-feature-settings: "kern", "liga", "frac", "pnum";
+  font-feature-settings: "kern", "liga", "frac", "pnum";
+  -webkit-font-smoothing: antialiased;
+  background-color: #F4F4F4;
+  color: #182642; }
 .button:disabled,
 button:disabled,
 input[type="button"]:disabled,
@@ -202,15 +351,27 @@ input[type="submit"] {
     background-color: #9DD865;
     color: #FFFFFF;
     border-color: #9DD865; }
-.button.button--secondary, .button.button--tertiary {
-  background-color: transparent;
-  color: #09A0DB;
+.button.button--secondary {
+  background-color: #09A0DB;
+  color: #FFFFFF;
   border-color: #09A0DB; }
-  .button.button--secondary:hover, .button.button--tertiary:hover {
+  .button.button--secondary:hover {
     background-color: #39B3E1;
     color: #FFFFFF;
     border-color: #39B3E1; }
-  .button.button--secondary:active, .button.button--tertiary:active {
+  .button.button--secondary:active {
+    background-color: #39B3E1;
+    color: #FFFFFF;
+    border-color: #39B3E1; }
+.button.button--tertiary {
+  background-color: transparent;
+  color: #09A0DB;
+  border-color: #09A0DB; }
+  .button.button--tertiary:hover {
+    background-color: #39B3E1;
+    color: #FFFFFF;
+    border-color: #39B3E1; }
+  .button.button--tertiary:active {
     background-color: #39B3E1;
     color: #FFFFFF;
     border-color: #39B3E1; }
@@ -250,413 +411,14 @@ input[type="submit"] {
 .button.button--massive {
   font-size: 1.8em;
   padding: 0.375em 2em; }
-a {
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  transition: color 0.1s linear;
-  color: #09A0DB;
-  text-decoration: none; }
-  a:hover, a:focus, a:active {
-    text-decoration: underline; }
-  a:visited {
-    color: #662d91; }
-  a:active, a:focus {
-    outline: none; }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Lato, "Lato", Helvetica, Arial, sans-serif;
-  line-height: 1.25;
-  font-weight: 700;
-  color: #182642;
-  text-decoration: none;
-  margin: 0;
-  margin-bottom: 0.75em; }
-h1,
-.text--headline-1 {
-  font-size: 2em; }
-h2,
-.text--headline-2 {
-  font-size: 1.5em; }
-h3,
-.text--headline-3 {
-  font-size: 1.17em; }
-h4,
-.text--headline-4 {
-  font-size: 1em; }
-h5,
-.text--headline-5 {
-  font-size: 0.83em; }
-h6,
-.text--headline-6 {
-  font-size: 0.67em; }
-p {
-  font-size: 1em;
-  margin-bottom: 0.75em;
-  line-height: 1.5; }
-  p:last-child {
-    margin-bottom: 0; }
-hr {
-  border-bottom: 1px solid #DDDDDD;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  margin: 1.5em 0; }
-ul.list--body {
-  margin-left: 20px; }
-blockquote {
-  border-left: 2px solid #DDDDDD;
-  color: #2c467a;
-  margin: 1.5em 0;
-  padding-left: 0.75em; }
-cite {
-  color: #3a5ca0;
-  font-style: italic; }
-  cite:before {
-    content: "\2014 \00A0"; }
-.text--caption {
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 1.5; }
-.text--details {
-  font-weight: 400;
-  font-size: 1em;
-  line-height: 1.5; }
-.light {
-  font-weight: 300; }
-.heavy {
-  font-weight: 700; }
-.image-grid {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  box-lines: multiple;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: distribute;
-  -moz-box-pack: distribute;
-  box-pack: distribute;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
-  -ms-flex-pack: distribute;
-  -webkit-align-content: space-around;
-  -moz-align-content: space-around;
-  align-content: space-around;
-  -ms-flex-line-pack: distribute; }
-.image-grid__item {
-  display: table;
-  width: 160px;
-  height: 160px;
-  margin: 2em; }
-  @media only screen and (max-width: 40em) {
-    .image-grid__item {
-      width: 100px;
-      height: 100px;
-      margin: 0.75em; } }
-.image-grid__image-wrap {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle; }
-.image-grid__image-wrap img {
-  width: 100%;
-  max-width: 100%;
-  max-height: 100%; }
 .employer-scope {
   -webkit-font-feature-settings: "kern", "liga", "frac", "pnum";
   -moz-font-feature-settings: "kern", "liga", "frac", "pnum";
   -ms-font-feature-settings: "kern", "liga", "frac", "pnum";
   font-feature-settings: "kern", "liga", "frac", "pnum";
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: #F4F4F4;
-  color: #182642;
-  font-family: Lato, "Lato", Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  line-height: 1.5;
-  font-weight: 400; }
-.button:disabled,
-button:disabled,
-input[type="button"]:disabled,
-input[type="reset"]:disabled,
-input[type="submit"]:disabled, [disabled].button:hover,
-button[disabled]:hover,
-input[disabled][type="button"]:hover,
-input[disabled][type="reset"]:hover,
-input[disabled][type="submit"]:hover, [disabled].button:active,
-button[disabled]:active,
-input[disabled][type="button"]:active,
-input[disabled][type="reset"]:active,
-input[disabled][type="submit"]:active, .disabled.button,
-button.disabled,
-input.disabled[type="button"],
-input.disabled[type="reset"],
-input.disabled[type="submit"], .disabled.button:hover,
-button.disabled:hover,
-input.disabled[type="button"]:hover,
-input.disabled[type="reset"]:hover,
-input.disabled[type="submit"]:hover, .disabled.button:active,
-button.disabled:active,
-input.disabled[type="button"]:active,
-input.disabled[type="reset"]:active,
-input.disabled[type="submit"]:active, .disabled, .disabled:hover {
-  opacity: 0.3;
-  filter: alpha(opacity=30);
-  /* IE8 */ }
-.button,
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-font-smoothing: antialiased;
-  border-radius: 3px;
-  color: #FFFFFF;
-  display: inline-block;
-  font-size: 1em;
-  font-weight: bold;
-  line-height: 1.5;
-  padding: 0.375em 1.375em;
-  text-decoration: none;
-  border: 2px solid #85CE3F;
-  cursor: pointer;
-  user-select: none;
-  vertical-align: top;
-  text-align: center;
-  white-space: nowrap;
-  width: auto;
-  background-color: #85CE3F;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none; }
-  .button:hover,
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    background-color: #9DD865;
-    color: #FFFFFF;
-    border-color: #9DD865; }
-  .button:active,
-  button:active,
-  input[type="button"]:active,
-  input[type="reset"]:active,
-  input[type="submit"]:active {
-    background-color: #9DD865;
-    color: #FFFFFF;
-    border-color: #9DD865; }
-.button.button--primary {
-  background-color: #85CE3F;
-  color: #FFFFFF;
-  border-color: #85CE3F; }
-  .button.button--primary:hover {
-    background-color: #9DD865;
-    color: #FFFFFF;
-    border-color: #9DD865; }
-  .button.button--primary:active {
-    background-color: #9DD865;
-    color: #FFFFFF;
-    border-color: #9DD865; }
-.button.button--secondary, .button.button--tertiary {
-  background-color: transparent;
-  color: #09A0DB;
-  border-color: #09A0DB; }
-  .button.button--secondary:hover, .button.button--tertiary:hover {
-    background-color: #39B3E1;
-    color: #FFFFFF;
-    border-color: #39B3E1; }
-  .button.button--secondary:active, .button.button--tertiary:active {
-    background-color: #39B3E1;
-    color: #FFFFFF;
-    border-color: #39B3E1; }
-.button.button--tertiary-inverse {
-  background-color: transparent;
-  color: #FFFFFF;
-  border-color: #FFFFFF; }
-  .button.button--tertiary-inverse:hover {
-    background-color: #FFFFFF;
-    color: #09A0DB;
-    border-color: #FFFFFF; }
-  .button.button--tertiary-inverse:active {
-    background-color: #FFFFFF;
-    color: #09A0DB;
-    border-color: #FFFFFF; }
-.button.button--negative {
-  background-color: #999999;
-  color: #FFFFFF;
-  border-color: #999999; }
-  .button.button--negative:hover {
-    background-color: #CCCCCC;
-    color: #FFFFFF;
-    border-color: #999999; }
-  .button.button--negative:active {
-    background-color: #CCCCCC;
-    color: #FFFFFF;
-    border-color: #999999; }
-.button.button--small {
-  font-size: 0.875em;
-  padding: 0.375em 1.375em; }
-.button.button--medium {
-  font-size: 1em;
-  padding: 0.375em 1.375em; }
-.button.button--large {
-  font-size: 1.25em;
-  padding: 0.375em 1.375em; }
-.button.button--massive {
-  font-size: 1.8em;
-  padding: 0.375em 2em; }
-a {
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  transition: color 0.1s linear;
-  color: #09A0DB;
-  text-decoration: none; }
-  a:hover, a:focus, a:active {
-    text-decoration: underline; }
-  a:visited {
-    color: #662d91; }
-  a:active, a:focus {
-    outline: none; }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Lato, "Lato", Helvetica, Arial, sans-serif;
-  line-height: 1.25;
-  font-weight: 700;
-  color: #182642;
-  text-decoration: none;
-  margin: 0;
-  margin-bottom: 0.75em; }
-h1,
-.text--headline-1 {
-  font-size: 2em; }
-h2,
-.text--headline-2 {
-  font-size: 1.5em; }
-h3,
-.text--headline-3 {
-  font-size: 1.17em; }
-h4,
-.text--headline-4 {
-  font-size: 1em; }
-h5,
-.text--headline-5 {
-  font-size: 0.83em; }
-h6,
-.text--headline-6 {
-  font-size: 0.67em; }
-p {
-  font-size: 1em;
-  margin-bottom: 0.75em;
-  line-height: 1.5; }
-  p:last-child {
-    margin-bottom: 0; }
-hr {
-  border-bottom: 1px solid #DDDDDD;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  margin: 1.5em 0; }
-ul.list--body {
-  margin-left: 20px; }
-blockquote {
-  border-left: 2px solid #DDDDDD;
-  color: #2c467a;
-  margin: 1.5em 0;
-  padding-left: 0.75em; }
-cite {
-  color: #3a5ca0;
-  font-style: italic; }
-  cite:before {
-    content: "\2014 \00A0"; }
-.text--caption {
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 1.5; }
-.text--details {
-  font-weight: 400;
-  font-size: 1em;
-  line-height: 1.5; }
-.light {
-  font-weight: 300; }
-.heavy {
-  font-weight: 700; }
-.image-grid {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  box-lines: multiple;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: distribute;
-  -moz-box-pack: distribute;
-  box-pack: distribute;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
-  -ms-flex-pack: distribute;
-  -webkit-align-content: space-around;
-  -moz-align-content: space-around;
-  align-content: space-around;
-  -ms-flex-line-pack: distribute; }
-.image-grid__item {
-  display: table;
-  width: 160px;
-  height: 160px;
-  margin: 2em; }
-  @media only screen and (max-width: 40em) {
-    .image-grid__item {
-      width: 100px;
-      height: 100px;
-      margin: 0.75em; } }
-.image-grid__image-wrap {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle; }
-.image-grid__image-wrap img {
-  width: 100%;
-  max-width: 100%;
-  max-height: 100%; }
-.employer-scope {
-  -webkit-font-feature-settings: "kern", "liga", "frac", "pnum";
-  -moz-font-feature-settings: "kern", "liga", "frac", "pnum";
-  -ms-font-feature-settings: "kern", "liga", "frac", "pnum";
-  font-feature-settings: "kern", "liga", "frac", "pnum";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #F4F4F4;
-  color: #182642;
-  font-family: Lato, "Lato", Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  line-height: 1.5;
-  font-weight: 400; }
+  color: #182642; }
 .lsg, .lsg-container, .lsg-footer, .lsg-logo, .lsg-paragraph,
 .lsg-code-block,
 .lsg-unordered-list,
@@ -1548,176 +1310,6 @@ hr {
       <button class="button button--massive">Massive button</button>
     </div>
     <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>button</em></b> <b>class</b>=&quot;button button--massive&quot;<b>&gt;</b>Massive button<b>&lt;/<em>button</em>&gt;</b></code></pre>
-  </section>
-  </section>
-  
-</div>
-<div>
-<section id="sass/content_grids">
-    <section class="lsg-example lsg-html-example" id="content_grids-1">
-    <div class="lsg-html">
-      <!-- Wrap grid in .image-grid class -->
-  <div class="image-grid">
-  <!-- Wrap each image in .image-grid__item and .image-grid__image-wrap classes -->
-    <div class="image-grid__item">
-      <div class="image-grid__image-wrap">
-        <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/458/original/accessible_databases-05.png?1447890127" alt="Sample Image">
-      </div>
-    </div>
-    <div class="image-grid__item">
-      <div class="image-grid__image-wrap">
-        <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/457/original/accessible_databases-06.png?1447890140" alt="Sample Image">
-      </div>
-    </div>
-    <div class="image-grid__item">
-      <div class="image-grid__image-wrap">
-        <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/456/original/accessible_databases-07.png?1447890152" alt="Sample Image">
-      </div>
-    </div>
-    <div class="image-grid__item">
-      <div class="image-grid__image-wrap">
-        <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/455/original/accessible_databases-08.png?1447890164" alt="Sample Image">
-      </div>
-    </div>
-    <div class="image-grid__item">
-      <div class="image-grid__image-wrap">
-        <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/459/original/accessible_databases-04.png?1447890118" alt="Sample Image">
-      </div>
-    </div>
-    <div class="image-grid__item">
-      <div class="image-grid__image-wrap">
-        <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/453/original/accessible_databases-10.png?1447890188" alt="Sample Image">
-      </div>
-    </div>
-    <div class="image-grid__item">
-      <div class="image-grid__image-wrap">
-        <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/460/original/accessible_databases-12.png?1447890107" alt="Sample Image">
-      </div>
-    </div>
-    <div class="image-grid__item">
-      <div class="image-grid__image-wrap">
-        <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/450/original/accessible_databases-03.png?1447890273" alt="Sample Image">
-      </div>
-    </div>
-    </div>
-    <pre class="lsg-code-block"><code class="lsg-code">&lt;!-- Wrap grid in .image-grid class --&gt;<br><b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid&quot;<b>&gt;</b><br>&lt;!-- Wrap each image in .image-grid__item and .image-grid__image-wrap classes --&gt;<br>  <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__item&quot;<b>&gt;</b><br>    <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__image-wrap&quot;<b>&gt;</b><br>      <b>&lt;<em>img</em></b> <b>src</b>=&quot;http://hiring-assets.careerbuilder.com/media/attachments/000/001/458/original/accessible_databases-05.png?1447890127&quot; <b>alt</b>=&quot;Sample Image&quot;<b>&gt;</b><br>    <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__item&quot;<b>&gt;</b><br>    <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__image-wrap&quot;<b>&gt;</b><br>      <b>&lt;<em>img</em></b> <b>src</b>=&quot;http://hiring-assets.careerbuilder.com/media/attachments/000/001/457/original/accessible_databases-06.png?1447890140&quot; <b>alt</b>=&quot;Sample Image&quot;<b>&gt;</b><br>    <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__item&quot;<b>&gt;</b><br>    <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__image-wrap&quot;<b>&gt;</b><br>      <b>&lt;<em>img</em></b> <b>src</b>=&quot;http://hiring-assets.careerbuilder.com/media/attachments/000/001/456/original/accessible_databases-07.png?1447890152&quot; <b>alt</b>=&quot;Sample Image&quot;<b>&gt;</b><br>    <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__item&quot;<b>&gt;</b><br>    <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__image-wrap&quot;<b>&gt;</b><br>      <b>&lt;<em>img</em></b> <b>src</b>=&quot;http://hiring-assets.careerbuilder.com/media/attachments/000/001/455/original/accessible_databases-08.png?1447890164&quot; <b>alt</b>=&quot;Sample Image&quot;<b>&gt;</b><br>    <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__item&quot;<b>&gt;</b><br>    <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__image-wrap&quot;<b>&gt;</b><br>      <b>&lt;<em>img</em></b> <b>src</b>=&quot;http://hiring-assets.careerbuilder.com/media/attachments/000/001/459/original/accessible_databases-04.png?1447890118&quot; <b>alt</b>=&quot;Sample Image&quot;<b>&gt;</b><br>    <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__item&quot;<b>&gt;</b><br>    <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__image-wrap&quot;<b>&gt;</b><br>      <b>&lt;<em>img</em></b> <b>src</b>=&quot;http://hiring-assets.careerbuilder.com/media/attachments/000/001/453/original/accessible_databases-10.png?1447890188&quot; <b>alt</b>=&quot;Sample Image&quot;<b>&gt;</b><br>    <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__item&quot;<b>&gt;</b><br>    <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__image-wrap&quot;<b>&gt;</b><br>      <b>&lt;<em>img</em></b> <b>src</b>=&quot;http://hiring-assets.careerbuilder.com/media/attachments/000/001/460/original/accessible_databases-12.png?1447890107&quot; <b>alt</b>=&quot;Sample Image&quot;<b>&gt;</b><br>    <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__item&quot;<b>&gt;</b><br>    <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__image-wrap&quot;<b>&gt;</b><br>      <b>&lt;<em>img</em></b> <b>src</b>=&quot;http://hiring-assets.careerbuilder.com/media/attachments/000/001/450/original/accessible_databases-03.png?1447890273&quot; <b>alt</b>=&quot;Sample Image&quot;<b>&gt;</b><br>    <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;/<em>div</em>&gt;</b></code></pre>
-  </section>
-  </section>
-  
-</div>
-<div>
-<section id="sass/typography">
-    <section class="lsg-example lsg-html-example" id="typography-1">
-    <div class="lsg-html">
-      <h1>H1</h1>
-  <p class="text--headline-1">Headline</p>
-    </div>
-    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>h1</em></b><b>&gt;</b>H1<b>&lt;/<em>h1</em>&gt;</b><br><b>&lt;<em>p</em></b> <b>class</b>=&quot;text--headline-1&quot;<b>&gt;</b>Headline<b>&lt;/<em>p</em>&gt;</b></code></pre>
-  </section>
-  <section class="lsg-example lsg-html-example" id="typography-2">
-    <div class="lsg-html">
-      <h2>H2</h2>
-  <p class="text--headline-2">Headline</p>
-    </div>
-    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>h2</em></b><b>&gt;</b>H2<b>&lt;/<em>h2</em>&gt;</b><br><b>&lt;<em>p</em></b> <b>class</b>=&quot;text--headline-2&quot;<b>&gt;</b>Headline<b>&lt;/<em>p</em>&gt;</b></code></pre>
-  </section>
-  <section class="lsg-example lsg-html-example" id="typography-3">
-    <div class="lsg-html">
-      <h3>H3</h3>
-  <p class="text--headline-3">Headline</p>
-    </div>
-    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>h3</em></b><b>&gt;</b>H3<b>&lt;/<em>h3</em>&gt;</b><br><b>&lt;<em>p</em></b> <b>class</b>=&quot;text--headline-3&quot;<b>&gt;</b>Headline<b>&lt;/<em>p</em>&gt;</b></code></pre>
-  </section>
-  <section class="lsg-example lsg-html-example" id="typography-4">
-    <div class="lsg-html">
-      <h4>H4</h4>
-  <p class="text--headline-4">Headline</p>
-    </div>
-    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>h4</em></b><b>&gt;</b>H4<b>&lt;/<em>h4</em>&gt;</b><br><b>&lt;<em>p</em></b> <b>class</b>=&quot;text--headline-4&quot;<b>&gt;</b>Headline<b>&lt;/<em>p</em>&gt;</b></code></pre>
-  </section>
-  <section class="lsg-example lsg-html-example" id="typography-5">
-    <div class="lsg-html">
-      <h5>H5</h5>
-  <p class="text--headline-5">Headline</p>
-    </div>
-    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>h5</em></b><b>&gt;</b>H5<b>&lt;/<em>h5</em>&gt;</b><br><b>&lt;<em>p</em></b> <b>class</b>=&quot;text--headline-5&quot;<b>&gt;</b>Headline<b>&lt;/<em>p</em>&gt;</b></code></pre>
-  </section>
-  <section class="lsg-example lsg-html-example" id="typography-6">
-    <div class="lsg-html">
-      <h6>H6</h6>
-  <p class="text--headline-6">Headline</p>
-    </div>
-    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>h6</em></b><b>&gt;</b>H6<b>&lt;/<em>h6</em>&gt;</b><br><b>&lt;<em>p</em></b> <b>class</b>=&quot;text--headline-6&quot;<b>&gt;</b>Headline<b>&lt;/<em>p</em>&gt;</b></code></pre>
-  </section>
-  <section class="lsg-example lsg-html-example" id="typography-7">
-    <div class="lsg-html">
-      <p class="light">Font weight light: 300</p>
-    </div>
-    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>p</em></b> <b>class</b>=&quot;light&quot;<b>&gt;</b>Font weight light: 300<b>&lt;/<em>p</em>&gt;</b></code></pre>
-  </section>
-  <section class="lsg-example lsg-html-example" id="typography-8">
-    <div class="lsg-html">
-      <p>Font weight normal: 400</p>
-    </div>
-    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>p</em></b><b>&gt;</b>Font weight normal: 400<b>&lt;/<em>p</em>&gt;</b></code></pre>
-  </section>
-  <section class="lsg-example lsg-html-example" id="typography-9">
-    <div class="lsg-html">
-      <p class="heavy">Font weight heavy: 700</p>
-    </div>
-    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>p</em></b> <b>class</b>=&quot;heavy&quot;<b>&gt;</b>Font weight heavy: 700<b>&lt;/<em>p</em>&gt;</b></code></pre>
-  </section>
-  <section class="lsg-example lsg-html-example" id="typography-10">
-    <div class="lsg-html">
-      <a href="https://hiring.careerbuilder.com/unvisited">Unvisited Link</a>
-  <a href="https://hiring.careerbuilder.com">Visited Link</a>
-    </div>
-    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>a</em></b> <b>href</b>=&quot;https://hiring.careerbuilder.com/unvisited&quot;<b>&gt;</b>Unvisited Link<b>&lt;/<em>a</em>&gt;</b><br><b>&lt;<em>a</em></b> <b>href</b>=&quot;https://hiring.careerbuilder.com&quot;<b>&gt;</b>Visited Link<b>&lt;/<em>a</em>&gt;</b></code></pre>
-  </section>
-  <section class="lsg-example lsg-html-example" id="typography-11">
-    <div class="lsg-html">
-      <hr>
-    </div>
-    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>hr</em></b><b>&gt;</b></code></pre>
-  </section>
-  <section class="lsg-example lsg-html-example" id="typography-12">
-    <div class="lsg-html">
-      <ul class="list--body">
-    <li>List Item</li>
-    <li>List Item</li>
-    <li>List Item</li>
-    <li>List Item</li>
-  </ul>
-    </div>
-    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>ul</em></b> <b>class</b>=&quot;list--body&quot;<b>&gt;</b><br>  <b>&lt;<em>li</em></b><b>&gt;</b>List Item<b>&lt;/<em>li</em>&gt;</b><br>  <b>&lt;<em>li</em></b><b>&gt;</b>List Item<b>&lt;/<em>li</em>&gt;</b><br>  <b>&lt;<em>li</em></b><b>&gt;</b>List Item<b>&lt;/<em>li</em>&gt;</b><br>  <b>&lt;<em>li</em></b><b>&gt;</b>List Item<b>&lt;/<em>li</em>&gt;</b><br><b>&lt;/<em>ul</em>&gt;</b></code></pre>
-  </section>
-  <section class="lsg-example lsg-html-example" id="typography-13">
-    <div class="lsg-html">
-      <blockquote>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-  </blockquote>
-    </div>
-    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>blockquote</em></b><b>&gt;</b><br>  Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><b>&lt;/<em>blockquote</em>&gt;</b></code></pre>
-  </section>
-  <section class="lsg-example lsg-html-example" id="typography-14">
-    <div class="lsg-html">
-      <cite>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-  </cite>
-    </div>
-    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>cite</em></b><b>&gt;</b><br>  Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><b>&lt;/<em>cite</em>&gt;</b></code></pre>
-  </section>
-  <section class="lsg-example lsg-html-example" id="typography-15">
-    <div class="lsg-html">
-      <p class="text--caption">Text Caption</p>
-    </div>
-    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>p</em></b> <b>class</b>=&quot;text--caption&quot;<b>&gt;</b>Text Caption<b>&lt;/<em>p</em>&gt;</b></code></pre>
-  </section>
-  <section class="lsg-example lsg-html-example" id="typography-16">
-    <div class="lsg-html">
-      <p class="text--details">Text Details</p>
-    </div>
-    <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>p</em></b> <b>class</b>=&quot;text--details&quot;<b>&gt;</b>Text Details<b>&lt;/<em>p</em>&gt;</b></code></pre>
   </section>
   </section>
   

@@ -1,0 +1,80 @@
+```
+<h1>H1</h1>
+<p class="text--headline-1">Headline</p>
+```
+
+```
+<h2>H2</h2>
+<p class="text--headline-2">Headline</p>
+```
+
+```
+<h3>H3</h3>
+<p class="text--headline-3">Headline</p>
+```
+
+```
+<h4>H4</h4>
+<p class="text--headline-4">Headline</p>
+```
+
+```
+<h5>H5</h5>
+<p class="text--headline-5">Headline</p>
+```
+
+```
+<h6>H6</h6>
+<p class="text--headline-6">Headline</p>
+```
+
+```
+<p class="light">Font weight light: 300</p>
+```
+
+```
+<p>Font weight normal: 400</p>
+```
+
+```
+<p class="heavy">Font weight heavy: 700</p>
+```
+
+
+```
+<a href="https://hiring.careerbuilder.com/unvisited">Unvisited Link</a>
+<a href="https://hiring.careerbuilder.com">Visited Link</a>
+```
+
+```
+<hr>
+```
+
+```
+<ul class="list--body">
+  <li>List Item</li>
+  <li>List Item</li>
+  <li>List Item</li>
+  <li>List Item</li>
+</ul>
+```
+
+```
+<blockquote>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</blockquote>
+```
+
+```
+<cite>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</cite>
+```
+
+```
+<p class="text--caption">Text Caption</p>
+```
+
+```
+<p class="text--details">Text Details</p>
+```

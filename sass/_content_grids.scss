@@ -9,7 +9,7 @@
   display: table;
   width: $image-grid-block;
   height: $image-grid-block;
-  margin: $base-spacing;
+  margin: 2em; // not $base-spacing; forcing enough white space to keep max 4 items per row
 
   @media only screen and (max-width: $small-screen-max){
     width: $image-grid-block * 0.625;

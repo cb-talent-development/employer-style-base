@@ -1,0 +1,6 @@
+.reading__section.reading__image-grid {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(space-around);
+  @include align-content(space-around);
+}

@@ -1,6 +1,30 @@
-.reading__section.reading__image-grid {
+.image-grid {
   @include display(flex);
   @include flex-wrap(wrap);
   @include justify-content(space-around);
   @include align-content(space-around);
+}
+
+.image-grid__item {
+  display: table;
+  width: $image-grid-block;
+  height: $image-grid-block;
+  margin: $base-spacing;
+
+  @media only screen and (max-width: $small-screen-max){
+    width: $image-grid-block * 0.625;
+    height: $image-grid-block * 0.625;
+    margin: $base-spacing / 2;
+  }
+}
+
+.image-grid__image-wrap {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.image-grid__image-wrap img {
+  max-width: 100%;
+  max-height: 100%;
 }

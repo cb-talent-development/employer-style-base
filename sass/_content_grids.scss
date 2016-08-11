@@ -12,8 +12,8 @@
   margin: 2em; // not $base-spacing; forcing enough white space to keep max 4 items per row
 
   @media only screen and (max-width: $small-screen-max){
-    width: $image-grid-block * 0.625;
-    height: $image-grid-block * 0.625;
+    width: $image-grid-block / 2;
+    height: $image-grid-block / 2;
     margin: $base-spacing / 2;
   }
 }
@@ -28,4 +28,5 @@
   width: 100%;
   max-width: 100%;
   max-height: 100%;
+  object-fit: contain;
 }

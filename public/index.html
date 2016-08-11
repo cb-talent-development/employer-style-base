@@ -329,6 +329,52 @@ cite {
   font-weight: 300; }
 .heavy {
   font-weight: 700; }
+.image-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  box-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
+  -webkit-align-content: space-around;
+  -moz-align-content: space-around;
+  align-content: space-around;
+  -ms-flex-line-pack: distribute; }
+.image-grid__item {
+  display: table;
+  width: 160px;
+  height: 160px;
+  margin: 2em; }
+  @media only screen and (max-width: 40em) {
+    .image-grid__item {
+      width: 100px;
+      height: 100px;
+      margin: 0.75em; } }
+.image-grid__image-wrap {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle; }
+.image-grid__image-wrap img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%; }
 .employer-scope {
   -webkit-font-feature-settings: "kern", "liga", "frac", "pnum";
   -moz-font-feature-settings: "kern", "liga", "frac", "pnum";
@@ -552,6 +598,52 @@ cite {
   font-weight: 300; }
 .heavy {
   font-weight: 700; }
+.image-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  box-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
+  -webkit-align-content: space-around;
+  -moz-align-content: space-around;
+  align-content: space-around;
+  -ms-flex-line-pack: distribute; }
+.image-grid__item {
+  display: table;
+  width: 160px;
+  height: 160px;
+  margin: 2em; }
+  @media only screen and (max-width: 40em) {
+    .image-grid__item {
+      width: 100px;
+      height: 100px;
+      margin: 0.75em; } }
+.image-grid__image-wrap {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle; }
+.image-grid__image-wrap img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%; }
 .employer-scope {
   -webkit-font-feature-settings: "kern", "liga", "frac", "pnum";
   -moz-font-feature-settings: "kern", "liga", "frac", "pnum";
@@ -1456,6 +1548,59 @@ hr {
       <button class="button button--massive">Massive button</button>
     </div>
     <pre class="lsg-code-block"><code class="lsg-code"><b>&lt;<em>button</em></b> <b>class</b>=&quot;button button--massive&quot;<b>&gt;</b>Massive button<b>&lt;/<em>button</em>&gt;</b></code></pre>
+  </section>
+  </section>
+  
+</div>
+<div>
+<section id="sass/content_grids">
+    <section class="lsg-example lsg-html-example" id="content_grids-1">
+    <div class="lsg-html">
+      <!-- Wrap grid in .image-grid class -->
+  <div class="image-grid">
+  <!-- Wrap each image in .image-grid__item and .image-grid__image-wrap classes -->
+    <div class="image-grid__item">
+      <div class="image-grid__image-wrap">
+        <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/458/original/accessible_databases-05.png?1447890127" alt="Sample Image">
+      </div>
+    </div>
+    <div class="image-grid__item">
+      <div class="image-grid__image-wrap">
+        <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/457/original/accessible_databases-06.png?1447890140" alt="Sample Image">
+      </div>
+    </div>
+    <div class="image-grid__item">
+      <div class="image-grid__image-wrap">
+        <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/456/original/accessible_databases-07.png?1447890152" alt="Sample Image">
+      </div>
+    </div>
+    <div class="image-grid__item">
+      <div class="image-grid__image-wrap">
+        <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/455/original/accessible_databases-08.png?1447890164" alt="Sample Image">
+      </div>
+    </div>
+    <div class="image-grid__item">
+      <div class="image-grid__image-wrap">
+        <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/459/original/accessible_databases-04.png?1447890118" alt="Sample Image">
+      </div>
+    </div>
+    <div class="image-grid__item">
+      <div class="image-grid__image-wrap">
+        <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/453/original/accessible_databases-10.png?1447890188" alt="Sample Image">
+      </div>
+    </div>
+    <div class="image-grid__item">
+      <div class="image-grid__image-wrap">
+        <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/460/original/accessible_databases-12.png?1447890107" alt="Sample Image">
+      </div>
+    </div>
+    <div class="image-grid__item">
+      <div class="image-grid__image-wrap">
+        <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/450/original/accessible_databases-03.png?1447890273" alt="Sample Image">
+      </div>
+    </div>
+    </div>
+    <pre class="lsg-code-block"><code class="lsg-code">&lt;!-- Wrap grid in .image-grid class --&gt;<br><b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid&quot;<b>&gt;</b><br>&lt;!-- Wrap each image in .image-grid__item and .image-grid__image-wrap classes --&gt;<br>  <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__item&quot;<b>&gt;</b><br>    <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__image-wrap&quot;<b>&gt;</b><br>      <b>&lt;<em>img</em></b> <b>src</b>=&quot;http://hiring-assets.careerbuilder.com/media/attachments/000/001/458/original/accessible_databases-05.png?1447890127&quot; <b>alt</b>=&quot;Sample Image&quot;<b>&gt;</b><br>    <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__item&quot;<b>&gt;</b><br>    <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__image-wrap&quot;<b>&gt;</b><br>      <b>&lt;<em>img</em></b> <b>src</b>=&quot;http://hiring-assets.careerbuilder.com/media/attachments/000/001/457/original/accessible_databases-06.png?1447890140&quot; <b>alt</b>=&quot;Sample Image&quot;<b>&gt;</b><br>    <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__item&quot;<b>&gt;</b><br>    <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__image-wrap&quot;<b>&gt;</b><br>      <b>&lt;<em>img</em></b> <b>src</b>=&quot;http://hiring-assets.careerbuilder.com/media/attachments/000/001/456/original/accessible_databases-07.png?1447890152&quot; <b>alt</b>=&quot;Sample Image&quot;<b>&gt;</b><br>    <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__item&quot;<b>&gt;</b><br>    <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__image-wrap&quot;<b>&gt;</b><br>      <b>&lt;<em>img</em></b> <b>src</b>=&quot;http://hiring-assets.careerbuilder.com/media/attachments/000/001/455/original/accessible_databases-08.png?1447890164&quot; <b>alt</b>=&quot;Sample Image&quot;<b>&gt;</b><br>    <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__item&quot;<b>&gt;</b><br>    <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__image-wrap&quot;<b>&gt;</b><br>      <b>&lt;<em>img</em></b> <b>src</b>=&quot;http://hiring-assets.careerbuilder.com/media/attachments/000/001/459/original/accessible_databases-04.png?1447890118&quot; <b>alt</b>=&quot;Sample Image&quot;<b>&gt;</b><br>    <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__item&quot;<b>&gt;</b><br>    <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__image-wrap&quot;<b>&gt;</b><br>      <b>&lt;<em>img</em></b> <b>src</b>=&quot;http://hiring-assets.careerbuilder.com/media/attachments/000/001/453/original/accessible_databases-10.png?1447890188&quot; <b>alt</b>=&quot;Sample Image&quot;<b>&gt;</b><br>    <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__item&quot;<b>&gt;</b><br>    <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__image-wrap&quot;<b>&gt;</b><br>      <b>&lt;<em>img</em></b> <b>src</b>=&quot;http://hiring-assets.careerbuilder.com/media/attachments/000/001/460/original/accessible_databases-12.png?1447890107&quot; <b>alt</b>=&quot;Sample Image&quot;<b>&gt;</b><br>    <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__item&quot;<b>&gt;</b><br>    <b>&lt;<em>div</em></b> <b>class</b>=&quot;image-grid__image-wrap&quot;<b>&gt;</b><br>      <b>&lt;<em>img</em></b> <b>src</b>=&quot;http://hiring-assets.careerbuilder.com/media/attachments/000/001/450/original/accessible_databases-03.png?1447890273&quot; <b>alt</b>=&quot;Sample Image&quot;<b>&gt;</b><br>    <b>&lt;/<em>div</em>&gt;</b><br>  <b>&lt;/<em>div</em>&gt;</b></code></pre>
   </section>
   </section>
   

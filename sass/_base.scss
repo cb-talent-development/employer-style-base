@@ -18,6 +18,8 @@
 
 @import "typography";
 @import "buttons";
+
+@import "forms";
 @import "content_grids";
 
 .employer-scope {
@@ -35,7 +37,5 @@
   line-height: $base-line-height;
   font-weight: $font-weight-normal;
 
-
-  // @import "forms";
   // @import "lists";
 }

@@ -35,9 +35,11 @@ $gradient-light: #58A9A2;
 // Basic Colors
 $black: #000000;
 $white: #FFFFFF;
+
 $grey-darkest: lighten($black, 20);
 $grey-darker: lighten($grey-darkest, 20);
 $grey-dark: #999999;
+$grey-semi-dark: #BBBBBB;
 $grey: #CCCCCC;
 $grey-light: #DDDDDD;
 $grey-lighter: #EEEEEE;
@@ -162,7 +164,12 @@ $inactive-carousel-button-color: $grey-lighter;
 $base-border-primary-color: $grey-light;
 $base-border: 1px solid $base-border-primary-color;
 
-// Form
-$form-border-color: $base-border-primary-color;
+// Forms
+$form-border-color: $grey;
+$form-border: 1px solid $form-border-color;
 $form-border-color-hover: darken($base-border-primary-color, 10);
 $form-border-color-focus: $alert-primary;
+
+$form-background-color: $white;
+$form-input-color: $body-text-color;
+$form-placeholder-color: $grey-semi-dark;

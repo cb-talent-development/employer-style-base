@@ -26,6 +26,6 @@ $gradient-dark $gradient-medium $gradient-light
 @colors{
 $black $white
 $grey-darkest $grey-darker $grey-dark
-- $grey
+- $grey $grey-semi-dark
 $grey-light $grey-lighter $grey-lightest
 }

@@ -122,7 +122,7 @@ input {
   padding: $form-input-vertical-padding $form-input-horizontal-padding;
   border: $form-border;
   border-radius: $form-border-radius;
-  box-shadow: inset $base-box-shadow;
+  box-shadow: $form-input-box-shadow;
 
   @include placeholder {
     color: $form-placeholder-color;
@@ -145,6 +145,7 @@ input {
   }
 
   &__button.button {
+    box-shadow: $form-input-box-shadow;
     min-width: 117px; // Safari won't make the button wide enough to fit text and padding
 
     @media only screen and (min-width: $small-screen-max) {

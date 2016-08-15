@@ -137,7 +137,6 @@ input {
 
   &__input {
     @include flex-grow(1);
-    width: $large-input-width;
 
     @media only screen and (min-width: $small-screen-max) {
       border-top-right-radius: 0;

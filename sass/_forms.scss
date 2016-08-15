@@ -136,17 +136,30 @@ input {
   @include flex-wrap(nowrap);
 
   &__input {
-    width: $large-input-width;
     @include flex-grow(1);
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    width: $large-input-width;
+
+    @media only screen and (min-width: $small-screen-max) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
   }
 
   &__button.button {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    box-shadow: $base-box-shadow;
+
+    @media only screen and (min-width: $small-screen-max) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    @media only screen and (max-width: $small-screen-max) {
+      min-width: 50%;
+      margin-top: $base-spacing / 2;
+    }
+  }
+
+  @media only screen and (max-width: $small-screen-max) {
+    @include flex-wrap(wrap);
   }
 }
-
-// Button is #09A0DB, hover #6BC6E9
-// Button copy is 16 px #ffffff Lato bold

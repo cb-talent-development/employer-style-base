@@ -122,7 +122,7 @@ input {
   padding: $form-input-vertical-padding $form-input-horizontal-padding;
   border: $form-border;
   border-radius: $form-border-radius;
-  box-shadow: $base-box-shadow;
+  box-shadow: inset $base-box-shadow;
 
   @include placeholder {
     color: $form-placeholder-color;
@@ -146,8 +146,6 @@ input {
   }
 
   &__button.button {
-    box-shadow: $base-box-shadow;
-
     @media only screen and (min-width: $small-screen-max) {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;

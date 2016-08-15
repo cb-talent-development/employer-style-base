@@ -146,6 +146,8 @@ input {
   }
 
   &__button.button {
+    min-width: 117px; // Safari won't make the button wide enough to fit text and padding
+
     @media only screen and (min-width: $small-screen-max) {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;

@@ -165,7 +165,7 @@ $base-border-primary-color: $grey-light;
 $base-border: 1px solid $base-border-primary-color;
 
 // Forms
-$form-border-color: $grey-semi-dark;
+$form-border-color: $grey;
 $form-border: 1px solid $form-border-color;
 $form-border-color-hover: darken($base-border-primary-color, 10);
 $form-border-color-focus: $alert-primary;

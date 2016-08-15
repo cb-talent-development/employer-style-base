@@ -153,12 +153,13 @@ input {
     }
 
     @media only screen and (max-width: $small-screen-max) {
-      min-width: 50%;
+      width: 50%;
       margin-top: $base-spacing / 2;
     }
   }
 
   @media only screen and (max-width: $small-screen-max) {
     @include flex-wrap(wrap);
+    @include flex-direction(column);
   }
 }

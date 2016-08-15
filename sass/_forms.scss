@@ -131,10 +131,22 @@ input {
 
 // Full-width field
 
-.input--large {
-  width: $large-input-width;
-}
+.fieldset--large {
+  @include display(flex);
+  @include flex-wrap(nowrap);
 
+  &__input {
+    width: $large-input-width;
+    @include flex-grow(1);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &__button.button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
 
 // Button is #09A0DB, hover #6BC6E9
 // Button copy is 16 px #ffffff Lato bold

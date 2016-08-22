@@ -1,112 +1,166 @@
-input,
-label,
-select {
-  display: block;
-}
+// TODO Determine any styles to keep and reactivate
+// input,
+// label,
+// select {
+//   display: block;
+// }
+//
+// label {
+//   margin-bottom: $base-spacing / 4;
+//   font-weight: $font-weight-bold;
+//
+//   &.required:after {
+//     // TODO: Make this an icon on an input field, instead
+//     content: "*";
+//   }
+//
+//   abbr {
+//     display: none;
+//   }
+// }
+//
+// textarea,
+// #{$all-text-inputs},
+// select[multiple=multiple] {
+//   @include box-sizing(border-box);
+//   @include transition(border-color);
+//   background-color: $white;
+//   border-radius: $form-border-radius;
+//   border: $base-input-border-size solid $form-border-color;
+//   box-shadow: $form-box-shadow;
+//   font-family: $form-font-family;
+//   font-size: $base-input-font-size;
+//   line-height: $base-input-line-height;
+//   padding: $base-input-vertical-padding $base-input-horizontal-padding;
+//   margin-bottom: 3px; // Just enough margin to expose the 'glow'
+//
+//   &:hover {
+//     border-color: $form-border-color-hover;
+//   }
+//
+//   &:focus {
+//     border-color: $form-border-color-focus;
+//     box-shadow: $form-box-shadow-focus;
+//     outline: none;
+//   }
+// }
+//
+// textarea {
+//   resize: vertical;
+// }
+//
+// input[type="radio"] {
+//   @extend %visuallyHidden;
+// }
+//
+// input[type="radio"] + label {
+//   position: relative;
+//
+//   &:before {
+//     left: 0;
+//     top: 0;
+//     content: " ";
+//     background-color: $white;
+//     box-shadow: $base-radio-box-shadow;
+//     padding: $base-font-size;
+//     margin-right: $base-spacing / 4;
+//     border-radius: $radio-border-radius;
+//     float: left;
+//     display: inline-block;
+//     position: relative;
+//   }
+// }
+//
+// input[type="radio"]:hover + label {
+//   &:before {
+//     box-shadow: $hover-radio-box-shadow;
+//     @include transition(box-shadow 0.5s linear);
+//   }
+// }
+//
+// input[type="radio"]:checked + label {
+//   &:before {
+//     box-shadow: $checked-radio-box-shadow;
+//   }
+// }
+//
+// input[type="radio"]:active + label {
+//   &:before {
+//     box-shadow: $active-radio-box-shadow;
+//   }
+// }
+//
+// select {
+//   margin-bottom: $base-spacing;
+//   max-width: 100%;
+//   width: auto;
+// }
+//
+// .form-header {
+//   color: $header-text-color;
+//   display: block;
+//   font-weight: bold;
+//   margin-bottom: $base-spacing / 4;
+// }
+//
+// div.group {
+//   overflow: auto; // Push height even when form elements float
+//   margin-top: $base-spacing / 2;
+// }
+//
+// table {
+//   @include font-feature-settings("kern", "liga", "tnum");
+// }
 
-label {
-  margin-bottom: $base-spacing / 4;
-  font-weight: $font-weight-bold;
 
-  &.required:after {
-    // TODO: Make this an icon on an input field, instead
-    content: "*";
-  }
-
-  abbr {
-    display: none;
-  }
-}
-
-textarea,
-#{$all-text-inputs},
-select[multiple=multiple] {
-  @include box-sizing(border-box);
-  @include transition(border-color);
-  background-color: $white;
-  border-radius: $form-border-radius;
-  border: $base-input-border-size solid $form-border-color;
-  box-shadow: $form-box-shadow;
+input {
+  font-size: $form-input-font-size;
   font-family: $form-font-family;
-  font-size: $base-input-font-size;
-  line-height: $base-input-line-height;
-  padding: $base-input-vertical-padding $base-input-horizontal-padding;
-  margin-bottom: 3px; // Just enough margin to expose the 'glow'
+  font-weight: $form-input-font-weight;
+  background-color: $form-background-color;
+  color: $form-input-color;
+  padding: $form-input-vertical-padding $form-input-horizontal-padding;
+  border: $form-border;
+  border-radius: $form-border-radius;
+  box-shadow: $form-input-box-shadow;
 
-  &:hover {
-    border-color: $form-border-color-hover;
-  }
-
-  &:focus {
-    border-color: $form-border-color-focus;
-    box-shadow: $form-box-shadow-focus;
-    outline: none;
+  @include placeholder {
+    color: $form-placeholder-color;
   }
 }
 
-textarea {
-  resize: vertical;
-}
+// Full-width field
 
-input[type="radio"] {
-  @extend %visuallyHidden;
-}
+.fieldset--large {
+  @include display(flex);
+  @include flex-wrap(nowrap);
 
-input[type="radio"] + label {
-  position: relative;
+  &__input {
+    @include flex-grow(1);
 
-  &:before {
-    left: 0;
-    top: 0;
-    content: " ";
-    background-color: $white;
-    box-shadow: $base-radio-box-shadow;
-    padding: $base-font-size;
-    margin-right: $base-spacing / 4;
-    border-radius: $radio-border-radius;
-    float: left;
-    display: inline-block;
-    position: relative;
+    @media only screen and (min-width: $small-screen-max) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
   }
-}
 
-input[type="radio"]:hover + label {
-  &:before {
-    box-shadow: $hover-radio-box-shadow;
-    @include transition(box-shadow 0.5s linear);
+  &__button.button {
+    box-shadow: $form-input-box-shadow;
+    min-width: 117px; // Safari won't make the button wide enough to fit text and padding
+
+    @media only screen and (min-width: $small-screen-max) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    @media only screen and (max-width: $small-screen-max) {
+      width: 50%;
+      margin-top: $base-spacing / 2;
+    }
   }
-}
 
-input[type="radio"]:checked + label {
-  &:before {
-    box-shadow: $checked-radio-box-shadow;
+  @media only screen and (max-width: $small-screen-max) {
+    @include flex-wrap(wrap);
+    @include flex-direction(column);
   }
-}
-
-input[type="radio"]:active + label {
-  &:before {
-    box-shadow: $active-radio-box-shadow;
-  }
-}
-
-select {
-  margin-bottom: $base-spacing;
-  max-width: 100%;
-  width: auto;
-}
-
-.form-header {
-  color: $header-text-color;
-  display: block;
-  font-weight: bold;
-  margin-bottom: $base-spacing / 4;
-}
-
-div.group {
-  overflow: auto; // Push height even when form elements float
-  margin-top: $base-spacing / 2;
-}
-
-table {
-  @include font-feature-settings("kern", "liga", "tnum");
 }

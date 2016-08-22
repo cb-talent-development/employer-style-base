@@ -6,7 +6,6 @@ $lato: Lato, 'Lato', Helvetica, Arial, sans-serif;
 // Typefaces
 $base-font-family: $lato;
 $header-font-family: $lato;
-$form-font-family: $base-font-family;
 
 // Font Weights
 $font-weight-light: 300;
@@ -121,3 +120,7 @@ cite {
 .heavy {
   font-weight: $font-weight-bold;
 }
+
+// Forms
+$form-font-family: $base-font-family;
+$form-input-font-weight: $font-weight-normal;

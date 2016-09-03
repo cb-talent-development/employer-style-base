@@ -1,0 +1,31 @@
+## CB Main Branding Colors
+@colors {
+- $anchor-blue $anchor-blue-light
+$sky-blue $sky-blue-light $sky-blue-dark
+$lime $lime-light $lime-dark
+$marigold $marigold-light $marigold-dark
+$emerald
+}
+
+## CB Secondary and Accent Colors
+@colors{
+$red $orange $teal
+$azure-two $azure-blue
+}
+
+## CB Gradient Colors
+@colors{
+$gradient-dark $gradient-medium $gradient-light
+}
+
+## Basic Colors
+@colors{
+$black $white
+}
+
+### Shades of Grey
+@colors{
+$grey-darkest $grey-darker $grey-dark
+- $grey $grey-semi-dark
+$grey-light $grey-lighter $grey-lightest
+}

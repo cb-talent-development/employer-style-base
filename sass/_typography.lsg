@@ -1,3 +1,7 @@
+## Typography
+
+### Headings
+
 ```
 <h1>H1</h1>
 <p class="text--headline-1">Headline</p>
@@ -28,6 +32,8 @@
 <p class="text--headline-6">Headline</p>
 ```
 
+### Body Copy
+
 ```
 <p class="light">Font weight light: 300</p>
 ```
@@ -40,15 +46,19 @@
 <p class="heavy">Font weight heavy: 700</p>
 ```
 
+```
+<hr>
+```
+
+### Links
 
 ```
 <a href="https://hiring.careerbuilder.com/unvisited">Unvisited Link</a>
 <a href="https://hiring.careerbuilder.com">Visited Link</a>
 ```
 
-```
-<hr>
-```
+
+### Lists
 
 ```
 <ul class="list--body">
@@ -59,11 +69,15 @@
 </ul>
 ```
 
+### Blockquotes
+
 ```
 <blockquote>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 </blockquote>
 ```
+
+### Small Print
 
 ```
 <cite>
@@ -77,4 +91,14 @@
 
 ```
 <p class="text--details">Text Details</p>
+```
+
+### Other
+
+```
+<p class="light">Light Text</p>
+```
+
+```
+<p class="heavy">Heavy Text</p>
 ```

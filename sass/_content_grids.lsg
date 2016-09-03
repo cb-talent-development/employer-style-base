@@ -1,3 +1,6 @@
+## Content Grids
+
+### Image Grid
 ```
 <!-- Wrap grid in .image-grid class -->
 <div class="image-grid">

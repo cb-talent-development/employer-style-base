@@ -2,6 +2,8 @@
 
 A stack-agnostic Sass library providing basic components and typography intended for the Employer experience.
 
+View code and component examples in the [pattern library](http://cb-talent-development.github.io/employer-style-base/).
+
 **Status:** Basic styling completed:
 * Buttons (small, medium, large + primary, secondary)
 * Horizontal/vertical button groups

@@ -1,6 +1,96 @@
+<!-- @require bourbon -->
 @scss base.scss
-@title CB Employer Pattern Library
+@title Employer Pattern Library
 
-# CB Employer Pattern Library
+@style font-family: Lato
+@style font-size: 16px
+@style sub-headeline-font-size: 26px
+@style sub-sub-headeline-font-size: 20px
 
-@import *.lsg
+@style width: 1200px
+@style color-swatch-border-radius: 40%
+
+@header {
+  <header>
+    <img class="logo" src="images/logo--cb--color.svg" alt="CareerBuilder Logo">
+    <h1>CB Employer Pattern Library</h1>
+  </header>
+}
+
+
+**Table of Contents**  
+
+* [Colors](#colors)  
+
+* [Typography](#typography)  
+
+* [Buttons](#buttons)  
+
+* [Forms](#forms)  
+
+* [Content Grids](#content-grids)  
+
+* [Motion](#motion)  
+
+---  
+
+@import colors.lsg  
+
+---  
+
+@import typography.lsg  
+
+---  
+
+@import buttons.lsg  
+
+---  
+
+@import forms.lsg  
+
+---  
+
+@import content_grids.lsg  
+
+---  
+
+@import motion.lsg
+
+
+
+@css {
+
+  header {
+    padding: 20px;
+  }
+
+  header .logo {
+    max-width: 25%;
+    margin-right: 20px;
+    float: left;
+  }
+
+  .lsg-example {
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  .lsg-code-block {
+    overflow-x: scroll;
+  }
+
+  .lsg-code-block {
+    background-color: white;
+    border: 1px solid $base-background-color;
+  }
+
+  .lsg-html {
+    background-color: $base-background-color;
+  }
+
+  .lsg-color-swatches .lsg-color-swatch {
+    height: 200px;
+    padding-top: 120px;
+    width: 200px;
+  }
+}

@@ -25,7 +25,7 @@ h6 {
   color: $header-text-color;
   text-decoration: none;
   margin: 0;
-  margin-bottom: $base-bottom-margin;
+  margin-bottom: $type-margin;
 }
 
 h1,
@@ -60,7 +60,7 @@ h6,
 
 p {
   font-size: $base-font-size;
-  margin-bottom: $base-bottom-margin;
+  margin-bottom: $type-margin;
   line-height: $base-line-height;
 
   &:last-child {

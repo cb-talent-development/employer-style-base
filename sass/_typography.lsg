@@ -5,34 +5,41 @@
 ```
 <h1>H1</h1>
 <p class="text--headline-1">Headline</p>
+<p>Font-size 32px</p>
 ```
 
 ```
 <h2>H2</h2>
 <p class="text--headline-2">Headline</p>
+<p>Font-size 24px</p>
 ```
 
 ```
 <h3>H3</h3>
 <p class="text--headline-3">Headline</p>
+<p>Font-size 18.72px</p>
 ```
 
 ```
 <h4>H4</h4>
 <p class="text--headline-4">Headline</p>
+<p>Font-size 16px</p>
 ```
 
 ```
 <h5>H5</h5>
 <p class="text--headline-5">Headline</p>
+<p>Font-size 13.28px</p>
 ```
 
 ```
 <h6>H6</h6>
 <p class="text--headline-6">Headline</p>
+<p>Font-size 10.72px</p>
 ```
 
 ### Body Copy
+
 
 ```
 <p class="light">Font weight light: 300</p>
@@ -40,6 +47,7 @@
 
 ```
 <p>Font weight normal: 400</p>
+<p>Font-size 16px</p>
 ```
 
 ```

@@ -1,0 +1,48 @@
+## Content Grids
+
+### Image Grid
+```
+<!-- Wrap grid in .image-grid class -->
+<div class="image-grid">
+<!-- Wrap each image in .image-grid__item and .image-grid__image-wrap classes -->
+  <div class="image-grid__item">
+    <div class="image-grid__image-wrap">
+      <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/458/original/accessible_databases-05.png?1447890127" alt="Sample Image">
+    </div>
+  </div>
+  <div class="image-grid__item">
+    <div class="image-grid__image-wrap">
+      <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/457/original/accessible_databases-06.png?1447890140" alt="Sample Image">
+    </div>
+  </div>
+  <div class="image-grid__item">
+    <div class="image-grid__image-wrap">
+      <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/456/original/accessible_databases-07.png?1447890152" alt="Sample Image">
+    </div>
+  </div>
+  <div class="image-grid__item">
+    <div class="image-grid__image-wrap">
+      <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/455/original/accessible_databases-08.png?1447890164" alt="Sample Image">
+    </div>
+  </div>
+  <div class="image-grid__item">
+    <div class="image-grid__image-wrap">
+      <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/459/original/accessible_databases-04.png?1447890118" alt="Sample Image">
+    </div>
+  </div>
+  <div class="image-grid__item">
+    <div class="image-grid__image-wrap">
+      <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/453/original/accessible_databases-10.png?1447890188" alt="Sample Image">
+    </div>
+  </div>
+  <div class="image-grid__item">
+    <div class="image-grid__image-wrap">
+      <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/460/original/accessible_databases-12.png?1447890107" alt="Sample Image">
+    </div>
+  </div>
+  <div class="image-grid__item">
+    <div class="image-grid__image-wrap">
+      <img src="http://hiring-assets.careerbuilder.com/media/attachments/000/001/450/original/accessible_databases-03.png?1447890273" alt="Sample Image">
+    </div>
+  </div>
+```

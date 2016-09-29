@@ -1,0 +1,10 @@
+## Forms
+
+### Large Input Field
+
+```
+<div class="fieldset--large">
+<input class="fieldset--large__input" placeholder="Your Email Address" required="" type="email">
+<button accesskey="s" class="button button--medium fieldset--large__button" type="submit">Subscribe</button>
+</div>
+```

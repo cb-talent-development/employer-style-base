@@ -1,0 +1,61 @@
+## Motion
+
+
+### Navigation Animation
+The **navigation animation** uses the following variable/transition values:  
+
+`$base-transition: all 0.2s ease;`  
+
+**To trigger**: Hover over the links in the right side of the top navigation bar.
+
+![Navigation Animation](images/nav.gif)  
+
+
+---  
+
+
+### Dropdown Animation
+The **dropdown animation** uses the following variable/transition values:  
+
+`$base-transition: all 0.2s ease;`  
+
+**To trigger**: Hover over the links in the left side of the top navigation bar.
+
+![Dropdown Animation](images/dropdown.gif)  
+
+
+---  
+
+
+### Popup Animation
+The **popup animation** uses the following variable/transition values:  
+
+`$popup-animation-transition: all 0.8s ease-in-out;` and
+`$popup-background-transition: all 0.3s ease-out;`  
+
+**To trigger**: Click a "Request Demo" button.
+
+![Popup Animation](images/popup.gif)  
+
+
+---  
+
+
+### Link Animation
+The **link animation** uses the following variable/transition values:  
+
+`$link-color-transition: color 0.1s linear;`  
+
+**To trigger**: Hover over a button or a text link.
+
+![Link Animation](images/link.gif)
+
+
+@css {
+  img {
+    max-width: 75%;
+    margin: auto;
+    display: block;
+    border: 1px solid $base-background-color;
+  }
+}

@@ -1,4 +1,7 @@
 @mixin speech_bubble {
+  border-radius: $base-border-radius;
+  padding: $base-spacing / 2 $base-spacing;
+
   &:after, &:before {
     bottom: 100%;
     left: 25%;

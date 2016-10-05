@@ -1,4 +1,4 @@
-%speech_bubble {
+@mixin speech_bubble {
   &:after, &:before {
     bottom: 100%;
     left: 25%;

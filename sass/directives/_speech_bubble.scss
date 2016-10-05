@@ -1,0 +1,26 @@
+%speech_bubble {
+  &:after, &:before {
+    bottom: 100%;
+    left: 25%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &:after {
+    border-color: transparent;
+    border-bottom-color: $header-flyout-color;
+    border-width: 13px;
+    margin-left: -13px;
+  }
+
+  &:before {
+    border-color: transparent;
+    border-bottom-color: $base-border-primary-color;
+    border-width: 14px;
+    margin-left: -14px;
+  }
+}

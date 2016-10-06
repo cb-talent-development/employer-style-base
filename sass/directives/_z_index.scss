@@ -1,0 +1,18 @@
+@function z($context-list, $context-item, $element-list, $element-item) {
+
+  $big-number: index($context-list, $context-item) * 1000;
+  $little-number: index($element-list, $element-item);
+
+  @if ($big-number and $little-number) {
+    $z-index: $big-number + $little-number;
+    @return $z-index;
+  }
+
+  @warn 'Z-index not calculated \a
+  You chose #{$context-item} from the following "context" list: \a
+  #{$context-list} \a
+  and #{$element-item} from the following "element" list: \a
+  #{$element-list} \a
+  Make sure your list names and your item names are correct.';
+  @return null;
+}

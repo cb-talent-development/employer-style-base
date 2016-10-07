@@ -1,0 +1,37 @@
+// Returns a z-index for a given element-list
+
+// Create the following lists in your project and pass in as arguments
+
+  // $context-group-list - a variable that contains a list of contexts ($context-group) or groups of elements;
+    // e.g. from lowest to highest layer:
+    // $context-group-list: (page-level-context, fixed-navigation-context, popup-modal-context);
+
+  // $element-list - a variable that matches a $context-group from the $context-group-list and that contains a list of elements ($element-item) that are layered within that context;
+    // e.g. from lowest to highest layer:
+    // $fixed-navigation-context: (navigation-bar, navigation-bar-dropdown);
+    // $popup-modal-context: (popup-modal-background, popup-modal-popup);
+
+  // The example elements above will have the following z-index values
+    // navigation-bar - 2001
+    // navigation-bar-dropdown - 2002
+    // popup-modal-background - 3001
+    // popup-modal-popup - 3002
+
+@function z($context-group-list, $context-group, $element-list, $element-item) {
+
+  $context-index: index($context-group-list, $context-group) * 1000;
+  $element-index: index($element-list, $element-item);
+
+  @if ($context-index and $element-index) {
+    $z-index: $context-index + $element-index;
+    @return $z-index;
+  }
+
+  @warn 'Z-index not calculated \a
+  You chose #{$context-group} from the following "context" list: \a
+  #{$context-group-list} \a
+  and #{$element-item} from the following "element" list: \a
+  #{$element-list} \a
+  Make sure your list names and your item names are correct.';
+  @return null;
+}

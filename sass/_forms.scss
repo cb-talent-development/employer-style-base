@@ -112,6 +112,12 @@
 //   @include font-feature-settings("kern", "liga", "tnum");
 // }
 
+form h2,
+form p,
+input {
+  margin-bottom: $base-margin;
+}
+
 fieldset { // #pardot-form p
   display: block;
   margin-bottom: $form-fieldset-margin;
@@ -141,7 +147,8 @@ textarea {
   }
 }
 
-input[type='submit'] {
+input[type='submit'],
+form button {
   width: 100%;
 }
 

@@ -1,0 +1,12 @@
+// Pop-out Box
+
+@mixin box--pop-out {
+  display: block;
+  margin: $base-margin;
+  border: $base-border;
+  border-bottom-width: 3px;
+  @include border-top-radius($minor-border-radius);
+  @include border-bottom-radius($minor-border-radius);
+  padding: $base-padding;
+  background-color: $panel-primary;
+}

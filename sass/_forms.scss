@@ -157,12 +157,61 @@ form button {
 // Radio button toggle
 
 @mixin radio-toggle {
-  display: flex;
-  border: $base-border;
-  border-radius: $minor-border-radius;
+  @include display(flex);
+  width: 100%;
 
-  input[type="radio"] {
-    box-shadow: none;
+  input[type='radio'] {
+    display: none;
+  }
+
+  label {
+    @include flex(1);
+    margin: 0;
+    border: $base-border;
+    padding: 6px 24px;
+    background-color: $grey-light;
+    cursor: pointer;
+    transition: $toggle-button-transistion;
+
+    &:first-of-type {
+      border-top-left-radius: $minor-border-radius;
+      border-bottom-left-radius: $minor-border-radius;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: $minor-border-radius;
+      border-bottom-right-radius: $minor-border-radius;
+    }
+
+    &:before {
+      content: '\f111';
+      font-family: FontAwesome;
+      margin-right: 6px;
+      color: $white;
+    }
+  }
+
+  input[type='radio']:checked + label {
+    background-color: $white;
+
+    &:before {
+      content: '\f058';
+      color: $base-link-color;
+    }
+  }
+
+  label,
+  input[type='radio']:checked + label {
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $hover-link-color;
+      color: $white;
+
+      &:before {
+        color: $white;
+      }
+    }
   }
 }
 

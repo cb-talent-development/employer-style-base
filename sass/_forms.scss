@@ -204,7 +204,14 @@ form button {
     }
   }
 
-  label,
+  label {
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $grey-lighter;
+    }
+  }
+
   input[type='radio']:checked + label {
     &:hover,
     &:active,
@@ -231,21 +238,30 @@ form button {
 
   input[type="search"]:focus {
     border: 1px solid $sky-blue;
-    outline: 1px solid $sky-blue;
+    outline: 0;
   }
 
   ul {
     position: absolute;
     width: 100%;
-    border: 1px solid $sky-blue;
-    border-top: 0;
     background-color: $white;
+    z-index: 1;
   }
 
   li {
     list-style-type: none;
+    border-left: 1px solid $sky-blue;
+    border-right: 1px solid $sky-blue;
+  }
+
+  .eac-item {
     padding: $form-input-vertical-padding $form-input-horizontal-padding;
   }
+
+  li:last-child {
+    border-bottom: 1px solid $sky-blue;
+  }
+
   li:hover {
     background-color: $sky-blue;
     color: $white;

@@ -219,6 +219,39 @@ form button {
   }
 }
 
+// Autocomplete Dropdown
+
+@mixin autocomplete-dropdown {
+  position: relative;
+  margin-bottom: $base-margin;
+
+  input[type="search"] {
+    margin-bottom: 0;
+  }
+
+  input[type="search"]:focus {
+    border: 1px solid $sky-blue;
+    outline: 1px solid $sky-blue;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    border: 1px solid $sky-blue;
+    border-top: 0;
+    background-color: $white;
+  }
+
+  li {
+    list-style-type: none;
+    padding: $form-input-vertical-padding $form-input-horizontal-padding;
+  }
+  li:hover {
+    background-color: $sky-blue;
+    color: $white;
+  }
+}
+
 // Full-width field
 
 .fieldset--large {

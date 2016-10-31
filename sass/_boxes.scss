@@ -5,11 +5,11 @@
   padding-bottom: 15px;
   background-color: white;
   border-bottom: $base-border;
-  box-shadow: $component-box-shadow;
+  box-shadow: $base-box-shadow;
   border-radius: $minor-border-radius;
 
   &:hover {
-    box-shadow: $component-box-shadow-hover;
+    box-shadow: $base-box-shadow-hover;
 
     .color_strip {
       height: $small-strip-height + 0.1rem;

@@ -2,9 +2,9 @@
 // Breakpoints used by Zurb Foundation
 // Zurb has breakpoints for XL and XXL, not used here.
 $small-screen-max: 40em; // (640px)
-$medium-screen-min: 40em;
+$medium-screen-min: $small-screen-max;
 $medium-screen-max: 64em; // (1024px)
-$large-screen-min: 64em;
+$large-screen-min: $medium-screen-max;
 
 // Nav breakpoints
 $midrange-nav-max: 71.875em; // (1150px) Point at which full nav no longer fits in one line

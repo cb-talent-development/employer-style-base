@@ -112,14 +112,6 @@
 //   @include font-feature-settings("kern", "liga", "tnum");
 // }
 
-form h2,
-form p,
-input[type='text'],
-input[type='search'],
-input[type='select'] {
-  margin-bottom: $base-margin;
-}
-
 fieldset { // #pardot-form p
   display: block;
   margin-bottom: $form-fieldset-margin;
@@ -131,12 +123,15 @@ label {
   font-weight: $form-label-font-weight;
 }
 
-input[type='text'],
-input[type='select'],
-input[type='search'],
-textarea {
-  width: 100%;
+form h2,
+form p {
+  margin-bottom: $base-margin;
+}
+
+#{$all-text-inputs} {
   box-sizing: border-box;
+  width: 100%;
+  margin-bottom: $base-margin;
   border: $form-border;
   border-radius: $form-border-radius;
   padding: $form-input-vertical-padding $form-input-horizontal-padding;
@@ -274,8 +269,9 @@ form button {
   @include display(flex);
   @include flex-wrap(nowrap);
 
-  &__input {
+  & input {
     @include flex-grow(1);
+    margin-bottom: 0;
 
     @media only screen and (min-width: $small-screen-max) {
       border-top-right-radius: 0;

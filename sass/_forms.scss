@@ -123,26 +123,144 @@ label {
   font-weight: $form-label-font-weight;
 }
 
-input,
-textarea {
-  font-size: $form-input-font-size;
-  font-family: $form-font-family;
-  font-weight: $form-input-font-weight;
-  background-color: $form-background-color;
-  color: $form-input-color;
-  padding: $form-input-vertical-padding $form-input-horizontal-padding;
+form h2,
+form p {
+  margin-bottom: $base-margin;
+}
+
+#{$all-text-inputs} {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: $base-margin;
   border: $form-border;
   border-radius: $form-border-radius;
+  padding: $form-input-vertical-padding $form-input-horizontal-padding;
   box-shadow: $form-input-box-shadow;
-  width: 100%;
+  background-color: $form-background-color;
+  color: $form-input-color;
+  font-family: $form-font-family;
+  font-size: $form-input-font-size;
+  font-weight: $form-input-font-weight;
 
   @include placeholder {
     color: $form-placeholder-color;
   }
 }
 
-input[type='submit'] {
+input[type='submit'],
+form button {
   width: 100%;
+}
+
+// Radio button toggle
+
+@mixin radio-toggle {
+  @include display(flex);
+  margin-bottom: $base-margin;
+  width: 100%;
+
+  input[type='radio'] {
+    display: none;
+  }
+
+  label {
+    @include flex(1);
+    margin: 0;
+    border: $base-border;
+    padding: 6px 24px;
+    background-color: $grey-light;
+    cursor: pointer;
+    transition: $toggle-button-transistion;
+
+    &:first-of-type {
+      border-top-left-radius: $minor-border-radius;
+      border-bottom-left-radius: $minor-border-radius;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: $minor-border-radius;
+      border-bottom-right-radius: $minor-border-radius;
+    }
+
+    &:before {
+      content: '\f111';
+      font-family: FontAwesome;
+      margin-right: 6px;
+      color: $white;
+    }
+  }
+
+  input[type='radio']:checked + label {
+    background-color: $white;
+
+    &:before {
+      content: '\f058';
+      color: $base-link-color;
+    }
+  }
+
+  label {
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $grey-lighter;
+    }
+  }
+
+  input[type='radio']:checked + label {
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $hover-link-color;
+      color: $white;
+
+      &:before {
+        color: $white;
+      }
+    }
+  }
+}
+
+// Autocomplete Dropdown
+
+@mixin autocomplete-dropdown {
+  position: relative;
+  margin-bottom: $base-margin;
+
+  input[type="search"] {
+    margin-bottom: 0;
+  }
+
+  input[type="search"]:focus {
+    border: 1px solid $sky-blue;
+    outline: 0;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    background-color: $white;
+    z-index: 1;
+  }
+
+  li {
+    list-style-type: none;
+    border-left: 1px solid $sky-blue;
+    border-right: 1px solid $sky-blue;
+  }
+
+  .eac-item {
+    padding: $form-input-vertical-padding $form-input-horizontal-padding;
+  }
+
+  li:last-child {
+    border-bottom: 1px solid $sky-blue;
+  }
+
+  li:hover {
+    background-color: $sky-blue;
+    color: $white;
+  }
 }
 
 // Full-width field
@@ -151,8 +269,9 @@ input[type='submit'] {
   @include display(flex);
   @include flex-wrap(nowrap);
 
-  &__input {
+  & input {
     @include flex-grow(1);
+    margin-bottom: 0;
 
     @media only screen and (min-width: $small-screen-max) {
       border-top-right-radius: 0;

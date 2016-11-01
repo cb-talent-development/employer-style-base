@@ -2,7 +2,7 @@
 @import "variables/breakpoints.scss";
 @import "variables/colors";
 @import "variables/sizing";
-@import "variables/motion";
+@import "variables/animations";
 
 // SASS Directives
 @import "directives/accents";
@@ -14,6 +14,7 @@
 @import "directives/flashes";
 @import "directives/gradients";
 @import "directives/groups";
+@import "directives/headers";
 @import "directives/link";
 @import "directives/modals";
 @import "directives/speech_bubble";

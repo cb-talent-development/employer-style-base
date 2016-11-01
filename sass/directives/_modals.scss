@@ -1,0 +1,9 @@
+%popup-modal {
+  width: 90vw;
+  height: 90vh;
+  max-width: 900px;
+  margin: auto;
+  border-radius: $minor-border-radius;
+  padding: $base-spacing * 1.5;
+  background-color: $panel-primary;
+}

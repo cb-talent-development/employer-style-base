@@ -144,6 +144,7 @@ form p {
 
   @include placeholder {
     color: $form-placeholder-color;
+    font-style: italic;
   }
 }
 

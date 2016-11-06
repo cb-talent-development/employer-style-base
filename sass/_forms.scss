@@ -128,7 +128,8 @@ form p {
   margin-bottom: $base-margin;
 }
 
-#{$all-text-inputs} {
+#{$all-text-inputs},
+select {
   box-sizing: border-box;
   width: 100%;
   margin-bottom: $base-margin;
@@ -269,8 +270,10 @@ form button {
 .fieldset--large {
   @include display(flex);
   @include flex-wrap(nowrap);
+  @include align-items(center);
 
-  & input {
+  & #{$all-text-inputs},
+  & select {
     @include flex-grow(1);
     margin-bottom: 0;
 
@@ -298,5 +301,6 @@ form button {
   @media only screen and (max-width: $small-screen-max) {
     @include flex-wrap(wrap);
     @include flex-direction(column);
+    @include align-items(flex-start);
   }
 }

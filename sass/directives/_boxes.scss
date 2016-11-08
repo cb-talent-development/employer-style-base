@@ -12,9 +12,9 @@
 
 // Accordion Panels
 @mixin accordion__panel {
-    padding: 0 18px;
-    background-color: $white;
-    max-height: 0;
+    padding: 0 $base-padding;
+    background-color: $panel-primary;
+    display: none
     overflow: hidden;
     transition: 0.1s ease-in-out;
     opacity: 0;
@@ -27,5 +27,5 @@
 
 @mixin accordion__active_panel {
     opacity: 1;
-    max-height: 500px;
+    display: block;
 }

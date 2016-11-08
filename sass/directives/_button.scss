@@ -221,46 +221,44 @@
 
 // Accordion Buttons
 @mixin accordion {
-    background-color: $white;
-    color: $anchor-blue;
+    background-color: $panel-primary;
+    color: $header-text-color;
     cursor: pointer;
-    padding: 18px;
+    padding: $base-padding;
     width: 100%;
     text-align: left;
     border: none;
     outline: none;
-    transition: 0.4s;
+    transition: $element-slow-fade-in;
     border-radius: 0px;
     font-size: $h3-font-size;
     vertical-align: middle;
 
     &:hover {
-      color: $sky-blue;
+      color: $base-link-color;
     }
 
     &:before {
       content: '+';
-      font-size: 25px;
+      font-size: $medium-icon-font-size;
       width: 30px;
       height: 30px;
-      color: $anchor-blue;
-      border: 2px solid $sky-blue;
+      color: $header-text-color;
+      border: 2px solid $base-link-color;
       border-radius: 50%;
       display: inline-block;
       text-align: center;
       margin-right: 5px;
       line-height: 1;
-      -webkit-transition: all 300ms 0s ease-in-out;
-      transition: all 300ms 0s ease-in-out;
+      @include transition([$element-spin-base-transition]);
     }
 }
 
 @mixin active_accordion {
-  color: $sky-blue;
+  color: $base-link-color;
 
   &:before {
     content: '-';
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    @include transform($element-spin-rotation-full);
   }
 }

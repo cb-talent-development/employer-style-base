@@ -129,7 +129,8 @@ form p {
 }
 
 #{$all-text-inputs},
-select {
+select,
+.select {
   box-sizing: border-box;
   width: 100%;
   margin-bottom: $base-margin;
@@ -273,7 +274,8 @@ form button {
   @include align-items(center);
 
   & #{$all-text-inputs},
-  & select {
+  & select,
+  & .select {
     @include flex-grow(1);
     margin-bottom: 0;
 

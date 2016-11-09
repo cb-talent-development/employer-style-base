@@ -233,11 +233,12 @@ form button {
   label {
     @include flex(1);
     margin: 0;
-    border: $base-border;
+    border: $form-border;
     padding: 6px 24px;
     background-color: $grey-light;
     cursor: pointer;
     transition: $toggle-button-transistion;
+    font-size: $small-font-size;
 
     &:first-of-type {
       border-top-left-radius: $minor-border-radius;
@@ -252,6 +253,7 @@ form button {
     &:before {
       content: '\f111';
       font-family: FontAwesome;
+      font-size: 1.45rem;
       margin-right: 6px;
       color: $white;
     }
@@ -278,12 +280,7 @@ form button {
     &:hover,
     &:active,
     &:focus {
-      background-color: $hover-link-color;
-      color: $white;
-
-      &:before {
-        color: $white;
-      }
+      background-color: $white;
     }
   }
 }
@@ -292,7 +289,6 @@ form button {
 
 @mixin autocomplete-dropdown {
   position: relative;
-  margin-bottom: $base-margin;
 
   input[type="search"] {
     margin-bottom: 0;

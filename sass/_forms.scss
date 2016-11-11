@@ -151,7 +151,7 @@ select,
   }
 }
 
-$select-arrow-width: calc(42px + #{$base-margin});
+$select-arrow-width: 3em;
 
 .select {
   @include transition($base-transition);
@@ -159,9 +159,10 @@ $select-arrow-width: calc(42px + #{$base-margin});
   position: relative;
   text-align: right;
   outline: 0;
+  padding-right: 0;
 
   .current {
-    margin-right: calc(#{$select-arrow-width} - #{$form-input-horizontal-padding});
+    margin-right: calc(#{$select-arrow-width} + #{$form-input-horizontal-padding});
   }
 
   &.open ul {
@@ -194,8 +195,7 @@ $select-arrow-width: calc(42px + #{$base-margin});
     li {
       list-style-type: none;
       padding: $form-input-vertical-padding $form-input-horizontal-padding;
-      padding-right: $select-arrow-width;
-      @include transition(all 0.2s);
+      padding-right: calc(#{$select-arrow-width} + #{$form-input-horizontal-padding});
     }
 
     li:last-child {

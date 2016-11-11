@@ -231,6 +231,8 @@ form button {
   }
 
   label {
+    @include display(flex);
+    @include align-items(center);
     @include flex(1);
     margin: 0;
     border: $form-border;

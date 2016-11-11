@@ -185,15 +185,14 @@ $select-arrow-width: calc(42px + #{$base-margin});
     top: 100%;
     left: 0;
     background-color: $white;
-    max-height: 50vh;
+    max-height: 47.25vh;
     overflow-y: scroll;
-    border-bottom: 1px solid $sky-blue;
+    border: 1px solid $sky-blue;
+    border-top: 0;
 
 
     li {
       list-style-type: none;
-      border-left: 1px solid $sky-blue;
-      border-right: 1px solid $sky-blue;
       padding: $form-input-vertical-padding $form-input-horizontal-padding;
       padding-right: $select-arrow-width;
       @include transition(all 0.2s);

@@ -14,9 +14,9 @@
 @mixin accordion__panel {
     padding: 0 $base-padding;
     background-color: $panel-primary;
-    display: none
+    display: none;
     overflow: hidden;
-    transition: 0.1s ease-in-out;
+    @include transition(0.1s ease-in-out);
     opacity: 0;
     border-bottom: ($base-input-border-size * 4) solid $grey-lighter;
 

@@ -9,23 +9,3 @@
   padding: $base-padding;
   background-color: $panel-primary;
 }
-
-// Accordion Panels
-@mixin accordion__panel {
-    padding: 0 $base-padding;
-    background-color: $panel-primary;
-    display: none
-    overflow: hidden;
-    transition: 0.1s ease-in-out;
-    opacity: 0;
-    border-bottom: ($base-input-border-size * 4) solid $grey-lighter;
-
-    p {
-      color: $paragraph-text-color;
-    }
-}
-
-@mixin accordion__active_panel {
-    opacity: 1;
-    display: block;
-}

@@ -1,0 +1,63 @@
+// Accordion Panels
+@mixin accordion__panel {
+    padding: 0 $base-padding;
+    background-color: $panel-primary;
+    display: none;
+    overflow: hidden;
+    @include transition(0.1s ease-in-out);
+    opacity: 0;
+    border-bottom: ($base-input-border-size * 4) solid $grey-lighter;
+
+    p {
+      color: $paragraph-text-color;
+    }
+}
+
+@mixin accordion__active_panel {
+    opacity: 1;
+    display: block;
+}
+
+// Accordion Buttons
+@mixin accordion {
+    background-color: $panel-primary;
+    color: $header-text-color;
+    cursor: pointer;
+    padding: $base-padding;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: $element-slow-fade-in;
+    border-radius: 0px;
+    font-size: $h3-font-size;
+    vertical-align: middle;
+
+    &:hover {
+      color: $base-link-color;
+    }
+
+    &:before {
+      content: '+';
+      font-size: $medium-icon-font-size;
+      width: 30px;
+      height: 30px;
+      color: $header-text-color;
+      border: 2px solid $base-link-color;
+      border-radius: 50%;
+      display: inline-block;
+      text-align: center;
+      margin-right: 5px;
+      line-height: 1;
+      @include transition($element-spin-base-transition);
+    }
+}
+
+@mixin active_accordion {
+  color: $base-link-color;
+
+  &:before {
+    content: '-';
+    @include transform($element-spin-rotation-full);
+  }
+}

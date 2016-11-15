@@ -47,13 +47,14 @@
     }
 
     h1 {
+      max-width: 28ch;
       margin-top: 0;
       line-height: normal;
       color: $hero-text-color;
     }
 
     p {
-      max-width: 20em;
+      max-width: 35ch;
       margin-bottom: 0;
       font-size: $hero-text-size;
       color: $hero-text-color;

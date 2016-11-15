@@ -6,10 +6,11 @@
     overflow: hidden;
     @include transition(0.1s ease-in-out);
     opacity: 0;
-    border-bottom: ($base-input-border-size * 4) solid $grey-lighter;
+    border-bottom: ($base-input-border-size * 2) solid $grey-lighter;
 
     p {
       color: $paragraph-text-color;
+      padding-bottom: $base-padding;
     }
 }
 
@@ -27,6 +28,7 @@
     width: 100%;
     text-align: left;
     border: none;
+    border-bottom: ($base-input-border-size * 2) solid $grey-lighter;
     outline: none;
     transition: $element-slow-fade-in;
     border-radius: 0px;
@@ -55,6 +57,7 @@
 
 @mixin active_accordion {
   color: $base-link-color;
+  border-bottom: none;
 
   &:after {
     content: '\f068';

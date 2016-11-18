@@ -34,6 +34,7 @@ $button-border-radius: $minor-border-radius;
 $panel-border-radius: $minor-border-radius;
 $radio-border-radius: $base-border-radius * 10;
 $checkbox-border-radius: $panel-border-radius;
+$vertical-rule-width: 1px;
 
 // Image Sizes
 $image-grid-block: 160px;
@@ -48,7 +49,6 @@ $section-padding: 35px;
 $type-margin: 24px;
 
 // UI components
-$medium-icon-font-size: 25px;
 $direction-arrow-size: 2em;
 $close-x-size: 18px;
 
@@ -121,3 +121,4 @@ $base-radio-box-shadow: 0 0 0 1px $grey inset, 0 0 0 9px $white inset, 0 0 0 10p
 $hover-radio-box-shadow: 0 0 0 1px $alert-primary-active inset, 0 0 0 9px $white inset, 0 0 0 16px $alert-primary-active inset;
 $checked-radio-box-shadow: 0 0 0 1px $grey inset, 0 0 0 9px $white inset, 0 0 0 16px $alert-primary inset;
 $active-radio-box-shadow: 0 0 0 8px $alert-primary-active inset, 0 0 0 16px $white inset;
+

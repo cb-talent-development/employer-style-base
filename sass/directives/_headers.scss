@@ -122,6 +122,10 @@
       margin-bottom: $header-headline-bottom-margin;
       line-height: normal;
       color: $hero-text-color;
+
+      @media only screen and (max-width: $small-screen-max) {
+        margin-bottom: 0;
+      }
     }
 
     p {
@@ -129,6 +133,10 @@
       margin-bottom: 0;
       font-size: $hero-text-size;
       color: $hero-text-color;
+
+      @media only screen and (max-width: $small-screen-max) {
+        display: none;
+      }
     }
   }
 }

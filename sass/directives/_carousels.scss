@@ -1,0 +1,33 @@
+@mixin carousel-dots { // ul
+  margin-top: $section-padding;
+  line-height: 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    list-style-type: none;
+    outline: 0;
+    line-height: 0;
+  }
+
+  button {
+    width: $carousel-dot-size;
+    height: $carousel-dot-size;
+    outline: 0;
+    border: 0;
+    border-radius: 50%;
+    margin: 0 $carousel-dot-spacing;
+    background-color: $inactive-carousel-button-color;
+    font-size: 0;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $active-carousel-button-color;
+    }
+  }
+
+  & .slick-active button {
+    background-color: $active-carousel-button-color;
+  }
+}

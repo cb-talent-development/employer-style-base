@@ -1,4 +1,17 @@
-@mixin carousel-dots { // ul
+@mixin carousel-dots($inverse: false) { // ul
+  @if $inverse == true {
+    $inactive-carousel-dot-color: $inverse-inactive-carousel-button-color;
+    $inactive-carousel-dot-opacity: $inverse-inactive-carousel-button-opacity;
+    $active-carousel-dot-color: $inverse-active-carousel-button-color;
+    $active-carousel-dot-opacity: $inverse-active-carousel-button-color;
+  }
+  @else {
+    $inactive-carousel-dot-color: $inactive-carousel-button-color;
+    $inactive-carousel-dot-opacity: $inactive-carousel-button-color;
+    $active-carousel-dot-color: $active-carousel-button-color;
+    $active-carousel-dot-opacity: $active-carousel-button-color;
+  }
+
   margin-top: $section-padding;
   line-height: 0;
   text-align: center;
@@ -17,18 +30,18 @@
     border: 0;
     border-radius: 50%;
     margin: 0 $carousel-dot-spacing;
-    background-color: $inactive-carousel-button-color;
+    background-color: $inactive-carousel-dot-color;
     font-size: 0;
 
     &:hover,
     &:active,
     &:focus {
-      background-color: $active-carousel-button-color;
+      background-color: $active-carousel-dot-color;
     }
   }
 
   & .slick-active button {
-    background-color: $active-carousel-button-color;
+    background-color: $active-carousel-dot-color;
   }
 }
 

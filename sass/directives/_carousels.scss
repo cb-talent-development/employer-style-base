@@ -1,17 +1,4 @@
 @mixin carousel-dots($inverse: false) { // ul
-  @if $inverse == true {
-    $inactive-carousel-dot-color: $inverse-inactive-carousel-button-color;
-    $inactive-carousel-dot-opacity: $inverse-inactive-carousel-button-opacity;
-    $active-carousel-dot-color: $inverse-active-carousel-button-color;
-    $active-carousel-dot-opacity: $inverse-active-carousel-button-color;
-  }
-  @else {
-    $inactive-carousel-dot-color: $inactive-carousel-button-color;
-    $inactive-carousel-dot-opacity: $inactive-carousel-button-color;
-    $active-carousel-dot-color: $active-carousel-button-color;
-    $active-carousel-dot-opacity: $active-carousel-button-color;
-  }
-
   margin-top: $section-padding;
   line-height: 0;
   text-align: center;
@@ -30,18 +17,41 @@
     border: 0;
     border-radius: 50%;
     margin: 0 $carousel-dot-spacing;
-    background-color: $inactive-carousel-dot-color;
+    background-color: $inactive-carousel-button-color;
+    opacity: $inactive-carousel-button-opacity;
     font-size: 0;
 
     &:hover,
     &:active,
     &:focus {
-      background-color: $active-carousel-dot-color;
+      background-color: $active-carousel-button-color;
+      opacity: $active-carousel-button-opacity;
     }
   }
 
   & .slick-active button {
-    background-color: $active-carousel-dot-color;
+    background-color: $active-carousel-button-color;
+    opacity: $active-carousel-button-opacity;
+  }
+
+  @if $inverse == true {
+    // Override and invert dot colors for dark backgrounds
+    button {
+      background-color: $inverse-inactive-carousel-button-color;
+      opacity: $inverse-inactive-carousel-button-opacity;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $inverse-active-carousel-button-color;
+        opacity: $inverse-active-carousel-button-opacity;
+      }
+    }
+
+    & .slick-active button {
+      background-color: $inverse-active-carousel-button-color;
+      opacity: $inverse-active-carousel-button-opacity;
+    }
   }
 }
 

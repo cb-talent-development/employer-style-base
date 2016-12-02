@@ -1,59 +1,59 @@
 // Accordion Panels
 @mixin accordion__panel {
-    padding: 0 $base-padding;
-    background-color: $panel-primary;
-    display: none;
-    overflow: hidden;
-    @include transition(0.1s ease-in-out);
-    opacity: 0;
-    border-bottom: ($base-input-border-size * 2) solid $grey-lighter;
+  padding: 0 $base-padding;
+  background-color: $panel-primary;
+  display: none;
+  overflow: hidden;
+  @include transition(0.1s ease-in-out);
+  opacity: 0;
+  border-bottom: ($base-input-border-size * 2) solid $grey-lighter;
 
-    p {
-      color: $paragraph-text-color;
-      padding-bottom: $base-padding;
-    }
+  p {
+    color: $paragraph-text-color;
+    padding-bottom: $base-padding;
+  }
 }
 
 @mixin accordion__active_panel {
-    opacity: 1;
-    display: block;
+  opacity: 1;
+  display: block;
 }
 
 // Accordion Buttons
 @mixin accordion {
-    background-color: $panel-primary;
-    color: $header-text-color;
-    cursor: pointer;
-    padding: $base-padding;
-    width: 100%;
-    text-align: left;
-    border: none;
-    border-bottom: ($base-input-border-size * 2) solid $grey-lighter;
-    outline: none;
-    transition: $element-slow-fade-in;
-    border-radius: 0px;
-    font-size: $h3-font-size;
-    vertical-align: middle;
-    white-space: normal;
+  background-color: $panel-primary;
+  color: $header-text-color;
+  cursor: pointer;
+  padding: $base-padding;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-bottom: ($base-input-border-size * 2) solid $grey-lighter;
+  outline: none;
+  transition: $element-slow-fade-in;
+  border-radius: 0px;
+  font-size: $h3-font-size;
+  vertical-align: middle;
+  white-space: normal;
 
-    &:hover {
-      color: $base-link-color;
-    }
+  &:hover {
+    color: $base-link-color;
+  }
 
-    &:after {
-      content: '\f067';
-      font-family: FontAwesome;
-      float: right;
-      font-size: $medium-icon-font-size;
-      width: 30px;
-      height: 30px;
-      color: $base-link-color;
-      display: inline-block;
-      text-align: center;
-      margin-right: 5px;
-      line-height: 1;
-      @include transition($element-spin-base-transition);
-    }
+  &:after {
+    content: '\f067';
+    font-family: FontAwesome;
+    float: right;
+    font-size: $medium-icon-font-size;
+    width: $accordion-icon-size;
+    height: $accordion-icon-size;
+    color: $base-link-color;
+    display: inline-block;
+    text-align: center;
+    margin-right: 5px;
+    line-height: 1;
+    @include transition($element-spin-base-transition);
+  }
 }
 
 @mixin active_accordion {

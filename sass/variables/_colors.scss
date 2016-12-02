@@ -163,6 +163,12 @@ $active-carousel-button-color: $grey-darker;
 $inactive-carousel-button-color: $grey-lighter;
 $active-resource-carousel-button-color: $active-carousel-button-color;
 $inactive-resource-carousel-button-color: $grey;
+$inactive-carousel-button-opacity: 1;
+$active-carousel-button-opacity: 1;
+$inverse-active-carousel-button-color: $grey-lighter;
+$inverse-inactive-carousel-button-color: $grey-lighter;
+$inverse-inactive-carousel-button-opacity: 0.35;
+$inverse-active-carousel-button-opacity: 1;
 
 // Border
 $base-border-primary-color: $grey-light;

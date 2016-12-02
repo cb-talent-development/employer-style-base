@@ -1,0 +1,98 @@
+@mixin carousel-dots($inverse: false) { // ul
+  margin-top: $section-padding;
+  line-height: 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    list-style-type: none;
+    outline: 0;
+    line-height: 0;
+  }
+
+  button {
+    width: $carousel-dot-size;
+    height: $carousel-dot-size;
+    outline: 0;
+    border: 0;
+    border-radius: 50%;
+    margin: 0 $carousel-dot-spacing;
+    background-color: $inactive-carousel-button-color;
+    opacity: $inactive-carousel-button-opacity;
+    font-size: 0;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $active-carousel-button-color;
+      opacity: $active-carousel-button-opacity;
+    }
+  }
+
+  & .slick-active button {
+    background-color: $active-carousel-button-color;
+    opacity: $active-carousel-button-opacity;
+  }
+
+  @if $inverse == true {
+    // Override and invert dot colors for dark backgrounds
+    button {
+      background-color: $inverse-inactive-carousel-button-color;
+      opacity: $inverse-inactive-carousel-button-opacity;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $inverse-active-carousel-button-color;
+        opacity: $inverse-active-carousel-button-opacity;
+      }
+    }
+
+    & .slick-active button {
+      background-color: $inverse-active-carousel-button-color;
+      opacity: $inverse-active-carousel-button-opacity;
+    }
+  }
+}
+
+@mixin carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: z($z-context, page_content, $page_content, carousel__arrow);
+  color: $inactive-carousel-button-color;
+  font-size: $direction-arrow-size;
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $active-carousel-button-color;
+  }
+
+  @media only screen and (max-width: $medium-screen-max) {
+    margin-left: $base-margin;
+    margin-right: $base-margin;
+  }
+
+  @media only screen and (max-width: $small-screen-max) {
+    display: none;
+  }
+
+  &--left {
+    left: 0;
+  }
+
+  &--right {
+    right: 0;
+  }
+}
+
+@mixin carousel-wrap {
+  margin: auto;
+  padding: 0 calc(#{$base-padding} + #{$direction-arrow-size});
+
+  @media only screen and (max-width: $small-screen-max) {
+    padding: 0;
+  }
+}

@@ -131,4 +131,6 @@ $table-margin: $base-margin;
 $table-row-divider-width: 1px;
 $table-header-padding: $base-margin;
 $table-header-corner-radius: $base-border-radius;
-$table-cell-padding: $base-padding;
+$table-cell-padding-sides: $base-margin;
+$table-cell-padding-top-and-bottom: $base-padding;
+$table-header-padding: $base-margin;

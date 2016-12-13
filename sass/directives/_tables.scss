@@ -1,0 +1,39 @@
+%table {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 $table-margin 0;
+  padding: 0;
+}
+
+.table__cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%;  // Default to full width
+  padding: $table-cell-padding;
+  overflow: hidden; // Or flex might break
+  list-style: none;
+  > h1, > h2, > h3, > h4, > h5, > h6 { margin: 0; }
+
+  &:not(.last-cell):not(.table__header) {
+    border-bottom: $table-row-divider-width solid $table-row-divider-color;
+  }
+}
+
+.table__header {
+  background-color: $table-header-background-color;
+  padding: $base-margin;
+}
+
+.table__header--first {
+  border-top-left-radius: $table-header-corner-radius;
+}
+
+.table__header--last {
+  border-top-right-radius: $table-header-corner-radius;
+}
+
+@mixin table-columns($quantity) {
+  .table__cell {
+    @include calc(width, "100% / #{$quantity}");
+  }
+}

@@ -40,6 +40,7 @@ $grey-darkest: lighten($black, 20);
 $grey-darker: lighten($grey-darkest, 20);
 $grey-dark: #999999;
 $grey-semi-dark: #BBBBBB;
+$grey-semi-darker: #b0b0b0; // Possibly not part of official style guide
 $grey: #CCCCCC;
 $grey-light: #DDDDDD;
 $grey-lighter: #EEEEEE;
@@ -183,3 +184,7 @@ $form-border-color-focus: $alert-primary;
 $form-background-color: $white;
 $form-input-color: $body-text-color;
 $form-placeholder-color: $grey-semi-dark;
+
+// Tables
+$table-row-divider-color: $grey-semi-darker;
+$table-header-background-color: $grey;

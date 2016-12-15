@@ -1,0 +1,40 @@
+@mixin table {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 $table-margin 0;
+  padding: 0;
+}
+
+@mixin table__cell($columns) {
+  @include calc(width, "100% / #{$columns}");
+
+  border-bottom: $table-row-divider-width solid $table-row-divider-color;
+  padding: $table-cell-padding-top-and-bottom $table-cell-padding-sides;
+  box-sizing: border-box;
+  flex-grow: 1;
+  overflow: hidden; // Or flex might break
+  list-style: none;
+  > h1, > h2, > h3, > h4, > h5, > h6 { margin: 0; }
+}
+
+@mixin table__cell--last-row($columns) {
+  @include table__cell($columns);
+  border-bottom: none !important;
+}
+
+@mixin table__header($columns) {
+  @include table__cell($columns);
+  background-color: $table-header-background-color;
+  padding: $table-header-padding;
+  border-bottom: none;
+}
+
+@mixin table__header--first($columns) {
+  @include table__header($columns);
+  border-top-left-radius: $table-header-corner-radius;
+}
+
+@mixin table__header--last($columns) {
+  @include table__header($columns);
+  border-top-right-radius: $table-header-corner-radius;
+}

@@ -17,8 +17,7 @@
   > h1, > h2, > h3, > h4, > h5, > h6 { margin: 0; }
 }
 
-@mixin table__cell--last-row($columns) {
-  @include table__cell($columns);
+@mixin table__row--last {
   border-bottom: none !important;
 }
 

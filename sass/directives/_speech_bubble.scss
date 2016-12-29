@@ -2,6 +2,7 @@
   border: $base-border;
   border-radius: $base-border-radius;
   padding: $base-spacing / 2 $base-spacing;
+  background-color: $panel-primary;
 
   &:after, &:before {
     bottom: 100%;

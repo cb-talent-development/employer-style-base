@@ -1,13 +1,24 @@
-@mixin speech_bubble($direction: up, $offset-position: left, $base-position: bottom) {
-  $pointer-triangle-size: 28px !default; // width of triangle base
-  $pointer-triangle-foreground-size: $pointer-triangle-size - 1 !default;
-  $pointer-offset: 25% !default;
+@mixin speech_bubble($direction: up, $pointer-offset: 25%, $pointer-triangle-size: 28px) {
+  $pointer-triangle-foreground-size: $pointer-triangle-size - 1;
+  $base-position: null;
+  $offset-position: null;
 
-  // TODO why doesn't this work; gives undefined variable error for both
-  // @if $direction == up {
-  //  $base-position: bottom;
-  //  $offset-position: left;
-  // }
+  @if $direction == up {
+   $base-position: bottom;
+   $offset-position: left;
+  }
+  @if $direction == down {
+   $base-position: top;
+   $offset-position: left;
+  }
+  @if $direction == left {
+   $base-position: right;
+   $offset-position: top;
+  }
+  @if $direction == right {
+   $base-position: left;
+   $offset-position: top;
+  }
 
   border: $base-border;
   border-radius: $base-border-radius;

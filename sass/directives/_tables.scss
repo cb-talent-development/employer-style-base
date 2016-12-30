@@ -39,6 +39,9 @@
 }
 
 @mixin table--row-column-headers {
+  $table-highlight-z-index: 1 !default;
+  $table-caption-z-index: 2 !default;
+
   border-collapse: separate;
   border-spacing: $table-border-spacing 0;
   table-layout: fixed;
@@ -47,7 +50,7 @@
 
   caption {
     position: relative;
-    z-index: z($z-context, page_content, $page_content, table_caption);
+    z-index: $table-caption-z-index;
     background: $panel-primary;
     text-align: left;
   }
@@ -76,7 +79,7 @@
       top: -5000px;
       height: 10000px;
       width: 100%;
-      z-index: z($z-context, page_content, $page_content, table_highlight);
+      z-index: $table-highlight-z-index;
       pointer-events: none;
     }
   }

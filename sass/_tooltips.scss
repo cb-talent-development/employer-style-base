@@ -14,11 +14,13 @@
   &:hover .tooltip-contents,
   &:focus .tooltip-contents,
   &:active .tooltip-contents {
+    $tooltip-z-index: 1 !default;
+
     @include speech_bubble;
     padding-top: calc(0.75rem + #{$small-strip-height});
     display: block;
     position: absolute;
-    z-index: z($z-context, page_content, $page_content, table_tooltip);
+    z-index: $tooltip-z-index;
     width: 40ch;
     left: calc(100% + #{$base-padding});
     top: 50%;

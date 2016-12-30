@@ -16,7 +16,11 @@
   &:active .tooltip-contents {
     $tooltip-z-index: 1 !default;
 
-    @include speech_bubble;
+    border: $base-border;
+    border-radius: $base-border-radius;
+    padding: $base-spacing / 2 $base-spacing;
+    background-color: $panel-primary;
+
     padding-top: calc(0.75rem + #{$small-strip-height});
     display: block;
     position: absolute;
@@ -40,11 +44,11 @@
       position: absolute;
       top: 50%;
       right: calc(100% - 5px);
-      transform: translateY(-50%) rotate(-90deg) scaleX(1.65);
+      transform: translateY(-50%) rotate(-90deg) scaleX(1.75);
       text-shadow:
         0 2px 0px rgba(255,255,255, 1),
         0 -1px 2px rgba(0, 0, 0, 0.25);
-      font-size: 30px;
+      font-size: 24px;
       color: $white;
     }
   }

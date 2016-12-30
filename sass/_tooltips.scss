@@ -1,0 +1,49 @@
+.tooltip {
+  position: relative;
+
+  &:before {
+    content: '\f059'; // Question circle icon
+    font-family: FontAwesome;
+    color: $base-link-color;
+  }
+
+  .tooltip-contents {
+    display: none;
+  }
+
+  &:hover .tooltip-contents,
+  &:focus .tooltip-contents,
+  &:active .tooltip-contents {
+    @include speech_bubble;
+    padding-top: calc(0.75rem + #{$small-strip-height});
+    display: block;
+    position: absolute;
+    z-index: z($z-context, page_content, $page_content, table_tooltip);
+    width: 40ch;
+    left: calc(100% + #{$base-padding});
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: $base-box-shadow;
+    border: 0;
+    color: $grey-darker;
+    font-size: $tooltip-contents-font-size;
+    font-weight: $font-weight-normal;
+
+    &:before {
+      @include small-strip;
+    }
+
+    &:after {
+      content: '▲';
+      position: absolute;
+      top: 50%;
+      right: calc(100% - 5px);
+      transform: translateY(-50%) rotate(-90deg) scaleX(1.65);
+      text-shadow:
+        0 2px 0px rgba(255,255,255, 1),
+        0 -1px 2px rgba(0, 0, 0, 0.25);
+      font-size: 30px;
+      color: $white;
+    }
+  }
+}

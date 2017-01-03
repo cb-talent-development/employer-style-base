@@ -134,6 +134,21 @@
   }
 }
 
+@mixin table--buttons-row {
+  td {
+    background-color: transparent !important;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:hover:after,
+    &:active:after,
+    &:focus:after {
+      content: none !important;
+      display: none;
+    }
+  }
+}
+
 @mixin table-data-icon {
   position: relative;
   right: 9999px;

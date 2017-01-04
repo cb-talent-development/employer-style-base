@@ -68,6 +68,7 @@
   th, td {
     padding: $base-padding;
     position: relative;
+    font-size: $small-font-size;
 
     // Column highlight
     &:hover:after,
@@ -98,7 +99,6 @@
   td {
     color: $grey-darker;
     text-align: center;
-    font-size: $small-font-size;
   }
 
   thead {
@@ -135,7 +135,7 @@
   }
 }
 
-@mixin table--buttons-row {
+@mixin table__buttons-row {
   td {
     background-color: transparent !important;
     padding-left: 0;

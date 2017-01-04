@@ -1,4 +1,4 @@
-.tooltip {
+@mixin tooltip($tooltip-z-index: 1) {
   position: relative;
 
   &:before {
@@ -14,8 +14,6 @@
   &:hover .tooltip-contents,
   &:focus .tooltip-contents,
   &:active .tooltip-contents {
-    $tooltip-z-index: 1 !default;
-
     border: $base-border;
     border-radius: $base-border-radius;
     padding: $base-spacing / 2 $base-spacing;

@@ -38,10 +38,9 @@
   border-top-right-radius: $table-header-corner-radius;
 }
 
-@mixin table--row-column-headers {
-  $table-highlight-z-index: 1 !default;
-  $table-caption-z-index: 2 !default;
 
+
+@mixin table--row-column-headers($table-highlight-z-index: 1, $table-caption-z-index: 2) {
   border-collapse: separate;
   border-spacing: $table-border-spacing 0;
   table-layout: fixed;

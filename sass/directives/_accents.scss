@@ -5,8 +5,8 @@
 @mixin small-strip {
   content: '';
   height: $small-strip-height;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
+  border-top-right-radius: $minor-border-radius;
+  border-top-left-radius: $minor-border-radius;
   background-color: $anchor-blue;
   position: absolute;
   top: 0;

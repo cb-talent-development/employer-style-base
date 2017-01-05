@@ -37,3 +37,138 @@
   @include table__header($columns);
   border-top-right-radius: $table-header-corner-radius;
 }
+
+
+
+@mixin table--row-column-headers($table-highlight-z-index: 1, $table-caption-z-index: 2) {
+  border-collapse: separate;
+  border-spacing: $table-border-spacing 0;
+  table-layout: fixed;
+  width: 100%;
+  overflow: hidden;
+
+  caption {
+    position: relative;
+    z-index: $table-caption-z-index;
+    background: $panel-primary;
+    text-align: left;
+  }
+
+  th[scope='col'] {
+    width: 25%;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  th[scope='row'] {
+    text-align: left;
+  }
+
+  th, td {
+    padding: $base-padding;
+    position: relative;
+    font-size: $small-font-size;
+
+    // Column highlight
+    &:hover:after,
+    &:active:after,
+    &:focus:after {
+      content: '';
+      position: absolute;
+      background-color: rgba($grey-darkest, 0.1);
+      left: 0;
+      top: -5000px;
+      height: 10000px;
+      width: 100%;
+      z-index: $table-highlight-z-index;
+      pointer-events: none;
+    }
+  }
+
+  // Remove column highlight
+  th[scope='row'],
+  thead td {
+    &:hover:after,
+    &:active:after,
+    &:focus:after {
+      content: none;
+    }
+  }
+
+  td {
+    color: $grey-darker;
+    text-align: center;
+  }
+
+  thead {
+    th {
+      color: $white;
+      font-weight: $font-weight-bold;
+    }
+
+    th:nth-of-type(1n) {
+      background-color: $table-column-heading-1;
+    }
+
+    th:nth-of-type(2n) {
+      background-color: $table-column-heading-2;
+    }
+
+    th:nth-of-type(3n) {
+      background-color: $table-column-heading-3;
+    }
+  }
+
+  tbody {
+    tr:nth-child(odd) {
+      th, td {
+        background-color: $table-row-light;
+      }
+    }
+
+    tr:nth-child(even) {
+      th, td {
+        background-color: $table-row-dark;
+      }
+    }
+  }
+}
+
+@mixin table__buttons-row {
+  td {
+    background-color: transparent !important;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:hover:after,
+    &:active:after,
+    &:focus:after {
+      content: none !important;
+      display: none;
+    }
+  }
+}
+
+@mixin table-data-icon {
+  position: relative;
+  right: 9999px;
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    right: -9999px;
+    width: 100%;
+    font-size: $table-data-icon-size;
+    line-height: 0;
+    font-family: FontAwesome;
+    color: $grey-dark;
+  }
+
+  &--no:after {
+    content: '\f00d'; // X icon
+  }
+
+  &--yes:after {
+    content: '\f00c'; // Checkmark icon
+  }
+}

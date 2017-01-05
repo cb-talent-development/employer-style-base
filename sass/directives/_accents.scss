@@ -1,3 +1,15 @@
 @mixin shadow($z: 1) {
   box-shadow: 0 (2px * $z) (2px * $z) rgba(0, 0, 0, 0.2);
 }
+
+@mixin small-strip {
+  content: '';
+  height: $small-strip-height;
+  border-top-right-radius: $minor-border-radius;
+  border-top-left-radius: $minor-border-radius;
+  background-color: $anchor-blue;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}

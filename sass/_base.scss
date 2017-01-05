@@ -21,14 +21,16 @@
 @import "directives/modals";
 @import "directives/speech_bubble";
 @import "directives/tables";
+@import "directives/tooltips";
 @import "directives/visibility";
 @import "directives/z_index";
 
 @import "typography";
 @import "buttons";
 
-@import "forms";
 @import "content_grids";
+@import "forms";
+@import "tables";
 
 .employer-scope {
   // Reset

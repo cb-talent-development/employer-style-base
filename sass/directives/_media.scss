@@ -19,10 +19,11 @@
   }
 }
 
-@mixin media__item__img-wrap {
+@mixin media__item__img-wrap($image-wrap-width) {
   @include flex-grow(0);
   @include flex-shrink(0);
   @include flex-basis(auto);
+  width: $image-wrap-width;
   margin-right: $base-spacing;
 
   @media only screen and (max-width: $small-screen-max) {
@@ -35,7 +36,11 @@
 @mixin media__item__text {
   @include flex-grow(1);
   @include flex-shrink(1);
-  @include flex-basis(100%);
+  @include flex-basis(auto);
+
+  @media only screen and (max-width: $small-screen-max) {
+    @include flex-shrink(0);
+  }
 
   &--headline {
     margin-bottom: 0;

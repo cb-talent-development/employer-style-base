@@ -3,7 +3,7 @@
   @include flex-direction(column);
 }
 
-@mixin media__item {
+@mixin media__item ($image-wrap-width, $breakpoint: $small-screen-max) {
   @include display(flex);
   @include flex(1);
   @include flex-grow(1);
@@ -13,41 +13,41 @@
     margin-bottom: 0;
   }
 
-  @media only screen and (max-width: $small-screen-max) {  // TODO Can this wrap so that I don't have to explicitly set column direction? Give image boxes a min-width?
+  @media only screen and (max-width: $breakpoint) {
     @include flex-direction(column);
     text-align: center;
   }
-}
 
-@mixin media__item__img-wrap($image-wrap-width) {
-  @include flex-grow(0);
-  @include flex-shrink(0);
-  @include flex-basis(auto);
-  width: $image-wrap-width;
-  margin-right: $base-spacing;
-
-  @media only screen and (max-width: $small-screen-max) {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: $base-margin;
-  }
-}
-
-@mixin media__item__text {
-  @include flex-grow(1);
-  @include flex-shrink(1);
-  @include flex-basis(auto);
-
-  @media only screen and (max-width: $small-screen-max) {
+  &__img-wrap {
+    @include flex-grow(0);
     @include flex-shrink(0);
+    @include flex-basis(auto);
+    width: $image-wrap-width;
+    margin-right: $base-spacing;
+
+    @media only screen and (max-width: $breakpoint) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: $base-margin;
+    }
   }
 
-  &--headline {
-    margin-bottom: 0;
-  }
+  &__text {
+    @include flex-grow(1);
+    @include flex-shrink(1);
+    @include flex-basis(auto);
 
-  &--description {
-    font-size: $h3-font-size;
-    color: $paragraph-text-color;
+    @media only screen and (max-width: $breakpoint) {
+      @include flex-shrink(0);
+    }
+
+    &--headline {
+      margin-bottom: 0;
+    }
+
+    &--description {
+      font-size: $h3-font-size;
+      color: $paragraph-text-color;
+    }
   }
 }

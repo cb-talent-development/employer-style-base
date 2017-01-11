@@ -5,8 +5,9 @@
 
 @mixin media__item ($image-wrap-width, $breakpoint: $small-screen-max) {
   @include display(flex);
-  @include flex(1);
   @include flex-grow(1);
+  @include flex-shrink(1);
+  @include flex-basis(auto);
   margin-bottom: $base-spacing;
 
   &:last-child {

@@ -1,0 +1,54 @@
+@mixin media__wrapper {
+  @include display(flex);
+  @include flex-direction(column);
+}
+
+@mixin media__item ($image-wrap-width, $breakpoint: $small-screen-max) {
+  @include display(flex);
+  @include flex-grow(1);
+  @include flex-shrink(1);
+  @include flex-basis(auto);
+  margin-bottom: $base-spacing;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media only screen and (max-width: $breakpoint) {
+    @include flex-direction(column);
+    text-align: center;
+  }
+
+  &__img-wrap {
+    @include flex-grow(0);
+    @include flex-shrink(0);
+    @include flex-basis(auto);
+    width: $image-wrap-width;
+    margin-right: $base-spacing;
+
+    @media only screen and (max-width: $breakpoint) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: $base-margin;
+    }
+  }
+
+  &__text {
+    @include flex-grow(1);
+    @include flex-shrink(1);
+    @include flex-basis(auto);
+
+    @media only screen and (max-width: $breakpoint) {
+      @include flex-shrink(0);
+    }
+
+    &--headline {
+      margin-bottom: 0;
+    }
+
+    &--description {
+      font-size: $h3-font-size;
+      color: $paragraph-text-color;
+    }
+  }
+}

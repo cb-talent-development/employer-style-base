@@ -1,0 +1,53 @@
+/*
+
+Read More Toggle
+
+Works for both inline (nested span) and block (new paragraph) hidden text. Read More and the hidden text have to both be one or the other.
+
+Example Markup:
+
+%p
+  [Visible paragraph]
+  %input#read-more__toggle.read-more__toggle{:type => "checkbox"}
+  %span.read-more__hidden-text [Hidden paragraph, nested]
+  %label.read-more__trigger{:for => "read-more__toggle"}
+    %span.sr-only Toggle paragraph
+
+%p [Visible paragraph]
+%input#read-more__toggle.read-more__toggle{:type => "checkbox"}
+%p.read-more__hidden-text [Hidden paragraph, new block]
+%label.read-more__trigger{:for => "read-more__toggle"}
+  %span.sr-only Toggle paragraph
+
+*/
+
+.read-more__hidden-text {
+  display: none;
+}
+
+.read-more__trigger { // label
+  color: $base-link-color;
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $hover-link-color;
+  }
+
+  &:after {
+    content: "Read More...";
+  }
+}
+
+.read-more__toggle { // checkbox
+  display: none;
+
+  &:checked ~ .read-more__hidden-text {
+    display: initial;
+  }
+
+  &:checked ~ .read-more__trigger {
+    content: "Read Less...";
+  }
+}

@@ -172,3 +172,10 @@
     content: '\f00c'; // Checkmark icon
   }
 }
+
+// Resize leftmost columns on medium screens
+@mixin medium-screen-left-column {
+  @media only screen and (max-width: $medium-screen-max) {
+    width: 14ch;
+  }
+}

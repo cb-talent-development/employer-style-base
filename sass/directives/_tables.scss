@@ -134,6 +134,12 @@
   }
 }
 
+@media only screen and (max-width: $medium-screen-max) {
+  thead td {
+    width: 14ch;
+  }
+}
+
 @mixin table__buttons-row {
   td {
     background-color: transparent !important;

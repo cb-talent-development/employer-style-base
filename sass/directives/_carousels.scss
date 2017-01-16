@@ -96,3 +96,38 @@
     padding: 0;
   }
 }
+
+// Product Buy Pages Carousel (Why Post and Why Search)
+@mixin product__carousel__item-wrap {
+  @include carousel-wrap;
+
+  .slick-list {
+    @media only screen and (max-width: $small-screen-max) {
+      background-color: $panel-primary;
+    }
+  }
+}
+
+@mixin product__carousel__item {
+  position: relative;
+  outline: 0;
+
+  @media only screen and (max-width: $small-screen-max) {
+    padding: $base-padding;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+
+  h3 {
+    margin-bottom: 0;
+    font-size: $base-font-size;
+  }
+
+  span {
+    color: $paragraph-text-color;
+  }
+}

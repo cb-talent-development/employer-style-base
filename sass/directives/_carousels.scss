@@ -158,7 +158,7 @@
 
 @mixin testimonial__carousel__logo {
   @media only screen and (min-width: $medium-screen-max) {
-    padding-right: $base-margin;
+    padding-right: $base-padding;
     width: 130px;
     flex-grow: 0;
     flex-shrink: 0;
@@ -175,7 +175,7 @@
 @mixin testimonial__carousel__copy {
   @media only screen and (min-width: $medium-screen-max) {
     border-left: $vertical-rule-width solid $white;
-    padding-left: $base-margin;
+    padding-left: $base-padding;
   }
 
   p {

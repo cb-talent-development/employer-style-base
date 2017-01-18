@@ -130,16 +130,11 @@
 
 // Testimonial Carousels
 @mixin testimonial__carousel__item-container {
-  @include display(flex);
-  @include flex-direction(row);
-  @include flex-wrap(nowrap);
+  @include media__item(400px, $medium-screen-max);
   @include justify-content(center);
   @include align-items(center);
 
   @media only screen and (max-width: $medium-screen-max) {
-    @include flex-direction(column);
-    text-align: center;
-
     img {
       display: inline;
     }
@@ -162,8 +157,6 @@
 }
 
 @mixin testimonial__carousel__logo {
-  max-width: 120px;
-
   @media only screen and (min-width: $medium-screen-max) {
     padding-right: $base-margin;
   }

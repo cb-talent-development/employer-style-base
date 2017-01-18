@@ -160,9 +160,9 @@
   @media only screen and (min-width: $medium-screen-max) {
     padding-right: $base-padding;
     width: 130px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: auto;
+    @include flex-grow(0);
+    @include flex-shrink(0);
+    @include flex-basis(auto);
   }
 
   img {

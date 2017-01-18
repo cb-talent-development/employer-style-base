@@ -159,11 +159,14 @@
 @mixin testimonial__carousel__logo {
   @media only screen and (min-width: $medium-screen-max) {
     padding-right: $base-margin;
+    width: 130px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
   }
 
   img {
     // Safari 9 fixes for preserving image aspect ratio
-    @include flex(0 0 auto);
     max-width: 100%;
     max-height: 100%;
   }

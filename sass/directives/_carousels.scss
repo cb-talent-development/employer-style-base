@@ -130,16 +130,11 @@
 
 // Testimonial Carousels
 @mixin testimonial__carousel__item-container {
-  @include display(flex);
-  @include flex-direction(row);
-  @include flex-wrap(nowrap);
+  @include media__item(400px, $medium-screen-max);
   @include justify-content(center);
   @include align-items(center);
 
   @media only screen and (max-width: $medium-screen-max) {
-    @include flex-direction(column);
-    text-align: center;
-
     img {
       display: inline;
     }
@@ -162,15 +157,16 @@
 }
 
 @mixin testimonial__carousel__logo {
-  max-width: 120px;
-
   @media only screen and (min-width: $medium-screen-max) {
-    padding-right: $base-margin;
+    padding-right: $base-padding;
+    width: 130px;
+    @include flex-grow(0);
+    @include flex-shrink(0);
+    @include flex-basis(auto);
   }
 
   img {
     // Safari 9 fixes for preserving image aspect ratio
-    @include flex(0 0 auto);
     max-width: 100%;
     max-height: 100%;
   }
@@ -179,7 +175,7 @@
 @mixin testimonial__carousel__copy {
   @media only screen and (min-width: $medium-screen-max) {
     border-left: $vertical-rule-width solid $white;
-    padding-left: $base-margin;
+    padding-left: $base-padding;
   }
 
   p {

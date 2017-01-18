@@ -39,6 +39,7 @@ $white: #FFFFFF;
 
 $grey-darkest: lighten($black, 20); // #333
 $grey-darker: lighten($grey-darkest, 20); /// #666
+$grey-demon: $grey-darker;
 $grey-dark: #999999;
 $grey-semi-dark: #BBBBBB;
 $grey-semi-darker: #b0b0b0; // Possibly not part of official style guide

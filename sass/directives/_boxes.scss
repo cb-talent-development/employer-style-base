@@ -1,9 +1,23 @@
-// Component Box
 @mixin component-box {
   border-radius: $minor-border-radius;
   padding: $base-padding;
   background-color: $panel-primary;
   box-shadow: $base-box-shadow;
+}
+
+@mixin sticky-box {
+  @include box--pop-out;
+  box-shadow: $base-box-shadow;
+  position: fixed;
+
+  @media only screen and (max-width: $small-screen-max) {
+    position: static;
+  }
+
+  p {
+    color: $paragraph-text-color;
+    font-size: $small-font-size;
+  }
 }
 
 // Card Deck - Centered - 4 across

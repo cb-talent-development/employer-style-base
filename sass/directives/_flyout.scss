@@ -1,0 +1,26 @@
+@mixin nav_flyout($offset: 25%) {
+  @include speech_bubble($pointer-offset: $offset);
+  @include transition($base-transition);
+  position: absolute;
+  text-align: left;
+  z-index: z($z-context, navigation, $navigation, top-bar--primary__flyout__ul);
+  width: auto;
+  height: auto;
+  padding: 25px;
+  display: none;
+
+  @media only screen and (max-width: $mobile-nav-max) {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  &:after, &:before {
+    @media only screen and (max-width: $mobile-nav-max) {
+      content: none;
+    }
+  }
+}

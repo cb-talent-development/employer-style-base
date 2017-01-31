@@ -1,26 +1,55 @@
-@mixin nav_flyout($offset: 25%) {
-  @include speech_bubble($pointer-offset: $offset);
-  @include transition($base-transition);
-  position: absolute;
-  text-align: left;
-  z-index: z($z-context, navigation, $navigation, top-bar--primary__flyout__ul);
-  width: auto;
-  height: auto;
-  padding: 25px;
-  display: none;
+@mixin nav_flyout($top, $left, $offset: 25%) {
+  position: relative;
 
-  @media only screen and (max-width: $mobile-nav-max) {
-    position: relative;
-    top: 0;
-    left: 0;
-    border: 0;
-    border-radius: 0;
-    padding: 0;
-  }
+  ul {
+    @include speech_bubble($pointer-offset: $offset);
+    @include transition($base-transition);
+    position: absolute;
+    top: $top;
+    left: $left;
+    text-align: left;
+    z-index: z($z-context, navigation, $navigation, top-bar--primary__flyout__ul);
+    width: auto;
+    height: auto;
+    padding: 25px;
+    display: none;
 
-  &:after, &:before {
+
     @media only screen and (max-width: $mobile-nav-max) {
-      content: none;
+      position: relative;
+      top: 0;
+      left: 0;
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+    }
+
+    &:after, &:before {
+      @media only screen and (max-width: $mobile-nav-max) {
+        content: none;
+      }
     }
   }
+
+  ul li {
+    padding: 7px 10px;
+    display: block;
+  }
+
+  ul li a {
+    color: $base-link-color;
+    font-weight: $font-weight-normal;
+
+    &.top-bar__link:hover,
+    &:hover .top-bar__link {
+      text-decoration: underline;
+    }
+
+    @media only screen and (max-width: $mobile-nav-max) {
+      color: $base-link-color;
+      text-indent: 2em;
+    }
+  }
+
+
 }

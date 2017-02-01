@@ -48,10 +48,12 @@ $image-grid-block: 160px;
 // TODO Use names like base-spacing-large and base-spacing-medium, a la Bootstrap, after we address spacing beyond the homepage
 $base-spacing: $base-line-height * 1rem; // 24px
 $base-margin: $base-spacing / 2; // 12px
+$base-margin--small: $base-margin / 2; // 6px
 $base-padding: $base-spacing;
 $section-padding: 35px;
 
 $type-margin: 24px;
+$type-indent: 2em;
 
 // UI components
 $medium-icon-font-size: 25px;

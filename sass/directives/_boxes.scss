@@ -5,12 +5,12 @@
   box-shadow: $base-box-shadow;
 }
 
-@mixin sticky-box {
+@mixin sticky-box($breakpoint: $small-screen-max) {
   @include box--pop-out;
   box-shadow: $base-box-shadow;
   position: fixed;
 
-  @media only screen and (max-width: $small-screen-max) {
+  @media only screen and (max-width: $breakpoint) {
     position: static;
   }
 

@@ -29,16 +29,13 @@
 // Card Tile
   // Use: Home product category blocks
 @mixin card--tile {
+  @include box--component;
   @include display(flex);
   @include flex-direction(column);
   @include align-items(center);
   @include flex(1);
   position: relative;
   margin: $base-margin;
-  border: $base-border;
-  border-radius: $minor-border-radius;
-  padding: $base-padding;
-  background-color: $panel-primary;
   text-decoration: none;
 
   &:hover,

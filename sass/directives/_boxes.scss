@@ -1,7 +1,5 @@
 // Component Box
 @mixin box--component {
-  display: block;
-  border-top: $base-border;
   border-radius: $minor-border-radius;
   padding: $base-padding;
   background-color: $panel-primary;

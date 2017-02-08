@@ -77,3 +77,78 @@
     }
   }
 }
+
+//Ecom Table Boxes
+@mixin ecom_table-item {
+  border-bottom: 1px solid $grey-light;
+  margin-top: $base-margin * 2;
+
+  .ecom__column-item_flag {
+    color: $white;
+    text-align: center;
+    background-color: $anchor-blue;
+    margin-bottom: 0;
+    width: 75%;
+    margin: auto;
+  }
+
+  .ecom__column-item_box {
+    width: 100%;
+    text-align: center;
+    border: 1px solid $grey-light;
+    border-radius: $minor-border-radius;
+    border-top: none;
+
+    .ecom__column-item_box--header {
+      @include cbGradient;
+
+      h3 {
+        color: $white;
+        padding-top: $base-margin;
+        padding-bottom: $base-margin;
+        margin-bottom: 0;
+      }
+    }
+
+    .ecom__column-item_box--price {
+      color: $azure-blue;
+      font-weight: bold;
+      padding-top: $base-margin;
+      padding-bottom: $base-margin;
+
+      span {
+        font-size: $h2-font-size;
+      }
+    }
+
+    .ecom__column-item_box--list {
+      background-color: $grey-lightest;
+
+      li {
+        list-style-type: none;
+        margin: auto;
+        padding-top: $base-margin;
+        padding-bottom: $base-margin;
+        border-top: 1px solid $grey-light;
+        width: 90%;
+
+        .ecom__dashed-price {
+          text-decoration: line-through;
+        }
+
+        .ecom__value-price {
+          color: $lime-dark;
+        }
+      }
+    }
+  }
+
+  .ecom__column-item_buy-button {
+    margin-top: $base-margin;
+    margin-bottom: $base-margin * 2;
+
+    a {
+      width: 100%;
+    }
+  }
+}

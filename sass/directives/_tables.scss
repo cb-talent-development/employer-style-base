@@ -178,3 +178,11 @@
     content: '\f00c'; // Checkmark icon
   }
 }
+
+@mixin section-bar {
+  background-color: $grey-lightest;
+  padding: $base-margin / 2;
+  margin-bottom: $section-padding;
+  border-radius: $minor-border-radius;
+  text-indent: $base-font-size;
+}

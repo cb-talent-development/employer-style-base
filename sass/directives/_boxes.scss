@@ -84,12 +84,7 @@
   margin-top: $base-margin * 2;
 
   .ecom__column-item_flag {
-    color: $white;
-    text-align: center;
-    background-color: $anchor-blue;
-    margin-bottom: 0;
-    width: 75%;
-    margin: auto;
+    @include column-flag;
   }
 
   .ecom__column-item_box {

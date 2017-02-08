@@ -13,3 +13,12 @@
   right: 0;
   left: 0;
 }
+
+@mixin column-flag {
+  color: $white;
+  text-align: center;
+  background-color: $anchor-blue;
+  margin-bottom: 0;
+  width: 75%;
+  margin: auto;
+}

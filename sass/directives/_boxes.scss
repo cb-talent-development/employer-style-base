@@ -1,5 +1,5 @@
 // Component Box
-@mixin box--component {
+@mixin component-box {
   border-radius: $minor-border-radius;
   padding: $base-padding;
   background-color: $panel-primary;
@@ -29,7 +29,7 @@
 // Card Tile
   // Use: Home product category blocks
 @mixin card--tile {
-  @include box--component;
+  @include component-box;
   @include display(flex);
   @include flex-direction(column);
   @include align-items(center);

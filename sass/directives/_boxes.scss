@@ -80,21 +80,21 @@
 
 //Ecom Table Boxes
 @mixin ecom_table-item {
-  border-bottom: 1px solid $grey-light;
+  border-bottom: $base-border;
   margin-top: $base-margin * 2;
 
   .ecom__column-item_flag {
     @include column-flag;
   }
 
-  .ecom__column-item_box {
+  .ecom__column-item-box {
     width: 100%;
     text-align: center;
-    border: 1px solid $grey-light;
+    border: $base-border;
     border-radius: $minor-border-radius;
     border-top: none;
 
-    .ecom__column-item_box--header {
+    .ecom__column-item-box--header {
       @include cbGradient;
 
       h3 {
@@ -105,9 +105,9 @@
       }
     }
 
-    .ecom__column-item_box--price {
+    .ecom__column-item-box--price {
       color: $azure-blue;
-      font-weight: bold;
+      font-weight: $font-weight-bold;
       padding-top: $base-margin;
       padding-bottom: $base-margin;
 
@@ -116,7 +116,7 @@
       }
     }
 
-    .ecom__column-item_box--list {
+    .ecom__column-item-box--list {
       background-color: $grey-lightest;
 
       li {
@@ -124,7 +124,7 @@
         margin: auto;
         padding-top: $base-margin;
         padding-bottom: $base-margin;
-        border-top: 1px solid $grey-light;
+        border-top: $base-border;
         width: 90%;
 
         .ecom__dashed-price {

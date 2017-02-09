@@ -179,10 +179,14 @@
   }
 }
 
-@mixin section-bar {
+@mixin section-bar($breakpoint) {
   background-color: $grey-lightest;
   padding: $base-margin / 2;
   margin-bottom: $section-padding;
   border-radius: $minor-border-radius;
-  text-indent: $base-font-size;
+  text-indent: $type-indent;
+
+  @media only screen and (max-width: $breakpoint) {
+    margin-bottom: 0;
+  }
 }

@@ -23,7 +23,6 @@
 @mixin accordion {
   background-color: $panel-primary;
   color: $header-text-color;
-  cursor: pointer;
   padding: $base-padding;
   width: 100%;
   text-align: left;
@@ -36,8 +35,12 @@
   vertical-align: middle;
   white-space: normal;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     color: $base-link-color;
+    background-color: $panel-primary;
+    border-bottom: ($base-input-border-size * 2) solid $grey-lighter;
   }
 
   &:after {

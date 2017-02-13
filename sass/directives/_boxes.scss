@@ -6,7 +6,7 @@
 }
 
 @mixin sticky-box($breakpoint: $small-screen-max) {
-  @include box--pop-out;
+  @include component-box;
   box-shadow: $base-box-shadow;
   position: fixed;
 

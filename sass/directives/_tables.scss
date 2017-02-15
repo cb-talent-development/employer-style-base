@@ -40,9 +40,8 @@
 
 
 
-@mixin table--row-column-headers($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
-  overflow: hidden;
-  @mixin table__content-format;
+@mixin table--product($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
+  @include table--row-column-headers($table-col-width, $table-caption-z-index);
 
   th, td {
     // Column highlight
@@ -79,8 +78,8 @@
   }
 }
 
-@mixin ecom-table--row-column-headers($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
-  @mixin table__content-format;
+@mixin table--ecom($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
+  @include table--row-column-headers($table-col-width, $table-caption-z-index);
 
   thead {
     th {
@@ -181,6 +180,8 @@
 }
 
 @mixin table__column-highlight($highlight-content, $table-highlight-z-index) {
+  overflow: hidden;
+
   &:hover:after,
   &:active:after,
   &:focus:after {
@@ -196,7 +197,7 @@
   }
 }
 
-@mixin table__content-format {
+@mixin table--row-column-headers($table-col-width: 25%, $table-caption-z-index: 2) {
   border-collapse: separate;
   border-spacing: $table-border-spacing 0;
   table-layout: fixed;

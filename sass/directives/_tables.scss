@@ -41,63 +41,18 @@
 
 
 @mixin table--row-column-headers($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
-  border-collapse: separate;
-  border-spacing: $table-border-spacing 0;
-  table-layout: fixed;
-  width: 100%;
   overflow: hidden;
-
-  caption {
-    position: relative;
-    z-index: $table-caption-z-index;
-    background: $panel-primary;
-    text-align: left;
-  }
-
-  th[scope='col'] {
-    width: $table-col-width;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  th[scope='row'] {
-    text-align: left;
-  }
+  @mixin table__content-format;
 
   th, td {
-    padding: $base-padding;
-    position: relative;
-    font-size: $small-font-size;
-
     // Column highlight
-    // &:hover:after,
-    // &:active:after,
-    // &:focus:after {
-    //   content: '';
-    //   position: absolute;
-    //   background-color: rgba($grey-darkest, 0.1);
-    //   left: 0;
-    //   top: -5000px;
-    //   height: 10000px;
-    //   width: 100%;
-    //   z-index: $table-highlight-z-index;
-    //   pointer-events: none;
-    // }
+    @include table__column-highlight('', $table-highlight-z-index);
   }
 
-  // // Remove column highlight
-  // th[scope='row'],
-  // thead td {
-  //   &:hover:after,
-  //   &:active:after,
-  //   &:focus:after {
-  //     content: none;
-  //   }
-  // }
-
-  td {
-    color: $grey-darker;
-    text-align: center;
+  // Remove column highlight
+  th[scope='row'],
+  thead td {
+    @include table__column-highlight(none, $table-highlight-z-index);
   }
 
   thead {
@@ -120,53 +75,12 @@
   }
 
   tbody {
-    tr:nth-child(odd) {
-      th, td {
-        background-color: $table-row-light;
-      }
-    }
-
-    tr:nth-child(even) {
-      th, td {
-        background-color: $table-row-dark;
-      }
-    }
+    @include table__row-alternating--colors;
   }
 }
 
 @mixin ecom-table--row-column-headers($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
-  border-collapse: separate;
-  border-spacing: $table-border-spacing 0;
-  table-layout: fixed;
-  width: 100%;
-
-  caption {
-    position: relative;
-    z-index: $table-caption-z-index;
-    background: $panel-primary;
-    text-align: left;
-  }
-
-  th[scope='col'] {
-    width: $table-col-width;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  th[scope='row'] {
-    text-align: left;
-  }
-
-  th, td {
-    padding: $base-padding;
-    position: relative;
-    font-size: $small-font-size;
-  }
-
-  td {
-    color: $grey-darker;
-    text-align: center;
-  }
+  @mixin table__content-format;
 
   thead {
     th {
@@ -176,32 +90,12 @@
     }
 
     .darken {
-      background-color: $ecom-table-darkend-heading;
+      background-color: $ecom-table-promo-heading;
     }
   }
 
   tbody {
-    tr:nth-child(odd) {
-      th, td {
-        background-color: $table-row-light;
-      }
-
-      .darken {
-        background-color: $table-row-light-darkend;
-        font-weight: $font-weight-bold;
-      }
-    }
-
-    tr:nth-child(even) {
-      th, td {
-        background-color: $table-row-dark;
-      }
-
-      .darken {
-        background-color: $table-row-dark-darkend;
-        font-weight: $font-weight-bold;
-      }
-    }
+    @include table__row-alternating--colors;
   }
 }
 
@@ -259,5 +153,80 @@
 
   @media only screen and (max-width: $breakpoint) {
     margin-bottom: 0;
+  }
+}
+
+@mixin table__row-alternating--colors {
+  tr:nth-child(odd) {
+    th, td {
+      background-color: $table-row-light;
+    }
+
+    .darken {
+      background-color: $table-row-light-promo;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  tr:nth-child(even) {
+    th, td {
+      background-color: $table-row-dark;
+    }
+
+    .darken {
+      background-color: $table-row-dark-promo;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+@mixin table__column-highlight($highlight-content, $table-highlight-z-index) {
+  &:hover:after,
+  &:active:after,
+  &:focus:after {
+    content: $highlight-content;
+    position: absolute;
+    background-color: rgba($grey-darkest, 0.1);
+    left: 0;
+    top: -5000px;
+    height: 10000px;
+    width: 100%;
+    z-index: $table-highlight-z-index;
+    pointer-events: none;
+  }
+}
+
+@mixin table__content-format {
+  border-collapse: separate;
+  border-spacing: $table-border-spacing 0;
+  table-layout: fixed;
+  width: 100%;
+
+  caption {
+    position: relative;
+    z-index: $table-caption-z-index;
+    background: $panel-primary;
+    text-align: left;
+  }
+
+  th[scope='col'] {
+    width: $table-col-width;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  th[scope='row'] {
+    text-align: left;
+  }
+
+  th, td {
+    padding: $base-padding;
+    position: relative;
+    font-size: $small-font-size;
+  }
+
+  td {
+    color: $grey-darker;
+    text-align: center;
   }
 }

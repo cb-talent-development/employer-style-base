@@ -70,19 +70,19 @@
     font-size: $small-font-size;
 
     // Column highlight
-    &:hover:after,
-    &:active:after,
-    &:focus:after {
-      content: '';
-      position: absolute;
-      background-color: rgba($grey-darkest, 0.1);
-      left: 0;
-      top: -5000px;
-      height: 10000px;
-      width: 100%;
-      z-index: $table-highlight-z-index;
-      pointer-events: none;
-    }
+    // &:hover:after,
+    // &:active:after,
+    // &:focus:after {
+    //   content: '';
+    //   position: absolute;
+    //   background-color: rgba($grey-darkest, 0.1);
+    //   left: 0;
+    //   top: -5000px;
+    //   height: 10000px;
+    //   width: 100%;
+    //   z-index: $table-highlight-z-index;
+    //   pointer-events: none;
+    // }
   }
 
   // Remove column highlight

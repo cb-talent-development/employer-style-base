@@ -45,7 +45,7 @@
 
   th, td {
     // Column highlight
-    @include table__column-highlight('', $table-highlight-z-index);
+    @include table__column-highlight(none, $table-highlight-z-index);
   }
 
   // Remove column highlight

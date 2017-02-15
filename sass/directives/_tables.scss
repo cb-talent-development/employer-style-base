@@ -180,7 +180,7 @@
 }
 
 @mixin section-bar($breakpoint) {
-  background-color: $grey-lightest;
+  background-color: $table-row-light;
   padding: $base-margin / 2;
   margin-bottom: $section-padding;
   border-radius: $minor-border-radius;

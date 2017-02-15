@@ -196,3 +196,6 @@ $table-row-dark-darkend: $grey-semi-dark;
 $table-column-heading-1: $emerald;
 $table-column-heading-2: $azure-blue;
 $table-column-heading-3: $azure-three;
+
+$ecom-table-heading: $table-column-heading-2;
+$ecom-table-darkend-heading: darken($table-column-heading-2, 10);

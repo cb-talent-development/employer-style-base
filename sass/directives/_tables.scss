@@ -172,7 +172,11 @@
     th {
       color: $white;
       font-weight: $font-weight-bold;
-      background-color: $table-column-heading-2;
+      background-color: $ecom-table-heading;
+    }
+
+    .darken {
+      background-color: $ecom-table-darkend-heading;
     }
   }
 

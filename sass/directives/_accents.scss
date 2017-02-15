@@ -22,3 +22,15 @@
   width: 75%;
   margin: auto;
 }
+
+@mixin table-flag {
+  color: $white;
+  text-align: center;
+  background-color: $alert-primary;
+  padding: 3px;
+  position: absolute;
+  bottom: 100%;
+  top: -23px;
+  width: 100%;
+  left: 0;
+}

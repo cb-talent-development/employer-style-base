@@ -145,7 +145,7 @@
 
 @mixin section-bar($breakpoint) {
   background-color: $table-row-light;
-  padding: $base-margin / 2;
+  padding: $base-margin;
   margin-bottom: $section-padding;
   border-radius: $minor-border-radius;
   font-weight: $font-weight-bold;

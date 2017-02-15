@@ -85,15 +85,15 @@
     // }
   }
 
-  // Remove column highlight
-  th[scope='row'],
-  thead td {
-    &:hover:after,
-    &:active:after,
-    &:focus:after {
-      content: none;
-    }
-  }
+  // // Remove column highlight
+  // th[scope='row'],
+  // thead td {
+  //   &:hover:after,
+  //   &:active:after,
+  //   &:focus:after {
+  //     content: none;
+  //   }
+  // }
 
   td {
     color: $grey-darker;
@@ -129,6 +129,73 @@
     tr:nth-child(even) {
       th, td {
         background-color: $table-row-dark;
+      }
+    }
+  }
+}
+
+@mixin ecom-table--row-column-headers($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
+  border-collapse: separate;
+  border-spacing: $table-border-spacing 0;
+  table-layout: fixed;
+  width: 100%;
+
+  caption {
+    position: relative;
+    z-index: $table-caption-z-index;
+    background: $panel-primary;
+    text-align: left;
+  }
+
+  th[scope='col'] {
+    width: $table-col-width;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  th[scope='row'] {
+    text-align: left;
+  }
+
+  th, td {
+    padding: $base-padding;
+    position: relative;
+    font-size: $small-font-size;
+  }
+
+  td {
+    color: $grey-darker;
+    text-align: center;
+  }
+
+  thead {
+    th {
+      color: $white;
+      font-weight: $font-weight-bold;
+      background-color: $table-column-heading-2;
+    }
+  }
+
+  tbody {
+    tr:nth-child(odd) {
+      th, td {
+        background-color: $table-row-light;
+      }
+
+      .darken {
+        background-color: $table-row-light-darkend;
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    tr:nth-child(even) {
+      th, td {
+        background-color: $table-row-dark;
+      }
+
+      .darken {
+        background-color: $table-row-dark-darkend;
+        font-weight: $font-weight-bold;
       }
     }
   }

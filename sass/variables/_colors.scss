@@ -191,6 +191,11 @@ $table-header-background-color: $grey;
 
 $table-row-dark: $grey-light;
 $table-row-light: $grey-lightest;
+$table-row-light-promo: $grey;
+$table-row-dark-promo: $grey-semi-dark;
 $table-column-heading-1: $emerald;
 $table-column-heading-2: $azure-blue;
 $table-column-heading-3: $azure-three;
+
+$ecom-table-heading: $table-column-heading-2;
+$ecom-table-promo-heading: darken($table-column-heading-2, 10);

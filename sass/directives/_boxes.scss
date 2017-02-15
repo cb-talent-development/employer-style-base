@@ -77,3 +77,73 @@
     }
   }
 }
+
+//Ecom Table Boxes
+@mixin ecom_table-item {
+  border-bottom: $base-border;
+  margin-top: $base-margin * 2;
+
+  .ecom__column-item_flag {
+    @include column-flag;
+  }
+
+  .ecom__column-item-box {
+    width: 100%;
+    text-align: center;
+    border: $base-border;
+    border-radius: $minor-border-radius;
+    border-top: none;
+
+    .ecom__column-item-box--header {
+      @include cbGradient;
+
+      h3 {
+        color: $white;
+        padding-top: $base-margin;
+        padding-bottom: $base-margin;
+        margin-bottom: 0;
+      }
+    }
+
+    .ecom__column-item-box--price {
+      color: $azure-blue;
+      font-weight: $font-weight-bold;
+      padding-top: $base-margin;
+      padding-bottom: $base-margin;
+
+      span {
+        font-size: $h2-font-size;
+      }
+    }
+
+    .ecom__column-item-box--list {
+      background-color: $grey-lightest;
+
+      li {
+        list-style-type: none;
+        margin: auto;
+        padding-top: $base-margin;
+        padding-bottom: $base-margin;
+        border-top: $base-border;
+        width: 90%;
+
+        .ecom__dashed-price {
+          text-decoration: line-through;
+        }
+
+        .ecom__value-price {
+          color: $lime-dark;
+        }
+      }
+    }
+  }
+
+  .ecom__column-item_buy-button {
+    margin-top: $base-margin;
+    margin-bottom: $base-margin * 2;
+
+    a {
+      width: 100%;
+    }
+  }
+}

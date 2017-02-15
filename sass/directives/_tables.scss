@@ -40,64 +40,18 @@
 
 
 
-@mixin table--row-column-headers($table-highlight-z-index: 1, $table-caption-z-index: 2) {
-  border-collapse: separate;
-  border-spacing: $table-border-spacing 0;
-  table-layout: fixed;
-  width: 100%;
-  overflow: hidden;
-
-  caption {
-    position: relative;
-    z-index: $table-caption-z-index;
-    background: $panel-primary;
-    text-align: left;
-  }
-
-  th[scope='col'] {
-    width: 25%;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  th[scope='row'] {
-    text-align: left;
-  }
+@mixin table--product($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
+  @include table--row-column-headers($table-col-width, $table-caption-z-index);
 
   th, td {
-    padding: $base-padding;
-    position: relative;
-    font-size: $small-font-size;
-
     // Column highlight
-    &:hover:after,
-    &:active:after,
-    &:focus:after {
-      content: '';
-      position: absolute;
-      background-color: rgba($grey-darkest, 0.1);
-      left: 0;
-      top: -5000px;
-      height: 10000px;
-      width: 100%;
-      z-index: $table-highlight-z-index;
-      pointer-events: none;
-    }
+    @include table__column-highlight('', $table-highlight-z-index);
   }
 
   // Remove column highlight
   th[scope='row'],
   thead td {
-    &:hover:after,
-    &:active:after,
-    &:focus:after {
-      content: none;
-    }
-  }
-
-  td {
-    color: $grey-darker;
-    text-align: center;
+    @include table__column-highlight(none, $table-highlight-z-index);
   }
 
   thead {
@@ -120,17 +74,27 @@
   }
 
   tbody {
-    tr:nth-child(odd) {
-      th, td {
-        background-color: $table-row-light;
-      }
+    @include table__row-alternating--colors;
+  }
+}
+
+@mixin table--ecom($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
+  @include table--row-column-headers($table-col-width, $table-caption-z-index);
+
+  thead {
+    th {
+      color: $white;
+      font-weight: $font-weight-bold;
+      background-color: $ecom-table-heading;
     }
 
-    tr:nth-child(even) {
-      th, td {
-        background-color: $table-row-dark;
-      }
+    .darken {
+      background-color: $ecom-table-promo-heading;
     }
+  }
+
+  tbody {
+    @include table__row-alternating--colors;
   }
 }
 
@@ -176,5 +140,94 @@
 
   &--yes:after {
     content: '\f00c'; // Checkmark icon
+  }
+}
+
+@mixin section-bar($breakpoint) {
+  background-color: $table-row-light;
+  padding: $base-margin / 2;
+  margin-bottom: $section-padding;
+  border-radius: $minor-border-radius;
+  text-indent: $type-indent;
+
+  @media only screen and (max-width: $breakpoint) {
+    margin-bottom: 0;
+  }
+}
+
+@mixin table__row-alternating--colors {
+  tr:nth-child(odd) {
+    th, td {
+      background-color: $table-row-light;
+    }
+
+    .darken {
+      background-color: $table-row-light-promo;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  tr:nth-child(even) {
+    th, td {
+      background-color: $table-row-dark;
+    }
+
+    .darken {
+      background-color: $table-row-dark-promo;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+@mixin table__column-highlight($highlight-content, $table-highlight-z-index) {
+  overflow: hidden;
+
+  &:hover:after,
+  &:active:after,
+  &:focus:after {
+    content: $highlight-content;
+    position: absolute;
+    background-color: rgba($grey-darkest, 0.1);
+    left: 0;
+    top: -5000px;
+    height: 10000px;
+    width: 100%;
+    z-index: $table-highlight-z-index;
+    pointer-events: none;
+  }
+}
+
+@mixin table--row-column-headers($table-col-width: 25%, $table-caption-z-index: 2) {
+  border-collapse: separate;
+  border-spacing: $table-border-spacing 0;
+  table-layout: fixed;
+  width: 100%;
+
+  caption {
+    position: relative;
+    z-index: $table-caption-z-index;
+    background: $panel-primary;
+    text-align: left;
+  }
+
+  th[scope='col'] {
+    width: $table-col-width;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  th[scope='row'] {
+    text-align: left;
+  }
+
+  th, td {
+    padding: $base-padding;
+    position: relative;
+    font-size: $small-font-size;
+  }
+
+  td {
+    color: $grey-darker;
+    text-align: center;
   }
 }

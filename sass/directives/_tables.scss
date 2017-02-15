@@ -148,7 +148,7 @@
   padding: $base-margin / 2;
   margin-bottom: $section-padding;
   border-radius: $minor-border-radius;
-  text-indent: $type-indent;
+  font-weight: $font-weight-bold;
 
   @media only screen and (max-width: $breakpoint) {
     margin-bottom: 0;

@@ -338,6 +338,9 @@ form button {
   & select,
   & .select {
     @include flex-grow(1);
+    @include flex-shrink(1);
+    @include flex-basis(auto);
+    width: 100%;
     margin-bottom: 0;
 
     @media only screen and (min-width: $small-screen-max) {

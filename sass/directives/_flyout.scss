@@ -1,12 +1,12 @@
-@mixin nav_flyout($top, $left, $offset: 25%) {
+@mixin nav_flyout($top, $flyout-offset-value, $flyout-offset-direction: 'left', $nav-pointer-offset: 25%) {
   position: relative;
 
   ul {
-    @include speech_bubble($pointer-offset: $offset);
+    @include speech_bubble($pointer-offset: $nav-pointer-offset);
     @include transition($base-transition);
     position: absolute;
     top: $top;
-    left: $left;
+    #{$flyout-offset-direction}: $flyout-offset-value;
     text-align: left;
     z-index: z($z-context, navigation, $navigation, top-bar--primary__flyout__ul);
     width: auto;

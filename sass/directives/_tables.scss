@@ -42,6 +42,7 @@
 
 @mixin table--product($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
   @include table--row-column-headers($table-col-width, $table-caption-z-index);
+  overflow: hidden;
 
   th, td {
     // Column highlight
@@ -188,8 +189,6 @@
 }
 
 @mixin table__column-highlight($highlight-content, $table-highlight-z-index) {
-  overflow: hidden;
-
   &:hover:after,
   &:active:after,
   &:focus:after {

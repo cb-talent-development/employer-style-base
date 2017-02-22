@@ -1,0 +1,13 @@
+.cta__wrapper {
+  @include component-box;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  padding: 0;
+  z-index: 9999;
+  // width: 3.75rem;
+  box-shadow: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}

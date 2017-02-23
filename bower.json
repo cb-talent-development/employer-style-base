@@ -1,6 +1,6 @@
 {
   "name": "employer-style-base",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "authors": [
     "Content Enablement <ContentEnablementProductTeam@careerbuilder.com>"
   ],
@@ -19,7 +19,6 @@
     "components",
     "typography"
   ],
-  "private": true,
   "main": [
     "sass/_base.scss"
   ],

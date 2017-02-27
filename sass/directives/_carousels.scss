@@ -88,6 +88,26 @@
   }
 }
 
+@mixin resource-carousel-arrow {
+  z-index: z($z-context, page_content, $page_content, carousel__arrow);
+  color: $inactive-carousel-button-color;
+  font-size: $direction-arrow-size / 2;
+  cursor: pointer;
+  border: 1px solid $inactive-carousel-button-color;
+  padding: $base-padding / 2;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $active-carousel-button-color;
+    border: 1px solid $active-carousel-button-color;
+  }
+
+  &--left {
+    margin-right: 1px;
+  }
+}
+
 @mixin carousel-wrap {
   margin: auto;
   padding: 0 calc(#{$base-padding} + #{$direction-arrow-size});

@@ -88,6 +88,17 @@
   }
 }
 
+@mixin resource-header {
+  h2 {
+    display: inline-block;
+  }
+
+  nav {
+    display: inline-block;
+    float: right;
+  }
+}
+
 @mixin resource-carousel-arrow {
   z-index: z($z-context, page_content, $page_content, carousel__arrow);
   color: $inactive-carousel-button-color;

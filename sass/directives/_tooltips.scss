@@ -9,6 +9,7 @@
 
   .tooltip-contents {
     display: none;
+    font-size: $tooltip-contents-font-size;
   }
 
   &:hover .tooltip-contents,
@@ -30,7 +31,6 @@
     box-shadow: $base-box-shadow;
     border: 0;
     color: $grey-darker;
-    font-size: $tooltip-contents-font-size;
     font-weight: $font-weight-normal;
 
     &:before {

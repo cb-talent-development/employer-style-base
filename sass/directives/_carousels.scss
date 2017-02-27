@@ -119,6 +119,28 @@
   }
 }
 
+@mixin resource-continue-block {
+  border-top: $base-border;
+  padding-top: $base-padding / 2;
+  padding-bottom: $base-padding / 2;
+  padding-left: 1em;
+  font-size: $h3-font-size;
+
+  .fa {
+    font-size: $h2-font-size;
+    margin-right: 0.25em;
+    color: $inactive-carousel-button-color;
+  }
+
+  &::after {
+    font-family: FontAwesome;
+    content: '\f054';
+    color: $inactive-carousel-button-color;
+    float: right;
+    margin-right: 1em;
+  }
+}
+
 @mixin carousel-wrap {
   margin: auto;
   padding: 0 calc(#{$base-padding} + #{$direction-arrow-size});

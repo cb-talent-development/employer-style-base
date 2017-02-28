@@ -1,0 +1,60 @@
+.cta__wrapper {
+  @include component-box;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  padding: 0;
+  z-index: 9999;
+  box-shadow: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.cta__action-link {
+  display: block;
+  height: 3.75rem;
+  width: 3.75rem;
+  text-align: center;
+  padding: $base-margin--small;
+  // smaller font-size to fit "feedback"
+  font-size: 0.6875rem;
+  color: $grey-darker;
+  border: $base-border;
+  border-right: none;
+  cursor: pointer;
+  border-top: none;
+
+  &:visited {
+    color: $grey-darker;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $white;
+    background-color: $base-link-color;
+    border-color: $base-link-color;
+    text-decoration: none;
+  }
+}
+
+.cta__action-link i {
+  display: block;
+  font-size: $cta-icon-size;
+}
+
+.cta__wrapper .cta__action-link:first-child {
+  border-top-left-radius: $minor-border-radius;
+  border-top: $base-border;
+
+  &:focus,
+  &:hover,
+  &:active {
+      border-top-color: $base-link-color;
+  }
+}
+
+.cta__wrapper .cta__action-link:last-child {
+  border-bottom-left-radius: $minor-border-radius;
+}

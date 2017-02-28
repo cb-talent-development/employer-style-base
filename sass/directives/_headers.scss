@@ -1,4 +1,4 @@
-@mixin header-hero($background-image-large, $background-image-medium: nil) {
+@mixin header-hero--home($background-image-large, $background-image-medium: nil) {
   position: relative;
   min-height: $header-height-large;
   overflow: hidden;
@@ -25,7 +25,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    @include cbGradientTransparent;
+    @include whiteGradientTransparent;
   }
 
   &__text {
@@ -47,14 +47,12 @@
     }
 
     h1 {
-      max-width: 28ch;
       margin-top: 0;
       line-height: normal;
       color: $hero-text-color;
     }
 
     p {
-      max-width: 35ch;
       margin-bottom: 0;
       font-size: $hero-text-size;
       color: $hero-text-color;

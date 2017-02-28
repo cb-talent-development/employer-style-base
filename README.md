@@ -55,6 +55,16 @@ sass/ >> The bulk of the styling itself
 
 After adding a new directive to [`sass/directives/`](sass/directives/), `@import` it into the [`variables/_base.scss`](sass/_base.scss)
 
+#### Updating the Version
+
+After your PR is merged, add a [release](https://github.com/cb-talent-development/employer-style-base/releases) and update the [semantic version number appropriately](http://semver.org/).
+
+Then update the `bower.json` file in your repo with the new number.
+
+```
+"employer-style-base": "=1.0.0"
+```
+
 ### Future
 
 - Implement build process to compile CSS into `dist` for easy consumption

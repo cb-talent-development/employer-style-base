@@ -1,15 +1,27 @@
+@mixin gradient($dark: $gradient-dark, $medium: $gradient-medium, $light: $gradient-light) {
+  background: $dark; // Old browsers
+  background: -moz-linear-gradient(-45deg, $dark 0%, $medium 35%, $light 100%); // FF3.6-15
+  background: -webkit-linear-gradient(-45deg, $dark 0%, $medium 35%, $light 100%); // Chrome10-25,Safari5.1-6
+  background: linear-gradient(135deg, $dark 0%, $medium 35%, $light 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$dark}', endColorstr='#{$light}',GradientType=1 ); // IE6-9 fallback on horizontal gradient
+}
+
+@mixin gradientTransparent($dark: $gradient-dark, $medium: $gradient-medium, $light: $gradient-light) {
+  background: $dark; // Old browsers
+  background: -moz-linear-gradient(-45deg, $dark 0%, $medium 35%, transparentize($light, 0.9) 100%); // FF3.6-15
+  background: -webkit-linear-gradient(-45deg, $dark 0%, $medium 35%, transparentize($light, 0.9) 100%); // Chrome10-25,Safari5.1-6
+  background: linear-gradient(135deg, $dark 0%, $medium 35%, transparentize($light, 0.9) 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$dark}', endColorstr='#{$light}',GradientType=1 ); // IE6-9 fallback on horizontal gradient
+}
+
 @mixin cbGradient {
-  background: $gradient-dark; // Old browsers
-  background: -moz-linear-gradient(-45deg, $gradient-dark 0%, $gradient-medium 35%, $gradient-light 100%); // FF3.6-15
-  background: -webkit-linear-gradient(-45deg, $gradient-dark 0%, $gradient-medium 35%, $gradient-light 100%); // Chrome10-25,Safari5.1-6
-  background: linear-gradient(135deg, $gradient-dark 0%, $gradient-medium 35%, $gradient-light 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$gradient-dark}', endColorstr='#{$gradient-light}',GradientType=1 ); // IE6-9 fallback on horizontal gradient
+  @include gradient;
 }
 
 @mixin cbGradientTransparent {
-  background: $gradient-dark; // Old browsers
-  background: -moz-linear-gradient(-45deg, $gradient-dark 0%, $gradient-medium 35%, transparentize($gradient-light, 0.9) 100%); // FF3.6-15
-  background: -webkit-linear-gradient(-45deg, $gradient-dark 0%, $gradient-medium 35%, transparentize($gradient-light, 0.9) 100%); // Chrome10-25,Safari5.1-6
-  background: linear-gradient(135deg, $gradient-dark 0%, $gradient-medium 35%, transparentize($gradient-light, 0.9) 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$gradient-dark}', endColorstr='#{$gradient-light}',GradientType=1 ); // IE6-9 fallback on horizontal gradient
+  @include gradientTransparent;
+}
+
+@mixin whiteGradientTransparent {
+  @include gradientTransparent($white, #f0f0f0, #f0f0f0);
 }

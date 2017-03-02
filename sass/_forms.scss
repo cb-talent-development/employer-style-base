@@ -351,7 +351,10 @@ form button {
 
   &__button.button {
     box-shadow: $form-input-box-shadow;
-    min-width: 117px; // Safari won't make the button wide enough to fit text and padding
+    width: auto;
+    @include flex-grow(0);
+    @include flex-shrink(0);
+    @include flex-basis(auto);
 
     @media only screen and (min-width: $small-screen-max) {
       border-top-left-radius: 0;
@@ -359,7 +362,7 @@ form button {
     }
 
     @media only screen and (max-width: $small-screen-max) {
-      width: 50%;
+      min-width: 50%;
       margin-top: $base-margin;
     }
   }

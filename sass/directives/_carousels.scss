@@ -130,7 +130,9 @@
   bottom: 0;
   margin-top: $base-padding;
 
-  .fa {
+  &::before {
+    font-family: FontAwesome;
+    content: '\f09e';
     font-size: $h2-font-size;
     margin-right: 0.25em;
     color: $inactive-carousel-button-color;
@@ -139,9 +141,10 @@
   &::after {
     font-family: FontAwesome;
     content: '\f054';
+    font-size: $h2-font-size;
     color: $inactive-carousel-button-color;
     float: right;
-    margin-right: 1em;
+    margin-right: 0.5em;
   }
 }
 

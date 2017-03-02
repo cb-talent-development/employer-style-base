@@ -125,8 +125,8 @@
   padding-bottom: $base-padding / 2;
   padding-left: 1em;
   font-size: $h3-font-size;
-  width: 100%;
   position: absolute;
+  width: 100%;
   bottom: 0;
 
   &::before {
@@ -144,6 +144,14 @@
     color: $inactive-carousel-button-color;
     float: right;
     margin-right: 0.5em;
+  }
+
+  @media only screen and (max-width: $medium-screen-max) {
+    font-size: $h4-font-size;
+
+    &::before, &::after {
+      font-size: $h3-font-size;
+    }
   }
 }
 

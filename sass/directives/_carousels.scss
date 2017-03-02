@@ -99,8 +99,8 @@
   }
 }
 
-@mixin resource-carousel-arrow {
-  z-index: z($z-context, page_content, $page_content, carousel__arrow);
+@mixin resource-carousel-arrow($arrow-z-index: 1) {
+  z-index: $arrow-z-index;
   color: $inactive-carousel-button-color;
   font-size: $direction-arrow-size / 2;
   cursor: pointer;

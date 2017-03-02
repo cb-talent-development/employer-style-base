@@ -88,6 +88,73 @@
   }
 }
 
+@mixin resource-header {
+  h2, p, h3, h1 {
+    display: inline-block;
+  }
+
+  nav {
+    display: inline-block;
+    float: right;
+  }
+}
+
+@mixin resource-carousel-arrow($arrow-z-index: 1) {
+  z-index: $arrow-z-index;
+  color: $inactive-carousel-button-color;
+  font-size: $direction-arrow-size / 2;
+  cursor: pointer;
+  border: 1px solid $inactive-carousel-button-color;
+  padding: $base-padding / 2;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $active-carousel-button-color;
+    border: 1px solid $active-carousel-button-color;
+  }
+
+  &--left {
+    margin-right: 1px;
+  }
+}
+
+@mixin resource-continue-block {
+  border-top: $base-border;
+  padding-top: $base-padding / 2;
+  padding-bottom: $base-padding / 2;
+  padding-left: 1em;
+  font-size: $h3-font-size;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+
+  &::before {
+    font-family: FontAwesome;
+    content: '\f09e';
+    font-size: $h2-font-size;
+    margin-right: 0.25em;
+    color: $inactive-carousel-button-color;
+  }
+
+  &::after {
+    font-family: FontAwesome;
+    content: '\f054';
+    font-size: $h2-font-size;
+    color: $inactive-carousel-button-color;
+    float: right;
+    margin-right: 0.5em;
+  }
+
+  @media only screen and (max-width: $medium-screen-max) {
+    font-size: $h4-font-size;
+
+    &::before, &::after {
+      font-size: $h3-font-size;
+    }
+  }
+}
+
 @mixin carousel-wrap {
   margin: auto;
   padding: 0 calc(#{$base-padding} + #{$direction-arrow-size});

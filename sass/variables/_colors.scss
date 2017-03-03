@@ -44,7 +44,6 @@ $grey-dark: #999999;
 $grey-semi-dark: #BBBBBB;
 $grey-semi-darker: #b0b0b0; // Possibly not part of official style guide
 $grey: #CCCCCC;
-$grey-semi-light: #D4D4D4; // top-bar-nav border color
 $grey-light: #DDDDDD;
 $grey-lighter: #EEEEEE;
 $grey-lightest: #F4F4F4;
@@ -64,7 +63,8 @@ $body-text-color: $anchor-blue;
 $paragraph-text-color: $grey-darker;
 $header-text-color: $anchor-blue;
 $base-accent-color: $emerald;
-$hero-text-color: $anchor-blue;
+$hero-text-color: $white;
+$hero-text-color-dark: $anchor-blue;
 
 // Links
 $base-link-color: $sky-blue;
@@ -92,7 +92,6 @@ $header-background-color: $white;
 $header-background-secondary-color: $grey-lighter;
 $header-flyout-color: $header-background-color;
 $header-subtitle-color: $grey-darker;
-$header-border: 1px solid #dfdfdf; // border color per story EM-724
 $footer-background-color: $anchor-blue;
 // $footer-accent-color: $header-accent-color;
 // $footer-text-color: $white;

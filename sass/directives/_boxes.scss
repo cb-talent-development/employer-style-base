@@ -78,7 +78,7 @@
   }
 }
 
-//Ecom Table Boxes
+// Ecom Table Boxes
 @mixin ecom_table-item {
   border-bottom: $base-border;
   margin-top: $base-margin * 2;
@@ -144,6 +144,52 @@
 
     a {
       width: 100%;
+    }
+  }
+}
+
+// Item Bar
+
+@mixin item-bar__list {
+  @include display(flex);
+  @include justify-content(center);
+  padding: $base-padding 0;
+
+  @media only screen and (max-width: $small-screen-max) {
+    @include flex-direction(column);
+    padding: 0;
+  }
+}
+
+@mixin item-bar__list-item {
+  position: relative;
+  border-right: $base-border;
+  padding: 0 $base-padding;
+  text-align: center;
+  list-style-type: none;
+
+  @media only screen and (max-width: $small-screen-max) {
+    border-right: 0;
+    padding: $base-margin 0;
+
+    &:after {
+      content: '';
+      height: 1px;
+      width: 100px;
+      border-bottom: $base-border;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &:last-child {
+    border: 0;
+
+    &:after {
+      content: none;
+      display: none;
     }
   }
 }

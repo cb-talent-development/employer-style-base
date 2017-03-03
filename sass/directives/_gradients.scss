@@ -22,6 +22,10 @@
   @include gradientTransparent;
 }
 
-@mixin whiteGradientTransparent {
-  @include gradientTransparent($white, #f0f0f0, #f0f0f0);
+@mixin whiteGradientTransparent($dark: $white, $medium: #f0f0f0, $light: #f0f0f0) {
+  background: $dark; // Old browsers
+  background: -moz-linear-gradient(-45deg, transparentize($dark, 0.1) 0%, transparentize($medium, 0.2) 35%, transparentize($light, 0.85) 100%); // FF3.6-15
+  background: -webkit-linear-gradient(-45deg, transparentize($dark, 0.1) 0%, transparentize($medium, 0.2) 35%, transparentize($light, 0.85) 100%); // Chrome10-25,Safari5.1-6
+  background: linear-gradient(135deg, transparentize($dark, 0.1) 0%, transparentize($medium, 0.2) 35%, transparentize($light, 0.85) 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$dark}', endColorstr='#{$light}',GradientType=1 ); // IE6-9 fallback on horizontal gradient
 }

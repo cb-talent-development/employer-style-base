@@ -14,6 +14,19 @@
   left: 0;
 }
 
+// The small strip changes for brand simplification
+@mixin bs__small-strip {
+  content: '';
+  height: $small-strip-height;
+  border-top-right-radius: $minor-border-radius;
+  border-top-left-radius: $minor-border-radius;
+  background-color: $bs__olive-green;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
 @mixin column-flag {
   color: $white;
   text-align: center;

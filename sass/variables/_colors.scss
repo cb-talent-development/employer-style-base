@@ -44,9 +44,15 @@ $grey-dark: #999999;
 $grey-semi-dark: #BBBBBB;
 $grey-semi-darker: #b0b0b0; // Possibly not part of official style guide
 $grey: #CCCCCC;
+$grey-semi-light: #D4D4D4; // border color
 $grey-light: #DDDDDD;
 $grey-lighter: #EEEEEE;
 $grey-lightest: #F4F4F4;
+
+// Brand Simplification - new colors; temporary names
+
+$brand-new-lime: #66a52a;
+$brand-new-azure: #0097d1;
 
 
 // Color Usage
@@ -64,6 +70,7 @@ $paragraph-text-color: $grey-darker;
 $header-text-color: $anchor-blue;
 $base-accent-color: $emerald;
 $hero-text-color: $white;
+$hero-text-color-dark: $anchor-blue;
 
 // Links
 $base-link-color: $sky-blue;
@@ -172,7 +179,7 @@ $inverse-inactive-carousel-button-opacity: 0.35;
 $inverse-active-carousel-button-opacity: 1;
 
 // Border
-$base-border-primary-color: $grey-light;
+$base-border-primary-color: $grey-semi-light;
 $base-border: 1px solid $base-border-primary-color;
 
 // Forms

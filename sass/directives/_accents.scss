@@ -47,3 +47,54 @@
   width: 100%;
   left: 0;
 }
+
+@mixin return-to-top {
+  position: fixed;
+  bottom: 1.25em;
+  right: 1.25em;
+  background: $grey-darkest;
+  opacity: 0.6;
+  width: 3.125em;
+  height: 3.125em;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 99999999999999;
+
+  i {
+    color: $white;
+    margin: 0;
+    position: relative;
+    left: 30%;
+    top: 20%;
+    font-size: $h1-font-size;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    background: $black;
+    opacity: 0.8;
+    cursor: pointer;
+
+    i {
+      color: $white;
+      top: 5px;
+    }
+  }
+
+  @media only screen and (max-width: $small-screen-max) {
+    display: none;
+  }
+}

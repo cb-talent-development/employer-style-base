@@ -30,7 +30,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$dark}', endColorstr='#{$light}',GradientType=1 ); // IE6-9 fallback on horizontal gradient
 }
 
-@mixin imageBackgroundGradient($bottom-layer: $bs__blue-light, $dark: $anchor-blue, $medium: $bs__blue-medium, $light: $bs__blue-light, $mode: multiply, $img-url) {
+@mixin imageBackgroundGradient($img-url, $bottom-layer: $bs__blue-light, $dark: $anchor-blue, $medium: $bs__blue-medium, $light: $bs__blue-light, $mode: multiply) {
   background-color: $bottom-layer;
   background-image:
     linear-gradient(to right, rgba($dark, 0.8), rgba($medium, 0.75), rgba($light, 0.2)),

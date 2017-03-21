@@ -249,3 +249,39 @@
     margin-bottom: 0;
   }
 }
+
+@mixin logos-carousel {
+  padding-bottom: $base-padding;
+
+  .slick-track {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin: auto;
+      max-width: 10em;
+      max-height: 4.375em;
+    }
+  }
+
+  .resource__carousel__dots {
+    display: none !important;
+  }
+
+  @media only screen and (max-width: $small-screen-max) {
+    display: none;
+  }
+}
+
+@mixin mobile-logos-carousel {
+  @media only screen and (min-width: $small-screen-max) {
+    display: none;
+  }
+
+  img {
+    margin: auto;
+    height: 4.375em;
+    max-width: 100%;
+    padding-bottom: 1em;
+  }
+}

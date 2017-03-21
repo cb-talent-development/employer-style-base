@@ -29,3 +29,12 @@
   background: linear-gradient(135deg, $dark 0%, $medium 35%, transparentize($light, 0.85) 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$dark}', endColorstr='#{$light}',GradientType=1 ); // IE6-9 fallback on horizontal gradient
 }
+
+@mixin imageBackgroundGradient($bottom-layer: $bs__blue-light, $dark: $anchor-blue, $medium: $bs__blue-medium, $light: $bs__blue-light, $mode: multiply, $img-url) {
+  background-color: $bottom-layer;
+  background-image:
+    linear-gradient(to right, rgba($dark, 0.8), rgba($medium, 0.75), rgba($light, 0.2)),
+    url($img-url);
+  background-blend-mode: $mode;
+  background-attachment: fixed;
+}

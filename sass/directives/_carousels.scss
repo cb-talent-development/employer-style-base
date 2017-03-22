@@ -260,7 +260,7 @@
     img {
       margin: auto;
       max-width: 10em;
-      max-height: 4.375em;
+      max-height: $homepage-logo-height;
     }
   }
 
@@ -280,8 +280,8 @@
 
   img {
     margin: auto;
-    height: 4.375em;
+    height: $homepage-logo-height;
     max-width: 100%;
-    padding-bottom: 1em;
+    margin-bottom: $base-spacing;
   }
 }

@@ -121,29 +121,37 @@
 
 @mixin resource-continue-block {
   border-top: $base-border;
-  padding-top: $base-padding / 2;
-  padding-bottom: $base-padding / 2;
+  background-color: $brand-new-grey-lighter;
+  padding-top: $base-line-height / 3;
+  padding-bottom: $base-line-height / 3;
   padding-left: 1em;
-  font-size: $h3-font-size;
+  font-size: $base-font-size;
   position: absolute;
   width: 100%;
   bottom: 0;
 
-  &::before {
-    font-family: FontAwesome;
-    content: '\f09e';
-    font-size: $h2-font-size;
-    margin-right: 0.25em;
-    color: $inactive-carousel-button-color;
-  }
+  // &::before {
+  //   font-family: FontAwesome;
+  //   content: '\f09e';
+  //   font-size: $h2-font-size;
+  //   margin-right: 0.25em;
+  //   color: $inactive-carousel-button-color;
+  // }
 
   &::after {
     font-family: FontAwesome;
     content: '\f054';
-    font-size: $h2-font-size;
+    font-size: $base-font-size;
     color: $inactive-carousel-button-color;
     float: right;
     margin-right: 0.5em;
+  }
+  &:hover {
+    background-color: $brand-new-grey-lightest;
+
+    &::after {
+      color: $grey-dark;
+    }
   }
 
   @media only screen and (max-width: $medium-screen-max) {

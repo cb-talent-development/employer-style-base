@@ -150,7 +150,7 @@
   &:hover {
     background-color: $brand-new-grey-lightest;
 
-    &:after {
+    &::after {
       color: $grey-dark;
     }
   }

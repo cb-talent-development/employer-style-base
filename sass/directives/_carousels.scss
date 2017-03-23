@@ -250,7 +250,7 @@
   }
 }
 
-@mixin logos-carousel($homepage-logo-width: 10em, $homepage-logo-height: 4.375em) {
+@mixin logos-carousel($logo-width: 10em, $logo-height: 4.375em) {
   padding-bottom: $base-padding;
 
   .slick-track {
@@ -259,8 +259,8 @@
 
     img {
       margin: auto;
-      max-width: $homepage-logo-width;
-      max-height: $homepage-logo-height;
+      max-width: $logo-width;
+      max-height: $logo-height;
     }
   }
 
@@ -269,15 +269,15 @@
   }
 }
 
-@mixin mobile-logos-carousel($homepage-logo-width: 100%, $homepage-logo-height: 4.375em) {
+@mixin mobile-logos-carousel($logo-width: 100%, $logo-height: 4.375em) {
   @media only screen and (min-width: $small-screen-max) {
     display: none;
   }
 
   img {
     margin: auto;
-    height: $homepage-logo-height;
-    max-width: $homepage-logo-width;
+    height: $logo-height;
+    max-width: $logo-width;
     margin-bottom: $base-spacing;
   }
 }

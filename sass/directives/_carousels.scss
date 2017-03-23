@@ -250,7 +250,7 @@
   }
 }
 
-@mixin logos-carousel {
+@mixin logos-carousel($homepage-logo-width: 10em, $homepage-logo-height: 4.375em) {
   padding-bottom: $base-padding;
 
   .slick-track {
@@ -259,7 +259,7 @@
 
     img {
       margin: auto;
-      max-width: 10em;
+      max-width: $homepage-logo-width;
       max-height: $homepage-logo-height;
     }
   }
@@ -273,7 +273,7 @@
   }
 }
 
-@mixin mobile-logos-carousel {
+@mixin mobile-logos-carousel($homepage-logo-width: 100%, $homepage-logo-height: 4.375em) {
   @media only screen and (min-width: $small-screen-max) {
     display: none;
   }
@@ -281,7 +281,7 @@
   img {
     margin: auto;
     height: $homepage-logo-height;
-    max-width: 100%;
+    max-width: $homepage-logo-width;
     margin-bottom: $base-spacing;
   }
 }

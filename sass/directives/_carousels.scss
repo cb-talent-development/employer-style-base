@@ -249,3 +249,35 @@
     margin-bottom: 0;
   }
 }
+
+@mixin logos-carousel($logo-width: 10em, $logo-height: 4.375em) {
+  padding-bottom: $base-padding;
+
+  .slick-track {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin: auto;
+      max-width: $logo-width;
+      max-height: $logo-height;
+    }
+  }
+
+  @media only screen and (max-width: $small-screen-max) {
+    display: none;
+  }
+}
+
+@mixin mobile-logos-carousel($logo-width: 100%, $logo-height: 4.375em) {
+  @media only screen and (min-width: $small-screen-max) {
+    display: none;
+  }
+
+  img {
+    margin: auto;
+    height: $logo-height;
+    max-width: $logo-width;
+    margin-bottom: $base-spacing;
+  }
+}

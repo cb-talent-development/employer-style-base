@@ -105,7 +105,6 @@
   font-size: $direction-arrow-size / 2;
   cursor: pointer;
   border: 1px solid $inactive-carousel-button-color;
-  //padding: $base-padding / 2;
   padding: 0.4rem 0.5rem;
 
   &:hover,
@@ -132,14 +131,6 @@
   position: absolute;
   width: 100%;
   bottom: 0;
-
-  // &::before {
-  //   font-family: FontAwesome;
-  //   content: '\f09e';
-  //   font-size: $h2-font-size;
-  //   margin-right: 0.25em;
-  //   color: $inactive-carousel-button-color;
-  // }
 
   &::after {
     font-family: FontAwesome;

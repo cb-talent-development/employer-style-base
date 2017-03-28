@@ -105,7 +105,7 @@
   font-size: $direction-arrow-size / 2;
   cursor: pointer;
   border: 1px solid $inactive-carousel-button-color;
-  padding: $base-margin--small ($base-margin / 3);
+  padding: #{$base-margin--small} #{($base-padding / 3)};
 
   &:hover,
   &:active,

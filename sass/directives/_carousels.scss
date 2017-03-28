@@ -123,18 +123,15 @@
   border-top: $base-border;
   border-color: $grey-lighter;
   background-color: $brand-new-grey-lightest;
-  // padding-top: $base-margin - 0.25rem;
-  // padding-bottom: $base-margin - 0.25rem;
   padding-left: 1em;
   font-size: $base-font-size;
   font-weight: $font-weight-bold;
   position: absolute;
-  display: flex;
-  height: 40px;
-  vertical-align: center;
-  align-items: center;
-  width: 100%;
   bottom: 0;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 100%;
 
   &::after {
     font-family: FontAwesome;
@@ -144,6 +141,7 @@
     float: right;
     position: absolute;
     right: 0;
+    top: 12px;
     margin-right: 0.5em;
   }
 

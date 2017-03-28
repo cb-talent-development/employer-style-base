@@ -265,19 +265,8 @@
   }
 
   @media only screen and (max-width: $small-screen-max) {
-    display: none;
-  }
-}
-
-@mixin mobile-logos-carousel($logo-width: 100%, $logo-height: 4.375em) {
-  @media only screen and (min-width: $small-screen-max) {
-    display: none;
-  }
-
-  img {
-    margin: auto;
-    height: $logo-height;
-    max-width: $logo-width;
-    margin-bottom: $base-spacing;
+    img {
+      width: 80%;
+    }
   }
 }

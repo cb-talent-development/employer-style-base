@@ -106,7 +106,7 @@
   cursor: pointer;
   border: 1px solid $inactive-carousel-button-color;
   text-align: center;
-  line-height: 28px;
+  line-height: 28px;//this is for vertically centering arrows in ::after
   height: 30px;
   width: 30px;
 

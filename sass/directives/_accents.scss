@@ -67,7 +67,7 @@
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  z-index: 99999999999999;
+  z-index: $tooltip-z-index;
 
   i {
     color: $white;

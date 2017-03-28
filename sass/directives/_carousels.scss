@@ -123,12 +123,14 @@
   border-top: $base-border;
   border-color: $grey-lighter;
   background-color: $brand-new-grey-lightest;
-  padding-top: $base-margin - 0.25rem;
-  padding-bottom: $base-margin - 0.25rem;
-  padding-left: 1em;
+  // padding-top: $base-margin - 0.25rem;
+  // padding-bottom: $base-margin - 0.25rem;
+  // padding-left: 1em;
   font-size: $base-font-size;
   font-weight: $font-weight-bold;
   position: absolute;
+  display: flex;
+  align-items: center;
   width: 100%;
   bottom: 0;
 
@@ -137,10 +139,15 @@
     content: '\f054';
     font-size: $base-font-size;
     color: $inactive-carousel-button-color;
-    float: right;
+    // float: right;
+    position: absolute;
+    right: 0;
     margin-right: 0.5em;
   }
-  &:hover {
+
+  &:hover,
+  &:active,
+  &:focus {
     background-color: $brand-new-grey-lighter;
 
     &::after {

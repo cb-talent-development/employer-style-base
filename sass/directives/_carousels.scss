@@ -105,7 +105,10 @@
   font-size: $direction-arrow-size / 2;
   cursor: pointer;
   border: 1px solid $inactive-carousel-button-color;
-  padding: $base-padding / 2;
+  text-align: center;
+  line-height: $carousel-arrow-size - 0.125em;//this is for vertically centering arrows in ::after
+  height: $carousel-arrow-size;
+  width: $carousel-arrow-size;
 
   &:hover,
   &:active,
@@ -121,29 +124,38 @@
 
 @mixin resource-continue-block {
   border-top: $base-border;
-  padding-top: $base-padding / 2;
-  padding-bottom: $base-padding / 2;
+  border-color: $grey-lighter;
+  background-color: $brand-new-grey-lightest;
   padding-left: 1em;
-  font-size: $h3-font-size;
+  font-size: $base-font-size;
+  font-weight: $font-weight-bold;
   position: absolute;
-  width: 100%;
   bottom: 0;
-
-  &::before {
-    font-family: FontAwesome;
-    content: '\f09e';
-    font-size: $h2-font-size;
-    margin-right: 0.25em;
-    color: $inactive-carousel-button-color;
-  }
+  display: flex;
+  align-items: center;
+  height: $resource-continue-block-size;
+  width: 100%;
 
   &::after {
     font-family: FontAwesome;
     content: '\f054';
-    font-size: $h2-font-size;
+    font-size: $base-font-size;
     color: $inactive-carousel-button-color;
     float: right;
+    position: absolute;
+    right: 0;
+    top: 20%;
     margin-right: 0.5em;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $brand-new-grey-lighter;
+
+    &::after {
+      color: $grey-dark;
+    }
   }
 
   @media only screen and (max-width: $medium-screen-max) {

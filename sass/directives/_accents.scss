@@ -98,16 +98,5 @@
 
   @media only screen and (max-width: $small-screen-max) {
     bottom: 3em;
-
-    i {
-      background: $grey-darkest;
-      opacity: 0.6;
-
-      &:hover {
-        i {
-          top: 10%;
-        }
-      }
-    }
   }
 }

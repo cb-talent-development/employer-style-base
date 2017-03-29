@@ -100,10 +100,10 @@
     bottom: 3em;
 
     i {
-      &:hover {
-        background: $grey-darkest;
-        opacity: 0.6;
+      background: $grey-darkest;
+      opacity: 0.6;
 
+      &:hover {
         i {
           top: 10%;
         }

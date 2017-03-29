@@ -106,9 +106,9 @@
   cursor: pointer;
   border: 1px solid $inactive-carousel-button-color;
   text-align: center;
-  line-height: 28px;//this is for vertically centering arrows in ::after
-  height: 30px;
-  width: 30px;
+  line-height: $carousel-arrow-size - 0.125em;//this is for vertically centering arrows in ::after
+  height: $carousel-arrow-size;
+  width: $carousel-arrow-size;
 
   &:hover,
   &:active,
@@ -133,7 +133,7 @@
   bottom: 0;
   display: flex;
   align-items: center;
-  height: 40px;
+  height: $resource-continue-block-size;
   width: 100%;
 
   &::after {

@@ -267,7 +267,7 @@
 }
 
 @mixin logos-carousel($logo-width: 10em, $logo-height: 4.375em) {
-  padding-bottom: $base-padding;
+  // padding-bottom: $base-padding;
 
   .slick-track {
     display: flex;

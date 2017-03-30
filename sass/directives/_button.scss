@@ -18,7 +18,7 @@
   user-select: none;
   vertical-align: top;
   text-align: center;
-  text-transform: uppercase;
+  // text-transform: uppercase; // TODO this should go here (?) but without breaking things like accordions
   white-space: nowrap;
   width: auto;
   background-color: $base-button-color;
@@ -49,6 +49,7 @@
   background-color: $primary-button-color;
   color: $primary-button-text-color;
   border-color: $primary-button-border-color;
+  text-transform: uppercase;
 
   &:hover {
     background-color: $primary-hover-button-color;
@@ -71,6 +72,7 @@
   background-color: $secondary-button-color;
   color: $secondary-button-text-color;
   border-color: $secondary-button-border-color;
+  text-transform: uppercase;
 
   &:hover {
     background-color: $secondary-hover-button-color;
@@ -93,6 +95,7 @@
   background-color: $tertiary-button-color;
   color: $tertiary-button-text-color;
   border-color: $tertiary-button-border-color;
+  text-transform: uppercase;
 
   &:hover {
     background-color: $tertiary-hover-button-color;
@@ -115,6 +118,7 @@
   background-color: $tertiary-button-color;
   color: $bs__sky-blue;
   border-color: $bs__sky-blue;
+  text-transform: uppercase;
 
   &:hover {
     background-color: $bs__sky-blue;
@@ -137,6 +141,7 @@
   background-color: $tertiary-inverse-button-color;
   color: $tertiary-inverse-button-text-color;
   border-color: $tertiary-inverse-button-border-color;
+  text-transform: uppercase;
 
   &:hover {
     background-color: $tertiary-inverse-hover-button-color;
@@ -159,6 +164,7 @@
   background-color: $negative-button-color;
   color: $negative-button-text-color;
   border-color: $negative-button-border-color;
+  text-transform: uppercase;
 
   &:hover {
     background-color: $negative-hover-button-color;

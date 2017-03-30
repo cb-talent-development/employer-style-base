@@ -50,7 +50,8 @@ $base-spacing: $base-line-height * 1rem; // 24px
 $base-margin: $base-spacing / 2; // 12px
 $base-margin--small: $base-margin / 2; // 6px
 $base-padding: $base-spacing;
-$section-padding: 35px;
+$section-padding: 70px;
+$section-padding--mobile: 50px;
 
 $type-margin: 24px;
 $type-indent: 2em;

@@ -3,6 +3,10 @@
   line-height: 0;
   text-align: center;
 
+  @media only screen and (max-width: $small-screen-max) {
+    margin-top: $section-padding--mobile;
+  }
+
   li {
     display: inline-block;
     list-style-type: none;

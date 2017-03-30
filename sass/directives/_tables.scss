@@ -162,6 +162,10 @@
   @media only screen and (max-width: $breakpoint) {
     margin-bottom: 0;
   }
+
+  @media only screen and (max-width: $small-screen-max) {
+    margin-bottom: $section-padding--mobile;
+  }
 }
 
 @mixin table__row-alternating--colors {

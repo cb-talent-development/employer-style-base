@@ -95,7 +95,7 @@ $large-input-vertical-padding: $base-input-font-size * 0.625;
 $large-input-horizontal-padding: $base-input-font-size * 0.938;
 
 // Button Sizes
-$base-button-font-size: $base-input-font-size;
+$base-button-font-size: 15px;  // TODO apply new style guide, use variable
 $base-button-vertical-padding: $base-input-font-size * 0.375;
 $base-button-horizontal-padding: $base-input-font-size * 1.375;
 $base-button-border-size: 2px;

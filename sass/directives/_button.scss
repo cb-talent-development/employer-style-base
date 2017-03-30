@@ -18,6 +18,7 @@
   user-select: none;
   vertical-align: top;
   text-align: center;
+  text-transform: uppercase;
   white-space: nowrap;
   width: auto;
   background-color: $base-button-color;
@@ -28,6 +29,7 @@
     background-color: $base-hover-button-color;
     color: $base-hover-button-text-color;
     border-color: $base-hover-button-border-color;
+    text-decoration: none;
   }
 
   &:active {

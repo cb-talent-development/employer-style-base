@@ -50,9 +50,10 @@ $grey-lighter: #EEEEEE;
 $grey-lightest: #F4F4F4;
 
 // Brand Simplification - new colors; temporary names
-// TODO de-dupe and rename colors
+// TODO de-dupe and rename colors; and review shades of grey
 $brand-new-grey-lighter: #f8f8f8;
 $brand-new-grey-lightest: #fcfcfc;
+$brand-new-grey-another-grey: #d8d8d8; // border color
 $brand-new-lime: #66a52a;
 $brand-new-azure: #0097d1;
 $bs__olive-green: #66a52a;
@@ -149,7 +150,7 @@ $tertiary-active-button-color: $tertiary-hover-button-color;
 $tertiary-active-button-text-color: $tertiary-hover-button-text-color;
 $tertiary-active-button-border-color: $tertiary-active-button-color;
 
-// TODO confirm hover/active and update
+// TODO confirm hover/
 $quarternary-button-color: transparent;
 $quarternary-button-text-color: $white;
 $quarternary-button-border-color: $bs__sky-blue;
@@ -196,7 +197,7 @@ $inverse-inactive-carousel-button-opacity: 0.35;
 $inverse-active-carousel-button-opacity: 1;
 
 // Border
-$base-border-primary-color: $grey-semi-light;
+$base-border-primary-color: $brand-new-grey-another-grey;
 $base-border: 1px solid $base-border-primary-color;
 
 // Forms

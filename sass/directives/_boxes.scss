@@ -1,6 +1,6 @@
 @mixin component-box {
   border-radius: $minor-border-radius;
-  padding: $base-padding;
+  padding: $base-spacing-medium;
   background-color: $panel-primary;
   box-shadow: $base-box-shadow;
 }
@@ -49,7 +49,7 @@
   @include align-items(center);
   @include flex(1);
   position: relative;
-  margin: $base-margin;
+  margin: $base-spacing-small;
   text-decoration: none;
 
   &:hover,
@@ -81,7 +81,7 @@
 // Ecom Table Boxes
 @mixin ecom_table-item {
   border-bottom: $base-border;
-  margin-top: $base-margin * 2;
+  margin-top: $base-margin * 2; // TODO should be $base-spacing-medium now but not yet touching Ecom
 
   .ecom__column-item_flag {
     @include column-flag;
@@ -150,27 +150,27 @@
 
 // Item Bar
 
-@mixin item-bar__list {
+@mixin item-bar__list($breakpoint: $small-screen-max) {
   @include display(flex);
   @include justify-content(center);
-  padding: $base-padding 0;
+  padding: $base-spacing-medium 0;
 
-  @media only screen and (max-width: $small-screen-max) {
+  @media only screen and (max-width: $breakpoint) {
     @include flex-direction(column);
     padding: 0;
   }
 }
 
-@mixin item-bar__list-item {
+@mixin item-bar__list-item($breakpoint: $small-screen-max) {
   position: relative;
   border-right: $base-border;
-  padding: 0 $base-padding;
+  padding: 0 $base-spacing-medium;
   text-align: center;
   list-style-type: none;
 
-  @media only screen and (max-width: $small-screen-max) {
+  @media only screen and (max-width: $breakpoint) {
     border-right: 0;
-    padding: $base-margin 0;
+    padding: $base-spacing-small 0;
 
     &:after {
       content: '';

@@ -39,7 +39,7 @@ $panel-border-radius: $minor-border-radius;
 $radio-border-radius: $base-border-radius * 10;
 $checkbox-border-radius: $panel-border-radius;
 $vertical-rule-width: 1px;
-$small-strip-height: 0.8rem;
+$small-strip-height: 0.5625rem; // 9px
 
 // Image Sizes
 $image-grid-block: 160px;
@@ -47,12 +47,19 @@ $image-grid-block: 160px;
 // Spacing
 // TODO Use names like base-spacing-large and base-spacing-medium, a la Bootstrap, after we address spacing beyond the homepage
 $base-spacing: $base-line-height * 1rem; // 24px
+
+$base-spacing-smallest: 6px;
+$base-spacing-small: 12px;
+$base-spacing-medium: 30px; // TODO undecided whether this should equal or replace $base-spacing
+$base-spacing-large: 70px;
+
 $base-margin: $base-spacing / 2; // 12px
 $base-margin--small: $base-margin / 2; // 6px
 $base-padding: $base-spacing;
-$section-padding: 35px;
+$section-padding: 70px;
+$section-padding--mobile: 50px;
 
-$type-margin: 24px;
+$type-margin: 20px;
 $type-indent: 2em;
 
 // UI components
@@ -95,7 +102,7 @@ $large-input-vertical-padding: $base-input-font-size * 0.625;
 $large-input-horizontal-padding: $base-input-font-size * 0.938;
 
 // Button Sizes
-$base-button-font-size: $base-input-font-size;
+$base-button-font-size: 15px;  // TODO apply new style guide, use variable
 $base-button-vertical-padding: $base-input-font-size * 0.375;
 $base-button-horizontal-padding: $base-input-font-size * 1.375;
 $base-button-border-size: 2px;

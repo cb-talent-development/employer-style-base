@@ -150,25 +150,25 @@
 
 // Item Bar
 
-@mixin item-bar__list {
+@mixin item-bar__list($breakpoint: $small-screen-max) {
   @include display(flex);
   @include justify-content(center);
   padding: $base-spacing-medium 0;
 
-  @media only screen and (max-width: $small-screen-max) {
+  @media only screen and (max-width: $breakpoint) {
     @include flex-direction(column);
     padding: 0;
   }
 }
 
-@mixin item-bar__list-item {
+@mixin item-bar__list-item($breakpoint: $small-screen-max) {
   position: relative;
   border-right: $base-border;
   padding: 0 $base-spacing-medium;
   text-align: center;
   list-style-type: none;
 
-  @media only screen and (max-width: $small-screen-max) {
+  @media only screen and (max-width: $breakpoint) {
     border-right: 0;
     padding: $base-spacing-small 0;
 

@@ -2,7 +2,7 @@
   position: relative;
 
   ul {
-    @include speech_bubble($pointer-offset: $nav-pointer-offset);
+    @include component-box;
     @include transition($base-transition);
     position: absolute;
     top: $top;

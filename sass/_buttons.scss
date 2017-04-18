@@ -6,6 +6,7 @@ input[type="submit"] {
   @extend %button;
 }
 
+// TODO shouldn't need 2-classes, adds specificity
 .button.button--primary {
   @extend %primary-button;
 }

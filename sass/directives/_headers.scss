@@ -60,7 +60,7 @@
   }
 }
 
-@mixin header-hero() {
+@mixin header-hero {
   position: relative;
   overflow: hidden;
   background-color: $base-background-color;

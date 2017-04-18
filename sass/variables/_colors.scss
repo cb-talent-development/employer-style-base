@@ -97,11 +97,13 @@ $alert-warning: $marigold;
 $alert-success: $lime;
 
 // Header/Footer
-$header-background-color--account-bar: $anchor-blue;
+$header-background-color--account-nav: $anchor-blue;
+$header-background-color--site-nav: $white;
+$header-background-color: $white; // mobile?
 $header-mobile-icon-color: $anchor-blue;
 $header-mobile-text-hover-color: $white;
 $header-text-color: $anchor-blue;
-$header-background-color: $white;
+$header-text-hover-color: $white;
 $header-background-secondary-color: $grey-lighter;
 $header-flyout-color: $header-background-color;
 $header-subtitle-color: $grey-darker;

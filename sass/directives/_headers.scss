@@ -104,7 +104,7 @@
     p {
       max-width: 28em;
       margin-bottom: 0;
-      font-size: $hero-text-size;
+      font-size: strip-units($hero-text-size) * 1rem;
       color: $hero-text-color;
 
       @media only screen and (max-width: $small-screen-max) {

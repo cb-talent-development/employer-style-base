@@ -60,7 +60,7 @@
   }
 }
 
-@mixin header-hero($background-image-large) {
+@mixin header-hero() {
   position: relative;
   overflow: hidden;
   background-color: $base-background-color;
@@ -115,13 +115,13 @@
 }
 
 @mixin header-hero-product($background-image-large, $background-image-medium: nil) {
-  @include header-hero;
   min-height: $header-height-product;
   background-color: $base-background-color;
   background-image: url(asset_path(#{$background-image-large}));
   background-size: auto $header-height-product;
   background-position: right bottom;
   background-repeat: repeat no-repeat;
+  @include header-hero;
 
   @media only screen and (max-width: $medium-screen-max) {
     background-image: url(asset_path(#{$background-image-medium}));

@@ -106,10 +106,6 @@
       margin-bottom: 0;
       font-size: strip-units($hero-text-size) * 1rem;
       color: $hero-text-color;
-
-      @media only screen and (max-width: $small-screen-max) {
-        display: none;
-      }
     }
   }
 }
@@ -130,6 +126,14 @@
   @media only screen and (max-width: $small-screen-max) {
     min-height: unset;
     background-image: none;
+  }
+
+  &__text {
+    p {
+      @media only screen and (max-width: $small-screen-max) {
+        display: none;
+      }
+    }
   }
 
   &:before {

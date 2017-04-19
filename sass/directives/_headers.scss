@@ -65,10 +65,10 @@
   overflow: hidden;
   background-color: $base-background-color;
 
-  @media only screen and (max-width: $small-screen-max) {
-    @include display(flex);
-    @include align-items(center);
-  }
+  // @media only screen and (max-width: $small-screen-max) {
+  //   @include display(flex);
+  //   @include align-items(center);
+  // }
 
   &__text {
     @include display(flex);

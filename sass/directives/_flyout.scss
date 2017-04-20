@@ -11,6 +11,8 @@
     z-index: z($z-context, navigation, $navigation, top-bar--primary__flyout__ul);
     width: auto;
     height: auto;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     padding: 0;
     display: none;
 

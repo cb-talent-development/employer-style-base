@@ -48,9 +48,11 @@
     color: $base-link-color;
     font-weight: $font-weight-bold;
 
-    &.top-bar__link:hover,
-    &:hover .top-bar__link {
-      text-decoration: underline;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      background-color: $grey-mid-lightest;
     }
 
     @media only screen and (max-width: $mobile-nav-max) {

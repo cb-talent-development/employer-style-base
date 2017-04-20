@@ -11,7 +11,7 @@
     z-index: z($z-context, navigation, $navigation, top-bar--primary__flyout__ul);
     width: auto;
     height: auto;
-    padding: 25px;
+    padding: 0;
     display: none;
 
     @media only screen and (max-width: $mobile-nav-max) {
@@ -40,11 +40,12 @@
   }
 
   ul li {
-    padding: 7px 10px;
-    display: block;
+    list-style-type: none;
   }
 
   ul li a {
+    display: block;
+    padding: $base-spacing-small $base-spacing-medium;
     color: $base-link-color;
     font-size: $top-bar-font-size;
     font-weight: $font-weight-bold;

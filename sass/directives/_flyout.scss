@@ -1,4 +1,4 @@
-@mixin nav_flyout($top, $flyout-offset-value, $flyout-offset-direction: 'left', $nav-pointer-offset: 25%) {
+@mixin nav_flyout($top, $flyout-offset-value, $flyout-offset-direction: 'left') { // TODO may not need any params
   position: relative;
 
   ul {

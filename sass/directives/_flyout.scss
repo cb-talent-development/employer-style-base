@@ -51,4 +51,20 @@
     }
   }
 
+  > a:after {
+    font-family: FontAwesome;
+    font-size: $top-bar-icon-size;
+    margin-left: $base-spacing-smallest;
+    color: $base-link-color;
+    content: '\f078';
+    transition: $element-spin-base-transition;
+  }
+
+  &:hover,
+  &.hover {
+    > a:after {
+      transform: $element-spin-rotation-half;
+      color: $header-text-hover-color;
+    }
+  }
 }

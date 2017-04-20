@@ -14,7 +14,6 @@
     padding: 25px;
     display: none;
 
-
     @media only screen and (max-width: $mobile-nav-max) {
       position: relative;
       top: 0;
@@ -28,6 +27,15 @@
       @media only screen and (max-width: $mobile-nav-max) {
         content: none;
       }
+    }
+  }
+
+  // Hover and Click behavior above hamburger menu range
+
+  &:hover ul,
+  &.hover ul {
+    @media only screen and (min-width: $mobile-nav-max) {
+      display: block;
     }
   }
 

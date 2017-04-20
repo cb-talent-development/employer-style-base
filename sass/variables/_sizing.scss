@@ -131,7 +131,8 @@ $top-bar--height--mobile: $top-bar--height-combined; // TODO making this 56 for 
 $top-bar--logo-width: 192px;
 $top-bar--logo-height: 20px;
 $top-bar-font-size: $small-font-size;
-$top-bar-icon-size: 0.75rem;
+$top-bar-icon-size: 0.75rem; // 12px
+$top-bar-angle-size: 1rem; // 16px
 
 // Header
 $header-height-large: 445px;

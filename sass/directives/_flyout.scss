@@ -65,10 +65,10 @@
 
   > a:after {
     font-family: FontAwesome;
-    font-size: $top-bar-icon-size;
+    font-size: $top-bar-angle-size;
     margin-left: $base-spacing-smallest;
     color: $base-link-color;
-    content: '\f078';
+    content: '\f107';
     transition: $element-spin-base-transition;
   }
 

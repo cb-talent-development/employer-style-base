@@ -127,7 +127,7 @@ $massive-button-horizontal-padding: $base-input-font-size * 2;
 // Top Bar
 $top-bar--height: 56px;
 $top-bar--height-combined: 56px * 2;
-$top-bar--height--mobile: $top-bar--height-combined; // TODO making this 56 for easy math but need to talk to susan about whether it should stay the small height then figure out the rest
+$top-bar--height--mobile: 42px;
 $top-bar--logo-width: 192px;
 $top-bar--logo-height: 20px;
 $top-bar-font-size: $small-font-size;

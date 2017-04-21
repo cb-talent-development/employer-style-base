@@ -61,7 +61,7 @@
 
     @media only screen and (max-width: $mobile-nav-max) {
       color: $base-link-color;
-      text-indent: 2em;
+      // text-indent: $type-indent;
     }
   }
 

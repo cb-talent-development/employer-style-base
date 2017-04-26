@@ -88,15 +88,9 @@
   }
 }
 
-@mixin resource-header { // TODO is this in common accross carousels and does it fit with style base and is it needed?
-  h2, p, h3, h1 {
-    display: inline-block;
-  }
-
-  nav {
-    display: inline-block;
-    float: right;
-  }
+@mixin resource-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 @mixin resource-carousel-arrow($arrow-z-index: 1) {

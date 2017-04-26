@@ -61,6 +61,15 @@
     }
   }
 
+  ul li:last-of-type a {
+    &:hover,
+    &:active,
+    &:focus {
+      border-bottom-left-radius: $minor-border-radius;
+      border-bottom-right-radius: $minor-border-radius;
+    }
+  }
+
   > a:after {
     font-family: FontAwesome;
     font-size: $top-bar-angle-size;

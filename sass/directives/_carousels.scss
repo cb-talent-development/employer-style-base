@@ -116,10 +116,6 @@
     color: $active-carousel-button-color;
     border: 1px solid $active-carousel-button-color;
   }
-
-  &--left {
-    margin-right: 1px;
-  }
 }
 
 @mixin resource-continue-block {

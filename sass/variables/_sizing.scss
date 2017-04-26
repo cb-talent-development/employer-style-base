@@ -125,11 +125,14 @@ $massive-button-vertical-padding: $base-input-font-size * 0.375;
 $massive-button-horizontal-padding: $base-input-font-size * 2;
 
 // Top Bar
-$top-bar--height: 60px;
+$top-bar--height: 56px;
+$top-bar--height-combined: 56px * 2;
 $top-bar--height--mobile: 42px;
 $top-bar--logo-width: 192px;
-$top-bar--logo-height: 32px;
+$top-bar--logo-height: 20px;
 $top-bar-font-size: $small-font-size;
+$top-bar-icon-size: 0.75rem; // 12px
+$top-bar-angle-size: 1rem; // 16px
 
 // Header
 $header-height-large: 445px;

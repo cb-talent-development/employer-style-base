@@ -47,6 +47,7 @@ $grey: #CCCCCC;
 $grey-semi-light: #D4D4D4; // border color
 $grey-light: #DDDDDD;
 $grey-lighter: #EEEEEE;
+$grey-mid-lightest: #E4E4E4;
 $grey-lightest: #F4F4F4;
 
 // Brand Simplification - new colors; temporary names
@@ -97,10 +98,14 @@ $alert-warning: $marigold;
 $alert-success: $lime;
 
 // Header/Footer
+$header-background-color--account-nav: $anchor-blue;
+$header-background-color--site-nav: $white;
+$header-background-color--mobile-nav: $white;
+$header-background-color: $white; // mobile?
 $header-mobile-icon-color: $anchor-blue;
 $header-mobile-text-hover-color: $white;
 $header-text-color: $anchor-blue;
-$header-background-color: $white;
+$header-text-hover-color: $white;
 $header-background-secondary-color: $grey-lighter;
 $header-flyout-color: $header-background-color;
 $header-subtitle-color: $grey-darker;

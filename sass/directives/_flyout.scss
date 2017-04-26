@@ -1,8 +1,8 @@
-@mixin nav_flyout($top, $flyout-offset-value, $flyout-offset-direction: 'left', $nav-pointer-offset: 25%) {
+@mixin nav_flyout($top, $flyout-offset-value, $flyout-offset-direction: 'left') { // TODO may not need any params
   position: relative;
 
   ul {
-    @include speech_bubble($pointer-offset: $nav-pointer-offset);
+    @include component-box;
     @include transition($base-transition);
     position: absolute;
     top: $top;
@@ -11,9 +11,10 @@
     z-index: z($z-context, navigation, $navigation, top-bar--primary__flyout__ul);
     width: auto;
     height: auto;
-    padding: 25px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 0;
     display: none;
-
 
     @media only screen and (max-width: $mobile-nav-max) {
       position: relative;
@@ -22,33 +23,58 @@
       border: 0;
       border-radius: 0;
       padding: 0;
+      box-shadow: none;
     }
+  }
 
-    &:after, &:before {
-      @media only screen and (max-width: $mobile-nav-max) {
-        content: none;
-      }
+  // Hover and Click behavior above hamburger menu range
+
+  &:hover ul,
+  &.hover ul {
+    @media only screen and (min-width: $mobile-nav-max) {
+      display: block;
     }
   }
 
   ul li {
-    padding: 7px 10px;
-    display: block;
+    list-style-type: none;
   }
 
   ul li a {
+    display: block;
+    padding: $base-spacing-small $base-spacing-medium;
     color: $base-link-color;
-    font-weight: $font-weight-normal;
+    font-size: $top-bar-font-size;
+    font-weight: $font-weight-bold;
 
-    &.top-bar__link:hover,
-    &:hover .top-bar__link {
-      text-decoration: underline;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      background-color: $grey-mid-lightest;
     }
 
     @media only screen and (max-width: $mobile-nav-max) {
+      padding: 10px 24px; // TODO when we update mobile nav update these numbers; currently sizes shouldn't change, so don't want to use the spacing variables that will change before mobile nav
       color: $base-link-color;
-      text-indent: 2em;
+      text-indent: $type-indent;
     }
   }
 
+  > a:after {
+    font-family: FontAwesome;
+    font-size: $top-bar-angle-size;
+    margin-left: $base-spacing-smallest;
+    color: $base-link-color;
+    content: '\f107';
+    transition: $element-spin-base-transition;
+  }
+
+  &:hover,
+  &.hover {
+    > a:after {
+      transform: $element-spin-rotation-half;
+      color: $header-text-hover-color;
+    }
+  }
 }

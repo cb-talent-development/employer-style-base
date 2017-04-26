@@ -88,7 +88,7 @@
   }
 }
 
-@mixin resource-header {
+@mixin resource-header { // TODO is this in common accross carousels and does it fit with style base and is it needed?
   h2, p, h3, h1 {
     display: inline-block;
   }
@@ -106,7 +106,7 @@
   cursor: pointer;
   border: 1px solid $inactive-carousel-button-color;
   text-align: center;
-  line-height: $carousel-arrow-size - 0.125em;//this is for vertically centering arrows in ::after
+  line-height: $carousel-arrow-size - 0.125em; // vertically centers arrows
   height: $carousel-arrow-size;
   width: $carousel-arrow-size;
 

@@ -60,39 +60,14 @@
   }
 }
 
-@mixin header-hero-product($background-image-large, $background-image-medium: nil) {
+@mixin header-hero {
   position: relative;
-  min-height: $header-height-product;
   overflow: hidden;
   background-color: $base-background-color;
-  background-image: url(asset_path(#{$background-image-large}));
-  background-size: auto $header-height-product;
-  background-position: right bottom;
-  background-repeat: repeat no-repeat;
-
-  @media only screen and (max-width: $medium-screen-max) {
-    background-image: url(asset_path(#{$background-image-medium}));
-  }
 
   @media only screen and (max-width: $small-screen-max) {
     @include display(flex);
     @include align-items(center);
-    min-height: unset;
-    background-image: none;
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    @include cbGradientTransparent;
-
-    @media only screen and (max-width: $small-screen-max) {
-      @include cbGradient;
-    }
   }
 
   &__text {
@@ -131,21 +106,15 @@
       margin-bottom: 0;
       font-size: $hero-text-size;
       color: $hero-text-color;
-
-      @media only screen and (max-width: $small-screen-max) {
-        display: none;
-      }
     }
   }
 }
 
-@mixin header-hero($background-image-large, $background-image-medium: nil) {
-  position: relative;
-  min-height: $header-height-large;
-  overflow: hidden;
-  background-color: $base-background-color;
+@mixin header-hero-product($background-image-large, $background-image-medium: nil) {
+  @include header-hero;
+  min-height: $header-height-product;
   background-image: url(asset_path(#{$background-image-large}));
-  background-size: auto $header-height-large;
+  background-size: auto $header-height-product;
   background-position: right bottom;
   background-repeat: repeat no-repeat;
 
@@ -154,9 +123,16 @@
   }
 
   @media only screen and (max-width: $small-screen-max) {
-    @include display(flex);
-    @include align-items(center);
-    background-size: cover;
+    min-height: unset;
+    background-image: none;
+  }
+
+  &__text {
+    p {
+      @media only screen and (max-width: $small-screen-max) {
+        display: none;
+      }
+    }
   }
 
   &:before {
@@ -167,38 +143,10 @@
     bottom: 0;
     left: 0;
     @include cbGradientTransparent;
-  }
-
-  &__text {
-    @include display(flex);
-    @include flex-direction(column);
-    @include justify-content(center);
-    @include align-items(flex-start);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    padding-top: $base-margin;
-    padding-bottom: $base-margin;
 
     @media only screen and (max-width: $small-screen-max) {
-      position: relative;
-    }
-
-    h1 {
-      max-width: 28ch;
-      margin-top: 0;
-      line-height: normal;
-      color: $hero-text-color;
-    }
-
-    p {
-      max-width: 35ch;
-      margin-bottom: 0;
-      font-size: $hero-text-size;
-      color: $hero-text-color;
+      @include cbGradient;
     }
   }
+
 }

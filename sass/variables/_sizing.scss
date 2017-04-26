@@ -15,7 +15,7 @@ $h6-font-size: $base-font-size * 0.67;
 $large-header-text: $base-font-size * 8; // 128px
 $large-header-text--mobile: $base-font-size * 4; //64px
 
-$hero-text-size: $h2-font-size;
+$hero-text-size: strip-units($h2-font-size) * 1rem;
 $small-font-size: 13px;
 $subhead-font-size: $base-font-size * 1.5;
 $caption-font-size: $small-font-size;

@@ -88,11 +88,6 @@
   }
 }
 
-@mixin resource-header {
-  display: flex;
-  justify-content: space-between;
-}
-
 @mixin resource-carousel-arrow($arrow-z-index: 1) {
   z-index: $arrow-z-index;
   color: $inactive-carousel-button-color;

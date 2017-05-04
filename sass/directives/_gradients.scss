@@ -1,4 +1,45 @@
-@mixin gradient($dark: $gradient-dark, $medium: $gradient-medium, $light: $gradient-light) {
+$cb: ( // TODO replace with variables
+  dark: #0a3a68,
+  medium: #0e759e,
+  light: #58a9a2
+);
+$rogueOne: (
+  dark: #182642,
+  medium: #1e5c8a,
+  light: #287ab8
+);
+$cloverfield: (
+  dark: #0a3a68,
+  medium: #009a74,
+  light: #66c2ab
+);
+$gobletOfFire: (
+  dark: #be7229,
+  medium: #f79c25,
+  light:  #fed473
+);
+$soylentGreen: (
+  dark: #66a52a,
+  medium: #85ce3f,
+  light:  #a0d8d4
+);
+$purpleRain: (
+  dark: #311b92,
+  medium: #673ab7,
+  light: #b389ff
+);
+$dayAfterTomorrow: (
+  dark: #fff,
+  medium: #f0f0f0,
+  light: #f0f0f0
+);
+$moonlight: (
+  dark: #311b92,
+  medium: #673ab7,
+  light: #63c0b9
+);
+
+@mixin gradient($dark, $medium, $light) {
   background: $dark; // Old browsers
   background: -moz-linear-gradient(-45deg, $dark 0%, $medium 35%, $light 100%); // FF3.6-15
   background: -webkit-linear-gradient(-45deg, $dark 0%, $medium 35%, $light 100%); // Chrome10-25,Safari5.1-6
@@ -6,7 +47,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$dark}', endColorstr='#{$light}',GradientType=1 ); // IE6-9 fallback on horizontal gradient
 }
 
-@mixin gradientTransparent($dark: $gradient-dark, $medium: $gradient-medium, $light: $gradient-light, $transparency: 0.9) {
+@mixin gradientTransparent($dark, $medium, $light, $transparency: 0.9) {
   background: $dark; // Old browsers
   background: -moz-linear-gradient(-45deg, $dark 0%, $medium 35%, transparentize($light, $transparency) 100%); // FF3.6-15
   background: -webkit-linear-gradient(-45deg, $dark 0%, $medium 35%, transparentize($light, $transparency) 100%); // Chrome10-25,Safari5.1-6
@@ -15,17 +56,75 @@
 }
 
 @mixin cbGradient {
-  @include gradient;
+  @include gradient(map-get($cb, dark), map-get($cb, medium), map-get($cb, light));
 }
 
 @mixin cbGradientTransparent {
-  @include gradientTransparent;
+  @include gradientTransparent(map-get($cb, dark), map-get($cb, medium), map-get($cb, light));
 }
 
-@mixin whiteGradientTransparent {
+@mixin rogueOneGradient {
+  @include gradient(map-get($rogueOne, dark), map-get($rogueOne, medium), map-get($rogueOne, light));
+}
+
+@mixin rogueOneGradientTransparent {
+  @include gradientTransparent(map-get($rogueOne, dark), map-get($rogueOne, medium), map-get($rogueOne, light));
+}
+
+@mixin cloverfieldGradient {
+  @include gradient(map-get($cloverfield, dark), map-get($cloverfield, medium), map-get($cloverfield, light));
+}
+
+@mixin cloverfieldGradientTransparent {
+  @include gradientTransparent(map-get($cloverfield, dark), map-get($cloverfield, medium), map-get($cloverfield, light));
+}
+
+@mixin gobletOfFireGradient {
+  @include gradient(map-get($gobletOfFire, dark), map-get($gobletOfFire, medium), map-get($gobletOfFire, light));
+}
+
+@mixin gobletOfFireGradientTransparent {
+  @include gradientTransparent(map-get($gobletOfFire, dark), map-get($gobletOfFire, medium), map-get($gobletOfFire, light));
+}
+
+@mixin soylentGreenGradient {
+  @include gradient(map-get($soylentGreen, dark), map-get($soylentGreen, medium), map-get($soylentGreen, light));
+}
+
+@mixin soylentGreenGradientTransparent {
+  @include gradientTransparent(map-get($soylentGreen, dark), map-get($soylentGreen, medium), map-get($soylentGreen, light));
+}
+
+@mixin purpleRainGradient {
+  @include gradient(map-get($purpleRain, dark), map-get($purpleRain, medium), map-get($purpleRain, light));
+}
+
+@mixin purpleRainGradientTransparent {
+  @include gradientTransparent(map-get($purpleRain, dark), map-get($purpleRain, medium), map-get($purpleRain, light));
+}
+
+@mixin dayAfterTomorrowGradient {
+  @include gradient(map-get($dayAfterTomorrow, dark), map-get($dayAfterTomorrow, medium), map-get($dayAfterTomorrow, light));
+}
+
+@mixin dayAfterTomorrowGradientTransparent {
+  @include gradientTransparent(map-get($dayAfterTomorrow, dark), map-get($dayAfterTomorrow, medium), map-get($dayAfterTomorrow, light));
+}
+
+@mixin moonlightGradient {
+  @include gradient(map-get($moonlight, dark), map-get($moonlight, medium), map-get($moonlight, light));
+}
+
+@mixin moonlightGradientTransparent {
+  @include gradientTransparent(map-get($moonlight, dark), map-get($moonlight, medium), map-get($moonlight, light));
+}
+
+
+@mixin whiteGradientTransparent { // TODO replace this with the movie-themed one
   @include gradientTransparent($dark: $white, $medium: #f0f0f0, $light: #f0f0f0, $transparency: 0.85);
 }
 
+// TODO break this apart from the gradient
 @mixin imageBackgroundGradient($img-url, $bottom-layer: $bs__blue-light, $dark: $anchor-blue, $medium: $bs__blue-medium, $light: $bs__blue-light, $mode: multiply) {
   background-color: $bottom-layer;
   background-image:

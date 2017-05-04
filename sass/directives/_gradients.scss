@@ -6,11 +6,11 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$dark}', endColorstr='#{$light}',GradientType=1 ); // IE6-9 fallback on horizontal gradient
 }
 
-@mixin gradientTransparent($dark: $gradient-dark, $medium: $gradient-medium, $light: $gradient-light) {
+@mixin gradientTransparent($dark: $gradient-dark, $medium: $gradient-medium, $light: $gradient-light, $transparency: 0.9) {
   background: $dark; // Old browsers
-  background: -moz-linear-gradient(-45deg, $dark 0%, $medium 35%, transparentize($light, 0.9) 100%); // FF3.6-15
-  background: -webkit-linear-gradient(-45deg, $dark 0%, $medium 35%, transparentize($light, 0.9) 100%); // Chrome10-25,Safari5.1-6
-  background: linear-gradient(135deg, $dark 0%, $medium 35%, transparentize($light, 0.9) 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+  background: -moz-linear-gradient(-45deg, $dark 0%, $medium 35%, transparentize($light, $transparency) 100%); // FF3.6-15
+  background: -webkit-linear-gradient(-45deg, $dark 0%, $medium 35%, transparentize($light, $transparency) 100%); // Chrome10-25,Safari5.1-6
+  background: linear-gradient(135deg, $dark 0%, $medium 35%, transparentize($light, $transparency) 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$dark}', endColorstr='#{$light}',GradientType=1 ); // IE6-9 fallback on horizontal gradient
 }
 
@@ -22,12 +22,8 @@
   @include gradientTransparent;
 }
 
-@mixin whiteGradientTransparent($dark: $white, $medium: #f0f0f0, $light: #f0f0f0) {
-  background: $dark; // Old browsers
-  background: -moz-linear-gradient(-45deg, $dark 0%, $medium 35%, transparentize($light, 0.85) 100%); // FF3.6-15
-  background: -webkit-linear-gradient(-45deg, $dark 0%, $medium 35%, transparentize($light, 0.85) 100%); // Chrome10-25,Safari5.1-6
-  background: linear-gradient(135deg, $dark 0%, $medium 35%, transparentize($light, 0.85) 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$dark}', endColorstr='#{$light}',GradientType=1 ); // IE6-9 fallback on horizontal gradient
+@mixin whiteGradientTransparent {
+  @include gradientTransparent($dark: $white, $medium: #f0f0f0, $light: #f0f0f0, $transparency: 0.85);
 }
 
 @mixin imageBackgroundGradient($img-url, $bottom-layer: $bs__blue-light, $dark: $anchor-blue, $medium: $bs__blue-medium, $light: $bs__blue-light, $mode: multiply) {

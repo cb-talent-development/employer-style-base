@@ -8,12 +8,10 @@ $sky-blue: #0097d1;
 $sky-blue-light: #6BC6E9;
 $sky-blue-dark: #0C88BC;
 
-$azure-two: #1280A1;
 $azure-blue: #287AB9;
-$azure-three: #00A1DE;
+$azure-light: #00A1DE;
 
 $bs__blue-medium: #1e5c8a;
-$bs__blue-light: #287ab8;
 
 $lime: #85CE3F;
 $lime-light: #B6E28C;
@@ -227,7 +225,7 @@ $table-row-light-promo: $grey;
 $table-row-dark-promo: $grey-semi-dark;
 $table-column-heading-1: $emerald;
 $table-column-heading-2: $azure-blue;
-$table-column-heading-3: $azure-three;
+$table-column-heading-3: $azure-light;
 
 $ecom-table-heading: $table-column-heading-2;
 $ecom-table-promo-heading: darken($table-column-heading-2, 10);

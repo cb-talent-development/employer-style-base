@@ -38,6 +38,16 @@ $moonlight: (
   medium: #673ab7,
   light: #63c0b9
 );
+$arielsTail: (
+  dark: #007457,
+  medium: #54a1a1,
+  light: #b6e28c
+);
+$limeGreen: (
+  dark: $lime-dark,
+  medium: $lime,
+  light: $lime-light
+);
 
 @mixin gradient($dark, $medium, $light) {
   background: $dark; // Old browsers
@@ -117,6 +127,22 @@ $moonlight: (
 
 @mixin moonlightGradientTransparent {
   @include gradientTransparent(map-get($moonlight, dark), map-get($moonlight, medium), map-get($moonlight, light));
+}
+
+@mixin arielsTailGradient {
+  @include gradient(map-get($arielsTail, dark), map-get($arielsTail, medium), map-get($arielsTail, light));
+}
+
+@mixin arielsTailGradientTransparent {
+  @include gradientTransparent(map-get($arielsTail, dark), map-get($arielsTail, medium), map-get($arielsTail, light));
+}
+
+@mixin limeGreenGradient {
+  @include gradient(map-get($limeGreen, dark), map-get($limeGreen, medium), map-get($limeGreen, light));
+}
+
+@mixin limeGreenGradientTransparent {
+  @include gradientTransparent(map-get($limeGreen, dark), map-get($limeGreen, medium), map-get($limeGreen, light));
 }
 
 

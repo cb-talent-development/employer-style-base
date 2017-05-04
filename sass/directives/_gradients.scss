@@ -38,7 +38,7 @@ $moonlight: (
   medium: #673ab7,
   light: #63c0b9
 );
-$arielsTail: (
+$arielsTail: ( // TODO These color sets from EM-1027 will be replaced with the sets above in EM-1163
   dark: #007457,
   medium: #54a1a1,
   light: #b6e28c
@@ -63,6 +63,15 @@ $limeGreen: (
   background: -webkit-linear-gradient(-45deg, $dark 0%, $medium 35%, transparentize($light, $transparency) 100%); // Chrome10-25,Safari5.1-6
   background: linear-gradient(135deg, $dark 0%, $medium 35%, transparentize($light, $transparency) 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$dark}', endColorstr='#{$light}',GradientType=1 ); // IE6-9 fallback on horizontal gradient
+}
+
+@mixin imageGradientBlend($img-url, $dark, $medium, $light, $mode: multiply) {
+  background-color: $light;
+  background-image:
+    linear-gradient(to right, rgba($dark, 0.8), rgba($medium, 0.75), rgba($light, 0.2)),
+    url($img-url);
+  background-blend-mode: $mode;
+  background-attachment: fixed;
 }
 
 @mixin cbGradient {
@@ -148,14 +157,4 @@ $limeGreen: (
 
 @mixin whiteGradientTransparent { // TODO replace this with the movie-themed one
   @include gradientTransparent($dark: $white, $medium: #f0f0f0, $light: #f0f0f0, $transparency: 0.85);
-}
-
-// TODO break this apart from the gradient
-@mixin imageBackgroundGradient($img-url, $bottom-layer: map-get($rogueOne, light), $dark: map-get($rogueOne, dark), $medium: map-get($rogueOne, medium), $light: map-get($rogueOne, light), $mode: multiply) {
-  background-color: $bottom-layer;
-  background-image:
-    linear-gradient(to right, rgba($dark, 0.8), rgba($medium, 0.75), rgba($light, 0.2)),
-    url($img-url);
-  background-blend-mode: $mode;
-  background-attachment: fixed;
 }

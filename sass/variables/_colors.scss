@@ -9,8 +9,11 @@ $sky-blue-light: #39B3E1;
 $sky-blue-dark: #0F6E9E;
 
 $lime: #85CE3F;
-$lime-light: #9DD865;
-$lime-dark: #6FAC40;
+$lime-light: #B6E28C;
+$lime-dark: #66A52A;
+
+$brand-new-lime: #66a52a;
+$bs__olive-green: #66a52a;
 
 $marigold: #FDB816;
 $marigold-light: #FED473;
@@ -55,9 +58,7 @@ $grey-lightest: #F4F4F4;
 $brand-new-grey-lighter: #f8f8f8;
 $brand-new-grey-lightest: #fcfcfc;
 $brand-new-grey-another-grey: #d8d8d8; // border color
-$brand-new-lime: #66a52a;
 $brand-new-azure: #0097d1;
-$bs__olive-green: #66a52a;
 $bs__sky-blue: #0097d1;
 $bs__blue-medium: #1e5c8a;
 $bs__blue-light: #287ab8;
@@ -115,7 +116,7 @@ $footer-background-color: $anchor-blue;
 // $footer-link-color: $white;
 
 // Buttons
-$base-button-color: $brand-new-lime;
+$base-button-color: $lime-dark;
 $base-button-text-color: $white;
 $base-button-border-color: $base-button-color;
 $base-hover-button-color: $lime-light;

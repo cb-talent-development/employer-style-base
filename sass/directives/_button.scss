@@ -114,29 +114,6 @@
   }
 }
 
-%bs__tertiary-button {
-  background-color: $tertiary-button-color;
-  color: $bs__sky-blue;
-  border-color: $bs__sky-blue;
-  text-transform: uppercase;
-
-  &:hover {
-    background-color: $bs__sky-blue;
-    color: $tertiary-hover-button-text-color;
-    border-color: $bs__sky-blue;
-  }
-
-  &:active {
-    background-color: $bs__sky-blue;
-    color: $tertiary-active-button-text-color;
-    border-color: $bs__sky-blue;
-  }
-
-  &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
-  }
-}
-
 %tertiary-inverse-button {
   background-color: $tertiary-inverse-button-color;
   color: $tertiary-inverse-button-text-color;

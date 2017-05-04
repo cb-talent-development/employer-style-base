@@ -23,10 +23,6 @@ input[type="submit"] {
   @extend %tertiary-button;
 }
 
-.button.bs__button--tertiary {
-  @extend %bs__tertiary-button;
-}
-
 .button.button--tertiary-inverse {
   @extend %tertiary-inverse-button;
 }

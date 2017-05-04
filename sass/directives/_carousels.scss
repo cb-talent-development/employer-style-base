@@ -88,17 +88,6 @@
   }
 }
 
-@mixin resource-header {
-  h2, p, h3, h1 {
-    display: inline-block;
-  }
-
-  nav {
-    display: inline-block;
-    float: right;
-  }
-}
-
 @mixin resource-carousel-arrow($arrow-z-index: 1) {
   z-index: $arrow-z-index;
   color: $inactive-carousel-button-color;
@@ -106,7 +95,7 @@
   cursor: pointer;
   border: 1px solid $inactive-carousel-button-color;
   text-align: center;
-  line-height: $carousel-arrow-size - 0.125em;//this is for vertically centering arrows in ::after
+  line-height: $carousel-arrow-size - 0.125em; // vertically centers arrows
   height: $carousel-arrow-size;
   width: $carousel-arrow-size;
 

@@ -151,7 +151,7 @@ $limeGreen: (
 }
 
 // TODO break this apart from the gradient
-@mixin imageBackgroundGradient($img-url, $bottom-layer: $bs__blue-light, $dark: $anchor-blue, $medium: $bs__blue-medium, $light: $bs__blue-light, $mode: multiply) {
+@mixin imageBackgroundGradient($img-url, $bottom-layer: map-get($rogueOne, light), $dark: map-get($rogueOne, dark), $medium: map-get($rogueOne, medium), $light: map-get($rogueOne, light), $mode: multiply) {
   background-color: $bottom-layer;
   background-image:
     linear-gradient(to right, rgba($dark, 0.8), rgba($medium, 0.75), rgba($light, 0.2)),

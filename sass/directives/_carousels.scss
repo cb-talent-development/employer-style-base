@@ -242,7 +242,7 @@
 
 @mixin testimonial__carousel__copy {
   @media only screen and (min-width: $medium-screen-max) {
-    border-left: $vertical-rule-width solid $white;
+    border-left: $vertical-rule-width solid white;
     padding-left: $base-padding;
   }
 

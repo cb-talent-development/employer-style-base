@@ -1,52 +1,52 @@
-$cb: ( // TODO replace with variables
-  dark: #0a3a68,
-  medium: #0e759e,
-  light: #58a9a2
+$cb: (
+  dark: $cb-gradient-dark,
+  medium: $cb-gradient-medium,
+  light: $cb-gradient-light
 );
 $rogueOne: (
-  dark: #182642,
-  medium: #1e5c8a,
-  light: #287ab8
+  dark: $anchor-blue,
+  medium: $azure-blue-dark,
+  light: $azure-blue
 );
 $cloverfield: (
-  dark: #0a3a68,
-  medium: #009a74,
-  light: #66c2ab
+  dark: $cb-gradient-dark,
+  medium: $emerald,
+  light: $emerald-light
 );
 $gobletOfFire: (
-  dark: #be7229,
-  medium: #f79c25,
-  light:  #fed473
+  dark: $orange-dark,
+  medium: $marigold-dark,
+  light:  $marigold-light
 );
 $soylentGreen: (
-  dark: #66a52a,
-  medium: #85ce3f,
-  light:  #a0d8d4
+  dark: $lime-dark,
+  medium: $lime,
+  light:  $teal-light
 );
 $purpleRain: (
-  dark: #311b92,
-  medium: #673ab7,
-  light: #b389ff
+  dark: $purple-dark,
+  medium: $purple-medium,
+  light: $purple-light
 );
 $dayAfterTomorrow: (
-  dark: #fff,
-  medium: #f0f0f0,
-  light: #f0f0f0
+  dark: $dayAfterTomorrow-dark,
+  medium: $dayAfterTomorrow-medium,
+  light: $dayAfterTomorrow-light
 );
 $moonlight: (
-  dark: #311b92,
-  medium: #673ab7,
-  light: #63c0b9
+  dark: $purple-dark,
+  medium: $purple-medium,
+  light: $teal
 );
 $lostworld: (
-  dark: #007457,
-  medium: #009a74,
-  light: #84cd3f
+  dark: $emerald-dark,
+  medium: $emerald,
+  light: $lime
 );
 $arielsTail: ( // TODO These color sets from EM-1027 will be replaced with the sets above in EM-1163
-  dark: #007457,
-  medium: #54a1a1,
-  light: #b6e28c
+  dark: $emerald-dark,
+  medium: $teal-dark,
+  light: $lime-light
 );
 $limeGreen: (
   dark: $lime-dark,
@@ -169,5 +169,5 @@ $limeGreen: (
 
 
 @mixin whiteGradientTransparent { // TODO replace this with the movie-themed one
-  @include gradientTransparent($dark: $white, $medium: #f0f0f0, $light: #f0f0f0, $transparency: 0.85);
+  @include gradientTransparent($dark: white, $medium: #f0f0f0, $light: #f0f0f0, $transparency: 0.85);
 }

@@ -2,47 +2,25 @@
 
 // CB Main Branding Colors
 $anchor-blue: #182642;
-$anchor-blue-light: #747D8E;
+$anchor-blue-light: #747d8e;
 
-$sky-blue: #0097d1;
-$sky-blue-light: #6BC6E9;
-$sky-blue-dark: #0C88BC;
+$azure-blue: #287ab9;
+$azure-blue-dark: #1e5c8b;
+$azure-light: #7eafd5;
 
-$azure-blue: #287AB9;
-$azure-light: #00A1DE;
+$emerald: #009b74;
+$emerald-dark: #007457;
+$emerald-light: #66c3ac;
 
-$bs__blue-medium: #1e5c8a;
+$marigold: #fcb716;
+$marigold-dark: #f79c25;
+$marigold-light: #fed473;
 
-$lime: #85CE3F;
-$lime-light: #B6E28C;
-$lime-dark: #66A52A;
 
-$dy-green-banner-dark: #007457;
-$dy-green-banner-medium: #54a1a1;
-$dy-lime-banner-lightest: #b6e28c;
 
-$marigold: #FDB816;
-$marigold-light: #FED473;
-$marigold-dark: #F79C25;
 
-$emerald: #009B74;
 
-// CB Secondary and Accent Colors
-$red: #DD4D39;
-$orange: #E78523;
-$teal: #63C0B9;
-$purple: #662d91;
-
-// CB Gradient
-$gradient-dark: #0A3A68;
-$gradient-medium: #0E759E;
-$gradient-light: #58A9A2;
-
-// Basic Colors
-$black: #000000;
-$white: #FFFFFF;
-
-$grey-darkest: lighten($black, 20); // #333
+$grey-darkest: lighten(black, 20); // #333
 $grey-darker: lighten($grey-darkest, 20); /// #666
 $grey-demon: $grey-darker;
 $grey-dark: #999999;
@@ -62,6 +40,48 @@ $brand-new-grey-lightest: #fcfcfc;
 $brand-new-grey-another-grey: #d8d8d8; // border color
 
 
+// CB Secondary
+
+$sky-blue: #0097d1;
+$sky-blue-dark: #0a7aaa;
+$sky-blue-light: #6bc6e9;
+
+$teal: #63c0b9;
+$teal-dark: #54a1a1;
+$teal-light: #a1d9d5;
+
+$aqua: #0195a3;
+$aqua-dark: #006064;
+$aqua-light: #50c5cd;
+
+$lime: #85ce3f;
+$lime-dark: #66a52a;
+$lime-light: #b6e28c;
+
+$orange: #e78523;
+$orange-dark: #be7229;
+$orange-light: #f1b67b;
+
+$purple: #662d91;
+$purple-dark: #311b92;
+$purple-medium: #673ab7;
+$purple-light: #b389ff;
+
+$red: #DD4D39;
+
+
+// CB Gradient
+$cb-gradient-dark: #0A3A68;
+$cb-gradient-medium: #0E759E;
+$cb-gradient-light: #58A9A2;
+
+
+
+$dayAfterTomorrow-dark: #fff;
+$dayAfterTomorrow-medium: #f0f0f0;
+$dayAfterTomorrow-light: #f0f0f0;
+
+
 // Color Usage
 
 // Product Branding
@@ -76,7 +96,7 @@ $body-text-color: $anchor-blue;
 $paragraph-text-color: $grey-darker;
 $header-text-color: $anchor-blue;
 $base-accent-color: $emerald;
-$hero-text-color: $white;
+$hero-text-color: white;
 $hero-text-color-dark: $anchor-blue;
 
 // Links
@@ -86,7 +106,7 @@ $visited-link-color: $purple;
 
 // Backgrounds
 $base-background-color: $grey-lightest;
-$panel-primary: $white;
+$panel-primary: white;
 $panel-secondary: $grey-lighter;
 $table-alt-row: #ceebe3; // TODO not a style guide color. need to determine right color(s) and move table styles to style-base
 
@@ -95,28 +115,28 @@ $alert-primary: $sky-blue;
 $alert-primary-active: $sky-blue-light;
 $alert-danger: $red;
 $alert-warning: $marigold;
-$alert-success: $lime;
+$alert-success: $lime-dark;
 
 // Header/Footer
 $header-background-color--account-nav: $anchor-blue;
-$header-background-color--site-nav: $white;
-$header-background-color--mobile-nav: $white;
-$header-background-color: $white; // mobile?
+$header-background-color--site-nav: white;
+$header-background-color--mobile-nav: white;
+$header-background-color: white; // mobile?
 $header-mobile-icon-color: $anchor-blue;
-$header-mobile-text-hover-color: $white;
+$header-mobile-text-hover-color: white;
 $header-text-color: $anchor-blue;
-$header-text-hover-color: $white;
+$header-text-hover-color: white;
 $header-background-secondary-color: $grey-lighter;
 $header-flyout-color: $header-background-color;
 $header-subtitle-color: $grey-darker;
 $footer-background-color: $anchor-blue;
 // $footer-accent-color: $header-accent-color;
-// $footer-text-color: $white;
-// $footer-link-color: $white;
+// $footer-text-color: white;
+// $footer-link-color: white;
 
 // Buttons
 $base-button-color: $lime-dark;
-$base-button-text-color: $white;
+$base-button-text-color: white;
 $base-button-border-color: $base-button-color;
 $base-hover-button-color: $lime;
 $base-hover-button-text-color: $base-button-text-color;
@@ -136,7 +156,7 @@ $primary-active-button-text-color: $primary-button-text-color;
 $primary-active-button-border-color: $primary-active-button-color;
 
 $secondary-button-color: $sky-blue;
-$secondary-button-text-color: $white;
+$secondary-button-text-color: white;
 $secondary-button-border-color: $secondary-button-color;
 $secondary-hover-button-color: $sky-blue-light;
 $secondary-hover-button-text-color: $secondary-button-text-color;
@@ -149,7 +169,7 @@ $tertiary-button-color: transparent;
 $tertiary-button-text-color: $sky-blue;
 $tertiary-button-border-color: $tertiary-button-text-color;
 $tertiary-hover-button-color: $sky-blue-light;
-$tertiary-hover-button-text-color: $white;
+$tertiary-hover-button-text-color: white;
 $tertiary-hover-button-border-color: $tertiary-hover-button-color;
 $tertiary-active-button-color: $tertiary-hover-button-color;
 $tertiary-active-button-text-color: $tertiary-hover-button-text-color;
@@ -157,7 +177,7 @@ $tertiary-active-button-border-color: $tertiary-active-button-color;
 
 // TODO confirm hover/
 $quarternary-button-color: transparent;
-$quarternary-button-text-color: $white;
+$quarternary-button-text-color: white;
 $quarternary-button-border-color: $sky-blue;
 // $quarternary-hover-button-color: $tertiary-inverse-button-border-color;
 // $quarternary-hover-button-text-color: $sky-blue;
@@ -168,7 +188,7 @@ $quarternary-button-border-color: $sky-blue;
 
 // TODO rename to Quinary (brand simplification)
 $tertiary-inverse-button-color: transparent;
-$tertiary-inverse-button-text-color: $white;
+$tertiary-inverse-button-text-color: white;
 $tertiary-inverse-button-border-color: $tertiary-inverse-button-text-color;
 $tertiary-inverse-hover-button-color: $tertiary-inverse-button-border-color;
 $tertiary-inverse-hover-button-text-color: $sky-blue;
@@ -178,7 +198,7 @@ $tertiary-inverse-active-button-text-color: $tertiary-inverse-hover-button-text-
 $tertiary-inverse-active-button-border-color: $tertiary-inverse-active-button-color;
 
 $negative-button-color: $grey-dark;
-$negative-button-text-color: $white;
+$negative-button-text-color: white;
 $negative-button-border-color: $negative-button-color;
 $negative-hover-button-color: $grey;
 $negative-hover-button-text-color: $negative-button-text-color;
@@ -211,7 +231,7 @@ $form-border: 1px solid $form-border-color;
 $form-border-color-hover: darken($base-border-primary-color, 10);
 $form-border-color-focus: $alert-primary;
 
-$form-background-color: $white;
+$form-background-color: white;
 $form-input-color: $body-text-color;
 $form-placeholder-color: $grey-semi-dark;
 

@@ -25,17 +25,18 @@
 
   @include appearance(none);
 
-  &:hover {
+  &:hover { // TODO is this the same as active?
     background-color: $base-hover-button-color;
     color: $base-hover-button-text-color;
     border-color: $base-hover-button-border-color;
     text-decoration: none;
   }
 
-  &:active {
+  &:active, &:focus {
     background-color: $base-active-button-color;
     color: $base-active-button-text-color;
     border-color: $base-active-button-border-color;
+    text-decoration: none;
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {

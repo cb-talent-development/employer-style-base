@@ -38,6 +38,11 @@ $moonlight: (
   medium: #673ab7,
   light: #63c0b9
 );
+$lostworld: (
+  dark: #007457,
+  medium: #009a74,
+  light: #84cd3f
+);
 $arielsTail: ( // TODO These color sets from EM-1027 will be replaced with the sets above in EM-1163
   dark: #007457,
   medium: #54a1a1,
@@ -152,6 +157,14 @@ $limeGreen: (
 
 @mixin limeGreenGradientTransparent {
   @include gradientTransparent(map-get($limeGreen, dark), map-get($limeGreen, medium), map-get($limeGreen, light));
+}
+
+@mixin lostWorldGradient {
+  @include gradient(map-get($lostWorld, dark), map-get($lostWorld, medium), map-get($lostWorld, light));
+}
+
+@mixin lostWorldGradientTransparent {
+  @include gradientTransparent(map-get($lostWorld, dark), map-get($lostWorld, medium), map-get($lostWorld, light));
 }
 
 

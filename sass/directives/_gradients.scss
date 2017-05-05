@@ -1,58 +1,72 @@
+// ## Gradient Color Sets ##
+
 $cb: (
   dark: $cb-gradient-dark,
   medium: $cb-gradient-medium,
   light: $cb-gradient-light
 );
+
 $rogueOne: (
   dark: $anchor-blue,
   medium: $azure-blue-dark,
   light: $azure-blue
 );
+
 $cloverfield: (
   dark: $cb-gradient-dark,
   medium: $emerald,
   light: $emerald-light
 );
+
 $gobletOfFire: (
   dark: $orange-dark,
   medium: $marigold-dark,
   light:  $marigold-light
 );
+
 $soylentGreen: (
   dark: $lime-dark,
   medium: $lime,
   light:  $teal-light
 );
+
 $purpleRain: (
   dark: $purple-dark,
   medium: $purple-medium,
   light: $purple-light
 );
+
 $dayAfterTomorrow: (
   dark: $dayAfterTomorrow-dark,
   medium: $dayAfterTomorrow-medium,
   light: $dayAfterTomorrow-light
 );
+
 $moonlight: (
   dark: $purple-dark,
   medium: $purple-medium,
   light: $teal
 );
+
 $lostworld: (
   dark: $emerald-dark,
   medium: $emerald,
   light: $lime
 );
+
 $arielsTail: ( // TODO These color sets from EM-1027 will be replaced with the sets above in EM-1163
   dark: $emerald-dark,
   medium: $teal-dark,
   light: $lime-light
 );
+
 $limeGreen: (
   dark: $lime-dark,
   medium: $lime,
   light: $lime-light
 );
+
+// ## Gradient Mixins ##
 
 @mixin gradient($dark, $medium, $light) {
   background: $dark; // Old browsers
@@ -78,6 +92,8 @@ $limeGreen: (
   background-blend-mode: $mode;
   background-attachment: fixed;
 }
+
+//
 
 @mixin cbGradient {
   @include gradient(map-get($cb, dark), map-get($cb, medium), map-get($cb, light));
@@ -165,9 +181,4 @@ $limeGreen: (
 
 @mixin lostWorldGradientTransparent {
   @include gradientTransparent(map-get($lostWorld, dark), map-get($lostWorld, medium), map-get($lostWorld, light));
-}
-
-
-@mixin whiteGradientTransparent { // TODO replace this with the movie-themed one
-  @include gradientTransparent($dark: white, $medium: #f0f0f0, $light: #f0f0f0, $transparency: 0.85);
 }

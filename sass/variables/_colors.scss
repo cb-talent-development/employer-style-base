@@ -16,10 +16,6 @@ $marigold: #fcb716;
 $marigold-dark: #f79c25;
 $marigold-light: #fed473;
 
-
-
-
-
 $grey-darkest: lighten(black, 20); // #333
 $grey-darker: lighten($grey-darkest, 20); /// #666
 $grey-demon: $grey-darker;
@@ -32,9 +28,6 @@ $grey-light: #DDDDDD;
 $grey-lighter: #EEEEEE;
 $grey-mid-lightest: #E4E4E4;
 $grey-lightest: #F4F4F4;
-
-// Brand Simplification - new colors; temporary names
-// TODO de-dupe and rename colors; and review shades of grey
 $brand-new-grey-lighter: #f8f8f8;
 $brand-new-grey-lightest: #fcfcfc;
 $brand-new-grey-another-grey: #d8d8d8; // border color
@@ -105,7 +98,6 @@ $visited-link-color: $purple;
 $base-background-color: $grey-lightest;
 $panel-primary: white;
 $panel-secondary: $grey-lighter;
-$table-alt-row: #ceebe3; // TODO not a style guide color. need to determine right color(s) and move table styles to style-base
 
 // Alerts
 $alert-primary: $sky-blue;

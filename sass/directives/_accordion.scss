@@ -6,7 +6,7 @@
   overflow: hidden;
   @include transition(0.1s ease-in-out);
   opacity: 0;
-  border-bottom: ($base-input-border-size * 2) solid $grey-lighter;
+  border-bottom: ($base-input-border-size * 2) solid $grey-lightest;
 
   p {
     color: $paragraph-text-color;
@@ -27,7 +27,7 @@
   width: 100%;
   text-align: left;
   border: none;
-  border-bottom: ($base-input-border-size * 2) solid $grey-lighter;
+  border-bottom: ($base-input-border-size * 2) solid $grey-lightest;
   outline: none;
   transition: $element-slow-fade-in;
   border-radius: 0px;
@@ -40,7 +40,7 @@
   &:focus {
     color: $base-link-color;
     background-color: $panel-primary;
-    border-bottom: ($base-input-border-size * 2) solid $grey-lighter;
+    border-bottom: ($base-input-border-size * 2) solid $grey-lightest;
   }
 
   &:after {

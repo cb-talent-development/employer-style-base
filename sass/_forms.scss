@@ -236,7 +236,7 @@ form button {
     margin: 0;
     border: $form-border;
     padding: 6px 24px;
-    background-color: $grey-light;
+    background-color: $brand-new-grey-another-grey;
     cursor: pointer;
     transition: $toggle-button-transistion;
     font-size: $small-font-size;
@@ -273,7 +273,7 @@ form button {
     &:hover,
     &:active,
     &:focus {
-      background-color: $grey-lighter;
+      background-color: $grey-lightest;
     }
   }
 

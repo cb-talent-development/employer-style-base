@@ -16,21 +16,17 @@ $marigold: #fcb716;
 $marigold-dark: #f79c25;
 $marigold-light: #fed473;
 
-$grey-darkest: lighten(black, 20); // #333
-$grey-darker: lighten($grey-darkest, 20); /// #666
-$grey-demon: $grey-darker;
+$grey-darkest: #333;
+$grey-demon: #666;
 $grey-dark: #999999;
 $grey-semi-dark: #BBBBBB;
-$grey-semi-darker: #b0b0b0; // Possibly not part of official style guide
-$grey: #CCCCCC;
-$grey-semi-light: #D4D4D4; // border color
-$grey-light: #DDDDDD;
-$grey-lighter: #EEEEEE;
-$grey-mid-lightest: #E4E4E4;
+$brand-new-grey-another-grey: #d8d8d8; // border color, home featured heading background
 $grey-lightest: #F4F4F4;
-$brand-new-grey-lighter: #f8f8f8;
-$brand-new-grey-lightest: #fcfcfc;
-$brand-new-grey-another-grey: #d8d8d8; // border color
+
+// Resources
+$resources__carousel-continue__background: #fcfcfc;
+$resources__carousel-continue__background--hover: #f8f8f8;
+$resources__carousel-continue__border: #EEEEEE;;
 
 
 // CB Secondary
@@ -67,7 +63,7 @@ $cb-gradient-dark: #0A3A68;
 $cb-gradient-medium: #0E759E;
 $cb-gradient-light: #58A9A2;
 
-$dayAfterTomorrow-dark: #fff;
+$dayAfterTomorrow-dark: white;
 $dayAfterTomorrow-medium: #f0f0f0;
 $dayAfterTomorrow-light: #f0f0f0;
 
@@ -83,7 +79,7 @@ $brand-color--recruitment-analytics: $emerald;
 
 // Font
 $body-text-color: $anchor-blue;
-$paragraph-text-color: $grey-darker;
+$paragraph-text-color: $grey-demon;
 $header-text-color: $anchor-blue;
 $base-accent-color: $emerald;
 $hero-text-color: white;
@@ -97,7 +93,7 @@ $visited-link-color: $purple;
 // Backgrounds
 $base-background-color: $grey-lightest;
 $panel-primary: white;
-$panel-secondary: $grey-lighter;
+$panel-secondary: $grey-lightest;
 
 // Alerts
 $alert-primary: $sky-blue;
@@ -115,9 +111,9 @@ $header-mobile-icon-color: $anchor-blue;
 $header-mobile-text-hover-color: white;
 $header-text-color: $anchor-blue;
 $header-text-hover-color: white;
-$header-background-secondary-color: $grey-lighter;
+$header-background-secondary-color: $grey-lightest;
 $header-flyout-color: $header-background-color;
-$header-subtitle-color: $grey-darker;
+$header-subtitle-color: $grey-demon;
 $footer-background-color: $anchor-blue;
 // $footer-accent-color: $header-accent-color;
 // $footer-text-color: white;
@@ -189,7 +185,7 @@ $tertiary-inverse-active-button-border-color: $tertiary-inverse-active-button-co
 $negative-button-color: $grey-dark;
 $negative-button-text-color: white;
 $negative-button-border-color: $negative-button-color;
-$negative-hover-button-color: $grey;
+$negative-hover-button-color: $grey-semi-dark;
 $negative-hover-button-text-color: $negative-button-text-color;
 $negative-hover-button-border-color: $grey-dark;
 $negative-active-button-color: $negative-hover-button-color;
@@ -201,12 +197,12 @@ $active-tab-color: $anchor-blue;
 $inactive-tab-color: $anchor-blue-light;
 
 // Carousel
-$active-carousel-button-color: $grey-darker;
-$inactive-carousel-button-color: $grey;
+$active-carousel-button-color: $grey-demon;
+$inactive-carousel-button-color: $grey-semi-dark;
 $inactive-carousel-button-opacity: 1;
 $active-carousel-button-opacity: 1;
-$inverse-active-carousel-button-color: $grey-lighter;
-$inverse-inactive-carousel-button-color: $grey-lighter;
+$inverse-active-carousel-button-color: $grey-lightest;
+$inverse-inactive-carousel-button-color: $grey-lightest;
 $inverse-inactive-carousel-button-opacity: 0.35;
 $inverse-active-carousel-button-opacity: 1;
 
@@ -215,7 +211,7 @@ $base-border-primary-color: $brand-new-grey-another-grey;
 $base-border: 1px solid $base-border-primary-color;
 
 // Forms
-$form-border-color: $grey;
+$form-border-color: $grey-semi-dark;
 $form-border: 1px solid $form-border-color;
 $form-border-color-hover: darken($base-border-primary-color, 10);
 $form-border-color-focus: $alert-primary;
@@ -225,12 +221,12 @@ $form-input-color: $body-text-color;
 $form-placeholder-color: $grey-semi-dark;
 
 // Tables
-$table-row-divider-color: $grey-semi-darker;
-$table-header-background-color: $grey;
+$table-row-divider-color: $grey-semi-dark;
+$table-header-background-color: $grey-semi-dark;
 
-$table-row-dark: $grey-light;
+$table-row-dark: $brand-new-grey-another-grey;
 $table-row-light: $grey-lightest;
-$table-row-light-promo: $grey;
+$table-row-light-promo: $grey-semi-dark;
 $table-row-dark-promo: $grey-semi-dark;
 $table-column-heading-1: $emerald;
 $table-column-heading-2: $azure-blue;

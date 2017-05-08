@@ -160,27 +160,36 @@ $tertiary-active-button-color: $tertiary-hover-button-color;
 $tertiary-active-button-text-color: $tertiary-hover-button-text-color;
 $tertiary-active-button-border-color: $tertiary-active-button-color;
 
-// TODO confirm hover/
+// TODO confirm hover
 $quarternary-button-color: transparent;
 $quarternary-button-text-color: white;
 $quarternary-button-border-color: $sky-blue;
-// $quarternary-hover-button-color: $tertiary-inverse-button-border-color;
-// $quarternary-hover-button-text-color: $sky-blue;
-// $quarternary-hover-button-border-color: $tertiary-inverse-hover-button-color;
-// $quarternary-active-button-color: $tertiary-inverse-hover-button-color;
-// $quarternary-active-button-text-color: $tertiary-inverse-hover-button-text-color;
-// $quarternary-active-button-border-color: $tertiary-inverse-active-button-color;
+$quarternary-hover-button-color: $quarternary-button-border-color;
+$quarternary-hover-button-text-color: $sky-blue;
+$quarternary-hover-button-border-color: $quarternary-hover-button-color;
+$quarternary-active-button-color: $quarternary-hover-button-color;
+$quarternary-active-button-text-color: $quarternary-hover-button-text-color;
+$quarternary-active-button-border-color: $quarternary-active-button-color;
 
-// TODO rename to Quinary (brand simplification)
-$tertiary-inverse-button-color: transparent;
-$tertiary-inverse-button-text-color: white;
-$tertiary-inverse-button-border-color: $tertiary-inverse-button-text-color;
-$tertiary-inverse-hover-button-color: $tertiary-inverse-button-border-color;
-$tertiary-inverse-hover-button-text-color: $sky-blue;
-$tertiary-inverse-hover-button-border-color: $tertiary-inverse-hover-button-color;
-$tertiary-inverse-active-button-color: $tertiary-inverse-hover-button-color;
-$tertiary-inverse-active-button-text-color: $tertiary-inverse-hover-button-text-color;
-$tertiary-inverse-active-button-border-color: $tertiary-inverse-active-button-color;
+$quinary-button-color: transparent;
+$quinary-button-text-color: white;
+$quinary-button-border-color: $quinary-button-text-color;
+$quinary-hover-button-color: $quinary-button-border-color;
+$quinary-hover-button-text-color: $sky-blue;
+$quinary-hover-button-border-color: $quinary-hover-button-color;
+$quinary-active-button-color: $quinary-hover-button-color;
+$quinary-active-button-text-color: $quinary-hover-button-text-color;
+$quinary-active-button-border-color: $quinary-active-button-color;
+
+$text-button-color: white;
+$text-button-text-color: $sky-blue;
+$text-button-border-color: $text-button-text-color;
+$text-hover-button-color: $text-button-border-color;
+$text-hover-button-text-color: $sky-blue;
+$text-hover-button-border-color: $text-hover-button-color;
+$text-active-button-color: $text-hover-button-color;
+$text-active-button-text-color: $text-hover-button-text-color;
+$text-active-button-border-color: $text-active-button-color;
 
 $negative-button-color: $grey-dark;
 $negative-button-text-color: white;

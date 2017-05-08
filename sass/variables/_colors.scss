@@ -19,15 +19,9 @@ $marigold-light: #fed473;
 $grey-darkest: #333;
 $grey-demon: #666;
 $grey-dark: #999999;
-$grey-semi-dark: #BBBBBB;
-$brand-new-grey-another-grey: #d8d8d8; // border color, home featured heading background
+$grey-light: #BBBBBB;
+$grey-lighter: #d8d8d8; // border color, home featured heading background
 $grey-lightest: #F4F4F4;
-
-// Resources
-$resources__carousel-continue__background: #fcfcfc;
-$resources__carousel-continue__background--hover: #f8f8f8;
-$resources__carousel-continue__border: #EEEEEE;;
-
 
 // CB Secondary
 
@@ -76,6 +70,11 @@ $brand-color--candidate-marketplace: $marigold;
 $brand-color--sourcing-technologies: $lime;
 $brand-color--recruitment-software: $azure-blue;
 $brand-color--recruitment-analytics: $emerald;
+
+// Resources
+$resources__carousel-continue__background: #fcfcfc;
+$resources__carousel-continue__background--hover: #f8f8f8;
+$resources__carousel-continue__border: #EEEEEE;
 
 // Font
 $body-text-color: $anchor-blue;
@@ -185,7 +184,7 @@ $tertiary-inverse-active-button-border-color: $tertiary-inverse-active-button-co
 $negative-button-color: $grey-dark;
 $negative-button-text-color: white;
 $negative-button-border-color: $negative-button-color;
-$negative-hover-button-color: $grey-semi-dark;
+$negative-hover-button-color: $grey-light;
 $negative-hover-button-text-color: $negative-button-text-color;
 $negative-hover-button-border-color: $grey-dark;
 $negative-active-button-color: $negative-hover-button-color;
@@ -198,7 +197,7 @@ $inactive-tab-color: $anchor-blue-light;
 
 // Carousel
 $active-carousel-button-color: $grey-demon;
-$inactive-carousel-button-color: $grey-semi-dark;
+$inactive-carousel-button-color: $grey-light;
 $inactive-carousel-button-opacity: 1;
 $active-carousel-button-opacity: 1;
 $inverse-active-carousel-button-color: $grey-lightest;
@@ -207,27 +206,27 @@ $inverse-inactive-carousel-button-opacity: 0.35;
 $inverse-active-carousel-button-opacity: 1;
 
 // Border
-$base-border-primary-color: $brand-new-grey-another-grey;
+$base-border-primary-color: $grey-lighter;
 $base-border: 1px solid $base-border-primary-color;
 
 // Forms
-$form-border-color: $grey-semi-dark;
+$form-border-color: $grey-light;
 $form-border: 1px solid $form-border-color;
 $form-border-color-hover: darken($base-border-primary-color, 10);
 $form-border-color-focus: $alert-primary;
 
 $form-background-color: white;
 $form-input-color: $body-text-color;
-$form-placeholder-color: $grey-semi-dark;
+$form-placeholder-color: $grey-light;
 
 // Tables
-$table-row-divider-color: $grey-semi-dark;
-$table-header-background-color: $grey-semi-dark;
+$table-row-divider-color: $grey-light;
+$table-header-background-color: $grey-light;
 
-$table-row-dark: $brand-new-grey-another-grey;
+$table-row-dark: $grey-lighter;
 $table-row-light: $grey-lightest;
-$table-row-light-promo: $grey-semi-dark;
-$table-row-dark-promo: $grey-semi-dark;
+$table-row-light-promo: $grey-light;
+$table-row-dark-promo: $grey-light;
 $table-column-heading-1: $emerald;
 $table-column-heading-2: $azure-blue;
 $table-column-heading-3: $sky-blue;

@@ -12,16 +12,16 @@ $rogueOne: (
   light: $azure-blue
 );
 
+$dayAfterTomorrow: (
+  dark: $dayAfterTomorrow-dark,
+  medium: $dayAfterTomorrow-medium,
+  light: $dayAfterTomorrow-light
+);
+
 $cloverfield: (
   dark: $cb-gradient-dark,
   medium: $emerald,
   light: $emerald-light
-);
-
-$gobletOfFire: (
-  dark: $orange-dark,
-  medium: $marigold-dark,
-  light:  $marigold-light
 );
 
 $soylentGreen: (
@@ -30,16 +30,16 @@ $soylentGreen: (
   light:  $teal-light
 );
 
+$gobletOfFire: (
+  dark: $orange-dark,
+  medium: $marigold-dark,
+  light:  $marigold-light
+);
+
 $purpleRain: (
   dark: $purple-dark,
   medium: $purple-medium,
   light: $purple-light
-);
-
-$dayAfterTomorrow: (
-  dark: $dayAfterTomorrow-dark,
-  medium: $dayAfterTomorrow-medium,
-  light: $dayAfterTomorrow-light
 );
 
 $moonlight: (

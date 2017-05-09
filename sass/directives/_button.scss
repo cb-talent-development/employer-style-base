@@ -184,6 +184,37 @@
   }
 }
 
+%text-button {
+  background-color: $text-button-color;
+  color: $text-button-text-color;
+  border-color: $text-button-border-color;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $text-hover-button-color;
+    color: $text-hover-button-text-color;
+    border-bottom: $base-button-border-size solid $text-hover-button-border-color;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: $base-button-horizontal-padding;
+    margin-right: $base-button-horizontal-padding;
+  }
+
+  &:active {
+    background-color: $text-active-button-color;
+    color: $text-active-button-text-color;
+    border-bottom: $base-button-border-size solid $text-active-button-border-color;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: $base-button-horizontal-padding;
+    margin-right: $base-button-horizontal-padding;
+  }
+
+  &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
+    @extend %disabled;
+  }
+}
+
 // Button Sizes
 
 %small-button {

@@ -180,7 +180,7 @@
     background-color: $text-hover-button-color;
     color: $text-hover-button-text-color;
     border-color: transparent;
-    border-bottom: $base-button-border-size solid $text-hover-button-border-color;
+    border-bottom: $base-button-border-size--text solid $text-hover-button-border-color;
     padding-left: 0;
     padding-right: 0;
     margin-left: $base-button-horizontal-padding;

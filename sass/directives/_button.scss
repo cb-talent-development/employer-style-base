@@ -1,9 +1,9 @@
-%disabled {
+@mixin disabled {
   opacity: 0.3;
   filter: alpha(opacity=30); /* IE8 */
 }
 
-%button {
+@mixin button {
   -webkit-font-smoothing: antialiased;
   border-radius: $button-border-radius;
   color: $base-button-text-color;
@@ -40,13 +40,13 @@
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
+    @include disabled;
   }
 }
 
 // Button Types
 
-%primary-button {
+@mixin primary-button {
   background-color: $primary-button-color;
   color: $primary-button-text-color;
   border-color: $primary-button-border-color;
@@ -65,11 +65,11 @@
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
+    @include disabled;
   }
 }
 
-%secondary-button {
+@mixin secondary-button {
   background-color: $secondary-button-color;
   color: $secondary-button-text-color;
   border-color: $secondary-button-border-color;
@@ -88,11 +88,11 @@
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
+    @include disabled;
   }
 }
 
-%tertiary-button {
+@mixin tertiary-button {
   background-color: $tertiary-button-color;
   color: $tertiary-button-text-color;
   border-color: $tertiary-button-border-color;
@@ -111,11 +111,11 @@
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
+    @include disabled;
   }
 }
 
-%quarternary-button {
+@mixin quarternary-button {
   background-color: $quarternary-button-color;
   color: $quarternary-button-text-color;
   border-color: $quarternary-button-border-color;
@@ -134,11 +134,11 @@
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
+    @include disabled;
   }
 }
 
-%quinary-button {
+@mixin quinary-button {
   background-color: $quinary-button-color;
   color: $quinary-button-text-color;
   border-color: $quinary-button-border-color;
@@ -157,11 +157,11 @@
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
+    @include disabled;
   }
 }
 
-%negative-button {
+@mixin negative-button {
   background-color: $negative-button-color;
   color: $negative-button-text-color;
   border-color: $negative-button-border-color;
@@ -180,19 +180,21 @@
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
+    @include disabled;
   }
 }
 
-%text-button {
+@mixin text-button {
   background-color: $text-button-color;
   color: $text-button-text-color;
   border-color: $text-button-border-color;
   text-transform: uppercase;
+  white-space: normal;
 
   &:hover {
     background-color: $text-hover-button-color;
     color: $text-hover-button-text-color;
+    border-color: transparent;
     border-bottom: $base-button-border-size solid $text-hover-button-border-color;
     padding-left: 0;
     padding-right: 0;
@@ -211,28 +213,28 @@
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
+    @include disabled;
   }
 }
 
 // Button Sizes
 
-%small-button {
+@mixin small-button {
   font-size: $small-button-font-size;
   padding: $small-button-vertical-padding $small-button-horizontal-padding;
 }
 
-%medium-button {
+@mixin medium-button {
   font-size: $medium-button-font-size;
   padding: $medium-button-vertical-padding $medium-button-horizontal-padding;
 }
 
-%large-button {
+@mixin large-button {
   font-size: $large-button-font-size;
   padding: $large-button-vertical-padding $large-button-horizontal-padding;
 }
 
-%massive-button {
+@mixin massive-button {
   font-size: $massive-button-font-size;
   padding: $massive-button-vertical-padding $massive-button-horizontal-padding;
 }

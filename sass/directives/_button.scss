@@ -45,6 +45,10 @@
   border-color: $primary-button-border-color;
   text-transform: uppercase;
 
+  &:visited {
+    color: $primary-button-text-color;
+  }
+
   &:hover, &:active, &:focus {
     background-color: $primary-hover-button-color;
     color: $primary-hover-button-text-color;
@@ -61,6 +65,10 @@
   color: $secondary-button-text-color;
   border-color: $secondary-button-border-color;
   text-transform: uppercase;
+
+  &:visited {
+    color: $secondary-button-text-color;
+  }
 
   &:hover, &:active, &:focus {
     background-color: $secondary-hover-button-color;
@@ -79,6 +87,10 @@
   border-color: $tertiary-button-border-color;
   text-transform: uppercase;
 
+  &:visited {
+    color: $tertiary-button-text-color;
+  }
+
   &:hover, &:active, &:focus {
     background-color: $tertiary-hover-button-color;
     color: $tertiary-hover-button-text-color;
@@ -95,6 +107,10 @@
   color: $quarternary-button-text-color;
   border-color: $quarternary-button-border-color;
   text-transform: uppercase;
+
+  &:visited {
+    color: $quarternary-button-text-color;
+  }
 
   &:hover, &:active, &:focus {
     background-color: $quarternary-hover-button-color;
@@ -113,6 +129,10 @@
   border-color: $quinary-button-border-color;
   text-transform: uppercase;
 
+  &:visited {
+    color: $quinary-button-text-color;
+  }
+
   &:hover, &:active, &:focus {
     background-color: $quinary-hover-button-color;
     color: $quinary-hover-button-text-color;
@@ -129,6 +149,10 @@
   color: $negative-button-text-color;
   border-color: $negative-button-border-color;
   text-transform: uppercase;
+
+  &:visited {
+    color: $negative-button-text-color;
+  }
 
   &:hover, &:active, &:focus {
     background-color: $negative-hover-button-color;
@@ -147,6 +171,10 @@
   border-color: $text-button-border-color;
   text-transform: uppercase;
   white-space: normal;
+
+  &:visited {
+    color: $text-button-text-color;
+  }
 
   &:hover, &:active, &:focus {
     background-color: $text-hover-button-color;

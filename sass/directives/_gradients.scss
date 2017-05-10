@@ -48,22 +48,10 @@ $moonlight: (
   light: $teal
 );
 
-$lostworld: (
+$lostWorld: (
   dark: $emerald-dark,
   medium: $emerald,
   light: $lime
-);
-
-$arielsTail: ( // TODO These color sets from EM-1027 will be replaced with the sets above in EM-1163
-  dark: $emerald-dark,
-  medium: $teal-dark,
-  light: $lime-light
-);
-
-$limeGreen: (
-  dark: $lime-dark,
-  medium: $lime,
-  light: $lime-light
 );
 
 // ## Gradient Mixins ##
@@ -157,22 +145,6 @@ $limeGreen: (
 
 @mixin moonlightGradientTransparent {
   @include gradientTransparent(map-get($moonlight, dark), map-get($moonlight, medium), map-get($moonlight, light));
-}
-
-@mixin arielsTailGradient {
-  @include gradient(map-get($arielsTail, dark), map-get($arielsTail, medium), map-get($arielsTail, light));
-}
-
-@mixin arielsTailGradientTransparent {
-  @include gradientTransparent(map-get($arielsTail, dark), map-get($arielsTail, medium), map-get($arielsTail, light));
-}
-
-@mixin limeGreenGradient {
-  @include gradient(map-get($limeGreen, dark), map-get($limeGreen, medium), map-get($limeGreen, light));
-}
-
-@mixin limeGreenGradientTransparent {
-  @include gradientTransparent(map-get($limeGreen, dark), map-get($limeGreen, medium), map-get($limeGreen, light));
 }
 
 @mixin lostWorldGradient {

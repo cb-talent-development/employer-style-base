@@ -3,6 +3,7 @@
 @import "variables/colors";
 @import "variables/sizing";
 @import "variables/animations";
+@import "typography";
 
 // SASS Directives
 @import "directives/accents";
@@ -27,7 +28,6 @@
 @import "directives/visibility";
 @import "directives/z_index";
 
-@import "typography";
 @import "buttons";
 
 @import "content_grids";

@@ -20,7 +20,7 @@
   height: $small-strip-height;
   border-top-right-radius: $minor-border-radius;
   border-top-left-radius: $minor-border-radius;
-  background-color: $bs__olive-green;
+  background-color: $lime-dark;
   position: absolute;
   top: 0;
   right: 0;
@@ -28,7 +28,7 @@
 }
 
 @mixin column-flag {
-  color: $white;
+  color: white;
   text-align: center;
   background-color: $anchor-blue;
   margin-bottom: 0;
@@ -37,7 +37,7 @@
 }
 
 @mixin table-flag {
-  color: $white;
+  color: white;
   text-align: center;
   background-color: $alert-primary;
   padding: 3px;
@@ -72,7 +72,7 @@ $return-to-top-z-index: 9001 !default;
   z-index: $return-to-top-z-index;
 
   i {
-    color: $white;
+    color: white;
     margin: 0;
     position: relative;
     left: 30%;
@@ -86,12 +86,12 @@ $return-to-top-z-index: 9001 !default;
   }
 
   &:hover {
-    background: $black;
+    background: black;
     opacity: 0.8;
     cursor: pointer;
 
     i {
-      color: $white;
+      color: white;
       top: 0;
     }
   }

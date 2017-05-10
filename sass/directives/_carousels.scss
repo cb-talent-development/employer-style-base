@@ -113,8 +113,8 @@
 
 @mixin resource-continue-block {
   border-top: $base-border;
-  border-color: $grey-lighter;
-  background-color: $brand-new-grey-lightest;
+  border-color: $resources__carousel-continue__border;
+  background-color: $resources__carousel-continue__background;
   padding-left: 1em;
   font-size: $base-font-size;
   font-weight: $font-weight-bold;
@@ -140,7 +140,7 @@
   &:hover,
   &:active,
   &:focus {
-    background-color: $brand-new-grey-lighter;
+    background-color: $resources__carousel-continue__background--hover;
 
     &::after {
       color: $grey-dark;
@@ -242,7 +242,7 @@
 
 @mixin testimonial__carousel__copy {
   @media only screen and (min-width: $medium-screen-max) {
-    border-left: $vertical-rule-width solid $white;
+    border-left: $vertical-rule-width solid white;
     padding-left: $base-padding;
   }
 

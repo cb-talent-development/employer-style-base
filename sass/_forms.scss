@@ -24,7 +24,7 @@
 // select[multiple=multiple] {
 //   @include box-sizing(border-box);
 //   @include transition(border-color);
-//   background-color: $white;
+//   background-color: white;
 //   border-radius: $form-border-radius;
 //   border: $base-input-border-size solid $form-border-color;
 //   box-shadow: $form-box-shadow;
@@ -60,7 +60,7 @@
 //     left: 0;
 //     top: 0;
 //     content: " ";
-//     background-color: $white;
+//     background-color: white;
 //     box-shadow: $base-radio-box-shadow;
 //     padding: $base-font-size;
 //     margin-right: $base-spacing / 4;
@@ -185,7 +185,7 @@ $select-arrow-width: 3em;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: $white;
+    background-color: white;
     max-height: 47.25vh;
     overflow-y: scroll;
     border: 1px solid $sky-blue;
@@ -208,7 +208,7 @@ $select-arrow-width: 3em;
     li.selected:focus,
     li.selected.focus {
       background-color: $sky-blue;
-      color: $white;
+      color: white;
     }
   }
 }
@@ -236,7 +236,7 @@ form button {
     margin: 0;
     border: $form-border;
     padding: 6px 24px;
-    background-color: $grey-light;
+    background-color: $grey-lighter;
     cursor: pointer;
     transition: $toggle-button-transistion;
     font-size: $small-font-size;
@@ -256,12 +256,12 @@ form button {
       font-family: FontAwesome;
       font-size: 1.45rem;
       margin-right: 6px;
-      color: $white;
+      color: white;
     }
   }
 
   input[type='radio']:checked + label {
-    background-color: $white;
+    background-color: white;
 
     &:before {
       content: '\f058';
@@ -273,7 +273,7 @@ form button {
     &:hover,
     &:active,
     &:focus {
-      background-color: $grey-lighter;
+      background-color: $grey-lightest;
     }
   }
 
@@ -281,7 +281,7 @@ form button {
     &:hover,
     &:active,
     &:focus {
-      background-color: $white;
+      background-color: white;
     }
   }
 }
@@ -303,7 +303,7 @@ form button {
   ul {
     position: absolute;
     width: 100%;
-    background-color: $white;
+    background-color: white;
     z-index: 1;
   }
 
@@ -323,7 +323,7 @@ form button {
 
   li:hover {
     background-color: $sky-blue;
-    color: $white;
+    color: white;
   }
 }
 

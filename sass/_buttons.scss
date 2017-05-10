@@ -3,58 +3,58 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  @extend %button;
+  @include button;
 }
 
 // TODO shouldn't need 2-classes, adds specificity
 .button.button--primary {
-  @extend %primary-button;
+  @include primary-button;
 }
 
 .button.button--secondary {
-  @extend %tertiary-button;
+  @include secondary-button;
 }
-
-// .button.button--secondary.text--white {
-//   @extend %secondary-secondary-button;
-// }
 
 .button.button--tertiary {
-  @extend %tertiary-button;
+  @include tertiary-button;
 }
 
-.button.bs__button--tertiary {
-  @extend %bs__tertiary-button;
+.button.button--quarternary {
+  @include quarternary-button;
 }
 
-.button.button--tertiary-inverse {
-  @extend %tertiary-inverse-button;
+.button.button--quinary {
+  @include quinary-button;
 }
 
 .button.button--negative {
-  @extend %negative-button;
+  @include negative-button;
+}
+
+.button.button--text {
+  @include text-button;
 }
 
 .button.button--small {
-  @extend %small-button;
+  @include small-button;
 }
 
 .button.button--medium {
-  @extend %medium-button;
+  @include medium-button;
 }
 
 .button.button--large {
-  @extend %large-button;
+  @include large-button;
 }
 
 .button.button--massive {
-  @extend %massive-button;
+  @include massive-button;
 }
 
 .disabled {
-  @extend %disabled;
+  @include disabled;
 
   &:hover {
-    @extend %disabled;
+    @include disabled;
   }
 }

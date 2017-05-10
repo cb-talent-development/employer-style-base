@@ -2,6 +2,7 @@
   @include transition($link-color-transition);
   color: $base-link-color;
   text-decoration: none;
+  font-weight: $font-weight-bold;
 
   &:hover,
   &:focus,

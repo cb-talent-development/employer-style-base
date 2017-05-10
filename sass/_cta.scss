@@ -19,20 +19,20 @@
   padding: $base-margin--small;
   // smaller font-size to fit "feedback"
   font-size: 0.6875rem;
-  color: $grey-darker;
+  color: $grey-demon;
   border: $base-border;
   border-right: none;
   cursor: pointer;
   border-top: none;
 
   &:visited {
-    color: $grey-darker;
+    color: $grey-demon;
   }
 
   &:active,
   &:focus,
   &:hover {
-    color: $white;
+    color: white;
     background-color: $base-link-color;
     border-color: $base-link-color;
     text-decoration: none;

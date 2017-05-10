@@ -1,9 +1,9 @@
-%disabled {
+@mixin disabled {
   opacity: 0.3;
   filter: alpha(opacity=30); /* IE8 */
 }
 
-%button {
+@mixin button {
   -webkit-font-smoothing: antialiased;
   border-radius: $button-border-radius;
   color: $base-button-text-color;
@@ -25,226 +25,191 @@
 
   @include appearance(none);
 
-  &:hover {
+  &:hover, &:active, &:focus {
     background-color: $base-hover-button-color;
     color: $base-hover-button-text-color;
     border-color: $base-hover-button-border-color;
     text-decoration: none;
   }
 
-  &:active {
-    background-color: $base-active-button-color;
-    color: $base-active-button-text-color;
-    border-color: $base-active-button-border-color;
-  }
-
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
+    @include disabled;
   }
 }
 
 // Button Types
 
-%primary-button {
+@mixin primary-button {
   background-color: $primary-button-color;
   color: $primary-button-text-color;
   border-color: $primary-button-border-color;
   text-transform: uppercase;
 
-  &:hover {
+  &:visited {
+    color: $primary-button-text-color;
+  }
+
+  &:hover, &:active, &:focus {
     background-color: $primary-hover-button-color;
     color: $primary-hover-button-text-color;
     border-color: $primary-hover-button-border-color;
   }
 
-  &:active {
-    background-color: $primary-active-button-color;
-    color: $primary-active-button-text-color;
-    border-color: $primary-active-button-border-color;
-  }
-
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
+    @include disabled;
   }
 }
 
-%secondary-button {
+@mixin secondary-button {
   background-color: $secondary-button-color;
   color: $secondary-button-text-color;
   border-color: $secondary-button-border-color;
   text-transform: uppercase;
 
-  &:hover {
+  &:visited {
+    color: $secondary-button-text-color;
+  }
+
+  &:hover, &:active, &:focus {
     background-color: $secondary-hover-button-color;
     color: $secondary-hover-button-text-color;
     border-color: $secondary-hover-button-border-color;
   }
 
-  &:active {
-    background-color: $secondary-active-button-color;
-    color: $secondary-active-button-text-color;
-    border-color: $secondary-active-button-border-color;
-  }
-
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
+    @include disabled;
   }
 }
 
-%tertiary-button {
+@mixin tertiary-button {
   background-color: $tertiary-button-color;
   color: $tertiary-button-text-color;
   border-color: $tertiary-button-border-color;
   text-transform: uppercase;
 
-  &:hover {
+  &:visited {
+    color: $tertiary-button-text-color;
+  }
+
+  &:hover, &:active, &:focus {
     background-color: $tertiary-hover-button-color;
     color: $tertiary-hover-button-text-color;
     border-color: $tertiary-hover-button-border-color;
   }
 
-  &:active {
-    background-color: $tertiary-active-button-color;
-    color: $tertiary-active-button-text-color;
-    border-color: $tertiary-active-button-border-color;
-  }
-
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
+    @include disabled;
   }
 }
 
-%bs__tertiary-button {
-  background-color: $tertiary-button-color;
-  color: $bs__sky-blue;
-  border-color: $bs__sky-blue;
+@mixin quarternary-button {
+  background-color: $quarternary-button-color;
+  color: $quarternary-button-text-color;
+  border-color: $quarternary-button-border-color;
   text-transform: uppercase;
 
-  &:hover {
-    background-color: $bs__sky-blue;
-    color: $tertiary-hover-button-text-color;
-    border-color: $bs__sky-blue;
+  &:visited {
+    color: $quarternary-button-text-color;
   }
 
-  &:active {
-    background-color: $bs__sky-blue;
-    color: $tertiary-active-button-text-color;
-    border-color: $bs__sky-blue;
+  &:hover, &:active, &:focus {
+    background-color: $quarternary-hover-button-color;
+    color: $quarternary-hover-button-text-color;
+    border-color: $quarternary-hover-button-border-color;
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
+    @include disabled;
   }
 }
 
-%tertiary-inverse-button {
-  background-color: $tertiary-inverse-button-color;
-  color: $tertiary-inverse-button-text-color;
-  border-color: $tertiary-inverse-button-border-color;
+@mixin quinary-button {
+  background-color: $quinary-button-color;
+  color: $quinary-button-text-color;
+  border-color: $quinary-button-border-color;
   text-transform: uppercase;
 
-  &:hover {
-    background-color: $tertiary-inverse-hover-button-color;
-    color: $tertiary-inverse-hover-button-text-color;
-    border-color: $tertiary-inverse-hover-button-border-color;
+  &:visited {
+    color: $quinary-button-text-color;
   }
 
-  &:active {
-    background-color: $tertiary-inverse-active-button-color;
-    color: $tertiary-inverse-active-button-text-color;
-    border-color: $tertiary-inverse-active-button-border-color;
+  &:hover, &:active, &:focus {
+    background-color: $quinary-hover-button-color;
+    color: $quinary-hover-button-text-color;
+    border-color: $quinary-hover-button-border-color;
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
+    @include disabled;
   }
 }
 
-%negative-button {
+@mixin negative-button {
   background-color: $negative-button-color;
   color: $negative-button-text-color;
   border-color: $negative-button-border-color;
   text-transform: uppercase;
 
-  &:hover {
+  &:visited {
+    color: $negative-button-text-color;
+  }
+
+  &:hover, &:active, &:focus {
     background-color: $negative-hover-button-color;
     color: $negative-hover-button-text-color;
     border-color: $negative-hover-button-border-color;
   }
 
-  &:active {
-    background-color: $negative-active-button-color;
-    color: $negative-active-button-text-color;
-    border-color: $negative-active-button-border-color;
-  }
-
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-    @extend %disabled;
+    @include disabled;
   }
 }
 
-// %primary-inverse-button {
-//   background-color: $primary-inverse-button-color;
-//   color: $primary-inverse-button-text-color;
-//   border-color: $primary-inverse-button-border-color;
-//
-//   &:hover {
-//     background-color: $primary-inverse-hover-button-color;
-//     color: $primary-inverse-hover-button-text-color;
-//     border-color: $primary-inverse-hover-button-border-color;
-//   }
-//
-//   &:active {
-//     background-color: $primary-inverse-active-button-color;
-//     color: $primary-inverse-active-button-text-color;
-//     border-color: $primary-inverse-active-button-border-color;
-//   }
-//
-//   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-//     @extend %disabled;
-//   }
-// }
+@mixin text-button {
+  background-color: $text-button-color;
+  color: $text-button-text-color;
+  border-color: $text-button-border-color;
+  text-transform: uppercase;
+  white-space: pre-line;
 
-// %secondary-secondary-button {
-//   background-color: $secondary-inverse-button-color;
-//   color: $secondary-inverse-button-text-color;
-//   border-color: $secondary-inverse-button-border-color;
-//
-//   &:hover {
-//     background-color: $secondary-inverse-hover-button-color;
-//     color: $secondary-inverse-hover-button-text-color;
-//     border-color: $secondary-inverse-hover-button-border-color;
-//   }
-//
-//   &:active {
-//     background-color: $secondary-inverse-active-button-color;
-//     color: $secondary-inverse-active-button-text-color;
-//     border-color: $secondary-inverse-active-button-border-color;
-//   }
-//
-//   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
-//     @extend %disabled;
-//   }
-// }
+  &:visited {
+    color: $text-button-text-color;
+  }
+
+  &:hover, &:active, &:focus {
+    background-color: $text-hover-button-color;
+    color: $text-hover-button-text-color;
+    border-color: transparent;
+    border-bottom: $base-button-border-size--text solid $text-hover-button-border-color;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: $base-button-horizontal-padding;
+    margin-right: $base-button-horizontal-padding;
+  }
+
+  &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
+    @include disabled;
+  }
+}
 
 // Button Sizes
 
-%small-button {
+@mixin small-button {
   font-size: $small-button-font-size;
   padding: $small-button-vertical-padding $small-button-horizontal-padding;
 }
 
-%medium-button {
+@mixin medium-button {
   font-size: $medium-button-font-size;
   padding: $medium-button-vertical-padding $medium-button-horizontal-padding;
 }
 
-%large-button {
+@mixin large-button {
   font-size: $large-button-font-size;
   padding: $large-button-vertical-padding $large-button-horizontal-padding;
 }
 
-%massive-button {
+@mixin massive-button {
   font-size: $massive-button-font-size;
   padding: $massive-button-vertical-padding $massive-button-horizontal-padding;
 }

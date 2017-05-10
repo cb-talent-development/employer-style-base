@@ -51,7 +51,7 @@
     &:active,
     &:focus {
       text-decoration: none;
-      background-color: $grey-mid-lightest;
+      background-color: $grey-lightest;
     }
 
     @media only screen and (max-width: $mobile-nav-max) {

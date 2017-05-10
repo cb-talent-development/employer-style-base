@@ -38,8 +38,6 @@
   border-top-right-radius: $table-header-corner-radius;
 }
 
-
-
 @mixin table--product($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
   @include table--row-column-headers($table-col-width, $table-caption-z-index);
   overflow: hidden;
@@ -116,14 +114,6 @@
     &:focus:after {
       content: none !important;
       display: none;
-    }
-  }
-
-  @media only screen and (max-width: $medium-screen-max) {
-    a.button {
-      border: 0;
-      padding: 0;
-      white-space: normal;
     }
   }
 }

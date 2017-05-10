@@ -25,17 +25,10 @@
 
   @include appearance(none);
 
-  &:hover { // TODO is this the same as active?
+  &:hover, &:active, &:focus {
     background-color: $base-hover-button-color;
     color: $base-hover-button-text-color;
     border-color: $base-hover-button-border-color;
-    text-decoration: none;
-  }
-
-  &:active, &:focus {
-    background-color: $base-active-button-color;
-    color: $base-active-button-text-color;
-    border-color: $base-active-button-border-color;
     text-decoration: none;
   }
 
@@ -52,16 +45,10 @@
   border-color: $primary-button-border-color;
   text-transform: uppercase;
 
-  &:hover {
+  &:hover, &:active, &:focus {
     background-color: $primary-hover-button-color;
     color: $primary-hover-button-text-color;
     border-color: $primary-hover-button-border-color;
-  }
-
-  &:active {
-    background-color: $primary-active-button-color;
-    color: $primary-active-button-text-color;
-    border-color: $primary-active-button-border-color;
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
@@ -75,16 +62,10 @@
   border-color: $secondary-button-border-color;
   text-transform: uppercase;
 
-  &:hover {
+  &:hover, &:active, &:focus {
     background-color: $secondary-hover-button-color;
     color: $secondary-hover-button-text-color;
     border-color: $secondary-hover-button-border-color;
-  }
-
-  &:active {
-    background-color: $secondary-active-button-color;
-    color: $secondary-active-button-text-color;
-    border-color: $secondary-active-button-border-color;
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
@@ -98,16 +79,10 @@
   border-color: $tertiary-button-border-color;
   text-transform: uppercase;
 
-  &:hover {
+  &:hover, &:active, &:focus {
     background-color: $tertiary-hover-button-color;
     color: $tertiary-hover-button-text-color;
     border-color: $tertiary-hover-button-border-color;
-  }
-
-  &:active {
-    background-color: $tertiary-active-button-color;
-    color: $tertiary-active-button-text-color;
-    border-color: $tertiary-active-button-border-color;
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
@@ -121,16 +96,10 @@
   border-color: $quarternary-button-border-color;
   text-transform: uppercase;
 
-  &:hover {
+  &:hover, &:active, &:focus {
     background-color: $quarternary-hover-button-color;
     color: $quarternary-hover-button-text-color;
     border-color: $quarternary-hover-button-border-color;
-  }
-
-  &:active {
-    background-color: $quarternary-active-button-color;
-    color: $quarternary-active-button-text-color;
-    border-color: $quarternary-active-button-border-color;
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
@@ -144,16 +113,10 @@
   border-color: $quinary-button-border-color;
   text-transform: uppercase;
 
-  &:hover {
+  &:hover, &:active, &:focus {
     background-color: $quinary-hover-button-color;
     color: $quinary-hover-button-text-color;
     border-color: $quinary-hover-button-border-color;
-  }
-
-  &:active {
-    background-color: $quinary-active-button-color;
-    color: $quinary-active-button-text-color;
-    border-color: $quinary-active-button-border-color;
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
@@ -167,16 +130,10 @@
   border-color: $negative-button-border-color;
   text-transform: uppercase;
 
-  &:hover {
+  &:hover, &:active, &:focus {
     background-color: $negative-hover-button-color;
     color: $negative-hover-button-text-color;
     border-color: $negative-hover-button-border-color;
-  }
-
-  &:active {
-    background-color: $negative-active-button-color;
-    color: $negative-active-button-text-color;
-    border-color: $negative-active-button-border-color;
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
@@ -191,21 +148,11 @@
   text-transform: uppercase;
   white-space: normal;
 
-  &:hover {
+  &:hover, &:active, &:focus {
     background-color: $text-hover-button-color;
     color: $text-hover-button-text-color;
     border-color: transparent;
     border-bottom: $base-button-border-size solid $text-hover-button-border-color;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: $base-button-horizontal-padding;
-    margin-right: $base-button-horizontal-padding;
-  }
-
-  &:active {
-    background-color: $text-active-button-color;
-    color: $text-active-button-text-color;
-    border-bottom: $base-button-border-size solid $text-active-button-border-color;
     padding-left: 0;
     padding-right: 0;
     margin-left: $base-button-horizontal-padding;

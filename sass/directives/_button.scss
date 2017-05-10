@@ -170,7 +170,7 @@
   color: $text-button-text-color;
   border-color: $text-button-border-color;
   text-transform: uppercase;
-  white-space: normal;
+  white-space: pre-line;
 
   &:visited {
     color: $text-button-text-color;

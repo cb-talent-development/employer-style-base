@@ -54,6 +54,31 @@ $lostWorld: (
   light: $lime
 );
 
+$gradient_name_list: (
+  cb,
+  rogueOne,
+  dayAfterTomorrow,
+  cloverfield,
+  soylentGreen,
+  gobletOfFire,
+  purpleRain,
+  moonlight,
+  lostWorld,
+);
+
+$gradient_var_list: (
+  $cb,
+  $rogueOne,
+  $dayAfterTomorrow,
+  $cloverfield,
+  $soylentGreen,
+  $gobletOfFire,
+  $purpleRain,
+  $moonlight,
+  $lostWorld,
+);
+
+
 // ## Gradient Mixins ##
 
 @mixin gradient($dark, $medium, $light) {
@@ -81,7 +106,8 @@ $lostWorld: (
   background-attachment: fixed;
 }
 
-//
+
+// ## Gradient Implementation ##
 
 @mixin cbGradient {
   @include gradient(map-get($cb, dark), map-get($cb, medium), map-get($cb, light));

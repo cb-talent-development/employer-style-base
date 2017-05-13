@@ -150,3 +150,18 @@
   }
 
 }
+
+@mixin header--large--centered {
+  &__text {
+    text-align: center;
+    align-items: center;
+
+    h1 {
+      max-width: 32ch;
+    }
+
+    p {
+      max-width: 65ch;
+    }
+  }
+}

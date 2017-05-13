@@ -110,7 +110,7 @@
   }
 }
 
-@mixin header-hero-product($background-image-large, $background-image-medium: nil) {
+@mixin header--large($background-image-large, $background-image-medium: nil) {
   @include header-hero;
   min-height: $header-height-product;
   background-image: url(asset_path(#{$background-image-large}));

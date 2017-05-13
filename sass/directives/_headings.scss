@@ -1,0 +1,43 @@
+// TODO incorporate site-wide typograpy updates
+
+@mixin heading--hero {
+  h1 {
+    font-size: 2.75rem;
+    font-weight: $font-weight-light;
+    margin-bottom: 28px; // TODO new type spacing (but this may be home specific)
+  }
+
+  p {
+    font-size: 1.375rem;
+  }
+}
+
+@mixin heading--hero--xl {
+  // In progress - For use with Extra Large header style (https://cb-content-enablement.atlassian.net/wiki/pages/viewpage.action?pageId=43897344)
+  h1 {
+    font-size: 1.375rem;
+  }
+
+  p {
+
+    font-size: 2.75rem;
+    font-weight: $font-weight-light;
+    margin-bottom: 28px;
+  }
+}
+
+@mixin heading--section {
+  margin-bottom: 20px;
+
+  &__heading {
+    font-size: 0.9375rem;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__subheading {
+    font-size: 1.875rem;
+    font-weight: $font-weight-light;
+  }
+}

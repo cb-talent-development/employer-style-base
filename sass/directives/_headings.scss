@@ -4,6 +4,7 @@
   h1 {
     font-size: 2.75rem;
     font-weight: $font-weight-light;
+    margin-bottom: 0;
   }
 
   p {
@@ -16,6 +17,7 @@
   // In progress - For use with Extra Large header style (https://cb-content-enablement.atlassian.net/wiki/pages/viewpage.action?pageId=43897344)
   h1 {
     font-size: 1.375rem;
+    margin-bottom: 0;
   }
 
   p {
@@ -32,6 +34,7 @@
     font-size: 0.9375rem;
     font-weight: $font-weight-bold;
     text-transform: uppercase;
+    margin-bottom: 0;
   }
 
   &__subheading {

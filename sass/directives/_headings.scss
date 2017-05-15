@@ -4,10 +4,10 @@
   h1 {
     font-size: 2.75rem;
     font-weight: $font-weight-light;
-    margin-bottom: 28px; // TODO new type spacing (but this may be home specific)
   }
 
   p {
+    margin-top: 28px; // TODO new type spacing (but this may be home specific)
     font-size: 1.375rem;
   }
 }
@@ -19,10 +19,9 @@
   }
 
   p {
-
+    margin-top: 28px;
     font-size: 2.75rem;
     font-weight: $font-weight-light;
-    margin-bottom: 28px;
   }
 }
 
@@ -33,10 +32,10 @@
     font-size: 0.9375rem;
     font-weight: $font-weight-bold;
     text-transform: uppercase;
-    margin-bottom: 20px;
   }
 
   &__subheading {
+    margin-top: 20px;
     font-size: 1.875rem;
     font-weight: $font-weight-light;
   }

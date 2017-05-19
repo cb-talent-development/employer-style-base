@@ -21,7 +21,7 @@
 }
 
 // Card Deck - Centered - 4 across
-  // Use: Arranges Home product category blocks
+// Use: Arranges Home product category blocks
 @mixin card-deck--centered {
   @include display(flex);
   @include flex-wrap(wrap);
@@ -41,7 +41,7 @@
 }
 
 // Card Tile
-  // Use: Home product category blocks
+// Use: Home product category blocks
 @mixin card--tile {
   @include component-box;
   @include display(flex);
@@ -57,6 +57,12 @@
   &:focus {
     text-decoration: none;
     box-shadow: $base-box-shadow-hover;
+  }
+
+  a:hover,
+  a:active,
+  a:focus {
+    text-decoration: none;
   }
 
   @media only screen and (max-width: $medium-screen-max) {

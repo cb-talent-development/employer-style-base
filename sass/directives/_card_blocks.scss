@@ -22,7 +22,7 @@
   }
 
   @media only screen and (min-width: $small-screen-max) { // TODO turning off the fanciness on mobile but should there still be some sort of state for usability?
-    &:hover, &:focus, &:active {
+    &:hover {
       @include transform(scale(1.06));
       @include transition(transform 550ms ease-out);
 

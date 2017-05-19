@@ -1,0 +1,66 @@
+@mixin card-block($include_strip: true) {
+  @include card--tile;
+  @include transform(scale(1)); // TODO mixin that includes transition and transform
+  @include transition(transform 0.4s ease-in);
+
+  padding-top: calc(#{$base-spacing-medium} + #{$small-strip-height});
+  color: $body-text-color;
+  text-align: center;
+  margin: $base-spacing-medium / 2;
+
+  h3 {
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    font-size: $small-font-size;
+    margin-top: $base-spacing-small;
+  }
+
+  &:before {
+    @if $include_strip {
+      @include bs__small-strip;
+    }
+  }
+
+  @media only screen and (min-width: $small-screen-max) { // TODO turning off the fanciness on mobile but should there still be some sort of state for usability?
+    &:hover, &:focus, &:active {
+      @include transform(scale(1.06));
+      @include transition(transform 550ms ease-out);
+
+      &:before {
+        background-color: $anchor-blue;
+      }
+    }
+  }
+}
+
+@mixin card-block__logo {
+  height: 80px;
+}
+
+@mixin card-block__button {
+  text-transform: uppercase;
+  margin-top: $base-spacing-medium; // TODO standardize new button top margins
+  margin-bottom: $base-spacing-small;
+}
+
+@mixin card-block__text {
+  @include flex-grow(1);
+  @include flex-shrink(0);
+  @include flex-basis(auto);
+
+  color: $body-text-color;
+  width: 100%;
+
+  p {
+    @include flex(1);
+    @include flex-basis(100%);
+
+    width: 100%;
+    color: $paragraph-text-color;
+  }
+}
+
+@mixin card-block__text--narrow { // TODO is there another solution to achieve design + not having tweaks for two of the blocks?
+  max-width: 30ch;
+  margin: auto;
+}

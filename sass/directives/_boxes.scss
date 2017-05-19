@@ -52,13 +52,13 @@
   margin: $base-spacing-small;
   text-decoration: none;
 
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none;
+  &:hover {
     box-shadow: $base-box-shadow-hover;
   }
 
+  &:hover,
+  &:active,
+  &:focus,
   a:hover,
   a:active,
   a:focus {

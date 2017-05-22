@@ -25,6 +25,10 @@
     width: 14px;
   }
 
+  &:after {
+    background-color: $grey-lighter;
+  }
+
   .visual__guide__divider {
     background-color: $base-border-primary-color;
     height: 100%;

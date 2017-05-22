@@ -22,6 +22,33 @@
   margin-bottom: $type-margin;
 }
 
+// A simple, center dividing column guide / line. See /recruiting-solutions/small-business-subscription-plans-and-pricing
+// The guide extends out of its relatively positioned parent container on the bottom and top
+// This guide does not include steps. It is only a center line.
+// You must have a parent container (relatively positioned) for this to work properly.
+@mixin column-guide {
+  bottom: -200px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: -65px;
+  width: 50px;
+
+  &:before, &:after {
+    content: '';
+    background-color: white;
+    border: $base-border;
+    border-radius: 7px; //TODO: New variable?
+    display: block;
+    height: 14px;
+    margin: 0 auto;
+    position: relative;
+    width: 14px;
+  }
+}
+
 // The small strip changes for brand simplification
 @mixin bs__small-strip {
   content: '';

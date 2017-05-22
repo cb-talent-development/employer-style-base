@@ -1,23 +1,23 @@
 /* A simple, center dividing column guide / line. See /recruiting-solutions/small-business-subscription-plans-and-pricing
- * The guide extends out of its relatively positioned parent container on the bottom and top
+ * The guide can extend out of its relatively positioned parent container on the bottom and top
  * This guide does not include steps. It is only a center line.
  * You must have a parent container (relatively positioned) for this to work properly.
  */
-@mixin visual-guide-divider {
-  bottom: -65px;
+@mixin visual-guide-divider($extend-top: 0px, $extend-bottom: 0px) {
+  bottom: $extend-top;
   left: 0;
   margin: auto;
   position: absolute;
   right: 0;
   text-align: center;
-  top: -65px;
+  top: $extend-bottom;
   width: 50px;
 
   &:before, &:after {
     content: '';
     background-color: white;
     border: $base-border;
-    border-radius: 7px; //TODO: New variable?
+    border-radius: 7px; //TODO: New border radius variable?
     display: block;
     height: 14px;
     margin: 0 auto;
@@ -94,7 +94,7 @@
   // The step must be within a <span>, not a <div>, and must contain another <span> for the actual counter
   span.visual__guide__step {
     background-color: white;
-    border: 2px solid $azure-blue; //TODO: New border variable
+    border: 2px solid $azure-blue; //TODO: New border variable?
     border-radius: 23px;
     bottom: 0;
     height: 42px;

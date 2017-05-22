@@ -1,0 +1,114 @@
+/* A simple, center dividing column guide / line. See /recruiting-solutions/small-business-subscription-plans-and-pricing
+ * The guide extends out of its relatively positioned parent container on the bottom and top
+ * This guide does not include steps. It is only a center line.
+ * You must have a parent container (relatively positioned) for this to work properly.
+ */
+@mixin visual-guide-divider {
+  bottom: -200px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: -65px;
+  width: 50px;
+
+  &:before, &:after {
+    content: '';
+    background-color: white;
+    border: $base-border;
+    border-radius: 7px; //TODO: New variable?
+    display: block;
+    height: 14px;
+    margin: 0 auto;
+    position: relative;
+    width: 14px;
+  }
+
+  .visual__guide__divider {
+    background-color: $base-border-primary-color;
+    height: 93%;
+    margin: 0 auto;
+    width: 1px;
+  }
+}
+
+/* For <li> elements only within a <ol>
+ * Parameter takes in a CSS counter that must be set / reset elsewhere
+ * Each row (your <li> content) consists of a block of text, and an image, with a center gutter.
+ * Modifiers include left properties to right justify content blocks (not text) along the center gutter.
+ * TODO: Concerning guides with no steps
+ */
+@mixin visual-guide-row ($counter) {
+  display: flex;
+  position: relative;
+
+  .visual__guide__content, .visual__guide__image {
+    display: flex;
+    width: 50%;
+
+    &:first-of-type {
+      margin-right: $base-spacing-large;
+    }
+
+    &:last-of-type {
+      margin-left: $base-spacing-large;
+    }
+  }
+
+  .visual__guide__content {
+    &.guide__content--left {
+      justify-content: flex-end;
+      padding-left: $type-margin;
+    }
+  }
+
+  .visual__guide__image {
+    //TODO: Add non-IPE
+    snippet {
+      align-self: center;
+      width: 90%;
+      max-width: 600px;
+    }
+
+    &.guide__image--left {
+      justify-content: flex-end;
+    }
+  }
+
+  .visual__guide__item__description {
+    align-self: center;
+    max-width: 509px;
+
+    h4 {
+      font-size: $h1-font-size;
+      font-weight: $font-weight-light;
+    }
+
+    p {
+      color: $paragraph-text-color;
+      font-size: $body-font-size;
+    }
+  }
+
+  // The step must be within a <span>, not a <div>, and must contain another <span> for the actual counter
+  span.visual__guide__step {
+    background-color: white;
+    border: 2px solid $azure-blue; //TODO: New border variable
+    border-radius: 23px;
+    bottom: 0;
+    height: 42px;
+    left: 0;
+    line-height: 35px;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 42px;
+
+    span:after {
+      content: counter($counter);
+    }
+  }
+}

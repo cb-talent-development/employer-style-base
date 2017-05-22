@@ -4,7 +4,7 @@
  * You must have a parent container (relatively positioned) for this to work properly.
  */
 @mixin visual-guide-divider {
-  bottom: -200px;
+  bottom: -65px;
   left: 0;
   margin: auto;
   position: absolute;
@@ -27,7 +27,7 @@
 
   .visual__guide__divider {
     background-color: $base-border-primary-color;
-    height: 93%;
+    height: 100%;
     margin: 0 auto;
     width: 1px;
   }

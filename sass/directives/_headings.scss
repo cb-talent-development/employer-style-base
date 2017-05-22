@@ -27,6 +27,18 @@
   }
 }
 
+@mixin heading--hero--sm {
+  h1 {
+    font-size: $h1-font-size;
+    font-weight: $font-weight-light;
+  }
+
+  p {
+    color: $paragraph-text-color;
+    font-size: $body-font-size;
+  }
+}
+
 @mixin heading--section {
   margin-bottom: 20px;
 

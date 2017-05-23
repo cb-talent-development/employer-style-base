@@ -75,12 +75,6 @@
   }
 
   .visual__guide__image {
-    //TODO: Add non-IPE
-    snippet {
-      align-self: center;
-      width: 90%;
-    }
-
     &.guide__image--left {
       justify-content: flex-end;
     }

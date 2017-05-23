@@ -4,13 +4,20 @@
  * You must have a parent container (relatively positioned) for this to work properly.
  */
 @mixin visual-guide-divider($extend-top: 0px, $extend-bottom: 0px) {
-  bottom: $extend-top;
+
+  @if $extend-top != 0px {
+    bottom: -($extend-bottom);
+    top: -($extend-top);
+  } @else {
+    bottom: $extend-bottom;
+    top: $extend-top;
+  }
+
   left: 0;
   margin: auto;
   position: absolute;
   right: 0;
   text-align: center;
-  top: $extend-bottom;
   width: 50px;
 
   &:before, &:after {

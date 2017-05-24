@@ -3,7 +3,6 @@
   @include transform(scale(1)); // TODO mixin that includes transition and transform
   @include transition(transform 0.4s ease-in);
 
-  padding-top: calc(#{$base-spacing-medium} + #{$small-strip-height});
   color: $body-text-color;
   text-align: center;
   margin: $base-spacing-medium / 2;
@@ -15,8 +14,10 @@
     margin-top: $base-spacing-small;
   }
 
-  &:before {
-    @if $include_strip {
+  @if $include_strip {
+    padding-top: calc(#{$base-spacing-medium} + #{$small-strip-height});
+
+    &:before {
       @include bs__small-strip;
     }
   }
@@ -26,8 +27,10 @@
       @include transform(scale(1.06));
       @include transition(transform 550ms ease-out);
 
-      &:before {
-        background-color: $anchor-blue;
+      @if $include_strip {
+        &:before {
+          background-color: $anchor-blue;
+        }
       }
     }
   }

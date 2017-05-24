@@ -36,8 +36,10 @@
 
   @media only screen and (min-width: $small-screen-max) { // TODO turning off the fanciness on mobile but should there still be some sort of state for usability?
     &:hover {
-      @include transform(scale(1.06));
-      @include transition(transform 550ms ease-out);
+      @if $scale {
+        @include transform(scale(1.06));
+        @include transition(transform 550ms ease-out);
+      }
 
       @if $include_strip {
         &:before {
@@ -66,11 +68,8 @@
   }
 }
 
-@mixin card--tile__logo($logo_height: 80px) {
-  img {
-    height: $logo_height;
-    margin-bottom: $base-spacing-small;
-  }
+@mixin card--tile__logo {
+  margin-bottom: $base-spacing-small;
 }
 
 @mixin card--tile__button {

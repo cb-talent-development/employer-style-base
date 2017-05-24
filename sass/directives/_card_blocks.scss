@@ -49,7 +49,8 @@
   @include flex-basis(auto);
 
   color: $body-text-color;
-  width: 100%;
+  max-width: 30ch;
+  margin: auto;
 
   p {
     @include flex(1);
@@ -58,9 +59,4 @@
     width: 100%;
     color: $paragraph-text-color;
   }
-}
-
-@mixin card-block__text--narrow { // TODO is there another solution to achieve design + not having tweaks for two of the blocks?
-  max-width: 30ch;
-  margin: auto;
 }

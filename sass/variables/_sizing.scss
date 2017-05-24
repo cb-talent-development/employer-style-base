@@ -65,6 +65,7 @@ $type-indent: 2em;
 
 // UI components
 $medium-icon-font-size: 25px;
+$large-icon-font-size: $medium-icon-font-size * 1.75;
 $direction-arrow-size: 2em;
 $close-x-size: 18px;
 $carousel-arrow-size: 1.875em;
@@ -160,3 +161,7 @@ $table-cell-padding-top-and-bottom: $base-padding;
 
 $table-data-icon-size: 2em;
 $table-border-spacing: 7.5px;
+
+// Accordions
+$accordion-bottom-margin: $form-fieldset-margin;
+$accordion-line-height: 0.5;

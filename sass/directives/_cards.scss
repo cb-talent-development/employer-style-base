@@ -1,0 +1,113 @@
+@mixin card--tile($scale: true, $include_strip: true) {
+  @include component-box;
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(center);
+  @include flex(1);
+
+  @if $scale {
+    @include transform(scale(1));
+    @include transition(transform 0.4s ease-in);
+  }
+
+  @if $include_strip {
+    padding-top: calc(#{$base-spacing-medium} + #{$small-strip-height});
+
+    &:before {
+      @include bs__small-strip;
+    }
+  }
+
+  margin: $base-spacing-medium / 2;
+  text-align: center;
+  font-weight: $font-weight-normal;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    box-shadow: $base-box-shadow-hover;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: $small-font-size;
+  }
+
+  @media only screen and (min-width: $small-screen-max) { // TODO turning off the fanciness on mobile but should there still be some sort of state for usability?
+    &:hover {
+      @include transform(scale(1.06));
+      @include transition(transform 550ms ease-out);
+
+      @if $include_strip {
+        &:before {
+          background-color: $anchor-blue;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: $medium-screen-max) {
+    @include flex(1 0 46%);
+  }
+
+  @media only screen and (max-width: $small-screen-max) {
+    width: 100%;
+    @include flex(1);
+    margin-left: 0;
+    margin-right: 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@mixin card--tile__logo($logo_height: 80px) {
+  img {
+    height: $logo_height;
+    margin-bottom: $base-spacing-small;
+  }
+}
+
+@mixin card--tile__button {
+  margin-top: $base-spacing-medium; // TODO standardize new button top margins
+}
+
+@mixin card--tile__text {
+  @include flex-grow(1);
+  @include flex-shrink(0);
+  @include flex-basis(auto);
+
+  max-width: 30ch;
+  margin: auto;
+
+  p {
+    @include flex(1);
+    @include flex-basis(100%);
+
+    color: $paragraph-text-color;
+  }
+}
+
+// 4 across
+@mixin card-deck--centered {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include flex-direction(row);
+  @include justify-content(space-between);
+  @include align-items(stretch);
+
+  @media only screen and (max-width: $medium-screen-max) {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  @media only screen and (max-width: $small-screen-max) {
+    @include flex-direction(column);
+    @include flex-wrap(nowrap);
+  }
+}

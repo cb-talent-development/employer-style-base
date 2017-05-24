@@ -9,7 +9,6 @@
 
   h3 {
     text-transform: uppercase;
-    font-weight: $font-weight-bold;
     font-size: $small-font-size;
     margin-top: $base-spacing-small;
   }
@@ -41,9 +40,7 @@
 }
 
 @mixin card-block__button {
-  text-transform: uppercase;
   margin-top: $base-spacing-medium; // TODO standardize new button top margins
-  margin-bottom: $base-spacing-small;
 }
 
 @mixin card-block__text {
@@ -51,7 +48,6 @@
   @include flex-shrink(0);
   @include flex-basis(auto);
 
-  color: $body-text-color;
   max-width: 30ch;
   margin: auto;
 
@@ -59,7 +55,6 @@
     @include flex(1);
     @include flex-basis(100%);
 
-    width: 100%;
     color: $paragraph-text-color;
   }
 }

@@ -75,8 +75,14 @@
   }
 
   .visual__guide__image {
+    align-self: center;
+
     &.guide__image--left {
       justify-content: flex-end;
+    }
+
+    img {
+      height: 100%;
     }
   }
 
@@ -112,7 +118,7 @@
     width: 42px;
 
     span:after {
-      content: counter($counter);
+      content: counter(overview-count);
     }
   }
 }

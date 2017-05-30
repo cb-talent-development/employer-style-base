@@ -24,19 +24,19 @@
     content: '';
     background-color: white;
     border: $base-border;
-    border-radius: 7px; //TODO: New border radius variable?
+    border-radius: 50%;
     display: block;
-    height: 14px;
+    height: 14px; //Variable
     margin: 0 auto;
     position: relative;
-    width: 14px;
+    width: 14px;  //Variable
   }
 
   &:after {
     background-color: $grey-lighter;
   }
 
-  .visual__guide__divider {
+  .visual-guide__divider {
     background-color: $base-border-primary-color;
     height: 100%;
     margin: 0 auto;
@@ -54,7 +54,7 @@
   display: flex;
   position: relative;
 
-  .visual__guide__content, .visual__guide__image {
+  .visual-guide__content, .visual-guide__image {
     display: flex;
     width: 50%;
 
@@ -67,14 +67,14 @@
     }
   }
 
-  .visual__guide__content {
+  .visual-guide__content {
     &.guide__content--left {
       justify-content: flex-end;
       padding-left: $type-margin;
     }
   }
 
-  .visual__guide__image {
+  .visual-guide__image {
     align-self: center;
 
     &.guide__image--left {
@@ -86,39 +86,42 @@
     }
   }
 
-  .visual__guide__item__description {
+  .visual-guide__item-description {
     align-self: center;
-    max-width: 509px;
 
-    h4 {
-      font-size: $h1-font-size;
+    .small-biz__overview__block--step {
+      font-weight: bold;
+    }
+
+    h3 {
+      font-size: 2em;
       font-weight: $font-weight-light;
     }
 
     p {
       color: $paragraph-text-color;
-      font-size: $body-font-size;
     }
   }
 
   // The step must be within a <span>, not a <div>, and must contain another <span> for the actual counter
-  span.visual__guide__step {
+  span.visual-guide__step {
+    align-items: center;
     background-color: white;
-    border: 2px solid $azure-blue; //TODO: New border variable?
-    border-radius: 23px;
+    border: 2px solid $azure-blue; // Variable
+    border-radius: 50%;
     bottom: 0;
-    height: 42px;
+    display: flex;
+    height: 42px; //Variable
+    justify-content: center;
     left: 0;
-    line-height: 35px;
     margin: auto;
     position: absolute;
     right: 0;
-    text-align: center;
     top: 0;
-    width: 42px;
+    width: 42px; //Variable
 
     span:after {
-      content: counter(overview-count);
+      content: counter($counter);
     }
   }
 }

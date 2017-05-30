@@ -83,18 +83,12 @@ $gradient_var_list: (
 
 @mixin gradient($dark, $medium, $light) {
   background: $dark; // Old browsers
-  background: -moz-linear-gradient(-45deg, $dark 0%, $medium 35%, $light 100%); // FF3.6-15
-  background: -webkit-linear-gradient(-45deg, $dark 0%, $medium 35%, $light 100%); // Chrome10-25,Safari5.1-6
-  background: linear-gradient(135deg, $dark 0%, $medium 35%, $light 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$dark}', endColorstr='#{$light}',GradientType=1 ); // IE6-9 fallback on horizontal gradient
+  background: linear-gradient(135deg, $dark 0%, $medium 35%, $light 100%);
 }
 
 @mixin gradientTransparent($dark, $medium, $light, $transparency: 0.9) {
   background: $dark; // Old browsers
-  background: -moz-linear-gradient(-45deg, $dark 0%, $medium 35%, transparentize($light, $transparency) 100%); // FF3.6-15
-  background: -webkit-linear-gradient(-45deg, $dark 0%, $medium 35%, transparentize($light, $transparency) 100%); // Chrome10-25,Safari5.1-6
-  background: linear-gradient(135deg, $dark 0%, $medium 35%, transparentize($light, $transparency) 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$dark}', endColorstr='#{$light}',GradientType=1 ); // IE6-9 fallback on horizontal gradient
+  background: linear-gradient(135deg, $dark 0%, $medium 35%, transparentize($light, $transparency) 100%);
 }
 
 @mixin imageGradientBlend($img-url, $dark, $medium, $light, $mode: multiply) {
@@ -105,7 +99,6 @@ $gradient_var_list: (
   background-blend-mode: $mode;
   background-attachment: fixed;
 }
-
 
 
 // ## Gradient Implementation ##

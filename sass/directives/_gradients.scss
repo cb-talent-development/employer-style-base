@@ -100,19 +100,12 @@ $gradient_var_list: (
 @mixin imageGradientBlend($img-url, $dark, $medium, $light, $mode: multiply) {
   background-color: $light;
   background-image:
-    linear-gradient(to right, rgba($dark, 0.8), rgba($medium, 0.75), rgba($light, 0.2)),
+    linear-gradient(135deg, $dark 0%, $medium 35%, $light),
     url($img-url);
   background-blend-mode: $mode;
   background-attachment: fixed;
 }
 
-@mixin imageGradient($img-url, $dark, $medium, $light) {
-  background-color: $light;
-  background-image:
-    linear-gradient(to right, rgba($dark, 0.8), rgba($medium, 0.75), rgba($light, 0.2)),
-    url($img-url);
-  background-attachment: fixed;
-}
 
 
 // ## Gradient Implementation ##

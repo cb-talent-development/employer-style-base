@@ -27,15 +27,14 @@
   }
 }
 
-@mixin heading--hero--sm {
+@mixin heading--section--sm {
   h1 {
-    font-size: $h1-font-size;
+    font-size: 1.875rem;
     font-weight: $font-weight-light;
   }
 
   p {
     color: $paragraph-text-color;
-    font-size: $body-font-size;
   }
 }
 

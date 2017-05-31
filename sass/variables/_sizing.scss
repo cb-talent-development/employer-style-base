@@ -63,6 +63,8 @@ $section-padding--mobile: 50px;
 $type-margin: 20px;
 $type-indent: 2em;
 
+$container-edge-padding: 20px; //Use this if using an unconventional body container and still need the default left /right padding some of our containers have (20px)
+
 // UI components
 $medium-icon-font-size: 25px;
 $direction-arrow-size: 2em;
@@ -73,8 +75,8 @@ $carousel-dot-spacing: 10px;
 $cta-icon-size: 2rem;
 $accordion-icon-size: 30px;
 $resource-continue-block-size: 40px;
-$visual-divider-endpoint-size: 14px;
-$visual-guide-step-size: 44px;
+$visual-divider-endpoint-size: 13px;
+$visual-guide-step-size: 42px;
 $visual-guide-content-width: 509px;
 $visual-guide-image-large: 290px;
 $visual-guide-image-medium: 275px;
@@ -89,7 +91,7 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color
 // Input Sizes
 $form-input-font-size: $base-font-size;
 $base-input-font-size: $form-input-font-size;
-$form-input-vertical-padding: $form-input-font-size * 0.4;
+$form-input-vertical-padding: $form-input-font-size * 0.6;
 $form-input-horizontal-padding: $form-input-font-size * 1.25;
 $base-input-border-size: 1px;
 $base-input-line-height: $base-line-height;

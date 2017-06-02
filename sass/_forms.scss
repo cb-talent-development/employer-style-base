@@ -231,7 +231,6 @@ form button {
 
   span {
     @include display(flex);
-    @include align-items(center);
     @include flex(1);
 
     &:first-of-type label {
@@ -247,6 +246,7 @@ form button {
 
   label {
     @include flex(1);
+    @include align-items(center);
     margin: 0;
     border: $form-border;
     padding: 6px 24px;

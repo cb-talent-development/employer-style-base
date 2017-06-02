@@ -232,6 +232,7 @@ form button {
   span {
     @include display(flex);
     @include flex(1);
+    @include align-items(stretch)
 
     &:first-of-type label {
       border-top-left-radius: $minor-border-radius;
@@ -245,7 +246,7 @@ form button {
   }
 
   label {
-    @include flex(1);
+    //@include flex(1);
     @include align-items(center);
     margin: 0;
     border: $form-border;

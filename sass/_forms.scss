@@ -232,7 +232,7 @@ form button {
   span {
     @include display(flex);
     @include flex(1);
-    @include align-items(stretch)
+    @include align-items(stretch);
 
     &:first-of-type label {
       border-top-left-radius: $minor-border-radius;

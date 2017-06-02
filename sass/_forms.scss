@@ -245,7 +245,7 @@ form button {
     }
   }
 
-  label {
+   span label {
     margin: 0;
     border: $form-border;
     padding: 6px 24px;
@@ -272,7 +272,7 @@ form button {
     }
   }
 
-  label {
+  span label {
     &:hover,
     &:active,
     &:focus {
@@ -280,7 +280,7 @@ form button {
     }
   }
 
-  input[type='radio']:checked + label {
+  span input[type='radio']:checked + label {
     &:hover,
     &:active,
     &:focus {

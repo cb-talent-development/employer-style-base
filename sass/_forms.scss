@@ -233,6 +233,16 @@ form button {
     @include display(flex);
     @include align-items(center);
     @include flex(1);
+
+    &:first-of-type label {
+      border-top-left-radius: $minor-border-radius;
+      border-bottom-left-radius: $minor-border-radius;
+    }
+
+    &:last-of-type label {
+      border-top-right-radius: $minor-border-radius;
+      border-bottom-right-radius: $minor-border-radius;
+    }
   }
 
   label {
@@ -243,16 +253,6 @@ form button {
     cursor: pointer;
     transition: $toggle-button-transistion;
     font-size: $small-font-size;
-
-    &:first-of-type {
-      border-top-left-radius: $minor-border-radius;
-      border-bottom-left-radius: $minor-border-radius;
-    }
-
-    &:last-of-type {
-      border-top-right-radius: $minor-border-radius;
-      border-bottom-right-radius: $minor-border-radius;
-    }
 
     &:before {
       content: '\f111';

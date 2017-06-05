@@ -45,10 +45,8 @@
 
   &:after {
     @include transition($element-spin-base-transition);
-
     content: '\f107';
     font-family: FontAwesome;
-
     float: right;
     font-size: $accordion-angle-size;
     font-weight: $font-weight-normal;
@@ -56,6 +54,11 @@
     display: inline-block;
     text-align: center;
     line-height: $accordion-line-height;
+
+    @media only screen and (max-width: $small-screen-max) {
+      content: '';
+      display: none;
+    }
   }
 }
 

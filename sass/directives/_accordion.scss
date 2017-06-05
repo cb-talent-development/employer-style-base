@@ -22,7 +22,7 @@
 @mixin accordion {
   background-color: $panel-primary;
   color: $header-text-color;
-  padding: $base-padding;
+  padding: $type-margin $base-padding;
   width: 100%;
   text-align: left;
   border: none;

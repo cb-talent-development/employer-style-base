@@ -110,8 +110,7 @@
 @mixin table__buttons-row {
   td {
     background-color: transparent !important;
-    padding-left: 0;
-    padding-right: 0;
+    padding: $base-spacing-medium 0 0;
 
     &:hover:after,
     &:active:after,

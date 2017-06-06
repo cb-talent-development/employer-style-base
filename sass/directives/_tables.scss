@@ -41,7 +41,7 @@
 
 // Compare Charts
 
-@mixin table--row-column-headers($table-col-width: 25%, $table-caption-z-index: 2) {
+@mixin table--row-column-headers($table-caption-z-index: 2) {
   border-collapse: collapse;
   border-spacing: $table-border-spacing 0;
   table-layout: fixed;
@@ -191,8 +191,8 @@
 
 // Comapre Chart Modifiers
 
-@mixin table--product($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
-  @include table--row-column-headers($table-col-width, $table-caption-z-index);
+@mixin table--product($table-highlight-z-index: 1, $table-caption-z-index: 2) {
+  @include table--row-column-headers($table-caption-z-index);
 
   // Column highlight
   overflow: hidden;
@@ -221,8 +221,8 @@
   }
 }
 
-@mixin table--ecom($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
-  @include table--row-column-headers($table-col-width, $table-caption-z-index);
+@mixin table--ecom($table-highlight-z-index: 1, $table-caption-z-index: 2) {
+  @include table--row-column-headers($table-caption-z-index);
 
   thead {
     th {

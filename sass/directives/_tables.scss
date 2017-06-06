@@ -215,14 +215,25 @@
     text-align: left;
   }
 
-  th[scope='col'] {
-    // width: $table-col-width;
+  th {
     text-transform: uppercase;
+  }
+
+  th[scope='col'] {
     text-align: center;
   }
 
   th[scope='row'] {
     text-align: left;
+    font-size: $small-font-size;
+    font-weight: $font-weight-bold;
+
+    small {
+      display: block;
+      font-size: 0.6875rem; // TODO is 11 the new small-font-size
+      font-weight: $font-weight-normal;
+      text-transform: none;
+    }
   }
 
   th, td {

@@ -54,9 +54,23 @@
     text-align: left;
   }
 
+  th, td {
+    position: relative;
+    border: $base-border;
+    font-size: 0.9375rem;
+  }
+
   th {
     padding: $base-spacing-medium;
     text-transform: uppercase;
+  }
+
+  thead th:first-of-type {
+    border: 0;
+
+    @media only screen and (max-width: $medium-screen-max) {
+      width: 14ch;
+    }
   }
 
   th[scope='col'] {
@@ -64,7 +78,6 @@
   }
 
   th[scope='row'] {
-    border: $base-border;
     background-color: $table-row-th--background;
     text-align: left;
     font-size: $small-font-size;
@@ -78,22 +91,10 @@
     }
   }
 
-  th, td {
-    position: relative;
-    font-size: 0.9375rem;
-  }
-
   td {
-    border: $base-border;
     padding: $table--row-column-headers--padding;
     color: $grey-demon;
     text-align: center;
-  }
-
-  @media only screen and (max-width: $medium-screen-max) {
-    thead th:first-of-type {
-      width: 14ch;
-    }
   }
 }
 

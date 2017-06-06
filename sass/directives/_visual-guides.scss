@@ -1,11 +1,3 @@
-/* Preliminary mixin for flexbox. TODO: Move to an appropriate file. */
-@mixin display-modified-flex {
-  display: -webkit-box;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 /* A simple, center dividing column guide / line. See /recruiting-solutions/small-business-subscription-plans-and-pricing
  * The guide can extend out of its relatively positioned parent container on the bottom and top
  * This guide does not include steps. It is only a center line.
@@ -57,11 +49,11 @@
  * TODO: Concerning guides with no steps
  */
 @mixin visual-guide-row ($counter) {
-  @include display-modified-flex;
+  @include display(flex);
   position: relative;
 
   .visual-guide__content, .visual-guide__image {
-    @include display-modified-flex;
+    @include display(flex);
     width: 50%;
 
     &:first-of-type {
@@ -113,7 +105,7 @@
     border-radius: 50%;
     bottom: 0;
     box-sizing: border-box;
-    @include display-modified-flex;
+    @include display(flex);
     font-size: $body-font-size;
     font-weight: $font-weight-bold;
     height: $visual-guide-step-size;

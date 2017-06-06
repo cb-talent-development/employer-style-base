@@ -68,17 +68,13 @@
   .visual-guide__content {
     &.guide__content--left {
       @include justify-content(flex-end);
-      padding-left: $container-edge-padding;
     }
   }
 
   .visual-guide__image {
     @include align-self(center);
-
-    &.guide__image--left {
-      @include justify-content(flex-end);
-    }
-
+    @include justify-content(center);
+    
     img {
       height: 100%;
     }

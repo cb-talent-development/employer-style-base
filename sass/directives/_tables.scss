@@ -62,11 +62,13 @@
 
   th {
     padding: $base-spacing-medium;
+    font-weight: $font-weight-bold;
     text-transform: uppercase;
   }
 
   thead th:first-of-type {
     border: 0;
+    background-color: transparent;
 
     @media only screen and (max-width: $medium-screen-max) {
       width: 14ch;
@@ -74,6 +76,7 @@
   }
 
   th[scope='col'] {
+    color: white;
     text-align: center;
   }
 
@@ -81,7 +84,6 @@
     background-color: $table-row-th--background;
     text-align: left;
     font-size: $small-font-size;
-    font-weight: $font-weight-bold;
 
     small {
       display: block;
@@ -117,14 +119,14 @@
 }
 
 @mixin table--alternating-row-colors--darkened-column {
-  tr:nth-child(odd) {
+  tbody tr:nth-child(odd) {
     .darken {
       background-color: $table-row-light-promo;
       font-weight: $font-weight-bold;
     }
   }
 
-  tr:nth-child(even) {
+  tbody tr:nth-child(even) {
     .darken {
       background-color: $table-row-dark-promo;
       font-weight: $font-weight-bold;
@@ -191,10 +193,10 @@
 
 @mixin table--product($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
   @include table--row-column-headers($table-col-width, $table-caption-z-index);
-  overflow: hidden;
 
+  // Column highlight
+  overflow: hidden;
   th, td {
-    // Column highlight
     @include table__column-highlight('', $table-highlight-z-index);
   }
 
@@ -205,11 +207,6 @@
   }
 
   thead {
-    th {
-      color: white;
-      font-weight: $font-weight-bold;
-    }
-
     th:nth-of-type(3n+2) {
       background-color: $table-column-heading-1;
     }
@@ -229,13 +226,7 @@
 
   thead {
     th {
-      color: white;
-      font-weight: $font-weight-bold;
       background-color: $ecom-table-heading;
-    }
-
-    th:first-of-type {
-      background-color: transparent;
     }
 
     .darken {

@@ -55,6 +55,7 @@
   }
 
   th {
+    padding: $base-spacing-medium;
     text-transform: uppercase;
   }
 
@@ -78,12 +79,12 @@
   }
 
   th, td {
-    padding: $base-spacing-medium;
     position: relative;
     font-size: 0.9375rem;
   }
 
   td {
+    padding: $table--row-column-headers--padding;
     color: $grey-demon;
     text-align: center;
   }

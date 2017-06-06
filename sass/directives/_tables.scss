@@ -135,18 +135,33 @@
 }
 
 @mixin table__column-highlight($highlight-content, $table-highlight-z-index) {
-  &:hover:after,
-  &:active:after,
-  &:focus:after {
-    content: $highlight-content;
-    position: absolute;
-    background-color: rgba($grey-darkest, 0.1);
-    left: 0;
-    top: -5000px;
-    height: 10000px;
-    width: 100%;
-    z-index: $table-highlight-z-index;
-    pointer-events: none;
+  overflow: hidden;
+
+  th, td {
+    &:hover:after,
+    &:active:after,
+    &:focus:after {
+      content: $highlight-content;
+      position: absolute;
+      background-color: rgba($grey-darkest, 0.1);
+      left: 0;
+      top: -5000px;
+      height: 10000px;
+      width: 100%;
+      z-index: $table-highlight-z-index;
+      pointer-events: none;
+    }
+  }
+
+  // Remove column highlight on first column
+  th[scope='row'],
+  thead th:first-of-type {
+    &:hover:after,
+    &:active:after,
+    &:focus:after {
+      content: none;
+      display: none;
+    }
   }
 }
 
@@ -193,18 +208,7 @@
 
 @mixin table--product($table-highlight-z-index: 1, $table-caption-z-index: 2) {
   @include table--row-column-headers($table-caption-z-index);
-
-  // Column highlight
-  overflow: hidden;
-  th, td {
-    @include table__column-highlight('', $table-highlight-z-index);
-  }
-
-  // Remove column highlight
-  th[scope='row'],
-  thead th:first-of-type {
-    @include table__column-highlight(none, $table-highlight-z-index);
-  }
+  @include table__column-highlight('', $table-highlight-z-index);
 
   thead {
     th:nth-of-type(3n+2) {

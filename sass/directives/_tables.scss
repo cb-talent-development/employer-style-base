@@ -38,6 +38,147 @@
   border-top-right-radius: $table-header-corner-radius;
 }
 
+
+// Compare Charts
+
+@mixin table--row-column-headers($table-col-width: 25%, $table-caption-z-index: 2) {
+  border-collapse: separate;
+  border-spacing: $table-border-spacing 0;
+  table-layout: fixed;
+  width: 100%;
+
+  caption {
+    position: relative;
+    z-index: $table-caption-z-index;
+    background: $panel-primary;
+    text-align: left;
+  }
+
+  th {
+    text-transform: uppercase;
+  }
+
+  th[scope='col'] {
+    text-align: center;
+  }
+
+  th[scope='row'] {
+    text-align: left;
+    font-size: $small-font-size;
+    font-weight: $font-weight-bold;
+
+    small {
+      display: block;
+      font-size: 0.6875rem; // TODO is 11 the new small-font-size
+      font-weight: $font-weight-normal;
+      text-transform: none;
+    }
+  }
+
+  th, td {
+    padding: $base-spacing-medium;
+    position: relative;
+    font-size: 0.9375rem;
+  }
+
+  td {
+    color: $grey-demon;
+    text-align: center;
+  }
+
+  @media only screen and (max-width: $medium-screen-max) {
+    thead th:first-of-type {
+      width: 14ch;
+    }
+  }
+}
+
+@mixin table--alternating-row-colors {
+  tr:nth-child(odd) {
+    th, td {
+      background-color: $table-row-light;
+    }
+  }
+
+  tr:nth-child(even) {
+    th, td {
+      background-color: $table-row-dark;
+    }
+  }
+}
+
+@mixin table--alternating-row-colors--darkened-column {
+  tr:nth-child(odd) {
+    .darken {
+      background-color: $table-row-light-promo;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  tr:nth-child(even) {
+    .darken {
+      background-color: $table-row-dark-promo;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+@mixin table__column-highlight($highlight-content, $table-highlight-z-index) {
+  &:hover:after,
+  &:active:after,
+  &:focus:after {
+    content: $highlight-content;
+    position: absolute;
+    background-color: rgba($grey-darkest, 0.1);
+    left: 0;
+    top: -5000px;
+    height: 10000px;
+    width: 100%;
+    z-index: $table-highlight-z-index;
+    pointer-events: none;
+  }
+}
+
+@mixin table__buttons-row {
+  td {
+    background-color: transparent !important;
+    padding: $base-spacing-medium 0 0;
+
+    &:hover:after,
+    &:active:after,
+    &:focus:after {
+      content: none !important;
+      display: none;
+    }
+  }
+}
+
+@mixin table-data-icon {
+  position: relative;
+  right: 9999px;
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    right: -9999px;
+    width: 100%;
+    font-size: $table-data-icon-size;
+    line-height: 0;
+    font-family: FontAwesome;
+    color: $grey-dark;
+  }
+
+  &--no:after {
+    content: '\f00d'; // X icon
+  }
+
+  &--yes:after {
+    content: '\f00c'; // Checkmark icon
+  }
+}
+
+// Comapre Chart Modifiers
+
 @mixin table--product($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
   @include table--row-column-headers($table-col-width, $table-caption-z-index);
   overflow: hidden;
@@ -93,50 +234,6 @@
   }
 }
 
-@media only screen and (max-width: $medium-screen-max) {
-  thead th:first-of-type {
-    width: 14ch;
-  }
-}
-
-@mixin table__buttons-row {
-  td {
-    background-color: transparent !important;
-    padding: $base-spacing-medium 0 0;
-
-    &:hover:after,
-    &:active:after,
-    &:focus:after {
-      content: none !important;
-      display: none;
-    }
-  }
-}
-
-@mixin table-data-icon {
-  position: relative;
-  right: 9999px;
-
-  &:after {
-    position: absolute;
-    top: 50%;
-    right: -9999px;
-    width: 100%;
-    font-size: $table-data-icon-size;
-    line-height: 0;
-    font-family: FontAwesome;
-    color: $grey-dark;
-  }
-
-  &--no:after {
-    content: '\f00d'; // X icon
-  }
-
-  &--yes:after {
-    content: '\f00c'; // Checkmark icon
-  }
-}
-
 @mixin section-bar($breakpoint) {
   background-color: $table-row-light;
   padding: $base-margin;
@@ -150,97 +247,5 @@
 
   @media only screen and (max-width: $small-screen-max) {
     margin-bottom: $section-padding--mobile;
-  }
-}
-
-@mixin table--alternating-row-colors {
-  tr:nth-child(odd) {
-    th, td {
-      background-color: $table-row-light;
-    }
-  }
-
-  tr:nth-child(even) {
-    th, td {
-      background-color: $table-row-dark;
-    }
-  }
-}
-
-@mixin table--alternating-row-colors--darkened-column {
-  tr:nth-child(odd) {
-    .darken {
-      background-color: $table-row-light-promo;
-      font-weight: $font-weight-bold;
-    }
-  }
-
-  tr:nth-child(even) {
-    .darken {
-      background-color: $table-row-dark-promo;
-      font-weight: $font-weight-bold;
-    }
-  }
-}
-
-@mixin table__column-highlight($highlight-content, $table-highlight-z-index) {
-  &:hover:after,
-  &:active:after,
-  &:focus:after {
-    content: $highlight-content;
-    position: absolute;
-    background-color: rgba($grey-darkest, 0.1);
-    left: 0;
-    top: -5000px;
-    height: 10000px;
-    width: 100%;
-    z-index: $table-highlight-z-index;
-    pointer-events: none;
-  }
-}
-
-@mixin table--row-column-headers($table-col-width: 25%, $table-caption-z-index: 2) {
-  border-collapse: separate;
-  border-spacing: $table-border-spacing 0;
-  table-layout: fixed;
-  width: 100%;
-
-  caption {
-    position: relative;
-    z-index: $table-caption-z-index;
-    background: $panel-primary;
-    text-align: left;
-  }
-
-  th {
-    text-transform: uppercase;
-  }
-
-  th[scope='col'] {
-    text-align: center;
-  }
-
-  th[scope='row'] {
-    text-align: left;
-    font-size: $small-font-size;
-    font-weight: $font-weight-bold;
-
-    small {
-      display: block;
-      font-size: 0.6875rem; // TODO is 11 the new small-font-size
-      font-weight: $font-weight-normal;
-      text-transform: none;
-    }
-  }
-
-  th, td {
-    padding: $base-spacing-medium;
-    position: relative;
-    font-size: 0.9375rem;
-  }
-
-  td {
-    color: $grey-demon;
-    text-align: center;
   }
 }

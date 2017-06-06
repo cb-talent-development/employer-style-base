@@ -71,10 +71,6 @@
       background-color: $table-column-heading-3;
     }
   }
-
-  tbody {
-    @include table__row-alternating--colors;
-  }
 }
 
 @mixin table--ecom($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
@@ -94,10 +90,6 @@
     .darken {
       background-color: $ecom-table-promo-heading;
     }
-  }
-
-  tbody {
-    @include table__row-alternating--colors;
   }
 }
 
@@ -161,15 +153,10 @@
   }
 }
 
-@mixin table__row-alternating--colors {
+@mixin table--alternating-row-colors {
   tr:nth-child(odd) {
     th, td {
       background-color: $table-row-light;
-    }
-
-    .darken {
-      background-color: $table-row-light-promo;
-      font-weight: $font-weight-bold;
     }
   }
 
@@ -177,7 +164,18 @@
     th, td {
       background-color: $table-row-dark;
     }
+  }
+}
 
+@mixin table--alternating-row-colors--darkened-column {
+  tr:nth-child(odd) {
+    .darken {
+      background-color: $table-row-light-promo;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  tr:nth-child(even) {
     .darken {
       background-color: $table-row-dark-promo;
       font-weight: $font-weight-bold;

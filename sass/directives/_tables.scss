@@ -42,7 +42,7 @@
 // Compare Charts
 
 @mixin table--row-column-headers($table-caption-z-index: 2) {
-  border-collapse: separate;
+  border-collapse: collapse;
   border-spacing: $table-border-spacing;
   table-layout: fixed;
   width: 100%;
@@ -55,7 +55,6 @@
   }
 
   th, td {
-    position: relative;
     border: $base-border;
   }
 
@@ -95,6 +94,7 @@
   }
 
   td {
+    position: relative;
     padding: $table--row-column-headers--row-top-bottom-padding 1.5rem;
     color: $grey-demon;
     text-align: center;

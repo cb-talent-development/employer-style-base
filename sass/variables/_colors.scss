@@ -77,8 +77,11 @@ $resources__carousel-continue__background--hover: #f8f8f8;
 $resources__carousel-continue__border: #EEEEEE;
 
 // Font
+  // TODO Text Color Variable Names
+    // if we create sets of typography styles do we need semantic variable color names? It's more to maintain (like if $paragraph-text-color and $dark-text-color get consolidated is it easier to find every instance of the variable vs changing the style sets?) and names won't always make sense (headers are now white or blue, do we need two variable names?)
 $body-text-color: $anchor-blue;
 $paragraph-text-color: $grey-demon;
+$dark-text-color: $grey-dark;
 $header-text-color: $anchor-blue;
 $base-accent-color: $emerald;
 $hero-text-color: white;

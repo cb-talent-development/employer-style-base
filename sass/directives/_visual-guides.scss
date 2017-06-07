@@ -49,11 +49,11 @@
  * TODO: Concerning guides with no steps
  */
 @mixin visual-guide-row ($counter) {
-  display: flex;
+  @include display(flex);
   position: relative;
 
   .visual-guide__content, .visual-guide__image {
-    display: flex;
+    @include display(flex);
     width: 50%;
 
     &:first-of-type {
@@ -67,25 +67,21 @@
 
   .visual-guide__content {
     &.guide__content--left {
-      justify-content: flex-end;
-      padding-left: $container-edge-padding;
+      @include justify-content(flex-end);
     }
   }
 
   .visual-guide__image {
-    align-self: center;
-
-    &.guide__image--left {
-      justify-content: flex-end;
-    }
-
+    @include align-self(center);
+    @include justify-content(center);
+    
     img {
       height: 100%;
     }
   }
 
   .visual-guide__item-description {
-    align-self: center;
+    @include align-self(center);
 
     h3 {
       font-size: 1.875rem;
@@ -99,17 +95,17 @@
 
   // The step must be within a <span>, not a <div>, and must contain another <span> for the actual counter
   span.visual-guide__step {
-    align-items: center;
+    @include align-items(center);
     background-color: white;
     border: $visual-guide-step-border;
     border-radius: 50%;
     bottom: 0;
     box-sizing: border-box;
-    display: flex;
+    @include display(flex);
     font-size: $body-font-size;
     font-weight: $font-weight-bold;
     height: $visual-guide-step-size;
-    justify-content: center;
+    @include justify-content(center);
     left: 0;
     margin: auto;
     position: absolute;

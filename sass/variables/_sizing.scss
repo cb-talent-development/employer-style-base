@@ -64,6 +64,8 @@ $type-margin: 20px;
 $type-margin--small: 12px;
 $type-indent: 2em;
 
+$container-edge-padding: 20px; //Use this if using an unconventional body container and still need the default left /right padding some of our containers have (20px)
+
 // UI components
 $medium-icon-font-size: 25px;
 $direction-arrow-size: 2em;
@@ -76,6 +78,12 @@ $accordion-icon-size: 30px;
 $accordion-toggle--round-size: 60px;
 $accordion-angle-size: 35px;
 $resource-continue-block-size: 40px;
+$visual-divider-endpoint-size: 13px;
+$visual-guide-step-size: 42px;
+$visual-guide-content-width: 509px;
+$visual-guide-image-large: 290px;
+$visual-guide-image-medium: 275px;
+$visual-guide-image-small: 170px;
 
 // Forms
 $form-border-radius: $minor-border-radius;

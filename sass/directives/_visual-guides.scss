@@ -1,0 +1,120 @@
+/* A simple, center dividing column guide / line. See /recruiting-solutions/small-business-subscription-plans-and-pricing
+ * The guide can extend out of its relatively positioned parent container on the bottom and top
+ * This guide does not include steps. It is only a center line.
+ * You must have a parent container (relatively positioned) for this to work properly.
+ */
+@mixin visual-guide-divider($extend-top: 0px, $extend-bottom: 0px) {
+
+  @if $extend-top != 0px {
+    bottom: -($extend-bottom);
+    top: -($extend-top);
+  } @else {
+    bottom: $extend-bottom;
+    top: $extend-top;
+  }
+
+  left: 0;
+  position: absolute;
+  right: 0;
+
+  &:before, &:after {
+    content: '';
+    background-color: white;
+    border: $base-border;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: block;
+    height: $visual-divider-endpoint-size;
+    margin: 0 auto;
+    position: relative;
+    width: $visual-divider-endpoint-size;
+  }
+
+  &:after {
+    background-color: $grey-lighter;
+  }
+
+  .visual-guide__divider {
+    background-color: $base-border-primary-color;
+    height: 100%;
+    margin: 0 auto;
+    width: 1px;
+  }
+}
+
+/* For <li> elements only within a <ol>
+ * Parameter takes in a CSS counter that must be set / reset elsewhere
+ * Each row (your <li> content) consists of a block of text, and an image, with a center gutter.
+ * Modifiers include left properties to right justify content blocks (not text) along the center gutter.
+ * TODO: Concerning guides with no steps
+ */
+@mixin visual-guide-row ($counter) {
+  @include display(flex);
+  position: relative;
+
+  .visual-guide__content, .visual-guide__image {
+    @include display(flex);
+    width: 50%;
+
+    &:first-of-type {
+      margin-right: $base-spacing-large;
+    }
+
+    &:last-of-type {
+      margin-left: $base-spacing-large;
+    }
+  }
+
+  .visual-guide__content {
+    &.guide__content--left {
+      @include justify-content(flex-end);
+    }
+  }
+
+  .visual-guide__image {
+    @include align-self(center);
+    @include justify-content(center);
+    
+    img {
+      height: 100%;
+    }
+  }
+
+  .visual-guide__item-description {
+    @include align-self(center);
+
+    h3 {
+      font-size: 1.875rem;
+      font-weight: $font-weight-light;
+    }
+
+    p {
+      color: $paragraph-text-color;
+    }
+  }
+
+  // The step must be within a <span>, not a <div>, and must contain another <span> for the actual counter
+  span.visual-guide__step {
+    @include align-items(center);
+    background-color: white;
+    border: $visual-guide-step-border;
+    border-radius: 50%;
+    bottom: 0;
+    box-sizing: border-box;
+    @include display(flex);
+    font-size: $body-font-size;
+    font-weight: $font-weight-bold;
+    height: $visual-guide-step-size;
+    @include justify-content(center);
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: $visual-guide-step-size;
+
+    span:after {
+      content: counter($counter);
+    }
+  }
+}

@@ -159,8 +159,8 @@ $table-header-corner-radius: $minor-border-radius;
 $table-cell-padding-sides: $base-margin;
 $table-cell-padding-top-and-bottom: $base-padding;
 
-$table--row-column-headers--padding: 1.25rem 1.5rem;
-$table-border-spacing: 7.5px;
+$table--row-column-headers--row-top-bottom-padding: 0.9375rem;
+$table-border-spacing: 0;
 
 $table-data-icon-size: 1.25rem;
 $table-flag-height: 1.25rem;

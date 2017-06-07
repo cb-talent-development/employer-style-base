@@ -69,3 +69,44 @@
     @include transform($element-spin-rotation-full);
   }
 }
+
+@mixin accordion-toggle--round {
+  @include secondary-button;
+  width: $accordion-toggle--round-size;
+  height: $accordion-toggle--round-size;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  box-shadow: $base-box-shadow;
+
+  &:after {
+    content: '\f107';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: FontAwesome;
+    font-size: $accordion-angle-size;
+    @include transition($element-spin-base-transition);
+  }
+
+  span {
+    position: relative;
+    right: 9999px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+}
+
+@mixin accordion-toggle--round--active {
+  @include transition($element-spin-base-transition);
+  @include transform(translate(-50%, -50%) $element-spin-rotation-half);
+}

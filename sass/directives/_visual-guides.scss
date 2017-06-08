@@ -14,29 +14,27 @@
   }
 
   left: 0;
-  margin: auto;
   position: absolute;
   right: 0;
-  text-align: center;
-  width: 50px;
 
   &:before, &:after {
     content: '';
     background-color: white;
     border: $base-border;
-    border-radius: 7px; //TODO: New border radius variable?
+    border-radius: 50%;
+    box-sizing: border-box;
     display: block;
-    height: 14px;
+    height: $visual-divider-endpoint-size;
     margin: 0 auto;
     position: relative;
-    width: 14px;
+    width: $visual-divider-endpoint-size;
   }
 
   &:after {
     background-color: $grey-lighter;
   }
 
-  .visual__guide__divider {
+  .visual-guide__divider {
     background-color: $base-border-primary-color;
     height: 100%;
     margin: 0 auto;
@@ -51,11 +49,11 @@
  * TODO: Concerning guides with no steps
  */
 @mixin visual-guide-row ($counter) {
-  display: flex;
+  @include display(flex);
   position: relative;
 
-  .visual__guide__content, .visual__guide__image {
-    display: flex;
+  .visual-guide__content, .visual-guide__image {
+    @include display(flex);
     width: 50%;
 
     &:first-of-type {
@@ -67,49 +65,53 @@
     }
   }
 
-  .visual__guide__content {
+  .visual-guide__content {
     &.guide__content--left {
-      justify-content: flex-end;
-      padding-left: $type-margin;
+      @include justify-content(flex-end);
     }
   }
 
-  .visual__guide__image {
-    &.guide__image--left {
-      justify-content: flex-end;
+  .visual-guide__image {
+    @include align-self(center);
+    @include justify-content(center);
+    
+    img {
+      height: 100%;
     }
   }
 
-  .visual__guide__item__description {
-    align-self: center;
-    max-width: 509px;
+  .visual-guide__item-description {
+    @include align-self(center);
 
-    h4 {
-      font-size: $h1-font-size;
+    h3 {
+      font-size: 1.875rem;
       font-weight: $font-weight-light;
     }
 
     p {
       color: $paragraph-text-color;
-      font-size: $body-font-size;
     }
   }
 
   // The step must be within a <span>, not a <div>, and must contain another <span> for the actual counter
-  span.visual__guide__step {
+  span.visual-guide__step {
+    @include align-items(center);
     background-color: white;
-    border: 2px solid $azure-blue; //TODO: New border variable?
-    border-radius: 23px;
+    border: $visual-guide-step-border;
+    border-radius: 50%;
     bottom: 0;
-    height: 42px;
+    box-sizing: border-box;
+    @include display(flex);
+    font-size: $body-font-size;
+    font-weight: $font-weight-bold;
+    height: $visual-guide-step-size;
+    @include justify-content(center);
     left: 0;
-    line-height: 35px;
     margin: auto;
     position: absolute;
     right: 0;
-    text-align: center;
     top: 0;
-    width: 42px;
+    width: $visual-guide-step-size;
 
     span:after {
       content: counter($counter);

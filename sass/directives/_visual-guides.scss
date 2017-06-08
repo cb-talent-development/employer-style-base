@@ -49,72 +49,106 @@
  * TODO: Concerning guides with no steps
  */
 @mixin visual-guide-row ($counter) {
-  @include display(flex);
+  display: block;
   position: relative;
 
-  .visual-guide__content, .visual-guide__image {
-    @include display(flex);
-    width: 50%;
-
-    &:first-of-type {
-      margin-right: $base-spacing-large;
-    }
-
-    &:last-of-type {
-      margin-left: $base-spacing-large;
-    }
-  }
-
-  .visual-guide__content {
-    &.guide__content--left {
-      @include justify-content(flex-end);
-    }
-  }
-
   .visual-guide__image {
-    @include align-self(center);
-    @include justify-content(center);
+    display: none;
     
+    @media only screen and (min-width: 750px) {
+      @include align-self(center);
+      @include justify-content(center);     
+    }
+  }
+
+  .visual-guide__image--mobile {
+    margin-bottom: $base-spacing;
+    text-align: center;
+
+    @media only screen and (min-width: 750px) {
+      display: none;
+    }
+  }
+
+  .visual-guide__image, .visual-guide__image--mobile {
     img {
       height: 100%;
     }
   }
 
-  .visual-guide__item-description {
-    @include align-self(center);
+  .visual-guide__content {
+    display: block;
 
+    @media only screen and (min-width: 750px) 
+    {
+      &.guide__content--left {
+        @include justify-content(flex-end);
+      }
+    }
+  }
+
+  .visual-guide__item-description {
     h3 {
       font-size: 1.875rem;
       font-weight: $font-weight-light;
+      margin-bottom: $base-spacing;
     }
 
     p {
       color: $paragraph-text-color;
     }
+
+    @media only screen and (min-width: 750px) {
+      @include align-self(center);
+
+      h3 {
+        margin-bottom: inherit;
+      }
+    }
   }
 
   // The step must be within a <span>, not a <div>, and must contain another <span> for the actual counter
   span.visual-guide__step {
-    @include align-items(center);
+    display: none;
     background-color: white;
     border: $visual-guide-step-border;
     border-radius: 50%;
-    bottom: 0;
     box-sizing: border-box;
-    @include display(flex);
     font-size: $body-font-size;
-    font-weight: $font-weight-bold;
     height: $visual-guide-step-size;
-    @include justify-content(center);
-    left: 0;
     margin: auto;
-    position: absolute;
-    right: 0;
-    top: 0;
     width: $visual-guide-step-size;
 
     span:after {
-      content: counter($counter);
+      content: counter(overview-count);
+    }
+
+    @media only screen and (min-width: 750px) {
+      @include align-items(center);
+      bottom: 0;
+      @include display(flex);
+      @include justify-content(center);
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  @media only screen and (min-width: 750px) {
+    @include display(flex);
+
+    .visual-guide__content, .visual-guide__image {
+      @include display(flex);
+      width: 50%;
+
+      &:first-of-type {
+        margin-right: $base-spacing-large;
+      }
+
+      &:last-of-type {
+        margin-left: $base-spacing-large;
+      }
     }
   }
 }

@@ -216,9 +216,8 @@
   // TODO function that generates table column header background colors from lists of color sets like https://github.com/cb-talent-development/employer-style-base/blob/master/sass/directives/_gradients.scss#L3 and uses index for nth child formulas like https://codepen.io/arelia/pen/wdWwym?editors=1100
   // Needs to include optional "darken" column
 
-@mixin table--product($table-highlight-z-index: 1, $table-caption-z-index: 2) {
+@mixin table--product($table-caption-z-index: 2) {
   @include table--row-column-headers($table-caption-z-index);
-  @include table__column-highlight('', $table-highlight-z-index);
 
   thead {
     th:nth-of-type(3n+2) {

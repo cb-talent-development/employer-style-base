@@ -27,6 +27,17 @@
   }
 }
 
+@mixin heading--section--sm {
+  h1 {
+    font-size: 1.875rem;
+    font-weight: $font-weight-light;
+  }
+
+  p {
+    color: $paragraph-text-color;
+  }
+}
+
 @mixin heading--section {
   margin-bottom: 20px;
 

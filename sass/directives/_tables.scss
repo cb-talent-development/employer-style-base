@@ -155,6 +155,10 @@
       z-index: $table-highlight-z-index;
       pointer-events: none;
     }
+
+    .button {
+      margin-bottom: 1px; // overflow: hidden cuts off bottom of bottom-row buttons in Safari
+    }
   }
 
   // Remove column highlight on first column

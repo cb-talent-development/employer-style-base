@@ -77,6 +77,8 @@
     padding: $base-spacing-medium;
     color: white;
     text-align: center;
+    position: relative;
+    background-clip: padding-box;
   }
 
   th[scope='row'] {

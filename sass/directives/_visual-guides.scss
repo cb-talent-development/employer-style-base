@@ -56,6 +56,10 @@ $visual-guide-breakpoint-small: 750px;
   display: block;
   position: relative;
 
+  &:focus {
+    outline: 0;
+  }
+
   .visual-guide__image {
     display: none;
     

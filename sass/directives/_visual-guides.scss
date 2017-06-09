@@ -70,8 +70,16 @@ $visual-guide-breakpoint-small: 750px;
     text-align: center;
     display: block;
 
+    img {
+      display: inline;
+    }
+
     @media only screen and (min-width: $visual-guide-breakpoint-small) {
       display: none;
+
+      img {
+        display: block;
+      }
     }
   }
 

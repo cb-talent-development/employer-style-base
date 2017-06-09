@@ -68,7 +68,7 @@ $visual-guide-breakpoint-small: 750px;
   .visual-guide__image--mobile {
     margin-bottom: $base-spacing;
     text-align: center;
-    display: inline;
+    display: block;
 
     @media only screen and (min-width: $visual-guide-breakpoint-small) {
       display: none;

@@ -1,3 +1,7 @@
+// Variables - TODO: Refactor stylebase
+$visual-guide-breakpoint-large: 1050px;
+$visual-guide-breakpoint-small: 750px;
+
 /* A simple, center dividing column guide / line. See /recruiting-solutions/small-business-subscription-plans-and-pricing
  * The guide can extend out of its relatively positioned parent container on the bottom and top
  * This guide does not include steps. It is only a center line.
@@ -55,7 +59,7 @@
   .visual-guide__image {
     display: none;
     
-    @media only screen and (min-width: 750px) {
+    @media only screen and (min-width: $visual-guide-breakpoint-small) {
       @include align-self(center);
       @include justify-content(center);     
     }
@@ -64,8 +68,9 @@
   .visual-guide__image--mobile {
     margin-bottom: $base-spacing;
     text-align: center;
+    display: inline;
 
-    @media only screen and (min-width: 750px) {
+    @media only screen and (min-width: $visual-guide-breakpoint-small) {
       display: none;
     }
   }
@@ -79,7 +84,7 @@
   .visual-guide__content {
     display: block;
 
-    @media only screen and (min-width: 750px) 
+    @media only screen and (min-width: $visual-guide-breakpoint-small) 
     {
       &.guide__content--left {
         @include justify-content(flex-end);
@@ -98,7 +103,7 @@
       color: $paragraph-text-color;
     }
 
-    @media only screen and (min-width: 750px) {
+    @media only screen and (min-width: $visual-guide-breakpoint-small) {
       @include align-self(center);
 
       h3 {
@@ -123,7 +128,7 @@
       content: counter(overview-count);
     }
 
-    @media only screen and (min-width: 750px) {
+    @media only screen and (min-width: $visual-guide-breakpoint-small) {
       @include align-items(center);
       bottom: 0;
       @include display(flex);
@@ -135,7 +140,7 @@
     }
   }
 
-  @media only screen and (min-width: 750px) {
+  @media only screen and (min-width: $visual-guide-breakpoint-small) {
     @include display(flex);
 
     .visual-guide__content, .visual-guide__image {

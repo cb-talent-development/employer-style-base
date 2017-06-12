@@ -4,9 +4,8 @@
   background-color: $panel-primary;
   display: none;
   overflow: hidden;
-  @include transition(0.1s ease-in-out);
   opacity: 0;
-  border-bottom: ($base-input-border-size * 2) solid $grey-lightest;
+  border-bottom: $accordion-bottom-border solid $grey-lightest;
 
   p {
     color: $paragraph-text-color;
@@ -23,39 +22,43 @@
 @mixin accordion {
   background-color: $panel-primary;
   color: $header-text-color;
-  padding: $base-padding;
+  padding: $type-margin $base-padding;
   width: 100%;
   text-align: left;
   border: none;
-  border-bottom: ($base-input-border-size * 2) solid $grey-lightest;
+  border-bottom: $accordion-bottom-border solid $grey-lightest;
   outline: none;
   transition: $element-slow-fade-in;
   border-radius: 0px;
-  font-size: $h3-font-size;
+  font-size: $body-font-size;
   vertical-align: middle;
   white-space: normal;
+  text-transform: uppercase;
 
   &:hover,
   &:active,
   &:focus {
     color: $base-link-color;
     background-color: $panel-primary;
-    border-bottom: ($base-input-border-size * 2) solid $grey-lightest;
+    border-bottom: $accordion-bottom-border solid $grey-lightest;
   }
 
   &:after {
-    content: '\f067';
+    @include transition($element-spin-base-transition);
+    content: '\f107';
     font-family: FontAwesome;
     float: right;
-    font-size: $medium-icon-font-size;
-    width: $accordion-icon-size;
-    height: $accordion-icon-size;
+    font-size: $accordion-angle-size;
+    font-weight: $font-weight-normal;
     color: $base-link-color;
     display: inline-block;
     text-align: center;
-    margin-right: 5px;
-    line-height: 1;
-    @include transition($element-spin-base-transition);
+    line-height: $accordion-line-height;
+
+    @media only screen and (max-width: $small-screen-max) {
+      content: '';
+      display: none;
+    }
   }
 }
 
@@ -64,9 +67,10 @@
   border-bottom: none;
 
   &:after {
-    content: '\f068';
-    font-family: FontAwesome;
     @include transform($element-spin-rotation-full);
+
+    content: '\f106';
+    font-family: FontAwesome;
   }
 }
 

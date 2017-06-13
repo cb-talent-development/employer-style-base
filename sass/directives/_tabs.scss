@@ -8,7 +8,7 @@
   &__tab {
     @include flex-grow(1);
     @include flex-shrink(0);
-    @include flex-basis(calc(1 / #{$tabs}));
+    @include flex-basis(calc((1 / #{$tabs}) * 100%));
     border-right: $base-border;
     padding: $base-spacing-small;
     list-style-type: none;

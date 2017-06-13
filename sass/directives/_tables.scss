@@ -108,6 +108,29 @@
   }
 }
 
+
+/* table--row-column-headers--mobile: Adds 100vw wrap for mobile, calculates table width based on number of columns, adjusts pixels due to border-collapse: collapse. For use with Tab component. Expects Tab component is adjacent to table and reflects selected tab with class in .selectedTab--0 format
+*/
+@mixin table--row-column-headers--mobile($columns) {
+  $length: $columns - 1;
+
+  width: calc((#{$columns} * 100%) - (#{$length} * 1px));
+  margin-left: -$container-edge-padding;
+  position: relative;
+
+
+  @for $i from 0 through $length {
+    .selectedTab--#{$i} + & {
+      left: calc((#{$i} * -100%) + #{$container-edge-padding} + (#{$i} * 1px));
+    }
+  }
+
+  &__wrap {
+    width: calc(100vw - (#{$container-edge-padding} * 2));
+    overflow: hidden;
+  }
+}
+
 @mixin table--alternating-row-colors {
   tr:nth-child(odd) {
     th, td {

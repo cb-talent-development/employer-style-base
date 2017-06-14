@@ -52,7 +52,8 @@ $base-spacing: $base-line-height * 1rem; // 24px
 $base-spacing-smallest: 6px;
 $base-spacing-small: 12px;
 $base-spacing-medium: 30px; // TODO undecided whether this should equal or replace $base-spacing
-$base-spacing-large: 70px;
+$base-spacing-large: 50px;
+$base-spacing-xlarge: 70px;
 
 $base-margin: $base-spacing / 2; // 12px
 $base-margin--small: $base-margin / 2; // 6px

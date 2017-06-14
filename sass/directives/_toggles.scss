@@ -21,7 +21,7 @@
   border-radius: 2em;
   padding: 3px;
   background: $sky-blue;
-  transition: all .4s ease;
+  transition: $toggle-button-transistion--checkbox--color;
   cursor: pointer;
   user-select: none;
 
@@ -34,7 +34,7 @@
     height: 100%;
     border-radius: 50%;
     background: white;
-    transition: all .2s ease;
+    transition: $toggle-button-transistion--checkbox--switch;
   }
 }
 
@@ -42,7 +42,7 @@
   background: $lime;
 
   &:after {
-    left: 50%;
+    @include transform(translateX(100%));
   }
 }
 
@@ -91,7 +91,7 @@
     padding: 6px 24px;
     background-color: $grey-lighter;
     cursor: pointer;
-    transition: $toggle-button-transistion;
+    transition: $toggle-button-transistion--radio;
     font-size: $small-font-size;
 
     &:first-of-type {

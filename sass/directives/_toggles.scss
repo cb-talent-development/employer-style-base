@@ -62,7 +62,7 @@
     color: $dark-text-color;
   }
 
-  .toggle-switch-block--on {
+  &.toggle-switch-block--on {
     .toggle__text-label--initial-state {
       color: $dark-text-color;
     }

@@ -119,7 +119,7 @@ $visual-guide-breakpoint-small: 750px;
       @include align-self(center);
 
       h3 {
-        margin-bottom: inherit;
+        margin-bottom: $type-margin;
       }
     }
   }

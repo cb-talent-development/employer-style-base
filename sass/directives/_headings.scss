@@ -28,9 +28,12 @@
 }
 
 @mixin heading--section {
+  margin-bottom: $type-margin;
+
   &__heading {
     font-size: 1.875rem;
     font-weight: $font-weight-light;
+    margin-bottom: $type-margin;
   }
 
   p {
@@ -39,7 +42,7 @@
 }
 
 @mixin heading--section--w-subhead {
-  margin-bottom: 20px;
+  margin-bottom: $type-margin;
 
   &__heading {
     font-size: 0.9375rem;
@@ -49,7 +52,7 @@
   }
 
   &__subheading {
-    margin-top: 20px;
+    margin-top: $type-margin;;
     font-size: 1.875rem;
     font-weight: $font-weight-light;
   }

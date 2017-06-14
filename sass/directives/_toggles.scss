@@ -1,75 +1,81 @@
 // Checkbox toggle (compare charts)
 
-.toggle-switch-block {
+@mixin toggle-switch-block {
   @include display(flex);
   @include align-items(center);
   @include justify-content(center);
+
+  @include toggle-switch;
+  @include toggle-text;
 }
 
-.toggle-switch__input {
-  display: none;
-}
+@mixin toggle-switch {
+  .toggle-switch__input { // checkbox
+    display: none;
+  }
 
-.toggle-switch__label {
-  display: block;
-  width: $toggle-switch-width;
-  height: $toggle-switch-width / 2;
-  box-sizing: border-box;
-  margin: 0 $base-spacing-small;
-  position: relative;
-  outline: 0;
-  border-radius: 2em;
-  padding: 3px;
-  background: $sky-blue;
-  transition: $toggle-button-transistion--checkbox--color;
-  cursor: pointer;
-  user-select: none;
-
-  &:after {
-    content: '';
+  .toggle-switch__label { // label
     position: relative;
-    left: 0;
     display: block;
-    width: 50%;
-    height: 100%;
-    border-radius: 50%;
-    background: white;
-    transition: $toggle-button-transistion--checkbox--switch;
+    width: $toggle-switch-width;
+    height: $toggle-switch-width / 2;
+    box-sizing: border-box;
+    outline: 0;
+    margin: 0 $base-spacing-small;
+    border-radius: 2em;
+    padding: 3px;
+    background: $sky-blue;
+    transition: $toggle-button-transistion--checkbox--color;
+    cursor: pointer;
+    user-select: none;
+
+    &:after {
+      content: '';
+      position: relative;
+      left: 0;
+      display: block;
+      width: 50%;
+      height: 100%;
+      border-radius: 50%;
+      background: white;
+      transition: $toggle-button-transistion--checkbox--switch;
+    }
+  }
+
+  .toggle-switch__input:checked + .toggle-switch__label {
+    background: $lime;
+
+    &:after {
+      @include transform(translateX(100%));
+    }
   }
 }
 
-.toggle-switch__input:checked + .toggle-switch__label {
-  background: $lime;
-
-  &:after {
-    @include transform(translateX(100%));
-  }
-}
-
-.toggle__text-label {
-  text-transform: uppercase;
-  font-size: $small-font-size;
-  font-weight: $font-weight-bold;
-}
-
-.toggle__text-label--on-state {
-  color: $dark-text-color;
-}
-
-.toggle-switch-block--on {
-  .toggle__text-label--initial-state {
-    color: $dark-text-color;
+@mixin toggle-text {
+  .toggle__text-label {
+    text-transform: uppercase;
+    font-size: $small-font-size;
+    font-weight: $font-weight-bold;
   }
 
   .toggle__text-label--on-state {
-    color: $body-text-color;
+    color: $dark-text-color;
+  }
+
+  .toggle-switch-block--on {
+    .toggle__text-label--initial-state {
+      color: $dark-text-color;
+    }
+
+    .toggle__text-label--on-state {
+      color: $body-text-color;
+    }
+  }
+
+  .toggle__label--savings {
+    color: $text-highlight;
   }
 }
-
-.toggle__label--savings {
-  color: $text-highlight;
-}
-
 
 // Radio button toggle (buy boxes)
 

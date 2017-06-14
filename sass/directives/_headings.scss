@@ -27,8 +27,8 @@
   }
 }
 
-@mixin heading--section--sm {
-  h1 {
+@mixin heading--section {
+  &__heading {
     font-size: 1.875rem;
     font-weight: $font-weight-light;
   }
@@ -38,7 +38,7 @@
   }
 }
 
-@mixin heading--section {
+@mixin heading--section--w-subhead {
   margin-bottom: 20px;
 
   &__heading {

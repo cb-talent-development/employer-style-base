@@ -38,76 +38,169 @@
   border-top-right-radius: $table-header-corner-radius;
 }
 
-@mixin table--product($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
-  @include table--row-column-headers($table-col-width, $table-caption-z-index);
+
+// Compare Charts
+
+@mixin table--row-column-headers($table-caption-z-index: 2) {
+  border-collapse: collapse;
+  border-spacing: $table-border-spacing;
+  table-layout: fixed;
+  width: 100%;
+
+  caption {
+    position: relative;
+    z-index: $table-caption-z-index;
+    background: $panel-primary;
+    text-align: left;
+  }
+
+  th, td {
+    border: $base-border;
+  }
+
+  th {
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    font-size: 0.9375rem;
+  }
+
+  thead th:first-of-type {
+    border: 0;
+    background-color: transparent;
+
+    @media only screen and (max-width: $medium-screen-max) {
+      width: 14ch;
+    }
+  }
+
+  th[scope='col'] {
+    padding: $base-spacing-medium;
+    color: white;
+    text-align: center;
+    position: relative;
+    background-clip: padding-box;
+  }
+
+  th[scope='row'] {
+    padding: $table--row-column-headers--row-top-bottom-padding $base-spacing-medium;
+    background-color: $table-row-th--background;
+    text-align: left;
+    font-size: $small-font-size;
+
+    small {
+      display: block;
+      font-size: 0.6875rem; // TODO is 11 the new small-font-size
+      font-weight: $font-weight-normal;
+      text-transform: none;
+    }
+  }
+
+  td {
+    position: relative;
+    padding: $table--row-column-headers--row-top-bottom-padding 1.5rem;
+    color: $grey-demon;
+    text-align: center;
+    font-size: $small-font-size;
+  }
+
+  .button {
+    font-size: $small-font-size;
+  }
+}
+
+
+/* table--row-column-headers--mobile: Adds 100vw wrap for mobile, calculates table width based on number of columns, adjusts pixels due to border-collapse: collapse. For use with Tab component. Expects Tab component is adjacent to table and reflects selected tab with class in .selectedTab--0 format
+*/
+@mixin table--row-column-headers--mobile($columns) {
+  $length: $columns - 1;
+
+  width: calc((#{$columns} * 100%) - (#{$length} * 1px));
+  margin-left: -$container-edge-padding;
+  position: relative;
+
+
+  @for $i from 0 through $length {
+    .selectedTab--#{$i} + & {
+      left: calc((#{$i} * -100%) + #{$container-edge-padding} + (#{$i} * 1px));
+    }
+  }
+
+  &__wrap {
+    width: calc(100vw - (#{$container-edge-padding} * 2));
+    overflow: hidden;
+  }
+}
+
+@mixin table--alternating-row-colors {
+  tr:nth-child(odd) {
+    th, td {
+      background-color: $table-row-light;
+    }
+  }
+
+  tr:nth-child(even) {
+    th, td {
+      background-color: $table-row-dark;
+    }
+  }
+}
+
+@mixin table--alternating-row-colors--darkened-column {
+  tbody tr:nth-child(odd) {
+    .darken {
+      background-color: $table-row-light-promo;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  tbody tr:nth-child(even) {
+    .darken {
+      background-color: $table-row-dark-promo;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+@mixin table__column-highlight($highlight-content, $table-highlight-z-index) {
   overflow: hidden;
 
   th, td {
-    // Column highlight
-    @include table__column-highlight('', $table-highlight-z-index);
+    &:hover:after,
+    &:active:after,
+    &:focus:after {
+      content: $highlight-content;
+      position: absolute;
+      background-color: rgba($grey-darkest, 0.1);
+      left: 0;
+      top: -5000px;
+      height: 10000px;
+      width: 100%;
+      z-index: $table-highlight-z-index;
+      pointer-events: none;
+    }
+
+    .button {
+      margin-bottom: 1px; // overflow: hidden cuts off bottom of bottom-row buttons in Safari
+    }
   }
 
-  // Remove column highlight
+  // Remove column highlight on first column
   th[scope='row'],
-  thead td {
-    @include table__column-highlight(none, $table-highlight-z-index);
-  }
-
-  thead {
-    th {
-      color: white;
-      font-weight: $font-weight-bold;
+  thead th:first-of-type {
+    &:hover:after,
+    &:active:after,
+    &:focus:after {
+      content: none;
+      display: none;
     }
-
-    th:nth-of-type(1n) {
-      background-color: $table-column-heading-1;
-    }
-
-    th:nth-of-type(2n) {
-      background-color: $table-column-heading-2;
-    }
-
-    th:nth-of-type(3n) {
-      background-color: $table-column-heading-3;
-    }
-  }
-
-  tbody {
-    @include table__row-alternating--colors;
-  }
-}
-
-@mixin table--ecom($table-highlight-z-index: 1, $table-caption-z-index: 2, $table-col-width: 25%) {
-  @include table--row-column-headers($table-col-width, $table-caption-z-index);
-
-  thead {
-    th {
-      color: white;
-      font-weight: $font-weight-bold;
-      background-color: $ecom-table-heading;
-    }
-
-    .darken {
-      background-color: $ecom-table-promo-heading;
-    }
-  }
-
-  tbody {
-    @include table__row-alternating--colors;
-  }
-}
-
-@media only screen and (max-width: $medium-screen-max) {
-  thead td {
-    width: 14ch;
   }
 }
 
 @mixin table__buttons-row {
   td {
-    background-color: transparent !important;
-    padding-left: 0;
-    padding-right: 0;
+    background-color: transparent;
+    border: 0;
+    padding: $base-spacing-medium 0 0;
 
     &:hover:after,
     &:active:after,
@@ -142,6 +235,64 @@
   }
 }
 
+// Comapre Chart Modifiers
+  // TODO function that generates table column header background colors from lists of color sets like https://github.com/cb-talent-development/employer-style-base/blob/master/sass/directives/_gradients.scss#L3 and uses index for nth child formulas like https://codepen.io/arelia/pen/wdWwym?editors=1100
+  // Needs to include optional "darken" column
+
+@mixin table--product($table-caption-z-index: 2) {
+  @include table--row-column-headers($table-caption-z-index);
+
+  thead {
+    th:nth-of-type(3n+2) {
+      background-color: $table-column-heading-1;
+    }
+
+    th:nth-of-type(3n+3) {
+      background-color: $table-column-heading-2;
+    }
+
+    th:nth-of-type(3n+4) {
+      background-color: $table-column-heading-3;
+    }
+  }
+}
+
+@mixin table--pricing-plan($table-caption-z-index: 2) {
+  @include table--row-column-headers($table-caption-z-index);
+
+  thead {
+    th:nth-of-type(3n+2) {
+      background-color: $azure-blue;
+    }
+
+    th:nth-of-type(3n+3) {
+      background-color: $azure-blue-dark;
+    }
+
+    th:nth-of-type(3n+4) {
+      background-color: $aqua-dark;
+    }
+
+    th:nth-of-type(3n+5) {
+      background-color: $aqua;
+    }
+  }
+}
+
+@mixin table--ecom($table-caption-z-index: 2) {
+  @include table--row-column-headers($table-caption-z-index);
+
+  thead {
+    th {
+      background-color: $ecom-table-heading;
+    }
+
+    .darken {
+      background-color: $ecom-table-promo-heading;
+    }
+  }
+}
+
 @mixin section-bar($breakpoint) {
   background-color: $table-row-light;
   padding: $base-margin;
@@ -155,80 +306,5 @@
 
   @media only screen and (max-width: $small-screen-max) {
     margin-bottom: $section-padding--mobile;
-  }
-}
-
-@mixin table__row-alternating--colors {
-  tr:nth-child(odd) {
-    th, td {
-      background-color: $table-row-light;
-    }
-
-    .darken {
-      background-color: $table-row-light-promo;
-      font-weight: $font-weight-bold;
-    }
-  }
-
-  tr:nth-child(even) {
-    th, td {
-      background-color: $table-row-dark;
-    }
-
-    .darken {
-      background-color: $table-row-dark-promo;
-      font-weight: $font-weight-bold;
-    }
-  }
-}
-
-@mixin table__column-highlight($highlight-content, $table-highlight-z-index) {
-  &:hover:after,
-  &:active:after,
-  &:focus:after {
-    content: $highlight-content;
-    position: absolute;
-    background-color: rgba($grey-darkest, 0.1);
-    left: 0;
-    top: -5000px;
-    height: 10000px;
-    width: 100%;
-    z-index: $table-highlight-z-index;
-    pointer-events: none;
-  }
-}
-
-@mixin table--row-column-headers($table-col-width: 25%, $table-caption-z-index: 2) {
-  border-collapse: separate;
-  border-spacing: $table-border-spacing 0;
-  table-layout: fixed;
-  width: 100%;
-
-  caption {
-    position: relative;
-    z-index: $table-caption-z-index;
-    background: $panel-primary;
-    text-align: left;
-  }
-
-  th[scope='col'] {
-    width: $table-col-width;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  th[scope='row'] {
-    text-align: left;
-  }
-
-  th, td {
-    padding: $base-padding;
-    position: relative;
-    font-size: $small-font-size;
-  }
-
-  td {
-    color: $grey-demon;
-    text-align: center;
   }
 }

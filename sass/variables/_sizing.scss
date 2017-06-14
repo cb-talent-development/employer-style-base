@@ -18,9 +18,9 @@ $large-header-text--mobile: $base-font-size * 4; //64px
 
 $hero-text-size: strip-units($h2-font-size) * 1rem;
 $small-font-size: 13px;
+$tiny-font-size: 11px;
 $subhead-font-size: $base-font-size * 1.5;
 $caption-font-size: $small-font-size;
-$tooltip-contents-font-size: 11px;
 
 // Line height
 $base-line-height: 1.5;
@@ -65,7 +65,7 @@ $type-margin: 20px;
 $type-margin--small: 12px;
 $type-indent: 2em;
 
-$container-edge-padding: 20px; //Use this if using an unconventional body container and still need the default left /right padding some of our containers have (20px)
+$container-edge-padding: 20px; //Use this if using an unconventional body container and still need the default left /right padding our .containers have (20px)
 
 // UI components
 $medium-icon-font-size: 25px;
@@ -170,9 +170,12 @@ $table-header-corner-radius: $minor-border-radius;
 $table-cell-padding-sides: $base-margin;
 $table-cell-padding-top-and-bottom: $base-padding;
 
-$table-data-icon-size: 2em;
-$table-border-spacing: 7.5px;
+$table--row-column-headers--row-top-bottom-padding: 0.9375rem;
+$table-border-spacing: 0;
 
-// Accordions
+$table-data-icon-size: 1.25rem;
+$table-flag-height: 1.25rem;
+$table-flag-offset: 20px;
+
 $accordion-bottom-border: $base-input-border-size * 2;
 $accordion-line-height: 0.5;

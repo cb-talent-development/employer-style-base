@@ -44,16 +44,17 @@
   margin: auto;
 }
 
-@mixin table-flag {
-  color: white;
-  text-align: center;
-  background-color: $alert-primary;
-  padding: 3px;
+@mixin table-flag($background-color) {
+  @include display(flex);
+  @include justify-content(center);
+  @include align-items(center);
+  height: $table-flag-height;
+  width: calc(100% - (#{$table-flag-offset} * 2));
   position: absolute;
   bottom: 100%;
-  top: -23px;
-  width: 100%;
-  left: 0;
+  left: $table-flag-offset;
+  color: white;
+  background-color: $background-color;
 }
 
 $return-to-top-z-index: 9001 !default;

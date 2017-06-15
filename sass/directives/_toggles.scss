@@ -1,0 +1,146 @@
+// Checkbox toggle (compare charts)
+
+@mixin toggle-switch-block {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+
+  @include toggle-switch;
+  @include toggle-text;
+}
+
+@mixin toggle-switch {
+  .toggle-switch__input { // checkbox
+    display: none;
+  }
+
+  .toggle-switch__label { // label
+    position: relative;
+    display: block;
+    width: $toggle-switch-width;
+    height: $toggle-switch-width / 2;
+    box-sizing: border-box;
+    outline: 0;
+    margin: 0 $base-spacing-small;
+    border-radius: 2em;
+    padding: 3px;
+    background: $sky-blue;
+    transition: $toggle-button-transistion--checkbox--color;
+    cursor: pointer;
+    user-select: none;
+
+    &:after {
+      content: '';
+      position: relative;
+      left: 0;
+      display: block;
+      width: 50%;
+      height: 100%;
+      border-radius: 50%;
+      background: white;
+      transition: $toggle-button-transistion--checkbox--switch;
+    }
+  }
+
+  .toggle-switch__input:checked + .toggle-switch__label {
+    background: $lime;
+
+    &:after {
+      @include transform(translateX(100%));
+    }
+  }
+}
+
+@mixin toggle-text {
+  .toggle__text-label {
+    text-transform: uppercase;
+    font-size: $small-font-size;
+    font-weight: $font-weight-bold;
+  }
+
+  .toggle__text-label--on-state {
+    color: $dark-text-color;
+  }
+
+  &.toggle-switch-block--on {
+    .toggle__text-label--initial-state {
+      color: $dark-text-color;
+    }
+
+    .toggle__text-label--on-state {
+      color: $body-text-color;
+    }
+  }
+
+  .toggle__label--savings {
+    color: $text-highlight;
+  }
+}
+
+// Radio button toggle (buy boxes)
+
+@mixin radio-toggle {
+  @include display(flex);
+  margin-bottom: $base-margin;
+  width: 100%;
+
+  input[type='radio'] {
+    display: none;
+  }
+
+  label {
+    @include display(flex);
+    @include align-items(center);
+    @include flex(1);
+    margin: 0;
+    border: $form-border;
+    padding: 6px 24px;
+    background-color: $grey-lighter;
+    cursor: pointer;
+    transition: $toggle-button-transistion--radio;
+    font-size: $small-font-size;
+
+    &:first-of-type {
+      border-top-left-radius: $minor-border-radius;
+      border-bottom-left-radius: $minor-border-radius;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: $minor-border-radius;
+      border-bottom-right-radius: $minor-border-radius;
+    }
+
+    &:before {
+      content: '\f111';
+      font-family: FontAwesome;
+      font-size: 1.45rem;
+      margin-right: 6px;
+      color: white;
+    }
+  }
+
+  input[type='radio']:checked + label {
+    background-color: white;
+
+    &:before {
+      content: '\f058';
+      color: $base-link-color;
+    }
+  }
+
+  label {
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $grey-lightest;
+    }
+  }
+
+  input[type='radio']:checked + label {
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: white;
+    }
+  }
+}

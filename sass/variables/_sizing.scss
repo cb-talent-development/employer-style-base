@@ -18,9 +18,9 @@ $large-header-text--mobile: $base-font-size * 4; //64px
 
 $hero-text-size: strip-units($h2-font-size) * 1rem;
 $small-font-size: 13px;
+$tiny-font-size: 11px;
 $subhead-font-size: $base-font-size * 1.5;
 $caption-font-size: $small-font-size;
-$tooltip-contents-font-size: 11px;
 
 // Line height
 $base-line-height: 1.5;
@@ -52,7 +52,8 @@ $base-spacing: $base-line-height * 1rem; // 24px
 $base-spacing-smallest: 6px;
 $base-spacing-small: 12px;
 $base-spacing-medium: 30px; // TODO undecided whether this should equal or replace $base-spacing
-$base-spacing-large: 70px;
+$base-spacing-large: 50px;
+$base-spacing-xlarge: 70px;
 
 $base-margin: $base-spacing / 2; // 12px
 $base-margin--small: $base-margin / 2; // 6px
@@ -61,7 +62,10 @@ $section-padding: 70px;
 $section-padding--mobile: 50px;
 
 $type-margin: 20px;
+$type-margin--small: 12px;
 $type-indent: 2em;
+
+$container-edge-padding: 20px; //Use this if using an unconventional body container and still need the default left /right padding our .containers have (20px)
 
 // UI components
 $medium-icon-font-size: 25px;
@@ -72,7 +76,16 @@ $carousel-dot-size: 12px;
 $carousel-dot-spacing: 10px;
 $cta-icon-size: 2rem;
 $accordion-icon-size: 30px;
+$accordion-toggle--round-size: 60px;
+$accordion-angle-size: 35px;
 $resource-continue-block-size: 40px;
+$toggle-switch-width: 65px;
+$visual-divider-endpoint-size: 13px;
+$visual-guide-step-size: 42px;
+$visual-guide-content-width: 509px;
+$visual-guide-image-large: 290px;
+$visual-guide-image-medium: 275px;
+$visual-guide-image-small: 170px;
 
 // Forms
 $form-border-radius: $minor-border-radius;
@@ -140,7 +153,7 @@ $top-bar-angle-size: 1rem; // 16px
 
 // Header
 $header-height-large: 445px;
-$header-height-product: 355px;
+$header-height-product: 455px;
 $header-top-bottom-padding: 32px;
 $header-headline-bottom-margin: 15px;
 
@@ -158,5 +171,12 @@ $table-header-corner-radius: $minor-border-radius;
 $table-cell-padding-sides: $base-margin;
 $table-cell-padding-top-and-bottom: $base-padding;
 
-$table-data-icon-size: 2em;
-$table-border-spacing: 7.5px;
+$table--row-column-headers--row-top-bottom-padding: 0.9375rem;
+$table-border-spacing: 0;
+
+$table-data-icon-size: 1.25rem;
+$table-flag-height: 1.25rem;
+$table-flag-offset: 20px;
+
+$accordion-bottom-border: $base-input-border-size * 2;
+$accordion-line-height: 0.5;

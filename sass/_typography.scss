@@ -125,3 +125,12 @@ cite {
 $form-font-family: $base-font-family;
 $form-label-font-weight: $font-weight-bold;
 $form-input-font-weight: $font-weight-normal;
+
+.screen-reader-only { // http://webaim.org/techniques/css/invisiblecontent/#absolutepositioning
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

@@ -20,64 +20,6 @@
   }
 }
 
-// Card Deck - Centered - 4 across
-  // Use: Arranges Home product category blocks
-@mixin card-deck--centered {
-  @include display(flex);
-  @include flex-wrap(wrap);
-  @include flex-direction(row);
-  @include justify-content(space-between);
-  @include align-items(stretch);
-
-  @media only screen and (max-width: $medium-screen-max) {
-    max-width: 100%;
-    margin: auto;
-  }
-
-  @media only screen and (max-width: $small-screen-max) {
-    @include flex-direction(column);
-    @include flex-wrap(nowrap);
-  }
-}
-
-// Card Tile
-  // Use: Home product category blocks
-@mixin card--tile {
-  @include component-box;
-  @include display(flex);
-  @include flex-direction(column);
-  @include align-items(center);
-  @include flex(1);
-  position: relative;
-  margin: $base-spacing-small;
-  text-decoration: none;
-
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none;
-    box-shadow: $base-box-shadow-hover;
-  }
-
-  @media only screen and (max-width: $medium-screen-max) {
-    @include flex(1 0 46%);
-  }
-
-  @media only screen and (max-width: $small-screen-max) {
-    width: 100%;
-    @include flex(1);
-    margin-left: 0;
-    margin-right: 0;
-
-    &:first-child {
-      margin-top: 0;
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
 // Ecom Table Boxes
 @mixin ecom_table-item {
   border-bottom: $base-border;

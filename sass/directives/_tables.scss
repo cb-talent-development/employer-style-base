@@ -236,8 +236,6 @@
 }
 
 // Comapre Chart Modifiers
-  // TODO function that generates table column header background colors from lists of color sets like https://github.com/cb-talent-development/employer-style-base/blob/master/sass/directives/_gradients.scss#L3 and uses index for nth child formulas like https://codepen.io/arelia/pen/wdWwym?editors=1100
-  // Needs to include optional "darken" column
 
 @mixin table--product($table-caption-z-index: 2) {
   @include table--row-column-headers($table-caption-z-index);
@@ -254,27 +252,9 @@
     th:nth-of-type(3n+4) {
       background-color: $table-column-heading-3;
     }
-  }
-}
-
-@mixin table--pricing-plan($table-caption-z-index: 2) {
-  @include table--row-column-headers($table-caption-z-index);
-
-  thead {
-    th:nth-of-type(3n+2) {
-      background-color: $azure-blue;
-    }
-
-    th:nth-of-type(3n+3) {
-      background-color: $azure-blue-dark;
-    }
-
-    th:nth-of-type(3n+4) {
-      background-color: $aqua-dark;
-    }
 
     th:nth-of-type(3n+5) {
-      background-color: $aqua;
+      background-color: $table-column-heading-4;
     }
   }
 }

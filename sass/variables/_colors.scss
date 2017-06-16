@@ -243,9 +243,10 @@ $table-row-light: $grey-lightest;
 $table-row-light-promo: $grey-light;
 $table-row-dark-promo: $grey-light;
 
-$table-column-heading-1: $emerald;
-$table-column-heading-2: $azure-blue;
-$table-column-heading-3: $sky-blue;
+$table-column-heading-1: $azure-blue;
+$table-column-heading-2: $azure-blue-dark;
+$table-column-heading-3: $aqua-dark;
+$table-column-heading-4: $aqua;
 
 $ecom-table-heading: $table-column-heading-2;
 $ecom-table-promo-heading: darken($table-column-heading-2, 10);

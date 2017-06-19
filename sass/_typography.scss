@@ -12,94 +12,40 @@ $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 
-// TODO used in footer copyright and on email form error messages. No guidance in UX style guide. Undecided on whether we need variables
-$text-smaller: 80%;
-$text-larger: 120%;
+// Font Sizes - Standard
+$body-font-size: 0.9375rem; // 15px
 
-$h1-font-size: $base-font-size * 2;
-$h2-font-size: $base-font-size * 1.5;
-$h3-font-size: $base-font-size * 1.17;
-$h4-font-size: $base-font-size;
-$h5-font-size: $base-font-size * 0.83;
-$h6-font-size: $base-font-size * 0.67;
-$body-font-size: $base-font-size * 0.9375;
-
+// Font Sizes - One Offs
 $large-header-text: $base-font-size * 8; // 128px
 $large-header-text--mobile: $base-font-size * 4; //64px
 
-$hero-text-size: strip-units($h2-font-size) * 1rem;
-$small-font-size: 13px;
-$tiny-font-size: 11px;
-$subhead-font-size: $base-font-size * 1.5;
-$caption-font-size: $small-font-size;
+// $hero-text-size: strip-units($h2-font-size) * 1rem; // 22px
+// $small-font-size: 13px;
+// $tiny-font-size: 11px;
+// $subhead-font-size: $base-font-size * 1.5; // 24px
+// $caption-font-size: $small-font-size;
 
 // Line height
 $base-line-height: 1.5;
 $header-line-height: 1.25;
 
-// Line height
-$base-line-height: 1.5;
-$header-line-height: 1.25;
-
+// Type Spacing
 $type-margin: 20px;
 $type-margin--small: 12px;
+
 $type-indent: 2em;
 
-// Headers
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $header-font-family;
-  line-height: $header-line-height;
-  font-weight: $font-weight-bold;
-  color: $header-text-color;
-  text-decoration: none;
-  margin: 0;
-  margin-bottom: $type-margin;
-}
+// text-decoration: none;
 
-h1,
-.text--headline-1 {
-  font-size: $h1-font-size;
-}
-
-h2,
-.text--headline-2 {
-  font-size: $h2-font-size;
-}
-
-h3,
-.text--headline-3 {
-  font-size: $h3-font-size;
-}
-
-h4,
-.text--headline-4 {
-  font-size: $h4-font-size;
-}
-
-h5,
-.text--headline-5 {
-  font-size: $h5-font-size;
-}
-
-h6,
-.text--headline-6 {
-  font-size: $h6-font-size;
-}
-
-p {
-  font-size: $body-font-size;
-  margin-bottom: $type-margin;
-  line-height: $base-line-height;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
+// p {
+//   font-size: $body-font-size;
+//   margin-bottom: $type-margin;
+//   line-height: $base-line-height;
+//
+//   &:last-child {
+//     margin-bottom: 0;
+//   }
+// }
 
 a {
   @extend %link;
@@ -133,26 +79,26 @@ cite {
   }
 }
 
-// UX Style guide does not specify these styles, but this class is also not currently in use. Consult with UX if using.
-.text--caption {
-  font-weight: $font-weight-normal;
-  font-size: $caption-font-size;
-  line-height: $base-line-height;
-}
-
-.text--details {
-  font-weight: $font-weight-normal;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-}
-
-.light {
-  font-weight: $font-weight-light;
-}
-
-.heavy {
-  font-weight: $font-weight-bold;
-}
+// // UX Style guide does not specify these styles, but this class is also not currently in use. Consult with UX if using.
+// .text--caption {
+//   font-weight: $font-weight-normal;
+//   font-size: $caption-font-size;
+//   line-height: $base-line-height;
+// }
+//
+// .text--details {
+//   font-weight: $font-weight-normal;
+//   font-size: $base-font-size;
+//   line-height: $base-line-height;
+// }
+//
+// .light {
+//   font-weight: $font-weight-light;
+// }
+//
+// .heavy {
+//   font-weight: $font-weight-bold;
+// }
 
 
 .screen-reader-only { // http://webaim.org/techniques/css/invisiblecontent/#absolutepositioning

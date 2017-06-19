@@ -29,7 +29,7 @@
 //   border: $base-input-border-size solid $form-border-color;
 //   box-shadow: $form-box-shadow;
 //   font-family: $form-font-family;
-//   font-size: $base-input-font-size;
+//   font-size: $form-input-font-size;
 //   line-height: $base-input-line-height;
 //   padding: $base-input-vertical-padding $base-input-horizontal-padding;
 //   margin-bottom: 3px; // Just enough margin to expose the 'glow'
@@ -111,6 +111,47 @@
 // table {
 //   @include font-feature-settings("kern", "liga", "tnum");
 // }
+
+// Forms Type Styles
+$form-font-family: $base-font-family;
+$form-label-font-weight: $font-weight-bold;
+$form-input-font-weight: $font-weight-normal;
+
+
+// Input Sizes
+$form-input-font-size: $base-font-size;
+
+$form-input-vertical-padding: $form-input-font-size * 0.6;
+$form-input-horizontal-padding: $form-input-font-size * 1.25;
+$base-input-border-size: 1px;
+$base-input-line-height: $base-line-height;
+
+$large-input-width: 100%;
+
+$medium-input-font-size: $form-input-font-size;
+$medium-input-vertical-padding: $form-input-vertical-padding;
+$medium-input-horizontal-padding: $form-input-horizontal-padding;
+
+$small-input-font-size: $form-input-font-size * 0.875;
+$small-input-vertical-padding: $form-input-font-size * 0.438;
+$small-input-horizontal-padding: $form-input-font-size * 0.625;
+
+$large-input-font-size: $form-input-font-size * 1.5;
+$large-input-vertical-padding: $form-input-font-size * 0.625;
+$large-input-horizontal-padding: $form-input-font-size * 0.938;
+
+// Forms
+$form-border-radius: $minor-border-radius;
+$form-fieldset-margin: 10px;
+$form-box-shadow: inset 0 1px 3px rgba(black, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+
+
+// Form Elements
+$base-radio-box-shadow: 0 0 0 1px $grey-light inset, 0 0 0 9px white inset, 0 0 0 10px $grey-light inset;
+$hover-radio-box-shadow: 0 0 0 1px $alert-primary-active inset, 0 0 0 9px white inset, 0 0 0 16px $alert-primary-active inset;
+$checked-radio-box-shadow: 0 0 0 1px $grey-light inset, 0 0 0 9px white inset, 0 0 0 16px $alert-primary inset;
+$active-radio-box-shadow: 0 0 0 8px $alert-primary-active inset, 0 0 0 16px white inset;
 
 fieldset { // #pardot-form p
   display: block;

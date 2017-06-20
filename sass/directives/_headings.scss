@@ -48,6 +48,6 @@
 
   &__subheading {
     margin-top: $type-margin;
-    @mixin font-style--xl-light;
+    @include font-style--xl-light;
   }
 }

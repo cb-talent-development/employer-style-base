@@ -87,3 +87,99 @@
     }
   }
 }
+
+// Use the mobile-subnav mixin for the subnav bars that appear on our subscription / product pages
+// Displays a single link with a flyout
+// Structure of markup should be:
+@mixin mobile-subnav-flyout() {
+  width: auto; 
+  display: none;
+  position: relative;
+  cursor: pointer;
+
+  @media only screen and (max-width: $small-screen-max) {
+    line-height: 45px;
+    display: block;
+    height: $product_subnav--height;
+    margin-left: -$container-edge-padding;
+    margin-right: -$container-edge-padding;
+  }
+  
+  &:hover {
+    ul {
+      display: block;
+    }
+
+    .mobile-subnav__top-link:after {
+      content: '';
+    }
+  }
+
+  ul {
+    display: none;
+    background-color: white;
+    border-bottom: $base-border;
+    position: absolute !important;
+    top: $product_subnav--height;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    > li {
+      display: block;
+      line-height: 45px;
+      width: 100%;
+      
+      &:hover {
+        background-color: $base-link-color;
+      }
+
+      a {
+        display: block;
+        float: none;
+        border: none;
+        color: $alt-link-color;
+        margin: 0 $container-edge-padding;
+        
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+  &__top-link__wrap {
+    &:hover {
+      background-color: $base-link-color;
+
+      .mobile-subnav__top-link {
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+  &__top-link {
+    color: $alt-link-color;
+    display: block;
+    padding-left: $container-edge-padding;
+    padding-right: $container-edge-padding;
+    text-transform: uppercase;
+    position: relative;
+    width: auto;
+
+    &:after {
+      font-family: FontAwesome;
+      font-size: $top-bar-angle-size;
+      color: $base-link-color;
+      content: '\f107';
+      position: absolute;
+      right: $container-edge-padding;
+    }
+  }
+
+  &--hidden {
+    display: none;
+  }
+}

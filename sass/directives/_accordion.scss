@@ -20,6 +20,7 @@
 
 // Accordion Buttons
 @mixin accordion {
+  @include font-style--med-bold-uppercase;
   background-color: $panel-primary;
   color: $header-text-color;
   padding: $type-margin $base-padding;
@@ -30,10 +31,8 @@
   outline: none;
   transition: $element-slow-fade-in;
   border-radius: 0px;
-  font-size: $body-font-size;
   vertical-align: middle;
   white-space: normal;
-  text-transform: uppercase;
 
   &:hover,
   &:active,

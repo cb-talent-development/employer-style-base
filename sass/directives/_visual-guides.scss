@@ -135,6 +135,7 @@ $visual-guide-breakpoint-small: 750px;
     height: $visual-guide-step-size;
     margin: auto;
     width: $visual-guide-step-size;
+    color: $text-color-dark;
 
     span:after {
       content: counter(overview-count);

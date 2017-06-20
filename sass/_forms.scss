@@ -117,6 +117,17 @@ $form-font-family: $base-font-family;
 $form-label-font-weight: $font-weight-bold;
 $form-input-font-weight: $font-weight-regular;
 
+// Forms
+$form-border-color: $grey-light;
+$form-border: 1px solid $form-border-color;
+$form-border-color-hover: darken($base-border-primary-color, 10);
+$form-border-color-focus: $alert-primary;
+
+$form-background-color: white;
+$form-input-color: $text-color-grey;
+$form-placeholder-color: $grey-light;
+
+
 
 // Input Sizes
 $form-input-font-size: $base-font-size;

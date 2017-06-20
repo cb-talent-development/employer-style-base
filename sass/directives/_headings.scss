@@ -31,6 +31,7 @@
   &__heading {
     @include font-style--xl-light;
     margin-bottom: $type-margin;
+    color: $header-text-color;
   }
 
   p {
@@ -44,15 +45,18 @@
   &__heading {
     @include font-style--med-bold-uppercase;
     margin-bottom: 0;
+    color: $header-text-color;
   }
 
   &__subheading {
     margin-top: $type-margin;
     @include font-style--xl-light;
+    color: $header-text-color;
   }
 }
 
 @mixin heading--item {
   @include font-style--small-bold-uppercase;
   margin-bottom: $type-margin--small;
+  color: $header-text-color;
 }

@@ -148,7 +148,7 @@
     }
   }
 
-  &__top-link__wrap {
+  .mobile-subnav__top-link__wrap {
     &:hover {
       background-color: $base-link-color;
 
@@ -160,7 +160,7 @@
     }
   }
 
-  &__top-link {
+  .mobile-subnav__top-link {
     color: $alt-link-color;
     display: block;
     padding-left: $container-edge-padding;
@@ -179,7 +179,7 @@
     }
   }
 
-  &--hidden {
+  .mobile-subnav--hidden {
     display: none;
   }
 }

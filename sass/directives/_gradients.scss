@@ -106,6 +106,14 @@ $gradient_var_list: (
   background-attachment: fixed;
 }
 
+@mixin imageGradient($img-url, $dark, $medium, $light) {
+  background-color: $light;
+  background-image:
+    linear-gradient(to right, rgba($dark, 0.8), rgba($medium, 0.75), rgba($light, 0.2)),
+    url($img-url);
+  background-attachment: fixed;
+}
+
 
 // ## Gradient Implementation ##
 

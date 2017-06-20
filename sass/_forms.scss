@@ -337,7 +337,7 @@ form button {
 .fieldset--large {
   @include display(flex);
   @include flex-wrap(nowrap);
-  @include align-items(center);
+  @include align-items(stretch);
 
   & #{$all-text-inputs},
   & select,
@@ -364,6 +364,8 @@ form button {
     @media only screen and (min-width: $small-screen-max) {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
+      padding-top: 0;
+      padding-bottom: 0;
     }
 
     @media only screen and (max-width: $small-screen-max) {

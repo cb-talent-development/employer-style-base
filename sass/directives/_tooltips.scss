@@ -9,7 +9,8 @@
 
   .tooltip-contents {
     display: none;
-    font-size: $tooltip-contents-font-size;
+    font-size: $tiny-font-size;
+    text-transform: none;
   }
 
   &:hover .tooltip-contents,

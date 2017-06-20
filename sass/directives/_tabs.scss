@@ -1,0 +1,30 @@
+@mixin tabs($tabs) {
+  &__tab-list {
+    @include display(flex);
+    width: 100%;
+    border: $base-border;
+  }
+
+  &__tab {
+    @include flex-grow(1);
+    @include flex-shrink(0);
+    @include flex-basis(calc((1 / #{$tabs}) * 100%));
+    border-right: $base-border;
+    padding: $base-spacing-small;
+    list-style-type: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $small-font-size;
+    font-weight: $font-weight-bold;
+    color: $dark-text-color;
+    cursor: pointer;
+
+    &:last-child {
+      border: 0;
+    }
+
+    &--selected {
+      color: white;
+    }
+  }
+}

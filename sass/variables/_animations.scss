@@ -2,7 +2,9 @@ $base-transition: all 0.2s ease;
 
 $link-color-transition: color 0.1s linear;
 
-$toggle-button-transistion: all 0.05s ease;
+$toggle-button-transistion--radio: all 0.05s ease;
+$toggle-button-transistion--checkbox--color: background-color 0.4s ease;
+$toggle-button-transistion--checkbox--switch: transform 0.2s ease;
 
 $popup-animation-transition: all 0.8s ease-in-out;
 

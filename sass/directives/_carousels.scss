@@ -91,7 +91,7 @@
 @mixin resource-carousel-arrow($arrow-z-index: 1) {
   z-index: $arrow-z-index;
   color: $inactive-carousel-button-color;
-  font-size: $direction-arrow-size / 2;
+  font-size: $resource-arrows;
   cursor: pointer;
   border: 1px solid $inactive-carousel-button-color;
   text-align: center;

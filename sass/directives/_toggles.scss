@@ -56,6 +56,10 @@
     @include font-style--small-bold-uppercase;
   }
 
+  .toggle__text-label--initial-state {
+    color: $text-color-dark;
+  }
+
   .toggle__text-label--on-state {
     color: $text-color-grey;
   }

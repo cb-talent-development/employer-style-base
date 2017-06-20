@@ -112,7 +112,7 @@
     padding: 6px 24px;
     background-color: $grey-lighter;
     cursor: pointer;
-    transition: $toggle-button-transistion;
+    transition: $toggle-button-transistion--radio;
     font-size: $small-font-size;
 
     &:before {

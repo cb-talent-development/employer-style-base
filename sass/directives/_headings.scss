@@ -42,7 +42,7 @@
   margin-bottom: $type-margin;
 
   &__heading {
-    @include font-style--med-bold;
+    @include font-style--med-bold-uppercase;
     margin-bottom: 0;
   }
 

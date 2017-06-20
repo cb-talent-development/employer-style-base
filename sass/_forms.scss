@@ -117,17 +117,25 @@ $form-font-family: $base-font-family;
 $form-label-font-weight: $font-weight-bold;
 $form-input-font-weight: $font-weight-regular;
 
-// Forms
+// Borders
 $form-border-color: $grey-light;
 $form-border: 1px solid $form-border-color;
 $form-border-color-hover: darken($base-border-primary-color, 10);
 $form-border-color-focus: $alert-primary;
+$form-border-radius: $minor-border-radius;
 
+// Input Styles
 $form-background-color: white;
 $form-input-color: $text-color-grey;
 $form-placeholder-color: $grey-light;
 
+$form-box-shadow: inset 0 1px 3px rgba(black, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
 
+$base-radio-box-shadow: 0 0 0 1px $grey-light inset, 0 0 0 9px white inset, 0 0 0 10px $grey-light inset;
+$hover-radio-box-shadow: 0 0 0 1px $alert-primary-active inset, 0 0 0 9px white inset, 0 0 0 16px $alert-primary-active inset;
+$checked-radio-box-shadow: 0 0 0 1px $grey-light inset, 0 0 0 9px white inset, 0 0 0 16px $alert-primary inset;
+$active-radio-box-shadow: 0 0 0 8px $alert-primary-active inset, 0 0 0 16px white inset;
 
 // Input Sizes
 $form-input-font-size: $base-font-size;
@@ -151,18 +159,8 @@ $large-input-font-size: $form-input-font-size * 1.5;
 $large-input-vertical-padding: $form-input-font-size * 0.625;
 $large-input-horizontal-padding: $form-input-font-size * 0.938;
 
-// Forms
-$form-border-radius: $minor-border-radius;
 $form-fieldset-margin: 10px;
-$form-box-shadow: inset 0 1px 3px rgba(black, 0.06);
-$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
 
-
-// Form Elements
-$base-radio-box-shadow: 0 0 0 1px $grey-light inset, 0 0 0 9px white inset, 0 0 0 10px $grey-light inset;
-$hover-radio-box-shadow: 0 0 0 1px $alert-primary-active inset, 0 0 0 9px white inset, 0 0 0 16px $alert-primary-active inset;
-$checked-radio-box-shadow: 0 0 0 1px $grey-light inset, 0 0 0 9px white inset, 0 0 0 16px $alert-primary inset;
-$active-radio-box-shadow: 0 0 0 8px $alert-primary-active inset, 0 0 0 16px white inset;
 
 fieldset { // #pardot-form p
   display: block;
@@ -173,6 +171,7 @@ fieldset { // #pardot-form p
 label {
   margin: 0;
   font-weight: $form-label-font-weight;
+  color: $text-color-dark;
 }
 
 form h2,

@@ -55,44 +55,46 @@ $type-margin--small: 12px;
 $type-indent: 2em;
 
 // Type Styles
-@mixin font-style--xxl-light { // hero headers
+@mixin font-style--xxl-light { // Style 1: hero headers
   font-size: $font-size-xxl;
   font-weight: $font-weight-light;
 }
 
-@mixin font-style--xl-light {  // section headers and subheaders
+@mixin font-style--xl-light {  // Style 2: section headers and subheaders
   font-size: $font-size-xl;
   font-weight: $font-weight-light;
 }
 
-@mixin font-style--large-regular {  // hero subheaders
+@mixin font-style--large-regular {  // Style 3: hero subheaders
   font-size: $font-size-large;
   font-weight: $font-weight-regular;
 }
 
-@mixin font-style--med-bold-uppercase { // section headers, buttons
+@mixin font-style--med-bold-uppercase { // Style 4: section headers, buttons
   font-size: $font-size-med;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
 }
 
-@mixin font-style--small-bold-uppercase { // navigation, labels
+@mixin font-style--small-bold-uppercase { // Style 5: navigation, labels
   font-size: $font-size-small;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
 }
 
-@mixin font-style--small-bold { // nav dropdowns
+@mixin font-style--small-bold { // Style 6: nav dropdowns
   font-size: $font-size-small;
   font-weight: $font-weight-bold;
 }
 
-@mixin font-style--med-regular { // body copy
+@mixin font-style--med-regular { // Style 7: body copy
   font-size: $font-size-med;
   font-weight: $font-weight-regular;
 }
 
-@mixin font-style--smallest-regular { // table captions, other table elements
+// Style 8
+
+@mixin font-style--smallest-regular { // Style 9: table captions, other table elements
   font-size: $font-size-smallest;
   font-weight: $font-weight-regular;
 }
@@ -134,6 +136,31 @@ h6 {
   line-height: $header-line-height;
   text-decoration: none;
   margin-bottom: $type-margin;
+}
+
+
+h1 {
+  @include font-style--xxl-light;
+}
+
+h2 {
+  @include font-style--xl-light;
+}
+
+h3 {
+  @include font-style--large-regular;
+}
+
+h4 {
+  @include font-style--med-bold-uppercase;
+}
+
+h5 {
+  @include font-style--small-bold-uppercase;
+}
+
+h6 {
+  @include font-style--small-bold;
 }
 
 p {

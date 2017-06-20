@@ -1,5 +1,5 @@
 // Button Sizes
-$base-button-font-size: 15px;  // TODO apply new style guide, use variable
+$base-button-font-size: $font-size-med;
 $base-button-vertical-padding: $base-input-font-size * 0.375;
 $base-button-horizontal-padding: $base-input-font-size * 1.375;
 $base-button-border-size: 2px;
@@ -36,7 +36,7 @@ $massive-button-horizontal-padding: $base-input-font-size * 2;
   color: $base-button-text-color;
   display: inline-block;
   font-size: $base-button-font-size;
-  font-weight: bold;
+  font-weight: $font-weight-bold;
   line-height: $base-button-line-height;
   padding: $base-button-vertical-padding $base-button-horizontal-padding;
   text-decoration: none;

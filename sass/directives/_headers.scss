@@ -32,7 +32,7 @@
       margin-top: 0;
       margin-bottom: $header-headline-bottom-margin;
       line-height: normal;
-      color: $hero-text-color;
+      color: $hero-text-color-light;
 
       @media only screen and (max-width: $small-screen-max) {
         margin-bottom: 0;
@@ -42,7 +42,7 @@
     p {
       max-width: 28em;
       margin-bottom: 0;
-      color: $hero-text-color;
+      color: $hero-text-color-light;
     }
   }
 }

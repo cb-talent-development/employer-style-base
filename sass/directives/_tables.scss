@@ -276,11 +276,11 @@
 
 @mixin section-bar($breakpoint) {
   @include font-style--med-bold-uppercase;
-  background-color: $table-row-light;
-  padding: $base-margin;
-  margin-bottom: $section-padding;
   border-radius: $minor-border-radius;
-  color: $text-color-dark;
+  margin-bottom: $section-padding;
+  padding: $base-margin;
+  background-color: $table-row-light;
+  line-height: normal;
 
   @media only screen and (max-width: $breakpoint) {
     margin-bottom: 0;

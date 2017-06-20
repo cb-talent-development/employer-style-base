@@ -1,24 +1,109 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,400i,700);
 
-// Typography
+// Typefaces
 $lato: Lato, 'Lato', Helvetica, Arial, sans-serif;
 
-// Typefaces
 $base-font-family: $lato;
 $header-font-family: $lato;
 
+// Font Sizes - Standard
+$font-size-xxl: 2.75rem; // 44px
+$font-size-xl: 1.875rem; // 30px
+$font-size-large: 1.375rem; // 22px
+$font-size-med: 0.9375rem; // 15px
+$font-size-small: 0.8125rem; // 13px
+$font-size-smallest: 0.6875rem; // 11px
+
+// Font Sizes - Non-Standard
+  // Use namespacing so usage is clear.
+  // Not for reuse unless a new pattern has emerged
+$404__large-header-text: $base-font-size * 8; // 128px
+$404__large-header-text--mobile: $base-font-size * 4; //64px
+
 // Font Weights
 $font-weight-light: 300;
-$font-weight-normal: 400;
+$font-weight-regular: 400;
 $font-weight-bold: 700;
 
-// Font Sizes - Standard
-$body-font-size: 0.9375rem; // 15px
+// Text Colors
+$text-color-dark: $anchor-blue;
+$text-color-grey: $grey-demon;
+$text-color-grey-light: $grey-dark;
 
-// Font Sizes - One Offs
-$large-header-text: $base-font-size * 8; // 128px
-$large-header-text--mobile: $base-font-size * 4; //64px
+$header-text-color-light: white;
+$header-text-color-dark: $text-color-dark;
+$hero-text-color-light: white;
+$hero-text-color-dark: $anchor-blue;
 
+$base-accent-color: $emerald;
+$text-highlight: $lime-dark;
+
+// Text Colors - Links
+$base-link-color: $sky-blue;
+$hover-link-color: $sky-blue-light;
+$visited-link-color: $purple;
+
+// Type Styles
+@mixin font-style--xxl-light { // hero headers
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-light;
+}
+
+@mixin font-style--xl-light {  // section headers and subheaders
+  font-size: $font-size-xl;
+  font-weight: $font-weight-light;
+}
+
+@mixin font-style--large-regular {  // hero subheaders
+  font-size: $font-size-large;
+  font-weight: $font-weight-regular;
+}
+
+@mixin font-style--med-bold { // section headers
+  font-size: $font-size-med;
+  font-weight: $font-weight-bold;
+}
+
+@mixin font-style--small-bold { // navigation, labels
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+}
+
+@mixin font-style--small-bold { // nav dropdowns
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+}
+
+@mixin font-style--med-regular { // body copy
+  font-size: $font-size-med;
+  font-weight: $font-weight-regular;
+}
+
+@mixin font-style--smallest-regular { // table captions, other table elements
+  font-size: $font-size-smallest;
+  font-weight: $font-weight-regular;
+}
+
+@mixin base-body-copy {
+  @include font-style--med-regular;
+  color: $text-color-grey;
+}
+
+// Sets defaults that are overridden by classes or mixins
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $header-text-color-dark;
+}
+
+p {
+  @include base-body-copy;
+}
+
+// $body-font-size: $font-size-med; // 15px
 // $hero-text-size: strip-units($h2-font-size) * 1rem; // 22px
 // $small-font-size: 13px;
 // $tiny-font-size: 11px;
@@ -81,13 +166,13 @@ cite {
 
 // // UX Style guide does not specify these styles, but this class is also not currently in use. Consult with UX if using.
 // .text--caption {
-//   font-weight: $font-weight-normal;
+//   font-weight: $font-weight-regular;
 //   font-size: $caption-font-size;
 //   line-height: $base-line-height;
 // }
 //
 // .text--details {
-//   font-weight: $font-weight-normal;
+//   font-weight: $font-weight-regular;
 //   font-size: $base-font-size;
 //   line-height: $base-line-height;
 // }

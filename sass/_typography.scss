@@ -99,7 +99,6 @@ $type-indent: 2em;
 
 @mixin base-body-copy {
   @include font-style--med-regular;
-  color: $text-color-grey;
   line-height: $base-line-height;
 }
 

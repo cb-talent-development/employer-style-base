@@ -17,8 +17,8 @@ $font-size-smallest: 0.6875rem; // 11px
 // Font Sizes - Non-Standard
   // Use namespacing so usage is clear.
   // Not for reuse unless a new pattern has emerged
-$404__large-header-text: $base-font-size * 8; // 128px
-$404__large-header-text--mobile: $base-font-size * 4; //64px
+$error-page__large-header-text: $base-font-size * 8; // 128px
+$error-page__large-header-text--mobile: $base-font-size * 4; //64px
 
 // Font Weights
 $font-weight-light: 300;

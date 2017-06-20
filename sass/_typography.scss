@@ -43,6 +43,17 @@ $base-link-color: $sky-blue;
 $hover-link-color: $sky-blue-light;
 $visited-link-color: $purple;
 
+// Line height
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+
+// Type Spacing
+$type-margin-large: 28px;
+$type-margin: 20px;
+$type-margin--small: 12px;
+
+$type-indent: 2em;
+
 // Type Styles
 @mixin font-style--xxl-light { // hero headers
   font-size: $font-size-xxl;
@@ -59,14 +70,16 @@ $visited-link-color: $purple;
   font-weight: $font-weight-regular;
 }
 
-@mixin font-style--med-bold { // section headers
+@mixin font-style--med-bold-uppercase { // section headers, buttons
   font-size: $font-size-med;
   font-weight: $font-weight-bold;
+  text-transform: uppercase;
 }
 
-@mixin font-style--small-bold { // navigation, labels
+@mixin font-style--small-bold-uppercase { // navigation, labels
   font-size: $font-size-small;
   font-weight: $font-weight-bold;
+  text-transform: uppercase;
 }
 
 @mixin font-style--small-bold { // nav dropdowns
@@ -87,9 +100,31 @@ $visited-link-color: $purple;
 @mixin base-body-copy {
   @include font-style--med-regular;
   color: $text-color-grey;
+  line-height: $base-line-height;
 }
 
-// Sets defaults that are overridden by classes or mixins
+@mixin link {
+  @include transition($link-color-transition);
+  color: $base-link-color;
+  text-decoration: none;
+  font-weight: $font-weight-bold;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $visited-link-color;
+  }
+
+  &:active, &:focus {
+    outline: none;
+  }
+}
+
+// Defaults - overridden by classes or mixins
 h1,
 h2,
 h3,
@@ -97,43 +132,21 @@ h4,
 h5,
 h6 {
   color: $header-text-color-dark;
+  line-height: $header-line-height;
+  text-decoration: none;
 }
 
 p {
   @include base-body-copy;
+  margin-bottom: $type-margin;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
-// $body-font-size: $font-size-med; // 15px
-// $hero-text-size: strip-units($h2-font-size) * 1rem; // 22px
-// $small-font-size: 13px;
-// $tiny-font-size: 11px;
-// $subhead-font-size: $base-font-size * 1.5; // 24px
-// $caption-font-size: $small-font-size;
-
-// Line height
-$base-line-height: 1.5;
-$header-line-height: 1.25;
-
-// Type Spacing
-$type-margin: 20px;
-$type-margin--small: 12px;
-
-$type-indent: 2em;
-
-// text-decoration: none;
-
-// p {
-//   font-size: $body-font-size;
-//   margin-bottom: $type-margin;
-//   line-height: $base-line-height;
-//
-//   &:last-child {
-//     margin-bottom: 0;
-//   }
-// }
-
 a {
-  @extend %link;
+  @include link;
 }
 
 hr {
@@ -164,6 +177,22 @@ cite {
   }
 }
 
+.screen-reader-only { // http://webaim.org/techniques/css/invisiblecontent/#absolutepositioning
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+
+// $body-font-size: $font-size-med; // 15px
+// $small-font-size: 13px;
+// $tiny-font-size: 11px;
+// $subhead-font-size: $base-font-size * 1.5; // 24px
+// $caption-font-size: $small-font-size;
+
 // // UX Style guide does not specify these styles, but this class is also not currently in use. Consult with UX if using.
 // .text--caption {
 //   font-weight: $font-weight-regular;
@@ -184,13 +213,3 @@ cite {
 // .heavy {
 //   font-weight: $font-weight-bold;
 // }
-
-
-.screen-reader-only { // http://webaim.org/techniques/css/invisiblecontent/#absolutepositioning
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}

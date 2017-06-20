@@ -8,7 +8,7 @@
 
   p {
     @include font-style--large-regular;
-    margin-top: 28px; // TODO new type spacing (but this may be home specific)
+    margin-top: $type-margin-large;
   }
 }
 
@@ -21,7 +21,7 @@
 
   p {
     @include font-style--xl-light;
-    margin-top: 28px;
+    margin-top: $type-margin-large;
   }
 }
 
@@ -43,7 +43,6 @@
 
   &__heading {
     @include font-style--med-bold;
-    text-transform: uppercase;
     margin-bottom: 0;
   }
 

@@ -53,22 +53,20 @@
 
 @mixin toggle-text {
   .toggle__text-label {
-    text-transform: uppercase;
-    font-size: $small-font-size;
-    font-weight: $font-weight-bold;
+    @include font-style--small-bold-uppercase;
   }
 
   .toggle__text-label--on-state {
-    color: $dark-text-color;
+    color: $text-color-grey;
   }
 
   &.toggle-switch-block--on {
     .toggle__text-label--initial-state {
-      color: $dark-text-color;
+      color: $text-color-grey;
     }
 
     .toggle__text-label--on-state {
-      color: $body-text-color;
+      color: $text-color-dark;
     }
   }
 

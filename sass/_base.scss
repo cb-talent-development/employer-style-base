@@ -46,15 +46,12 @@
   // @import 'reset';
 
   // Typography and Elements
+  @include base-body-copy;
   @include font-feature-settings("kern", "liga", "frac", "pnum");
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $base-background-color;
-  color: $body-text-color;
   font-family: $base-font-family;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  font-weight: $font-weight-regular;
 
   // @import "lists";
 }

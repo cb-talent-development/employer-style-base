@@ -62,10 +62,10 @@ $visual-guide-breakpoint-small: 750px;
 
   .visual-guide__image {
     display: none;
-    
+
     @media only screen and (min-width: $visual-guide-breakpoint-small) {
       @include align-self(center);
-      @include justify-content(center);     
+      @include justify-content(center);
     }
   }
 
@@ -96,7 +96,7 @@ $visual-guide-breakpoint-small: 750px;
   .visual-guide__content {
     display: block;
 
-    @media only screen and (min-width: $visual-guide-breakpoint-small) 
+    @media only screen and (min-width: $visual-guide-breakpoint-small)
     {
       &.guide__content--left {
         @include justify-content(flex-end);
@@ -131,7 +131,7 @@ $visual-guide-breakpoint-small: 750px;
     border: $visual-guide-step-border;
     border-radius: 50%;
     box-sizing: border-box;
-    font-size: $body-font-size;
+    font-size: $font-size-med;
     height: $visual-guide-step-size;
     margin: auto;
     width: $visual-guide-step-size;

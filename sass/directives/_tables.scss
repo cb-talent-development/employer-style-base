@@ -83,6 +83,7 @@
 
   th[scope='row'] {
     @include font-style--small-bold-uppercase;
+    color: $text-color-dark;
     padding: $table--row-column-headers--row-top-bottom-padding $base-spacing-medium;
     background-color: $table-row-th--background;
     text-align: left;

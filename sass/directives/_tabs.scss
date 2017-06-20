@@ -9,13 +9,11 @@
     @include flex-grow(1);
     @include flex-shrink(0);
     @include flex-basis(calc((1 / #{$tabs}) * 100%));
+    @include font-style--small-bold-uppercase;
     border-right: $base-border;
     padding: $base-spacing-small;
     list-style-type: none;
     text-align: center;
-    text-transform: uppercase;
-    font-size: $small-font-size;
-    font-weight: $font-weight-bold;
     color: $dark-text-color;
     cursor: pointer;
 

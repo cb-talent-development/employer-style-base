@@ -82,10 +82,10 @@
   }
 
   th[scope='row'] {
+    @include font-style--small-bold-uppercase;
     padding: $table--row-column-headers--row-top-bottom-padding $base-spacing-medium;
     background-color: $table-row-th--background;
     text-align: left;
-    font-size: $small-font-size;
 
     small {
       display: block;
@@ -100,11 +100,11 @@
     padding: $table--row-column-headers--row-top-bottom-padding 1.5rem;
     color: $grey-demon;
     text-align: center;
-    font-size: $small-font-size;
+    font-size: $font-size-small;
   }
 
   .button {
-    font-size: $small-font-size;
+    font-size: $font-size-small;
   }
 }
 

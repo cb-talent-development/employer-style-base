@@ -51,3 +51,8 @@
     @include font-style--xl-light;
   }
 }
+
+@mixin heading--item {
+  @include font-style--small-bold-uppercase;
+  margin-bottom: $type-margin--small;
+}

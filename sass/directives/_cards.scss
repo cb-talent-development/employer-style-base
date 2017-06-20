@@ -30,7 +30,7 @@
   }
 
   h3 {
-    @include font-style--small-bold-uppercase;
+    @include heading--item;
   }
 
   @media only screen and (min-width: $small-screen-max) { // TODO turning off the fanciness on mobile but should there still be some sort of state for usability?

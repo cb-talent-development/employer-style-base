@@ -116,13 +116,13 @@
     @include display(flex);
     @include flex(1);
     @include align-items(center);
+    @include font-style--small-bold-uppercase;
     margin: 0;
     border: $form-border;
-    padding: 6px 24px;
+    padding: 6px 10px;
     background-color: $grey-lighter;
     cursor: pointer;
     transition: $toggle-button-transistion--radio;
-    font-size: $font-size-small;
 
     &:before {
       content: '\f111';

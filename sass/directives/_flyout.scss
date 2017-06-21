@@ -104,6 +104,18 @@
     margin-left: -$container-edge-padding;
     margin-right: -$container-edge-padding;
   }
+
+  @media only screen and (pointer: coarse) and (hover: none) {
+    &:active {
+      ul {
+        display: block;
+      }
+
+      .mobile-subnav__top-link:after {
+        content: '';
+      }
+    }
+  }
   
   &:hover {
     ul {

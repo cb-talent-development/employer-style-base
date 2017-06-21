@@ -35,7 +35,7 @@ $header-text-color-dark: $text-color-dark;
 $hero-text-color-light: white;
 $hero-text-color-dark: $anchor-blue;
 
-$base-accent-color: $emerald;
+$base-accent-color: $emerald;  // TODO check whether this is still in use
 $text-highlight: $lime-dark;
 
 // Text Colors - Links
@@ -206,6 +206,7 @@ cite {
   }
 }
 
+// TODO consolidate with https://github.com/cbdr/employer/blob/topic/EM-1483-typography/app/assets/stylesheets/layouts/_common.scss#L116, pick class name, determine where it should live
 .screen-reader-only { // http://webaim.org/techniques/css/invisiblecontent/#absolutepositioning
   position: absolute;
   left: -10000px;

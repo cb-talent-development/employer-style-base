@@ -30,8 +30,7 @@
 
   &__heading {
     @include font-style--xl-light;
-    margin-bottom: $type-margin;
-    color: $header-text-color;
+    @include base-heading-copy;
   }
 
   p {

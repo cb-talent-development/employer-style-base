@@ -104,6 +104,13 @@ $type-indent: 2em;
   line-height: $base-line-height;
 }
 
+@mixin base-heading-copy {
+  color: $header-text-color-dark;
+  line-height: $header-line-height;
+  text-decoration: none;
+  margin-bottom: $type-margin;
+}
+
 @mixin link {
   @include transition($link-color-transition);
   color: $base-link-color;
@@ -126,40 +133,33 @@ $type-indent: 2em;
 }
 
 // Defaults - overridden by classes or mixins
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $header-text-color-dark;
-  line-height: $header-line-height;
-  text-decoration: none;
-  margin-bottom: $type-margin;
-}
-
-
 h1 {
+  @include base-heading-copy;
   @include font-style--xxl-light;
 }
 
 h2 {
+  @include base-heading-copy;
   @include font-style--xl-light;
 }
 
 h3 {
+  @include base-heading-copy;
   @include font-style--large-regular;
 }
 
 h4 {
+  @include base-heading-copy;
   @include font-style--med-bold-uppercase;
 }
 
 h5 {
+  @include base-heading-copy;
   @include font-style--small-bold-uppercase;
 }
 
 h6 {
+  @include base-heading-copy;
   @include font-style--small-bold;
 }
 
@@ -171,6 +171,8 @@ p {
     margin-bottom: 0;
   }
 }
+
+// Other Typography
 
 a {
   @include link;

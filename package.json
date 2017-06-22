@@ -1,10 +1,10 @@
 {
   "name": "employer-style-base",
   "version": "2.2.1",
-  "authors": [
-    "Content Enablement <ContentEnablementProductTeam@careerbuilder.com>"
-  ],
+  "author": "EmployerSiteContentProducts@cb.com",
+  "license": "Apache-2.0",
   "description": "A stack-agnostic Sass library providing basic components and typography intended for the Employer experience",
+  "repository": "github:cb-talent-development/employer-style-base",
   "keywords": [
     "cb",
     "careerbuilder",
@@ -19,17 +19,11 @@
     "components",
     "typography"
   ],
-  "main": [
-    "sass/_base.scss"
+  "files": [
+    "sass"
   ],
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "main": "sass/_base.scss",
   "dependencies": {
-    "bourbon": "~4.2.3"
+    "bourbon": "^4.3.4"
   }
 }

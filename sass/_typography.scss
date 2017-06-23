@@ -151,11 +151,13 @@ h3 {
 h4 {
   @include base-heading-copy;
   @include font-style--med-bold-uppercase;
+  margin-bottom: $type-margin--small;
 }
 
 h5 {
   @include base-heading-copy;
   @include font-style--small-bold-uppercase;
+  margin-bottom: $type-margin--small;
 }
 
 h6 {

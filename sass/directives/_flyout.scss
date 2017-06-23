@@ -103,7 +103,7 @@
       background-color: white;
       border-bottom: $base-border;
       position: absolute !important;
-      top: 0;
+      top: 45px;
       left: 0;
       right: 0;
       width: 100%;
@@ -156,6 +156,18 @@
       font-size: $top-bar-angle-size;
       color: $base-link-color;
       content: '\f107';
+      position: absolute;
+      right: $container-edge-padding;
+    }
+  }
+
+  .mobile-subnav__close {
+    &:after {
+      font-family: FontAwesome;
+      font-size: $top-bar-angle-size;
+      color: $base-link-color;
+      content: '\f107';
+      transform: rotate(180deg);
       position: absolute;
       right: $container-edge-padding;
     }

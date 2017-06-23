@@ -96,6 +96,12 @@
       ul {
         display: block;
       }
+
+      .mobile-subnav__top-link {
+        &:after {
+          content: '';
+        }
+      }
     }
 
     ul {
@@ -178,11 +184,23 @@
     ul {
       display: none;
     }
+
+    .mobile-subnav__top-link {
+      &:after {
+        content: '';
+      }
+    }
   }
 
   &.mobile-subnav__wrap--show {
     ul {
       display: block;
+    }
+
+    .mobile-subnav__top-link {
+      &:after {
+        content: '\f107';
+      }
     }
   }
 }

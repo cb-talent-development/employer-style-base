@@ -161,9 +161,16 @@
     }
   }
 
+  // Mainly for mobile
   &.mobile-subnav__wrap--hidden {
     ul {
       display: none;
+    }
+  }
+
+  &.mobile-subnav__wrap--show {
+    ul {
+      display: block;
     }
   }
 }

@@ -164,7 +164,6 @@ h6 {
 }
 
 p {
-  @include base-body-copy;
   margin-bottom: $type-margin;
 
   &:last-child {

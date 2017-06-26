@@ -108,8 +108,8 @@
       display: none;
       background-color: white;
       border-bottom: $base-border;
-      position: absolute !important;
-      top: 45px;
+      position: absolute;
+      top: $product_subnav--height;
       left: 0;
       right: 0;
       width: 100%;
@@ -127,7 +127,7 @@
           display: block;
           float: none;
           border: none;
-          color: $alt-link-color;
+          color: $primary-nav-link-color;
           margin: 0 $container-edge-padding;
           
           &.active {
@@ -152,7 +152,7 @@
 
   .mobile-subnav__top-link {
     line-height: $product_subnav--height;
-    color: $alt-link-color;
+    color: $primary-nav-link-color;
     padding-left: $container-edge-padding;
     text-transform: uppercase;
     position: relative;
@@ -187,7 +187,7 @@
 
     .mobile-subnav__top-link {
       &:after {
-        content: '';
+        content: '\f107';
       }
     }
   }
@@ -199,7 +199,7 @@
 
     .mobile-subnav__top-link {
       &:after {
-        content: '\f107';
+        content: '';
       }
     }
   }

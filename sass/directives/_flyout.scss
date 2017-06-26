@@ -142,7 +142,7 @@
     }
   }
 
-  .mobile-subnav__top-link, .mobile-subnav__close {
+  .mobile-subnav__top-link {
     display: block;
 
     @media only screen and (min-width: $medium-screen-min) {
@@ -168,6 +168,8 @@
   }
 
   .mobile-subnav__close {
+    display: none;
+    
     &:after {
       font-family: FontAwesome;
       font-size: $top-bar-angle-size;

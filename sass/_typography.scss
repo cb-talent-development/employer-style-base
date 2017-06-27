@@ -15,7 +15,7 @@ $font-size-small: 0.8125rem; // 13px
 $font-size-smallest: 0.6875rem; // 11px
 
 // Font Sizes - Non-Standard
-  // Use namespacing so usage is clear.
+  // NOTE: Use namespacing so usage is clear.
   // Not for reuse unless a new pattern has emerged
 $error-page__large-header-text: $base-font-size * 8; // 128px
 $error-page__large-header-text--mobile: $base-font-size * 4; //64px
@@ -26,17 +26,17 @@ $font-weight-regular: 400;
 $font-weight-bold: 700;
 
 // Text Colors
-$text-color-dark: $anchor-blue;
-$text-color-grey: $grey-demon;
-$text-color-grey-light: $grey-dark;
+$text-color-dark: $anchor-blue; // typically used on non-white backgrounds
+$text-color-grey: $grey-demon; // default text color. used on white backgrounds
+$text-color-grey-light: $grey-dark; // toggle-switch tabs
 
-$header-text-color-light: white;
+$header-text-color-light: white; // typically used on blue/gradient backgrounds
 $header-text-color-dark: $text-color-dark;
-$hero-text-color-light: white;
+$hero-text-color-light: white; // typically used on blue/gradient backgrounds
 $hero-text-color-dark: $anchor-blue;
 
-$base-accent-color: $emerald;  // TODO check whether this is still in use
-$text-highlight: $lime-dark;
+$base-accent-color: $emerald;  // TODO check whether this is still in use. Used on .text--accent > used on email modal > not in use?
+$text-highlight: $lime-dark; // price/discount elements
 
 // Text Colors - Links
 $base-link-color: $sky-blue;
@@ -48,9 +48,9 @@ $base-line-height: 1.5;
 $header-line-height: 1.25;
 
 // Type Spacing
-$type-margin-large: 28px;
+$type-margin-large: 28px; // hero headers
 $type-margin: 20px;
-$type-margin--small: 12px;
+$type-margin--small: 12px; // used with headers/fonts font-size-med and smaller
 
 $type-indent: 2em;
 

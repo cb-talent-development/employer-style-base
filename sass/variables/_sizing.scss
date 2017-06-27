@@ -60,6 +60,7 @@ $base-margin--small: $base-margin / 2; // 6px
 $base-padding: $base-spacing;
 $section-padding: 70px;
 $section-padding--mobile: 50px;
+$header-padding: 70px;
 
 $type-margin: 20px;
 $type-margin--small: 12px;
@@ -156,6 +157,7 @@ $header-height-large: 445px;
 $header-height-product: 455px;
 $header-top-bottom-padding: 32px;
 $header-headline-bottom-margin: 15px;
+$header-width-normal: 47ch;
 
 // Form Elements
 $base-radio-box-shadow: 0 0 0 1px $grey-light inset, 0 0 0 9px white inset, 0 0 0 10px $grey-light inset;

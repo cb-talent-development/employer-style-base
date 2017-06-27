@@ -8,11 +8,11 @@
     @include align-items(center);
   }
 
-  &__headline--small {
+  &__headline {
     @include span-columns(12);
     padding-right: 20px;
-    padding-top: 50px;
-    padding-bottom: 134px;
+    padding: $header-padding 0;
+    max-width: $header-width-normal;
 
     h1 {
       margin-bottom: 15px;

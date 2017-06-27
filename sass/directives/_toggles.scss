@@ -94,12 +94,6 @@
     @include display(flex);
     @include flex(1);
     margin: 0;
-    border: $form-border;
-    padding: 6px 24px;
-    background-color: $grey-lighter;
-    cursor: pointer;
-    transition: $toggle-button-transistion--radio;
-    font-size: $font-size-small;
 
     &:first-of-type label {
       border-top-left-radius: $minor-border-radius;
@@ -123,6 +117,7 @@
     background-color: $grey-lighter;
     cursor: pointer;
     transition: $toggle-button-transistion--radio;
+    font-size: $font-size-small;
 
     &:before {
       content: '\f111';

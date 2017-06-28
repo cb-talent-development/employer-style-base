@@ -6,19 +6,20 @@ View code and component examples in the [pattern library](http://cb-talent-devel
 
 ### Consumption
 
-Install with Bower (from an appropriate repository)
+Add and install with Yarn:
 
 ```sh
-$ bower install employer-style-base
+$ yarn add employer-style-base
 ```
 
 Now, import `sass/base` after [Bourbon](http://bourbon.io/), and before any grids or application sources in your main `application.scss`. For example:
 
 ```scss
-@import 'bower_components/bourbon/app/assets/stylesheets/bourbon';
-@import 'bower_components/employer-style-base/sass/base';
+@import 'bourbon/app/assets/stylesheets/bourbon';
+@import 'employer-style-base/sass/base';
 @import 'some-grid-foundation';
-@import 'my-app';
+
+@import 'your-app';
 ```
 
 You may now apply the styling to your application. Note that all styling is scoped with the `employer-scope` class. We would have preferred leaving scoping up to the consuming application, but certain inflexibilites with Sass and some peculiar things this library is doing currently forbid this.
@@ -29,7 +30,7 @@ You may use any grid framework of your choosing. We have, however, built a [Neat
 
 ### What's included
 
-At the moment, only uncompiled Sass source files are available for consumption. That means your application will need to perform the precompilation, whether it be through Gulp, Grunt, Rails asset pipeline, etc. Do note that `employer-style-base` depends upon, and includes [Bourbon](http://bourbon.io/) for basic Sass mixins. Additionally, this library includes its own reset, scoped to `employer-scope`.
+At the moment, only uncompiled Sass source files are available for consumption. That means your application will need to perform the precompilation, whether it be through Webpack, Gulp, Grunt, Rails asset pipeline, etc. Do note that `employer-style-base` depends upon and includes [Bourbon](http://bourbon.io/) for basic Sass mixins. Additionally, this library includes its own reset, scoped to `employer-scope`.
 
 The current layout of this library is heavily inspired by [Bitters](http://bitters.bourbon.io/), a wonderful boilerplate of common-sense Sass conventions and structure. Our outline looks a little something like this:
 
@@ -49,15 +50,16 @@ After adding a new directive to [`sass/directives/`](sass/directives/), `@import
 
 #### Updating the Version
 
-After your PR is merged, add a [release](https://github.com/cb-talent-development/employer-style-base/releases) and update the [semantic version number appropriately](http://semver.org/).
+After your PR is merged, update the [semantic version number appropriately](http://semver.org/), add a [release](https://github.com/cb-talent-development/employer-style-base/releases) and `publish` via Yarn or npm.
 
-Then update the `bower.json` file in your repo with the new number.
+Then update the `package.json` file in your project with the new version:
 
-```
-"employer-style-base": "=1.0.0"
+```json
+  "dependencies": {
+    "employer-style-base": "=2.2.1"
+  }
 ```
 
 ### Future
 
 - Implement build process to compile CSS into `dist` for easy consumption
-- Remove `bourbon` dependency

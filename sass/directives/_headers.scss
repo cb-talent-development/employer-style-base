@@ -109,7 +109,7 @@
   }
 }
 
-@mixin header--large($background-image-large, $background-image-medium: nil) {
+@mixin header--large--background-image($background-image-large, $background-image-medium: nil) {
   @include header-hero;
   @include heading--hero;
   min-height: $header-height-product;
@@ -135,7 +135,17 @@
     left: 0;
     @include cbGradientTransparent;
   }
+}
 
+@mixin header--large--side-image { // TODO refactor common styles into header--large
+  @include header-hero;
+  @include heading--hero;
+  @include cbGradient;
+  min-height: $header-height-product; // TODO rename to header-height-large
+
+  @media only screen and (max-width: $small-screen-max) {
+    min-height: unset;
+  }
 }
 
 @mixin header--large--left {

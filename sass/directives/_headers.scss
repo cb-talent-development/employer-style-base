@@ -19,8 +19,8 @@
     right: 0;
     width: 100%;
     height: 100%;
-    padding-top: $base-margin;
-    padding-bottom: $base-margin;
+    padding-top: $header-padding;
+    padding-bottom: $header-padding;
 
     @media only screen and (max-width: $small-screen-max) {
       position: relative;
@@ -161,6 +161,8 @@
 
 @mixin header--large--left {
   &__text {
+    max-width: $header-width-normal;
+
     p {
       @media only screen and (max-width: $small-screen-max) {
         display: none;

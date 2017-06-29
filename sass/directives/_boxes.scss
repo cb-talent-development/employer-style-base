@@ -15,8 +15,8 @@
   }
 
   p {
-    color: $paragraph-text-color;
-    font-size: $small-font-size;
+    color: $text-color-grey;
+    font-size: $font-size-small;
   }
 }
 
@@ -38,13 +38,10 @@
 
     .ecom__column-item-box--header {
       @include cbGradient;
-
-      h3 {
-        color: white;
-        padding-top: $base-margin;
-        padding-bottom: $base-margin;
-        margin-bottom: 0;
-      }
+      color: white;
+      padding-top: $base-margin;
+      padding-bottom: $base-margin;
+      margin-bottom: 0;
     }
 
     .ecom__column-item-box--price {
@@ -54,7 +51,7 @@
       padding-bottom: $base-margin;
 
       span {
-        font-size: $h2-font-size;
+        font-size: $font-size-large;
       }
     }
 
@@ -68,6 +65,7 @@
         padding-bottom: $base-margin;
         border-top: $base-border;
         width: 90%;
+        color: $text-color-dark;
 
         .ecom__dashed-price {
           text-decoration: line-through;

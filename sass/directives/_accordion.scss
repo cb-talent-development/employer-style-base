@@ -8,7 +8,7 @@
   border-bottom: $accordion-bottom-border solid $grey-lightest;
 
   p {
-    color: $paragraph-text-color;
+    color: $text-color-grey;
     padding-bottom: $base-padding;
   }
 }
@@ -20,6 +20,7 @@
 
 // Accordion Buttons
 @mixin accordion {
+  @include font-style--med-bold-uppercase;
   background-color: $panel-primary;
   color: $header-text-color;
   padding: $type-margin $base-padding;
@@ -30,10 +31,8 @@
   outline: none;
   transition: $element-slow-fade-in;
   border-radius: 0px;
-  font-size: $body-font-size;
   vertical-align: middle;
   white-space: normal;
-  text-transform: uppercase;
 
   &:hover,
   &:active,
@@ -49,7 +48,7 @@
     font-family: FontAwesome;
     float: right;
     font-size: $accordion-angle-size;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-regular;
     color: $base-link-color;
     display: inline-block;
     text-align: center;

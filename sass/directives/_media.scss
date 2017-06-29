@@ -44,12 +44,12 @@
     }
 
     &--headline {
-      font-size: $base-font-size;
-      margin-bottom: 0;
+      @include font-style--small-bold-uppercase;
+      margin-bottom: $base-spacing-smallest;
     }
 
     &--description {
-      color: $paragraph-text-color;
+      color: $text-color-grey;
     }
   }
 }

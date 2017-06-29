@@ -32,7 +32,7 @@
       margin-top: 0;
       margin-bottom: $header-headline-bottom-margin;
       line-height: normal;
-      color: $hero-text-color;
+      color: $hero-text-color-light;
 
       @media only screen and (max-width: $small-screen-max) {
         margin-bottom: 0;
@@ -42,13 +42,13 @@
     p {
       max-width: 28em;
       margin-bottom: 0;
-      font-size: $hero-text-size;
-      color: $hero-text-color;
+      color: $hero-text-color-light;
     }
   }
 }
 
 @mixin header-hero--home($background-image-large, $background-image-medium: nil) {
+  @include heading--hero;
   position: relative;
   min-height: $header-height-large;
   overflow: hidden;
@@ -104,7 +104,6 @@
 
     p {
       margin-bottom: 0;
-      font-size: $hero-text-size;
       color: $hero-text-color-dark;
     }
   }
@@ -112,6 +111,7 @@
 
 @mixin header--large($background-image-large, $background-image-medium: nil) {
   @include header-hero;
+  @include heading--hero;
   min-height: $header-height-product;
   background-image: url(asset_path(#{$background-image-large}));
   background-size: auto $header-height-product;

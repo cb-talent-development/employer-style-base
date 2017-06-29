@@ -4,6 +4,7 @@
 @import "variables/sizing";
 @import "variables/animations";
 @import "typography";
+@import "variables/top_bar";
 
 // SASS Directives
 @import "directives/accents";
@@ -21,7 +22,6 @@
 @import "directives/groups";
 @import "directives/headers";
 @import "directives/headings";
-@import "directives/link";
 @import "directives/media";
 @import "directives/modals";
 @import "directives/speech_bubble";
@@ -46,15 +46,13 @@
   // @import 'reset';
 
   // Typography and Elements
+  @include base-body-copy;
   @include font-feature-settings("kern", "liga", "frac", "pnum");
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $base-background-color;
-  color: $body-text-color;
+  color: $text-color-grey;
   font-family: $base-font-family;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  font-weight: $font-weight-normal;
 
   // @import "lists";
 }

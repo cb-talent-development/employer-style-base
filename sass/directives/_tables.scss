@@ -82,15 +82,16 @@
   }
 
   th[scope='row'] {
+    @include font-style--small-bold-uppercase;
+    color: $text-color-dark;
     padding: $table--row-column-headers--row-top-bottom-padding $base-spacing-medium;
     background-color: $table-row-th--background;
     text-align: left;
-    font-size: $small-font-size;
 
     small {
       display: block;
-      font-size: 0.6875rem; // TODO is 11 the new small-font-size
-      font-weight: $font-weight-normal;
+      font-size: $font-size-smallest;
+      font-weight: $font-weight-regular;
       text-transform: none;
     }
   }
@@ -100,11 +101,11 @@
     padding: $table--row-column-headers--row-top-bottom-padding 1.5rem;
     color: $grey-demon;
     text-align: center;
-    font-size: $small-font-size;
+    font-size: $font-size-small;
   }
 
   .button {
-    font-size: $small-font-size;
+    font-size: $font-size-small;
   }
 }
 
@@ -274,11 +275,12 @@
 }
 
 @mixin section-bar($breakpoint) {
-  background-color: $table-row-light;
-  padding: $base-margin;
-  margin-bottom: $section-padding;
+  @include font-style--med-bold-uppercase;
   border-radius: $minor-border-radius;
-  font-weight: $font-weight-bold;
+  margin-bottom: $section-padding;
+  padding: $base-margin;
+  background-color: $table-row-light;
+  line-height: normal;
 
   @media only screen and (max-width: $breakpoint) {
     margin-bottom: 0;

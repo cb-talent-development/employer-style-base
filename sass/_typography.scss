@@ -1,75 +1,182 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,400i,700);
 
-// Typography
+// Typefaces
 $lato: Lato, 'Lato', Helvetica, Arial, sans-serif;
 
-// Typefaces
 $base-font-family: $lato;
 $header-font-family: $lato;
 
+// Font Sizes - Standard
+$font-size-xxl: 2.75rem; // 44px
+$font-size-xl: 1.875rem; // 30px
+$font-size-large: 1.375rem; // 22px
+$font-size-med: 0.9375rem; // 15px
+$font-size-small: 0.8125rem; // 13px
+$font-size-smallest: 0.6875rem; // 11px
+
+// Font Sizes - Non-Standard
+  // NOTE: Use namespacing so usage is clear.
+  // Not for reuse unless a new pattern has emerged
+$error-page__large-header-text: $base-font-size * 8; // 128px
+$error-page__large-header-text--mobile: $base-font-size * 4; //64px
+
 // Font Weights
 $font-weight-light: 300;
-$font-weight-normal: 400;
+$font-weight-regular: 400;
 $font-weight-bold: 700;
 
-// Headers
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $header-font-family;
-  line-height: $header-line-height;
+// Text Colors
+$text-color-dark: $anchor-blue; // typically used on non-white backgrounds
+$text-color-grey: $grey-demon; // default text color. used on white backgrounds
+$text-color-grey-light: $grey-dark; // toggle-switch tabs
+
+$header-text-color-light: white; // typically used on blue/gradient backgrounds
+$header-text-color-dark: $text-color-dark;
+$hero-text-color-light: white; // typically used on blue/gradient backgrounds
+$hero-text-color-dark: $anchor-blue;
+
+$base-accent-color: $emerald;  // TODO check whether this is still in use. Used on .text--accent > used on email modal > not in use?
+$text-highlight: $lime-dark; // price/discount elements
+
+// Text Colors - Links
+$base-link-color: $sky-blue;
+$hover-link-color: $sky-blue-light;
+$visited-link-color: $purple;
+
+// Line height
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+
+// Type Spacing
+$type-margin-large: 28px; // hero headers
+$type-margin: 20px;
+$type-margin--small: 12px; // used with headers/fonts font-size-med and smaller
+
+$type-indent: 2em;
+
+// Type Styles
+@mixin font-style--xxl-light { // Style 1: hero headers
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-light;
+}
+
+@mixin font-style--xl-light {  // Style 2: section headers and subheaders
+  font-size: $font-size-xl;
+  font-weight: $font-weight-light;
+}
+
+@mixin font-style--large-regular {  // Style 3: hero subheaders
+  font-size: $font-size-large;
+  font-weight: $font-weight-regular;
+}
+
+@mixin font-style--med-bold-uppercase { // Style 4: section headers, buttons
+  font-size: $font-size-med;
   font-weight: $font-weight-bold;
-  color: $header-text-color;
+  text-transform: uppercase;
+}
+
+@mixin font-style--small-bold-uppercase { // Style 5: navigation, labels
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+}
+
+@mixin font-style--small-bold { // Style 6: nav dropdowns
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+}
+
+@mixin font-style--med-regular { // Style 7: body copy
+  font-size: $font-size-med;
+  font-weight: $font-weight-regular;
+}
+
+// Style 8
+
+@mixin font-style--smallest-regular { // Style 9: table captions, other table elements
+  font-size: $font-size-smallest;
+  font-weight: $font-weight-regular;
+}
+
+@mixin base-body-copy {
+  @include font-style--med-regular;
+  line-height: $base-line-height;
+}
+
+@mixin base-heading-copy {
+  color: $header-text-color-dark;
+  line-height: $header-line-height;
   text-decoration: none;
-  margin: 0;
   margin-bottom: $type-margin;
 }
 
-h1,
-.text--headline-1 {
-  font-size: $h1-font-size;
+@mixin link {
+  @include transition($link-color-transition);
+  color: $base-link-color;
+  text-decoration: none;
+  font-weight: $font-weight-bold;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $visited-link-color;
+  }
+
+  &:active, &:focus {
+    outline: none;
+  }
 }
 
-h2,
-.text--headline-2 {
-  font-size: $h2-font-size;
+// Defaults - overridden by classes or mixins
+h1 {
+  @include base-heading-copy;
+  @include font-style--xxl-light;
 }
 
-h3,
-.text--headline-3 {
-  font-size: $h3-font-size;
+h2 {
+  @include base-heading-copy;
+  @include font-style--xl-light;
 }
 
-h4,
-.text--headline-4 {
-  font-size: $h4-font-size;
+h3 {
+  @include base-heading-copy;
+  @include font-style--large-regular;
 }
 
-h5,
-.text--headline-5 {
-  font-size: $h5-font-size;
+h4 {
+  @include base-heading-copy;
+  @include font-style--med-bold-uppercase;
+  margin-bottom: $type-margin--small;
 }
 
-h6,
-.text--headline-6 {
-  font-size: $h6-font-size;
+h5 {
+  @include base-heading-copy;
+  @include font-style--small-bold-uppercase;
+  margin-bottom: $type-margin--small;
+}
+
+h6 {
+  @include base-heading-copy;
+  @include font-style--small-bold;
 }
 
 p {
-  font-size: $body-font-size;
   margin-bottom: $type-margin;
-  line-height: $base-line-height;
 
   &:last-child {
     margin-bottom: 0;
   }
 }
 
+// Other Typography
+
 a {
-  @extend %link;
+  @include link;
 }
 
 hr {
@@ -86,51 +193,16 @@ ul.list--body {
 
 blockquote {
   border-left: 2px solid $base-border-primary-color;
-  color: lighten($body-text-color, 15);
+  color: lighten($text-color-dark, 15);
   margin: $base-spacing 0;
   padding-left: $base-spacing / 2;
 }
 
 cite {
-  color: lighten($body-text-color, 25);
+  color: lighten($text-color-dark, 25);
   font-style: italic;
 
   &:before {
     content: "\2014 \00A0";
   }
-}
-
-// UX Style guide does not specify these styles, but this class is also not currently in use. Consult with UX if using.
-.text--caption {
-  font-weight: $font-weight-normal;
-  font-size: $caption-font-size;
-  line-height: $base-line-height;
-}
-
-.text--details {
-  font-weight: $font-weight-normal;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-}
-
-.light {
-  font-weight: $font-weight-light;
-}
-
-.heavy {
-  font-weight: $font-weight-bold;
-}
-
-// Forms
-$form-font-family: $base-font-family;
-$form-label-font-weight: $font-weight-bold;
-$form-input-font-weight: $font-weight-normal;
-
-.screen-reader-only { // http://webaim.org/techniques/css/invisiblecontent/#absolutepositioning
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
 }

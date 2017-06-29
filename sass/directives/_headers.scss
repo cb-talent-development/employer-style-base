@@ -146,13 +146,20 @@
   @media only screen and (max-width: $small-screen-max) {
     min-height: unset;
   }
+
+  .header--large__image-wrap {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .header--large__image {
+    display: block;
+    max-width: 550px;
+  }
 }
 
 @mixin header--large--left {
-  @media only screen and (max-width: $small-screen-max) {
-    background-image: none;
-  }
-
   &__text {
     p {
       @media only screen and (max-width: $small-screen-max) {

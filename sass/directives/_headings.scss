@@ -1,29 +1,25 @@
-// TODO incorporate site-wide typograpy updates
-
 @mixin heading--hero {
   h1 {
-    font-size: 2.75rem;
-    font-weight: $font-weight-light;
+    @include font-style--xxl-light;
     margin-bottom: 0;
   }
 
   p {
-    margin-top: 28px; // TODO new type spacing (but this may be home specific)
-    font-size: 1.375rem;
+    @include font-style--large-regular;
+    margin-top: $type-margin-large;
   }
 }
 
 @mixin heading--hero--xl {
   // In progress - For use with Extra Large header style (https://cb-content-enablement.atlassian.net/wiki/pages/viewpage.action?pageId=43897344)
   h1 {
-    font-size: 1.375rem;
+    @include font-style--large-regular;
     margin-bottom: 0;
   }
 
   p {
-    margin-top: 28px;
-    font-size: 2.75rem;
-    font-weight: $font-weight-light;
+    @include font-style--xl-light;
+    margin-top: $type-margin-large;
   }
 }
 
@@ -31,13 +27,12 @@
   margin-bottom: $type-margin;
 
   &__heading {
-    font-size: 1.875rem;
-    font-weight: $font-weight-light;
-    margin-bottom: $type-margin;
+    @include font-style--xl-light;
+    @include base-heading-copy;
   }
 
   p {
-    color: $paragraph-text-color;
+    color: $text-color-grey;
   }
 }
 
@@ -45,15 +40,20 @@
   margin-bottom: $type-margin;
 
   &__heading {
-    font-size: 0.9375rem;
-    font-weight: $font-weight-bold;
-    text-transform: uppercase;
+    @include font-style--med-bold-uppercase;
     margin-bottom: 0;
+    color: $header-text-color;
   }
 
   &__subheading {
-    margin-top: $type-margin;;
-    font-size: 1.875rem;
-    font-weight: $font-weight-light;
+    margin-top: $type-margin;
+    @include font-style--xl-light;
+    color: $header-text-color;
   }
+}
+
+@mixin heading--item {
+  @include font-style--small-bold-uppercase;
+  margin-bottom: $type-margin--small;
+  color: $header-text-color;
 }

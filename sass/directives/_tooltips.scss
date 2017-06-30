@@ -9,7 +9,7 @@
 
   .tooltip-contents {
     display: none;
-    font-size: $tiny-font-size;
+    font-size: $font-size-smallest;
     text-transform: none;
   }
 
@@ -32,7 +32,7 @@
     box-shadow: $base-box-shadow;
     border: 0;
     color: $grey-demon;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-regular;
 
     &:before {
       @include small-strip;

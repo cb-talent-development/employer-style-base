@@ -1,3 +1,30 @@
+// Button Sizes
+$base-button-font-size: $font-size-med;
+$base-button-vertical-padding: $base-input-font-size * 0.375;
+$base-button-horizontal-padding: $base-input-font-size * 1.375;
+$base-button-border-size: 2px;
+$base-button-border-size--text: 3px;
+$base-button-line-height: $base-line-height;
+
+$fixed-button-width: 11.875rem;
+
+$medium-button-font-size: $base-button-font-size;
+$medium-button-vertical-padding: $base-button-vertical-padding;
+$medium-button-horizontal-padding: $base-button-horizontal-padding;
+
+$small-button-font-size: $base-font-size * 0.875;;
+$small-button-vertical-padding: $base-input-font-size * 0.375;
+$small-button-horizontal-padding: $base-input-font-size * 1.375;
+
+$large-button-font-size: $base-button-font-size * 1.25;
+$large-button-vertical-padding: $base-input-font-size * 0.375;
+$large-button-horizontal-padding: $base-input-font-size * 1.375;
+
+$massive-button-font-size: $base-button-font-size * 1.8;
+$massive-button-vertical-padding: $base-input-font-size * 0.375;
+$massive-button-horizontal-padding: $base-input-font-size * 2;
+
+
 @mixin disabled {
   opacity: 0.3;
   filter: alpha(opacity=30); /* IE8 */
@@ -9,7 +36,7 @@
   color: $base-button-text-color;
   display: inline-block;
   font-size: $base-button-font-size;
-  font-weight: bold;
+  font-weight: $font-weight-bold;
   line-height: $base-button-line-height;
   padding: $base-button-vertical-padding $base-button-horizontal-padding;
   text-decoration: none;

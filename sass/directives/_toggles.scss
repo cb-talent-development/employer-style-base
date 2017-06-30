@@ -53,22 +53,24 @@
 
 @mixin toggle-text {
   .toggle__text-label {
-    text-transform: uppercase;
-    font-size: $small-font-size;
-    font-weight: $font-weight-bold;
+    @include font-style--small-bold-uppercase;
+  }
+
+  .toggle__text-label--initial-state {
+    color: $text-color-dark;
   }
 
   .toggle__text-label--on-state {
-    color: $dark-text-color;
+    color: $text-color-grey;
   }
 
   &.toggle-switch-block--on {
     .toggle__text-label--initial-state {
-      color: $dark-text-color;
+      color: $text-color-grey;
     }
 
     .toggle__text-label--on-state {
-      color: $body-text-color;
+      color: $text-color-dark;
     }
   }
 
@@ -91,6 +93,7 @@
   span {
     @include display(flex);
     @include flex(1);
+    margin: 0;
 
     &:first-of-type label {
       border-top-left-radius: $minor-border-radius;
@@ -107,18 +110,19 @@
     @include display(flex);
     @include flex(1);
     @include align-items(center);
+    @include font-style--small-bold-uppercase;
     margin: 0;
     border: $form-border;
-    padding: 6px 24px;
+    padding: 6px $base-spacing-small;
     background-color: $grey-lighter;
     cursor: pointer;
     transition: $toggle-button-transistion--radio;
-    font-size: $small-font-size;
+    font-size: $font-size-small;
 
     &:before {
       content: '\f111';
       font-family: FontAwesome;
-      font-size: 1.45rem;
+      font-size: 1.125rem; // 18px
       margin-right: 6px;
       color: white;
     }

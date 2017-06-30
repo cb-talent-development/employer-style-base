@@ -99,7 +99,7 @@
 
       .mobile-subnav__top-link {
         &:after {
-          content: '';
+          content: '\f106';
         }
       }
     }
@@ -190,18 +190,6 @@
     .mobile-subnav__top-link {
       &:after {
         content: '\f107';
-      }
-    }
-  }
-
-  &.mobile-subnav__wrap--show {
-    ul {
-      display: block;
-    }
-
-    .mobile-subnav__top-link {
-      &:after {
-        content: '';
       }
     }
   }

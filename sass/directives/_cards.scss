@@ -20,7 +20,7 @@
 
   margin: $base-spacing-medium / 2;
   text-align: center;
-  font-weight: $font-weight-normal;
+  font-weight: $font-weight-regular;
 
   &:hover,
   &:active,
@@ -30,8 +30,7 @@
   }
 
   h3 {
-    text-transform: uppercase;
-    font-size: $small-font-size;
+    @include heading--item;
   }
 
   @media only screen and (min-width: $small-screen-max) { // TODO turning off the fanciness on mobile but should there still be some sort of state for usability?
@@ -88,7 +87,7 @@
     @include flex(1);
     @include flex-basis(100%);
 
-    color: $paragraph-text-color;
+    color: $text-color-grey;
   }
 }
 

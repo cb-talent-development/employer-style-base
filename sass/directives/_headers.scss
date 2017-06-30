@@ -249,22 +249,16 @@
 }
 
 @mixin header--small {
-  max-height: 300px;
+  max-height: $header-height-small;
 
   &__headline {
     padding: $header-padding 0;
     max-width: $header-width-normal;
  
-    h1 {
-      margin-bottom: 15px;
-    }
-
-    h2 {
-      margin-top: 15px;
-    }
+    @include heading--small;
 
     @media only screen and (min-width: $mobile-nav-max) {
-      max-height: 300px;
+      max-height: $header-height-small;
     }
 
     @media only screen and (max-width: $medium-screen-max) {

@@ -132,6 +132,7 @@ $visual-guide-breakpoint-small: 750px;
 
     div:after {
       content: counter(overview-count);
+      margin-left: -2px; //Override IPE adding in &nbsp into this container
     }
 
     @media only screen and (min-width: $visual-guide-breakpoint-small) {

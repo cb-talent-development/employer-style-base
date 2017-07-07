@@ -117,8 +117,8 @@ $visual-guide-breakpoint-small: 750px;
     }
   }
 
-  // The step must be within a <span>, not a <div>, and must contain another <span> for the actual counter
-  div.visual-guide__step {
+
+  .visual-guide__step {
     display: none;
     background-color: white;
     border: $visual-guide-step-border;
@@ -130,9 +130,8 @@ $visual-guide-breakpoint-small: 750px;
     width: $visual-guide-step-size;
     color: $text-color-dark;
 
-    div:after {
+    &:after {
       content: counter(overview-count);
-      margin-left: -2px; //Override IPE adding in &nbsp into this container
     }
 
     @media only screen and (min-width: $visual-guide-breakpoint-small) {

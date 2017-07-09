@@ -1,10 +1,10 @@
 // Variables
-@import "variables/breakpoints.scss";
-@import "variables/colors";
-@import "variables/sizing";
-@import "variables/animations";
+@import "00_variables/breakpoints.scss";
+@import "00_variables/colors";
+@import "00_variables/sizing";
+@import "00_variables/animations";
 @import "typography";
-@import "variables/top_bar";
+@import "00_variables/top_bar";
 
 // SASS Directives
 @import "directives/accents";

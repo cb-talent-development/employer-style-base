@@ -95,13 +95,6 @@ $visual-guide-breakpoint-small: 750px;
 
   .visual-guide__content {
     display: block;
-
-    @media only screen and (min-width: $visual-guide-breakpoint-small)
-    {
-      &.guide__content--left {
-        @include justify-content(flex-end);
-      }
-    }
   }
 
   .visual-guide__item-description {
@@ -124,8 +117,8 @@ $visual-guide-breakpoint-small: 750px;
     }
   }
 
-  // The step must be within a <span>, not a <div>, and must contain another <span> for the actual counter
-  span.visual-guide__step {
+
+  .visual-guide__step {
     display: none;
     background-color: white;
     border: $visual-guide-step-border;
@@ -137,7 +130,7 @@ $visual-guide-breakpoint-small: 750px;
     width: $visual-guide-step-size;
     color: $text-color-dark;
 
-    span:after {
+    &:after {
       content: counter(overview-count);
     }
 
@@ -147,6 +140,7 @@ $visual-guide-breakpoint-small: 750px;
       @include display(flex);
       @include justify-content(center);
       left: 0;
+      @include order(2);
       position: absolute;
       right: 0;
       top: 0;
@@ -159,13 +153,28 @@ $visual-guide-breakpoint-small: 750px;
     .visual-guide__content, .visual-guide__image {
       @include display(flex);
       width: 50%;
+    }
 
-      &:first-of-type {
+    &:nth-child(odd) {
+      .visual-guide__content {
+        @include justify-content(flex-end);
         margin-right: $base-spacing-xlarge;
+        @include order(1);
       }
-
-      &:last-of-type {
+      .visual-guide__image {
         margin-left: $base-spacing-xlarge;
+        @include order(3);
+      }
+    }
+
+    &:nth-child(even) {
+      .visual-guide__content {
+        margin-left: $base-spacing-xlarge;
+        @include order(3);
+      }
+      .visual-guide__image {
+        margin-right: $base-spacing-xlarge;
+        @include order(1);
       }
     }
   }

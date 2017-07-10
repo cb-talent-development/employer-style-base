@@ -48,11 +48,8 @@
 @import "selectors/read_more";
 @import "selectors/tables";
 
-.employer-scope {
-  // Reset
-  // @import 'reset'; // TODO delete
 
-  // Typography and Elements
+.employer-scope {
   @include base-body-copy;
   @include font-feature-settings("kern", "liga", "frac", "pnum");
   -webkit-font-smoothing: antialiased;
@@ -60,6 +57,4 @@
   background-color: $base-background-color;
   color: $text-color-grey;
   font-family: $base-font-family;
-
-  // @import "lists"; // TODO delete
 }

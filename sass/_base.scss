@@ -12,6 +12,8 @@
 @import "directives/01_tools/z_index";
 
 // 02 Base Components - small components that are typically used in larger components
+@import "directives/02_base_components/type_styles";
+
 @import "directives/02_base_components/accents";
 @import "directives/02_base_components/boxes";
 @import "directives/02_base_components/button";
@@ -47,6 +49,7 @@
 @import "selectors/cta";
 @import "selectors/read_more";
 @import "selectors/tables";
+@import "selectors/typography";
 
 
 .employer-scope {

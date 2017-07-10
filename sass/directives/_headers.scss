@@ -247,3 +247,22 @@
     }
   }
 }
+
+@mixin header--small {
+  max-height: $header-height-small;
+
+  &__headline {
+    padding: $header-padding 0;
+    max-width: $header-width-normal;
+ 
+    @include heading--hero;
+
+    @media only screen and (min-width: $mobile-nav-max) {
+      max-height: $header-height-small;
+    }
+
+    @media only screen and (max-width: $medium-screen-max) {
+      padding: $section-padding--mobile 0;
+    }
+  }
+}

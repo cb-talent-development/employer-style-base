@@ -118,7 +118,7 @@
         display: block;
         line-height: $product_subnav--height;
         width: 100%;
-        
+
         &:hover {
           background-color: $base-link-color;
         }
@@ -129,7 +129,7 @@
           border: none;
           color: $primary-nav-link-color;
           margin: 0 $container-edge-padding;
-          
+
           &.active {
             border-bottom: none;
           }
@@ -169,7 +169,7 @@
 
   .mobile-subnav__close {
     display: none;
-    
+
     &:after {
       font-family: FontAwesome;
       font-size: $top-bar-angle-size;

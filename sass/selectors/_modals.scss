@@ -1,0 +1,7 @@
+.popup-modal {
+  @extend %popup-modal;
+}
+
+.close-x {
+  @include close-x;
+}

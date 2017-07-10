@@ -1,0 +1,33 @@
+%popup-modal {
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+  max-width: 900px;
+  margin: auto;
+  border-radius: $minor-border-radius;
+  padding: $base-spacing * 1.5;
+  background-color: $panel-primary;
+}
+// TODO convert to mixin
+
+@mixin close-x {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: $medium-icon-font-size;
+  height: $medium-icon-font-size;
+  text-align: center;
+  color: $grey-dark;
+  cursor: pointer;
+
+  &:after {
+    content: '\f00d'; // X icon
+    font-family: FontAwesome;
+    margin-left: 0;
+  }
+
+  &:hover, &:active, &:focus {
+    color: $grey-demon;
+    text-decoration: none;
+  }
+}

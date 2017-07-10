@@ -23,7 +23,7 @@
 }
 
 // The small strip changes for brand simplification
-@mixin bs__small-strip {
+@mixin bs__small-strip { // TODO we shouldn't need this anymore; if anything, add a background color parameter to @mixin small-strip
   content: '';
   height: $small-strip-height;
   border-top-right-radius: $minor-border-radius;

@@ -1,0 +1,15 @@
+.component-box {
+  @include component-box;
+}
+
+.sticky-box {
+  @include sticky-box;
+}
+
+.item-bar__list {
+  @include item-bar__list;
+}
+
+.item-bar__list-item {
+  @include item-bar__list-item;
+}

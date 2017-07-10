@@ -3,7 +3,7 @@
   @include flex-direction(column);
 }
 
-@mixin media__item ($image-wrap-width, $breakpoint: $small-screen-max) {
+@mixin media__item ($image-wrap-width: 4em, $breakpoint: $small-screen-max) {
   @include display(flex);
   @include flex-grow(1);
   @include flex-shrink(1);

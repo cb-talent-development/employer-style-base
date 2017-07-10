@@ -1,0 +1,19 @@
+.card--tile {
+  @include card--tile;
+}
+
+.card--tile__logo {
+  @include card--tile__logo;
+}
+
+.card--tile__button {
+  @include card--tile__button;
+}
+
+.card--tile__text {
+  @include card--tile__text;
+}
+
+.card-deck--centered {
+  @include card-deck--centered;
+}

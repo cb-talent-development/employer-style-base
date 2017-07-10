@@ -47,7 +47,7 @@
   }
 }
 
-@mixin header-hero--home($background-image-large, $background-image-medium: nil) {
+@mixin header-hero--home($background-image-large: nil, $background-image-medium: nil) {
   @include heading--hero;
   position: relative;
   min-height: $header-height-home;
@@ -109,7 +109,7 @@
   }
 }
 
-@mixin header--large--background-image($background-image-large, $background-image-medium: nil) {
+@mixin header--large--background-image($background-image-large: nil, $background-image-medium: nil) {
   @include header-hero;
   @include heading--hero;
   min-height: $header-height-large;

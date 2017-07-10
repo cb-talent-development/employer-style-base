@@ -1,3 +1,43 @@
+.table {
+  @include table;
+}
+
+.table__row--last {
+  @include table__row--last;
+}
+
+.table--row-column-headers {
+  @include table--row-column-headers;
+}
+
+.table--row-column-headers--mobile {
+  // @include table--row-column-headers--mobile; // TODO requires $columns parameter
+}
+
+.table--alternating-row-colors {
+  @include table--alternating-row-colors;
+}
+
+.table--alternating-row-colors--darkened-column {
+  @include table--alternating-row-colors--darkened-column;
+}
+
+.table__buttons-row {
+  @include table__buttons-row;
+}
+
+.table-data-icon {
+  @include table-data-icon;
+}
+
+.table--product {
+  @include table--product;
+}
+
+.table--ecom {
+  @include table--ecom;
+}
+
 .table-data-icon {
   @include table-data-icon;
 }

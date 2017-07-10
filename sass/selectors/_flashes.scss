@@ -1,0 +1,15 @@
+.flash-primary {
+  @include flash-primary;
+}
+
+.flash-success {
+  @include flash-success;
+}
+
+.flash-warning {
+  @include flash-warning;
+}
+
+.flash-danger {
+  @include flash-danger;
+}

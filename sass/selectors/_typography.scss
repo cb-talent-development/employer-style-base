@@ -40,7 +40,7 @@ p {
   }
 }
 
-// Other Typography
+// Other Default Typography
 
 a {
   @include link;
@@ -72,4 +72,74 @@ cite {
   &:before {
     content: "\2014 \00A0";
   }
+}
+
+// Type Styles
+.font-style--xxl-light { // Style 1: hero headers
+  @include font-style--xxl-light;
+}
+
+.font-style--xl-light {  // Style 2: section headers and subheaders
+  @include font-style--xl-light;
+}
+
+.font-style--large-regular {  // Style 3: hero subheaders
+  @include font-style--large-regular;
+}
+
+.font-style--med-bold-uppercase { // Style 4: section headers, buttons
+  @include font-style--med-bold-uppercase;
+}
+
+.font-style--small-bold-uppercase { // Style 5: navigation, labels
+  @include font-style--small-bold-uppercase;
+}
+
+.font-style--small-bold { // Style 6: nav dropdowns
+  @include font-style--small-bold;
+}
+
+.font-style--med-regular { // Style 7: body copy
+  @include font-style--med-regular;
+}
+
+// Style 8
+
+.font-style--smallest-regular { // Style 9: table captions, other table elements
+  @include font-style--smallest-regular;
+}
+
+.base-body-copy {
+  @include base-body-copy;
+}
+
+.base-heading-copy {
+  @include base-heading-copy;
+}
+
+.base-link {
+  @include link;
+}
+
+
+// Headings
+
+.heading--hero {
+  @include heading--hero
+}
+
+.heading--hero--xl {
+  @include heading--hero--xl
+}
+
+.heading--section {
+  @include heading--section
+}
+
+.heading--section--w-subhead {
+  @include heading--section--w-subhead
+}
+
+.heading--item {
+  @include heading--item
 }

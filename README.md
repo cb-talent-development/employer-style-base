@@ -12,11 +12,12 @@ Add and install with Yarn:
 $ yarn add employer-style-base
 ```
 
-Now, import `sass/base` after any resets and [Bourbon](http://bourbon.io/), and before any grids or application sources in your main `application.scss`. For example:
+Now, import `sass/base` after any resets, [Bourbon](http://bourbon.io/) and [FontAwesome](http://fontawesome.io/), and before any grids and application sources in your main `application.scss`. For example:
 
 ```scss
 @import 'reset';
 @import 'bourbon/app/assets/stylesheets/bourbon';
+@import 'font-awesome';
 @import 'employer-style-base/sass/base';
 @import 'some-grid-foundation';
 

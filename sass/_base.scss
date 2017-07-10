@@ -1,4 +1,4 @@
-// 00 Variables (Order is specific)
+// 00 Variables - Re-usable color and sizing variables (Order is specific)
 @import "directives/00_variables/breakpoints.scss";
 @import "directives/00_variables/colors";
 @import "directives/00_variables/sizing";
@@ -41,7 +41,7 @@
 @import "directives/04_utilities/visibility";
 
 
-// Selectors - classes and other selectors that implement directives
+// Selectors - classes and element selectors which implement directives
 @import "selectors/buttons";
 @import "selectors/content_grids";
 @import "selectors/cta";

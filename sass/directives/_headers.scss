@@ -266,3 +266,45 @@
     }
   }
 }
+
+.header--large-alternate {
+  @media only screen and (min-width: $mobile-nav-max) {
+    padding-top: $top-bar--height;
+  }
+}
+
+.header--large-alternate__headline {
+  @include span-columns(12);
+  padding: 44px 0;
+  position: relative;
+  // layers above image
+  z-index: z($z-context, headers, $headers, header--large-alternate__headline);
+}
+
+.header--large-alternate__image-container {
+  @include outer-container;
+}
+
+.header--large-alternate__image {
+  background-color: transparent;
+  position: absolute;
+  @include shift(6);
+  top: 140px;
+  text-align: right;
+  // layers below headline, above stickynav
+  z-index: z($z-context, headers, $headers, header--large-alternate__image);
+}
+
+.header--large-alternate__image img {
+  max-width: 470px;
+  max-height: 470px;
+}
+
+@media only screen and (max-width: $medium-screen-max) {
+  .header--large-alternate__headline {
+    @include span-columns(12);
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 32px;
+  }
+}

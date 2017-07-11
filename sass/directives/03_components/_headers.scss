@@ -280,7 +280,7 @@
     top: 140px;
     text-align: right;
     // layers below headline, above stickynav
-    z-index: z($z-context, headers, $headers, header--large-alternate__image);
+    z-index: z($z-context, headers, $headers, header--small__image);
 
     img {
       max-width: 470px;

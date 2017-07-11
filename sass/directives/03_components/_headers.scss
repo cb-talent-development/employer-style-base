@@ -258,7 +258,7 @@
     // layers above image
     z-index: z($z-context, headers, $headers, header--small__headline);
  
-    @include heading--hero;
+    @include heading--small;
 
     @media only screen and (min-width: $mobile-nav-max) {
       max-height: $header-height-small;

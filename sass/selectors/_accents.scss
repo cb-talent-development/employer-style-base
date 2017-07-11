@@ -1,0 +1,19 @@
+.small-strip {
+  @include small-strip;
+}
+
+.divider_line {
+  @include divider_line;
+}
+
+.column-flag {
+  @include column-flag;
+}
+
+// .table-flag {
+//   @include table-flag; // TODO Must include background color param; is it enough to set a default color on the mixin?
+// }
+
+.return-to-top {
+  @include return-to-top;
+}

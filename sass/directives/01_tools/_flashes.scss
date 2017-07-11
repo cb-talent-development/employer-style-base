@@ -17,22 +17,22 @@
   padding: $base-spacing / 2;
 }
 
-%flash-primary {
+@mixin flash-primary {
   @extend %flash-base;
   @include flash($alert-primary);
 }
 
-%flash-success {
+@mixin flash-success {
   @extend %flash-base;
   @include flash($alert-success);
 }
 
-%flash-warning {
+@mixin flash-warning {
   @extend %flash-base;
   @include flash($alert-warning);
 }
 
-%flash-danger {
+@mixin flash-danger {
   @extend %flash-base;
   @include flash($alert-danger);
 }

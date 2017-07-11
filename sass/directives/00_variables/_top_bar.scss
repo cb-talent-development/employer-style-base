@@ -7,3 +7,6 @@ $top-bar--logo-height: 20px;
 $top-bar-font-size: $font-size-small;
 $top-bar-icon-size: 0.75rem; // 12px
 $top-bar-angle-size: 1rem; // 16px
+
+// TODO move to sizing? This file is much more specific than it's siblings.
+// The file is broken out so that it renders after typography because it uses $font-size-small

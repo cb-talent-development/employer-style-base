@@ -1,0 +1,145 @@
+// Defaults Type Styles - overridden by classes or mixins
+
+h1 {
+  @include base-heading-copy;
+  @include font-style--xxl-light;
+}
+
+h2 {
+  @include base-heading-copy;
+  @include font-style--xl-light;
+}
+
+h3 {
+  @include base-heading-copy;
+  @include font-style--large-regular;
+}
+
+h4 {
+  @include base-heading-copy;
+  @include font-style--med-bold-uppercase;
+  margin-bottom: $type-margin--small;
+}
+
+h5 {
+  @include base-heading-copy;
+  @include font-style--small-bold-uppercase;
+  margin-bottom: $type-margin--small;
+}
+
+h6 {
+  @include base-heading-copy;
+  @include font-style--small-bold;
+}
+
+p {
+  margin-bottom: $type-margin;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Other Default Typography
+
+a {
+  @include link;
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-spacing 0;
+}
+
+ul.list--body {
+  margin-left: 20px;
+}
+
+blockquote {
+  border-left: 2px solid $base-border-primary-color;
+  color: lighten($text-color-dark, 15);
+  margin: $base-spacing 0;
+  padding-left: $base-spacing / 2;
+}
+
+cite {
+  color: lighten($text-color-dark, 25);
+  font-style: italic;
+
+  &:before {
+    content: "\2014 \00A0";
+  }
+}
+
+// Type Styles
+.font-style--xxl-light { // Style 1: hero headers
+  @include font-style--xxl-light;
+}
+
+.font-style--xl-light {  // Style 2: section headers and subheaders
+  @include font-style--xl-light;
+}
+
+.font-style--large-regular {  // Style 3: hero subheaders
+  @include font-style--large-regular;
+}
+
+.font-style--med-bold-uppercase { // Style 4: section headers, buttons
+  @include font-style--med-bold-uppercase;
+}
+
+.font-style--small-bold-uppercase { // Style 5: navigation, labels
+  @include font-style--small-bold-uppercase;
+}
+
+.font-style--small-bold { // Style 6: nav dropdowns
+  @include font-style--small-bold;
+}
+
+.font-style--med-regular { // Style 7: body copy
+  @include font-style--med-regular;
+}
+
+// Style 8
+
+.font-style--smallest-regular { // Style 9: table captions, other table elements
+  @include font-style--smallest-regular;
+}
+
+.base-body-copy {
+  @include base-body-copy;
+}
+
+.base-heading-copy {
+  @include base-heading-copy;
+}
+
+.base-link {
+  @include link;
+}
+
+
+// Headings
+
+.heading--hero {
+  @include heading--hero
+}
+
+.heading--hero--xl {
+  @include heading--hero--xl
+}
+
+.heading--section {
+  @include heading--section
+}
+
+.heading--section--w-subhead {
+  @include heading--section--w-subhead
+}
+
+.heading--item {
+  @include heading--item
+}

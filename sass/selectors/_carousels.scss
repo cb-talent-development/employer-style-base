@@ -1,0 +1,47 @@
+.carousel-dots {
+  @include carousel-dots;
+}
+
+// .carousel-arrow {
+//   @include carousel-arrow; // TODO requires z-index
+// }
+
+.resource-carousel-arrow {
+  @include resource-carousel-arrow;
+}
+
+.resource-continue-block {
+  @include resource-continue-block;
+}
+
+.carousel-wrap {
+  @include carousel-wrap;
+}
+
+.product__carousel__item-wrap {
+  @include product__carousel__item-wrap;
+}
+
+.product__carousel__item {
+  @include product__carousel__item;
+}
+
+.testimonial__carousel__item-container {
+  @include testimonial__carousel__item-container;
+}
+
+.testimonial__carousel__item {
+  @include testimonial__carousel__item;
+}
+
+.testimonial__carousel__logo {
+  @include testimonial__carousel__logo;
+}
+
+.testimonial__carousel__copy {
+  @include testimonial__carousel__copy;
+}
+
+.logos-carousel {
+  @include logos-carousel;
+}

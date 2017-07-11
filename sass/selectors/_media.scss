@@ -1,0 +1,7 @@
+.media__wrapper {
+  @include media__wrapper;
+}
+
+.media__item {
+  @include media__item;
+}

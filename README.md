@@ -12,10 +12,12 @@ Add and install with Yarn:
 $ yarn add employer-style-base
 ```
 
-Now, import `sass/base` after [Bourbon](http://bourbon.io/), and before any grids or application sources in your main `application.scss`. For example:
+Now, import `sass/base` after any resets, [Bourbon](http://bourbon.io/) and [FontAwesome](http://fontawesome.io/), and before any grids and application sources in your main `application.scss`. For example:
 
 ```scss
+@import 'reset';
 @import 'bourbon/app/assets/stylesheets/bourbon';
+@import 'font-awesome';
 @import 'employer-style-base/sass/base';
 @import 'some-grid-foundation';
 
@@ -30,7 +32,7 @@ You may use any grid framework of your choosing. We have, however, built a [Neat
 
 ### What's included
 
-At the moment, only uncompiled Sass source files are available for consumption. That means your application will need to perform the precompilation, whether it be through Webpack, Gulp, Grunt, Rails asset pipeline, etc. Do note that `employer-style-base` depends upon and includes [Bourbon](http://bourbon.io/) for basic Sass mixins. Additionally, this library includes its own reset, scoped to `employer-scope`.
+At the moment, only uncompiled Sass source files are available for consumption. That means your application will need to perform the precompilation, whether it be through Webpack, Gulp, Grunt, Rails asset pipeline, etc. Do note that `employer-style-base` depends upon and includes [Bourbon](http://bourbon.io/) for basic Sass mixins.
 
 The current layout of this library is heavily inspired by [Bitters](http://bitters.bourbon.io/), a wonderful boilerplate of common-sense Sass conventions and structure. Our outline looks a little something like this:
 
@@ -38,15 +40,27 @@ The current layout of this library is heavily inspired by [Bitters](http://bitte
 dist/
 ├── ... >> Not yet used
 sass/ >> The bulk of the styling itself
-├── directives/ >> Mixins and @extend-only selectors, AKA useful functions to build a site with
-└── variables/ >> Re-usable color and sizing variables
+├── directives/ >> Useful mixins and functions to build a site with
+│   ├── 00_variables/ >> Re-usable color and sizing variables
+│   ├── 01_tools/ >> Globally used mixins and functions
+│   ├── 02_base_components/ >> Small components that are typically used in larger components
+│   ├── 03_components/ >> Large components and features; items that make use of 02_base_components
+│   └── 04_utilities/ >> Helper classes and overrides
+└── selectors/ >> Classes and element selectors which implement directives
 ```
 
 ### Contributing
 
+#### Mixins over Extends and Classes
+Our projects prefer semantic (BEM) class names that are specific to their use and which use the directives created here, over classes that are reused. For that reason, contributions should typically be added as mixins.
+
+*Adding Classes* - Reusable classes are primarily buttons, tooltips, and other commonly repeated elements. That said, do include a class or element counterpart to your directives in the `selectors/` directory for use by 3rd party projects that do not consume the Sass files.
+
+*Do Not Add Extends* - For [predictability](https://www.sitepoint.com/avoid-sass-extend/) and [performance](https://csswizardry.com/2016/02/mixins-better-for-performance/), use mixins instead.
+
 #### Adding Directives
 
-After adding a new directive to [`sass/directives/`](sass/directives/), `@import` it into the [`variables/_base.scss`](sass/_base.scss)
+After adding a new directive to [`sass/directives/`](sass/directives/), remember to `@import` it into the [`_base.scss`](sass/_base.scss) file.
 
 #### Updating the Version
 

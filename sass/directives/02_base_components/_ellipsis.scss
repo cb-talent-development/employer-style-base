@@ -1,0 +1,4 @@
+%ellipsis {
+  @include ellipsis;
+}
+// TODO we may not be using this anywhere, but we also only need the mixin, not the extend

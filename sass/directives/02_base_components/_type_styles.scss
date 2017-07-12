@@ -26,7 +26,7 @@
   text-transform: uppercase;
 }
 
-@mixin font-style--small-bold { // Style 6: nav dropdowns
+@mixin font-style--small-bold { // Style 6: nav dropdowns, pagination
   font-size: $font-size-small;
   font-weight: $font-weight-bold;
 }
@@ -60,6 +60,7 @@
   color: $base-link-color;
   text-decoration: none;
   font-weight: $font-weight-bold;
+  cursor: pointer;
 
   &:hover,
   &:focus,

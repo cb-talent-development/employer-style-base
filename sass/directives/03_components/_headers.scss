@@ -255,8 +255,6 @@
     padding: $header-padding 0;
     max-width: $header-width-normal;
     position: relative;
-    // layers above image
-    z-index: z($z-context, headers, $headers, header--small__headline);
  
     @include heading--small;
 
@@ -266,25 +264,6 @@
 
     @media only screen and (max-width: $medium-screen-max) {
       padding: $section-padding--mobile 0;
-    }
-  }
-
-  &__image-container {
-    @include outer-container;
-  }
-
-  &__image {
-    background-color: transparent;
-    position: absolute;
-    @include shift(6);
-    top: 140px;
-    text-align: right;
-    // layers below headline, above stickynav
-    z-index: z($z-context, headers, $headers, header--small__image);
-
-    img {
-      max-width: 470px;
-      max-height: 470px;
     }
   }
 }

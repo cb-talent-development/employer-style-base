@@ -53,3 +53,68 @@
     }
   }
 }
+
+
+// Search Results
+@mixin site-search__results__list {
+
+  .site-search__results__list-item { // li
+    list-style-type: none;
+    border-bottom: $base-border;
+    padding: $base-spacing-medium 0;
+  }
+
+  .site-search__results__item-link { // li a
+    @include display(flex);
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .site-search__results__item-thumb { // div
+    @include flex-grow(0);
+    @include flex-shrink(0);
+    @include flex-basis(auto);
+    margin-right: $base-spacing-medium;
+    width: 150px;
+  }
+
+  .site-search__results__item-image { // div img
+    height: auto;
+    width: auto;
+    max-width: 150px;
+
+    @supports (object-fit: contain) {
+      height: 100%;
+      width: 100%;
+      max-width: none;
+      object-fit: contain;
+    }
+  }
+
+  .site-search__results__item-text { // div
+    @include flex-grow(1);
+    @include flex-shrink(1);
+    @include flex-basis(auto);
+  }
+
+  .site-search__results__item-header { // div h#
+    @include font-style--large-regular;
+    color: $base-link-color;
+    text-transform: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .site-search__results__item-description { // div p
+    @include base-body-copy;
+    color: $text-color-grey;
+  }
+}

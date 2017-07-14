@@ -214,6 +214,7 @@ $massive-button-horizontal-padding: $base-input-font-size * 2;
     background-color: $text-hover-button-color;
     color: $text-hover-button-text-color;
     border-color: $text-hover-button-border-color;
+    outline: none;
   }
 
   &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {

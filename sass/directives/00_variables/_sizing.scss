@@ -30,6 +30,7 @@ $base-spacing-xlarge: 70px;
 
 $section-padding: 70px;
 $section-padding--mobile: 50px;
+$header-padding: 70px;
 $container-edge-padding: 20px; // Use this if using an unconventional body container and still need the default left /right padding our .containers have (20px)
 
 // The following are old spacing values. *Do not use*
@@ -66,11 +67,11 @@ $visual-guide-image-medium: 275px;
 $visual-guide-image-small: 170px;
 
 // Header
-$header-height-large: 445px;
-$header-height-product: 455px;
+$header-height-home: 445px;
+$header-height-large: 455px;
 $header-top-bottom-padding: 32px;
 $header-headline-bottom-margin: 15px;
-
+$header-width-normal: 650px;
 $header-height-small: 300px;
 
 // Tables

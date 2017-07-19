@@ -60,10 +60,12 @@
 
 @mixin heading--small {
   h1 {
-    margin-bottom: 15px;
+    @include font-style--xxl-light;
+    margin-bottom: 0;
   }
 
-  h2 {
-    margin-top: 15px;
+  p {
+    @include font-style--large-regular;
+    margin-top: $type-margin;
   }
 }

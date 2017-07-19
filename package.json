@@ -1,6 +1,6 @@
 {
   "name": "employer-style-base",
-  "version": "2.2.13",
+  "version": "2.2.14",
   "author": "EmployerSiteContentProducts@cb.com",
   "license": "Apache-2.0",
   "description": "A stack-agnostic Sass library providing basic components and typography intended for the Employer experience",

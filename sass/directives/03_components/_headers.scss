@@ -254,8 +254,9 @@
   &__headline {
     padding: $header-padding 0;
     max-width: $header-width-normal;
+    position: relative;
  
-    @include heading--hero;
+    @include heading--small;
 
     @media only screen and (min-width: $mobile-nav-max) {
       max-height: $header-height-small;

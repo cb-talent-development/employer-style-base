@@ -105,9 +105,11 @@
   }
 
   .site-search__results__item-header { // div h#
-    @include font-style--large-regular;
+    font-size: $font-size-med;
+    font-weight: $font-weight-bold;
     color: $base-link-color;
     text-transform: none;
+    margin-bottom: 0;
 
     &:hover,
     &:active,

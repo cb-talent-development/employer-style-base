@@ -90,7 +90,7 @@
     max-width: $search__thumbnail-width;
     max-height: $search__thumbnail-height;
 
-    @supports (object-fit: contain) {
+    @supports (object-fit: cover) {
       height: 100%;
       width: 100%;
       max-width: none;

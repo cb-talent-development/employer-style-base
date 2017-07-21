@@ -1,7 +1,4 @@
 @mixin pagination {
-  margin-top: $base-spacing-medium;
-  text-align: center;
-
   &__arrow {
     position: relative;
     @include text-button;

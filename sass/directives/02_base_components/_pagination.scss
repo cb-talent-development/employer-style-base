@@ -1,0 +1,36 @@
+@mixin pagination {
+  &__arrow {
+    position: relative;
+    @include text-button;
+    @include font-style--small-bold;
+    text-transform: none;
+
+    &:after {
+      font-family: FontAwesome;
+      position: absolute;
+    }
+  }
+
+  &__arrow--prev {
+    &:after {
+      content: '\f137'; // chevron circle left
+      right: calc(100% + #{$base-spacing-smallest});
+    }
+  }
+
+  &__arrow--next {
+    &:after {
+      content: '\f138'; // chevron circle right
+      left: calc(100% + #{$base-spacing-smallest});
+    }
+  }
+
+  &__arrow + &__arrow:before {
+    content: '';
+    position: absolute;
+    top: $base-button-vertical-padding;
+    bottom: $base-button-vertical-padding;
+    left: -$base-button-horizontal-padding;
+    border-left: $base-border;
+  }
+}

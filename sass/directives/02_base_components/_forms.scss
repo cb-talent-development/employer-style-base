@@ -165,7 +165,7 @@ $select-arrow-width: 3em;
 
 // Autocomplete Dropdown
 
-@mixin autocomplete-dropdown {
+@mixin autocomplete-dropdown($list-z-index: 1) {
   position: relative;
 
   input[type="search"] {
@@ -181,7 +181,7 @@ $select-arrow-width: 3em;
     position: absolute;
     width: 100%;
     background-color: white;
-    z-index: 1;
+    z-index: $list-z-index;
   }
 
   li {

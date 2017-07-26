@@ -7,5 +7,5 @@ $medium-screen-max: 64em; // (1024px)
 $large-screen-min: $medium-screen-max;
 
 // Nav breakpoints
-$midrange-nav-max: 56em; // (~880px) Point at which full nav no longer fits in one line
+$midrange-nav-max: 66.5em; // (~1060px) Point at which full nav + search no longer fits in one line
 $mobile-nav-max: 31em; // (490px) Point at which full nav + collapsed right-side nav no longer fit in one line

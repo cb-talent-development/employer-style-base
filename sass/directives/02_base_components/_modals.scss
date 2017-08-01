@@ -33,14 +33,14 @@
 }
 
 @mixin close-x-overflow {
-  width: 25px;
-  height: 25px;
+  width: $close-x-overflow-size;
+  height: $close-x-overflow-size;
   border-radius: 50%;
-  background-color: #333;
+  background-color: $grey-darkest;
   opacity: 1;
   color: white;
   line-height: 0;
   font-size: 16px;
-  right: -10px;
-  top: -10px;
+  right: -$close-x-overflow-size / 2;
+  top: -$close-x-overflow-size / 2;
 }

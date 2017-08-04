@@ -45,6 +45,7 @@ $base-padding: $base-spacing;
 $medium-icon-font-size: 25px;
 $direction-arrow-size: 2em;
 $close-x-size: 18px;
+$close-x-overflow-size: 25px;
 $carousel-arrow-size: 1.875em;
 $carousel-dot-size: 12px;
 $carousel-dot-spacing: 10px;
@@ -67,6 +68,12 @@ $visual-guide-content-width: 509px;
 $visual-guide-image-large: 290px;
 $visual-guide-image-medium: 275px;
 $visual-guide-image-small: 170px;
+$feature-modal-desktop-bp: 1012px;
+$feature-modal-tablet-bp: 850px;
+$feature-modal-maxheight: 570px;
+$feature-modal-maxwidth: 975px;
+$feature-modal-img-maxwidth: 650px;
+$feature-modal-controls-size: 25px;
 
 // Header
 $header-height-home: 445px;

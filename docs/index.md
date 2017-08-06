@@ -1,4 +1,4 @@
 ---
-title: FooCorp Components
+title: Employer Style Base Components
 ---
-This is the component library for FooCorp. **Feel free to look around!**
+This is the component library for Employer Style Base

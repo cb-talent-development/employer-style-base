@@ -18,7 +18,7 @@ fractal.docs.set('path', __dirname + '/docs');
 fractal.web.set('static.path', __dirname + '/dist');
 fractal.web.set('builder.dest', __dirname + '/dist/build');
 
-fractal.components.set('default.preview', '@preview');
+fractal.components.set('default.preview', '@component_preview');
 // Change file type of docs and components
 // fractal.components.set('ext', '.handlebars');
 // fractal.docs.set('ext', '.html');

@@ -1,3 +1,5 @@
+@import "./node_modules/bourbon/app/assets/stylesheets/bourbon.scss";
+
 // 00 Variables - Re-usable color and sizing variables (Order is specific)
 @import "directives/00_variables/breakpoints.scss";
 @import "directives/00_variables/colors";
@@ -16,7 +18,7 @@
 
 @import "directives/02_base_components/accents";
 @import "directives/02_base_components/boxes";
-@import "directives/02_base_components/button";
+@import "directives/02_base_components/button/button";
 @import "directives/02_base_components/ellipsis";
 @import "directives/02_base_components/gradients";
 @import "directives/02_base_components/groups";

@@ -15,7 +15,7 @@ fractal.components.set('path', __dirname + '/sass');
 fractal.docs.set('path', __dirname + '/docs');
 
 /* Static docs */
-fractal.web.set('static.path', __dirname + '/dist/docs');
+fractal.web.set('static.path', __dirname + '/dist');
 fractal.web.set('builder.dest', __dirname + '/dist/build');
 
 fractal.components.set('default.preview', '@preview');

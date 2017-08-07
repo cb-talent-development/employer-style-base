@@ -1,4 +1,2 @@
----
-title: Employer Style Base Components
----
-This is the component library for Employer Style Base
+# {{ _config.project.title }} 
+{{ _config.project.version }}

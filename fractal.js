@@ -4,7 +4,7 @@
 const fractal = module.exports = require('@frctl/fractal').create();
 
 /* Set the title of the project */
-fractal.set('project.title', 'Employer Pattern Library');
+fractal.set('project.title', 'Employer Style Base Pattern Library');
 fractal.set('project.version', 'v1.0');
 fractal.set('project.author', 'Employer Site and Content Products');
 

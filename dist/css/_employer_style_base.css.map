@@ -87,7 +87,7 @@
 		"../../sass/directives/00_variables/_breakpoints.scss",
 		"../../sass/directives/00_variables/_colors.scss",
 		"../../sass/directives/00_variables/_sizing.scss",
-		"../../sass/directives/00_variables/_animations.scss",
+		"../../sass/directives/00_variables/animations/_animations.scss",
 		"../../sass/directives/00_variables/_typography.scss",
 		"../../sass/directives/00_variables/_top_bar.scss",
 		"../../sass/directives/01_tools/_aspect_ratio.scss",

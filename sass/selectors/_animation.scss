@@ -1,0 +1,43 @@
+.transition--base {
+  transition: $base-transition;
+}
+
+.transition--link-color {
+  transition: $link-color-transition;
+}
+
+.transition--toggle-button--radio {
+  transition: $toggle-button-transistion--radio;
+}
+
+.transition--toggle-button--checkbox--color {
+  transition: $toggle-button-transistion--checkbox--color;
+}
+
+.transition--toggle-button--checkbox--switch {
+  transition: $toggle-button-transistion--checkbox--switch;
+}
+
+.transition--popup-animation {
+  transition: $popup-animation-transition;
+}
+
+.transition--popup-background {
+  transition: $popup-background-transition;
+}
+
+.transition--element-spin-base {
+  transition: $element-spin-base-transition;
+}
+
+.transform--element-spin-rotation-full {
+  transform: $element-spin-rotation-full;
+}
+
+.transform--element-spin-rotation-half {
+  transform: $element-spin-rotation-half;
+}
+
+.transition-duration--element-slow-fade-in {
+  transition-duration: $element-slow-fade-in;
+}

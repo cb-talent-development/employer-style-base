@@ -1,8 +1,8 @@
 {
 	"version": 3,
-	"file": "_employer_style_base.css",
+	"file": "employer_style_base.css",
 	"sources": [
-		"../../sass/_employer_style_base.scss",
+		"../../sass/employer_style_base.scss",
 		"../../node_modules/bourbon/app/assets/stylesheets/_bourbon.scss",
 		"../../node_modules/bourbon/app/assets/stylesheets/settings/_deprecation-warnings.scss",
 		"../../node_modules/bourbon/app/assets/stylesheets/settings/_prefixer.scss",

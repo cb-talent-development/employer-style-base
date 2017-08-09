@@ -1,10 +1,11 @@
 module.exports = {
   "collated": true,
-  // collator: function(markup, item) {
-  //     return `<!-- Start: @${item.handle} -->\n${markup}<br><br>\n<!-- End: @${item.handle} -->\n`
-  //   },
+  collator: function(markup, item) {
+      return `<!-- Start: @${item.handle} -->\n <div style="border: 1px solid grey; width: 200px; margin: 20px"> ${markup} </div> \n<!-- End: @${item.handle} -->\n`
+    },
   "preview": "@preview_colors",
   "default": "anchor-blue",
+  "notes": "See 'Context' for color usage notes",
   "variants": [
     {
       "name": 'anchor-blue',

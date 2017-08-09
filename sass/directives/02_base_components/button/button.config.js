@@ -3,9 +3,7 @@ module.exports = {
   collator: function(markup, item) {
       return `<!-- Start: @${item.handle} -->\n${markup}<br><br>\n<!-- End: @${item.handle} -->\n`
     },
-  "display": {
-    "background-color": "#f4f4f4"
-  },
+  "preview": "@preview_buttons",
   "default": "base",
   "variants": [
     {

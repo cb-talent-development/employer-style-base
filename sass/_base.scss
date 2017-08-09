@@ -3,7 +3,8 @@
 @import "directives/00_variables/colors/colors";
 @import "directives/00_variables/sizing";
 @import "directives/00_variables/animations/animations";
-@import "directives/00_variables/typography";
+@import "directives/00_variables/typography/typography";
+@import "directives/00_variables/typography/type_styles";
 @import "directives/00_variables/top_bar";
 
 // 01 Tools - globally used mixins and functions
@@ -12,8 +13,6 @@
 @import "directives/01_tools/z_index";
 
 // 02 Base Components - small components that are typically used in larger components
-@import "directives/02_base_components/type_styles";
-
 @import "directives/02_base_components/accents";
 @import "directives/02_base_components/boxes";
 @import "directives/02_base_components/button/button";

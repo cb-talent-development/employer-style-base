@@ -36,9 +36,7 @@
   font-weight: $font-weight-regular;
 }
 
-// Style 8
-
-@mixin font-style--smallest-regular { // Style 9: table captions, other table elements
+@mixin font-style--smallest-regular { // Style 8: table captions, other table elements
   font-size: $font-size-smallest;
   font-weight: $font-weight-regular;
 }

@@ -89,7 +89,7 @@ This will install Fractal and Fractal CLI.
 In order to show styled components, you must first compile from `.scss` to `.css`. Run
 
 ```
-npm dev
+yarn run dev
 ```
 
 to both compile and watch the `.scss` files. If you've already started the Fractal server you may need to restart it.
@@ -98,7 +98,7 @@ to both compile and watch the `.scss` files. If you've already started the Fract
 Now start the pattern library locally with
 
 ```
-fractal start --sync
+yarn run fractal
 ```
 
 Open the URL provided to see your local copy of the pattern library.

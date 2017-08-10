@@ -79,6 +79,7 @@ Create the following lists in your project and pass in as arguments
     );
 ```
 
+### Output
   The example elements above will have the following z-index values:
   ```
   z($context-group-list, fixed-navigation-context, $fixed-navigation-context, navigation-bar)

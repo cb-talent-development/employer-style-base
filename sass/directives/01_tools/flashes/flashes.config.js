@@ -4,7 +4,7 @@ module.exports = {
       return `<!-- Start: @${item.handle} -->\n${markup}<br><br>\n<!-- End: @${item.handle} -->\n`
     },
   "default": "primary",
-  "status": prototype,
+  // "status": prototype,
   "variants": [
     {
       "name": "primary",

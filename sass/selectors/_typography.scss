@@ -125,21 +125,25 @@ cite {
 // Headings
 
 .heading--hero {
-  @include heading--hero
+  @include heading--hero;
 }
 
 .heading--hero--xl {
-  @include heading--hero--xl
+  @include heading--hero--xl;
 }
 
 .heading--section {
-  @include heading--section
+  @include heading--section;
 }
 
 .heading--section--w-subhead {
-  @include heading--section--w-subhead
+  @include heading--section--w-subhead;
 }
 
 .heading--item {
-  @include heading--item
+  @include heading--item;
+}
+
+.heading--small {
+  @include heading--small;
 }

@@ -11,15 +11,14 @@
 }
 
 @mixin heading--hero--xl {
-  // In progress - For use with Extra Large header style (https://cb-content-enablement.atlassian.net/wiki/pages/viewpage.action?pageId=43897344)
   h1 {
-    @include font-style--large-regular;
+    @include font-style--med-bold-uppercase;
     margin-bottom: 0;
   }
 
   p {
     @include font-style--xl-light;
-    margin-top: $type-margin-large;
+    margin-top: $type-margin;
   }
 }
 

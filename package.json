@@ -24,6 +24,22 @@
   ],
   "main": "sass/_base.scss",
   "dependencies": {
-    "bourbon": "^4.3.4"
+    "@frctl/fractal": "^1.1.4",
+    "autoprefixer": "^7.1.2",
+    "bourbon": "^4.3.4",
+    "chokidar-cli": "^1.2.0",
+    "npm-run-all": "^4.0.2",
+    "postcss-cli": "^4.1.0"
+  },
+  "devDependencies": {
+    "node-sass-chokidar": "^0.0.3"
+  },
+  "scripts": {
+    "fractal": " ./node_modules/.bin/fractal start --sync",
+    "build-task:scss-compile": "node-sass-chokidar --source-map true sass/employer_style_base.scss -o dist/css",
+    "build-task:autoprefixer": "postcss dist/css/*.css --use autoprefixer -d dist/css",
+    "sass:build": "npm-run-all -p build-task:*",
+    "sass:watch": "chokidar 'sass/*.scss' -c 'npm run sass:build'",
+    "dev": "npm-run-all -p sass:*"
   }
 }

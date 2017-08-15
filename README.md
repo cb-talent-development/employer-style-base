@@ -74,6 +74,44 @@ Then update the `package.json` file in your project with the new version:
   }
 ```
 
+### Working with the Pattern Library
+
+Employer Style Base includes a [pattern library](http://cb-talent-development.github.io/employer-style-base/) built with [Fractal](http://fractal.build/). The pattern library serves as a quick reference to the components that come with style base and how to use them.
+
+If you haven't already, from within the employer-style-base repo run
+
+```
+yarn install
+```
+
+This will install Fractal and Fractal CLI.
+
+In order to show styled components, you must first compile from `.scss` to `.css`. Run
+
+```
+yarn run dev
+```
+
+to both compile and watch the `.scss` files. If you've already started the Fractal server you may need to restart it.
+
+
+Now start the pattern library locally with
+
+```
+yarn run fractal
+```
+
+Open the URL provided to see your local copy of the pattern library.
+
+After your changes are committed and merged, update the production build of the pattern library, then push the changes to the `gh-pages` branch:
+
+```
+fractal build
+git subtree push --prefix dist/build origin gh-pages
+```
+
+Fractal views are built using the [Handlebars](http://handlebarsjs.com/) templating framework.
+
 ### Future
 
 - Implement build process to compile CSS into `dist` for easy consumption

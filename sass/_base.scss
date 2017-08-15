@@ -2,7 +2,7 @@
 @import "directives/00_variables/breakpoints.scss";
 @import "directives/00_variables/colors";
 @import "directives/00_variables/sizing";
-@import "directives/00_variables/animations";
+@import "directives/00_variables/animations/animations";
 @import "directives/00_variables/typography";
 @import "directives/00_variables/top_bar";
 
@@ -16,7 +16,7 @@
 
 @import "directives/02_base_components/accents";
 @import "directives/02_base_components/boxes";
-@import "directives/02_base_components/button";
+@import "directives/02_base_components/button/button";
 @import "directives/02_base_components/ellipsis";
 @import "directives/02_base_components/gradients";
 @import "directives/02_base_components/groups";

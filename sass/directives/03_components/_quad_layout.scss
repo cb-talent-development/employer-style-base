@@ -1,0 +1,26 @@
+$_quad-layout-breakpoint: 50em;
+
+@mixin quad-layout {
+  // used for content configured in sets of 2x2 (small biz benefits, why-cb difference)
+  // markup is a list element with li's in multiples of 4
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include align-content(stretch);
+  padding: 0;
+
+  @media only screen and (max-width: $_quad-layout-breakpoint) {
+    @include flex-direction(column);
+    @include flex-wrap(nowrap);
+  }
+
+  li {
+    width: 50%;
+    position: relative;
+    padding: 0 $base-spacing-xlarge 40px;
+    list-style: none;
+
+    @media only screen and (max-width: $_quad-layout-breakpoint) {
+      width: 100%;
+    }
+  }
+}

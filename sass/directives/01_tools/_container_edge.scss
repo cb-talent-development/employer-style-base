@@ -1,0 +1,11 @@
+// calc that positions fixed or abosloutly positioned items to the edge of the .container
+  // moves item to one side then adjusts with a margin that matches the .container's margin
+  // used on buy boxes and why careerbuilder news flag
+@mixin container-edge-margin($side) {
+  margin-#{$side}: $container-edge-padding;
+  #{$side}: 0;
+
+  @media only screen and (min-width: $container-width) {
+    margin-#{$side}: calc(50% - (#{$container-width} / 2));
+  }
+}

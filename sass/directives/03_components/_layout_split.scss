@@ -1,4 +1,4 @@
-@mixin text-image-panels--full-bleed-image($image-url, $overlay-gradient: null, $image-side: 'left') {
+@mixin text-image-panels--full-bleed-image($image-url, $overlay-gradient: null, $image-side: left) {
   &__wrap {
     display: flex;
     justify-content: center;
@@ -15,7 +15,7 @@
 
   &__panel--image {
 
-    @if $image-side == 'right' {
+    @if $image-side == right {
       order: 2;
     } @else {
       order: 1;
@@ -41,6 +41,7 @@
   &__panel--content {
     order: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: $base-spacing-xlarge;
@@ -55,7 +56,7 @@
   [class$='__heading'] {
     @include font-style--xl-light;
     width: 50%;
-    margin-bottom: $base-spacing;
+    margin-bottom: $base-spacing-medium;
 
     @media only screen and (max-width: $small-screen-max) {
       width: 100%;

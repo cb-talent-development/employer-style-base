@@ -1,0 +1,11 @@
+.quad-layout {
+  @include quad-layout;
+}
+
+.text-image-panels--full-bleed-image {
+  @include text-image-panels--full-bleed-image;
+}
+
+.text-image-panels-content {
+  @include text-image-panels-content;
+}

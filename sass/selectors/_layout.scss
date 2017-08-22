@@ -3,7 +3,7 @@
 }
 
 .text-image-panels--full-bleed-image {
-  @include text-image-panels--full-bleed-image;
+  @include text-image-panels--full-bleed-image($image-url: 'http://via.placeholder.com/350x150');
 }
 
 .text-image-panels-content {

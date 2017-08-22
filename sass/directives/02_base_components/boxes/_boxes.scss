@@ -90,13 +90,13 @@
 
 // Item Bar
 
-$_item-bar-breakpoint: 750px;
+$_item-bar-breakpoint: 46.8em; // ~750px
 
 @mixin item-bar__container {
   border-top: $base-border;
   border-bottom: $base-border;
   background-color: $panel-primary;
-  height: 145px;
+  height: 9.0625rem; // 145px;
   display: flex;
   align-items: center;
 

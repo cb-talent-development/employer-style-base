@@ -16,7 +16,7 @@ $_quad-layout-breakpoint: 50em;
   li {
     width: 50%;
     position: relative;
-    padding: 0 $base-spacing-xlarge 40px;
+    padding: 0 $base-spacing-xlarge 2.5rem;
     list-style: none;
 
     @media only screen and (max-width: $_quad-layout-breakpoint) {

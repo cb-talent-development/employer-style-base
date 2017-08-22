@@ -49,6 +49,14 @@
     @media only screen and (max-width: $small-screen-max) {
       padding: $section-padding--mobile $base-spacing-medium;
     }
+
+    // overwrites padding above
+    @if $image-side == right {
+      @include container-edge-calc(left, padding);
+    } @else {
+      @include container-edge-calc(right, padding);
+    }
+
   }
 }
 

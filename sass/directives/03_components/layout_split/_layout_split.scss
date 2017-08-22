@@ -63,7 +63,7 @@
 @mixin text-image-panels-content {
   [class$='__heading'] {
     @include font-style--xl-light;
-    width: 50%;
+    max-width: 25ch;
     margin-bottom: $base-spacing-medium;
 
     @media only screen and (max-width: $small-screen-max) {

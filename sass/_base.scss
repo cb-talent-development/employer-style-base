@@ -34,8 +34,8 @@
 @import "directives/03_components/flyout";
 @import "directives/03_components/headers";
 @import "directives/03_components/media";
-@import "directives/03_components/layout_quad";
-@import "directives/03_components/layout_split";
+@import "directives/03_components/layout_quad/layout_quad";
+@import "directives/03_components/layout_split/layout_split";
 @import "directives/03_components/speech_bubble";
 @import "directives/03_components/tables";
 @import "directives/03_components/tooltips";
@@ -59,6 +59,7 @@
 @import "selectors/forms";
 @import "selectors/gradients";
 @import "selectors/headers";
+@import "selectors/layout";
 @import "selectors/media";
 @import "selectors/modals";
 @import "selectors/navigation";

@@ -18,7 +18,10 @@ fractal.docs.set('path', __dirname + '/docs');
 fractal.web.set('static.path', __dirname + '/dist');
 fractal.web.set('builder.dest', __dirname + '/dist/build');
 
-fractal.components.set('default.preview', '@component_preview');
+fractal.components.set('default.preview', '@preview_default');
 fractal.components.set('default.display', {
-    'padding': '30px'
+    'padding': '30px',
+    'background-color': 'white',
+    'color': '#666666',
+    'font-family': 'Lato'
 });

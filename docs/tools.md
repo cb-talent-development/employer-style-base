@@ -100,3 +100,21 @@ Create the following lists in your project and pass in as arguments
   z($context-group-list, popup-modal-context, $popup-modal-context, popup-modal-popup)
   ```
   popup-modal-popup = 3002
+
+
+## Container Edge Calc
+
+Positions `fixed` or `absolutely` positioned items to the edge of the `.container` area. Moves item to one side then adjusts with combinations of `margin` and `padding` that match that of the `.container`
+
+Used on buy boxes and the why careerbuilder news flag
+
+```
+@mixin container-edge-calc($side, $property: margin, $offset: 0px) {
+  #{$property}-#{$side}: $container-edge-padding;
+  #{$side}: 0;
+
+  @media only screen and (min-width: $container-width) {
+    #{$property}-#{$side}: calc(50% - (#{$container-width} / 2) + #{$container-edge-padding} + #{$offset});
+  }
+}
+```

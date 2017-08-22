@@ -1,6 +1,3 @@
-// calc that positions fixed or abosloutly positioned items to the edge of the .container
-  // moves item to one side then adjusts with a margin + padding that matches that of the .container
-  // used on buy boxes and why careerbuilder news flag
 @mixin container-edge-calc($side, $property: margin, $offset: 0px) {
   #{$property}-#{$side}: $container-edge-padding;
   #{$side}: 0;

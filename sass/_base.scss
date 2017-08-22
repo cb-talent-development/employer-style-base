@@ -1,32 +1,31 @@
 // 00 Variables - Re-usable color and sizing variables (Order is specific)
 @import "directives/00_variables/breakpoints.scss";
-@import "directives/00_variables/colors";
+@import "directives/00_variables/colors/colors";
 @import "directives/00_variables/sizing";
 @import "directives/00_variables/animations/animations";
-@import "directives/00_variables/typography";
+@import "directives/00_variables/typography/typography";
+@import "directives/00_variables/typography/type_styles";
 @import "directives/00_variables/top_bar";
 
 // 01 Tools - globally used mixins and functions
 @import "directives/01_tools/aspect_ratio";
 @import "directives/01_tools/container_edge";
-@import "directives/01_tools/flashes";
+@import "directives/01_tools/flashes/flashes";
 @import "directives/01_tools/z_index";
 
 // 02 Base Components - small components that are typically used in larger components
-@import "directives/02_base_components/type_styles";
-
-@import "directives/02_base_components/accents";
-@import "directives/02_base_components/boxes";
+@import "directives/02_base_components/accents/accents";
+@import "directives/02_base_components/boxes/boxes";
 @import "directives/02_base_components/button/button";
 @import "directives/02_base_components/ellipsis";
-@import "directives/02_base_components/gradients";
+@import "directives/02_base_components/gradients/gradients";
 @import "directives/02_base_components/groups";
-@import "directives/02_base_components/headings";
+@import "directives/02_base_components/headings/headings";
 @import "directives/02_base_components/pagination";
 @import "directives/02_base_components/modals";
 @import "directives/02_base_components/tabs";
 @import "directives/02_base_components/toggles";
-@import "directives/02_base_components/forms";
+@import "directives/02_base_components/forms/forms";
 
 // 03 Components - large components and features
 @import "directives/03_components/accordion";
@@ -35,8 +34,8 @@
 @import "directives/03_components/flyout";
 @import "directives/03_components/headers";
 @import "directives/03_components/media";
-@import "directives/03_components/layout_quad";
-@import "directives/03_components/layout_split";
+@import "directives/03_components/layout_quad/layout_quad";
+@import "directives/03_components/layout_split/layout_split";
 @import "directives/03_components/speech_bubble";
 @import "directives/03_components/tables";
 @import "directives/03_components/tooltips";
@@ -60,6 +59,7 @@
 @import "selectors/forms";
 @import "selectors/gradients";
 @import "selectors/headers";
+@import "selectors/layout";
 @import "selectors/media";
 @import "selectors/modals";
 @import "selectors/navigation";

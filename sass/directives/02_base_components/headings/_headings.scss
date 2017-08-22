@@ -1,0 +1,70 @@
+@mixin heading--hero {
+  h1 {
+    @include font-style--xxl-light;
+    margin-bottom: 0;
+  }
+
+  p {
+    @include font-style--large-regular;
+    margin-top: $type-margin-large;
+  }
+}
+
+@mixin heading--hero--xl {
+  h1 {
+    @include font-style--med-bold-uppercase;
+    margin-bottom: 0;
+  }
+
+  p {
+    @include font-style--xl-light;
+    margin-top: $type-margin;
+  }
+}
+
+@mixin heading--section {
+  margin-bottom: $type-margin;
+
+  &__heading {
+    @include font-style--xl-light;
+    @include base-heading-copy;
+  }
+
+  p {
+    color: $text-color-grey;
+  }
+}
+
+@mixin heading--section--w-subhead {
+  margin-bottom: $type-margin;
+
+  &__heading {
+    @include font-style--med-bold-uppercase;
+    margin-bottom: 0;
+    color: $header-text-color;
+  }
+
+  &__subheading {
+    margin-top: $type-margin;
+    @include font-style--xl-light;
+    color: $header-text-color;
+  }
+}
+
+@mixin heading--item {
+  @include font-style--small-bold-uppercase;
+  margin-bottom: $type-margin--small;
+  color: $header-text-color;
+}
+
+@mixin heading--small {
+  h1 {
+    @include font-style--xxl-light;
+    margin-bottom: 0;
+  }
+
+  p {
+    @include font-style--large-regular;
+    margin-top: $type-margin;
+  }
+}

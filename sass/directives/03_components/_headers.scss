@@ -137,7 +137,7 @@
   }
 }
 
-@mixin header--extra-large($background-image-large: nil, $background-image-medium: nil) {
+@mixin header--extra-large($background-image-large: nil, $background-image-medium: nil, $gradient-variable: $cb) {
   @include header-hero;
   min-height: $header-height-xl;
   background-image: url(asset_path(#{$background-image-large}));
@@ -166,7 +166,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    @include cbGradientTransparent;
+    @include gradientTransparent(map-get($gradient-variable, dark), map-get($gradient-variable, medium), map-get($gradient-variable, light));
   }
 }
 

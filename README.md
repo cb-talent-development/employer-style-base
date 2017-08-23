@@ -101,9 +101,9 @@ Now start the pattern library locally with
 yarn run fractal
 ```
 
-Open the URL provided to see your local copy of the pattern library.
+This will give you a URL where you can view the local copy of the pattern library and it will watch the files for changes.
 
-After your changes are committed and merged, update the production build of the pattern library, then push the changes to the `gh-pages` branch:
+After your changes are committed and merged, update the production build of the pattern library, then push the changes to the `gh-pages` branch with the following commands:
 
 ```
 fractal build

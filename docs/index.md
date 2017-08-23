@@ -10,12 +10,12 @@ title: Employer Style Base Pattern Library
 
 ### Mobile breakpoints
 
-Variable        | Value
-------------|------------
-**$small-screen-max** | 40em *(640px)*
-**$medium-screen-min** | $small-screen-max
-**$medium-screen-max** | 64em *(1024px)*
-**$large-screen-min** | $medium-screen-max
+Variable        | Value | Pixels
+------------|------------|----------
+**$small-screen-max** | 40em | 640px
+**$medium-screen-min** | $small-screen-max | 640px
+**$medium-screen-max** | 64em | 1024px
+**$large-screen-min** | $medium-screen-max | 1024px
 
 ### Navigation breakpoints
 

@@ -1,4 +1,5 @@
 $_quad-layout-breakpoint: 50em;
+$_quad-layout-breakpoint--min: calc(#{$_quad-layout-breakpoint} + 1px);
 
 @mixin quad-layout {
   // used for content configured in sets of 2x2 (small biz benefits, why-cb difference)
@@ -16,7 +17,7 @@ $_quad-layout-breakpoint: 50em;
   li {
     width: 50%;
     position: relative;
-    padding: 0 $base-spacing-xlarge 40px;
+    padding: 0 $base-spacing-xlarge 2.5rem;
     list-style: none;
 
     @media only screen and (max-width: $_quad-layout-breakpoint) {

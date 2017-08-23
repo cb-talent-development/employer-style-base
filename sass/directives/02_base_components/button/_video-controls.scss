@@ -1,0 +1,90 @@
+// Fancy Play Button
+// Initial state
+$_ripple-diameter: 24em;
+$_play-button-size: 4em;
+$_ripple-color: white;
+$_ripple-hover-color: $azure-blue-dark;
+
+@function ripple-animation-delay($duration, $count, $index) {
+  $increment: $duration/$count;
+  @return $index * $increment;
+}
+
+@mixin play-rippling-button {
+  @keyframes ripple {
+    0% {
+      transform: scale(0.2);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale($_ripple-diameter);
+      opacity: 0;
+    }
+  }
+
+  .ripple-block {
+    position: relative;
+    width: $_ripple-diameter;
+    height: $_ripple-diameter;
+    display: block;
+
+    &:hover,
+    &:active,
+    &:focus {
+      .fa-play-circle {
+        color: $_ripple-hover-color;
+      }
+    }
+
+    .fa-play-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: $_play-button-size;
+      color: $_ripple-color;
+      transition: color $video-play-button-ripple--transition;
+    }
+
+    .ripple {
+      position: absolute;
+      width: $_ripple-diameter;
+      height: $_ripple-diameter;
+      background: rgba($_ripple-color, $video-play-button-ripple--opacity);
+      border-radius: 50%;
+      animation: ripple $video-play-button-ripple--duration ease-in-out infinite;
+      transition: background $video-play-button-ripple--transition;
+
+      .ripple-block:hover &,
+      .ripple-block:active &,
+      .ripple-block:focus & {
+        background: rgba($_ripple-hover-color, $video-play-button-ripple--opacity);
+      }
+    }
+
+    @media (prefers-reduced-motion) {
+      .fa-play-circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: $_play-button-size * 2;
+        color: $_ripple-color;
+      }
+      .ripple-block .ripple {
+        animation: none;
+        display: none;
+      }
+    }
+  }
+
+  @for $index from 0 through ($video-play-button-ripple--count - 1) {
+    $order: $index + 1;
+    .ripple-block .ripple-#{$order} {
+      animation-delay: ripple-animation-delay($video-play-button-ripple--duration, $video-play-button-ripple--count, $index);
+    }
+  }
+}

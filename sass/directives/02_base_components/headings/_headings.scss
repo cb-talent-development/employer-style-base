@@ -13,11 +13,13 @@
 @mixin heading--hero--xl {
   h1 {
     @include font-style--med-bold-uppercase;
+    line-height: normal;
     margin-bottom: 0;
   }
 
   p {
     @include font-style--xl-light;
+    line-height: normal;
     margin-top: $type-margin;
   }
 }

@@ -13,19 +13,13 @@
 @mixin heading--hero--xl {
   h1 {
     @include font-style--med-bold-uppercase;
-<<<<<<< HEAD
-=======
     line-height: normal;
->>>>>>> 2d80427ba0fd84b87bff104b1127b39510299b39
     margin-bottom: 0;
   }
 
   p {
     @include font-style--xl-light;
-<<<<<<< HEAD
-=======
     line-height: normal;
->>>>>>> 2d80427ba0fd84b87bff104b1127b39510299b39
     margin-top: $type-margin;
   }
 }

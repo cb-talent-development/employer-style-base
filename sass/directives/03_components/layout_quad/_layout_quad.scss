@@ -1,4 +1,5 @@
 $_quad-layout-breakpoint: 50em;
+$_quad-layout-breakpoint--min: calc(#{$_quad-layout-breakpoint} + 1px);
 
 @mixin quad-layout {
   // used for content configured in sets of 2x2 (small biz benefits, why-cb difference)

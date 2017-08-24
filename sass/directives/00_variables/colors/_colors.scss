@@ -175,10 +175,10 @@ $text-button-text-color: $sky-blue;
 $text-button-border-color: transparent;
 $text-hover-button-color: $text-button-color;
 $text-hover-button-text-color: $sky-blue;
-$text-hover-button-border-color: $sky-blue;
+$text-hover-button-border-color: currentColor;
 $text-active-button-color: $text-hover-button-color;
 $text-active-button-text-color: $text-hover-button-text-color;
-$text-active-button-border-color: $text-active-button-color;
+$text-active-button-border-color: currentColor;
 
 $negative-button-color: $grey-dark;
 $negative-button-text-color: white;

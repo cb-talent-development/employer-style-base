@@ -107,7 +107,7 @@ After your changes are committed and merged, update the production build of the 
 
 ```
 fractal build
-git subtree push --prefix dist/build origin gh-pages
+git subtree push --prefix build origin gh-pages
 ```
 
 Fractal views are built using the [Handlebars](http://handlebarsjs.com/) templating framework.

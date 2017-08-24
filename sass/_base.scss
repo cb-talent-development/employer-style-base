@@ -9,6 +9,7 @@
 
 // 01 Tools - globally used mixins and functions
 @import "directives/01_tools/aspect_ratio";
+@import "directives/01_tools/container_edge";
 @import "directives/01_tools/flashes/flashes";
 @import "directives/01_tools/z_index";
 
@@ -33,6 +34,8 @@
 @import "directives/03_components/flyout";
 @import "directives/03_components/headers";
 @import "directives/03_components/media";
+@import "directives/03_components/layout_quad/layout_quad";
+@import "directives/03_components/layout_split/layout_split";
 @import "directives/03_components/speech_bubble";
 @import "directives/03_components/tables";
 @import "directives/03_components/tooltips";
@@ -56,6 +59,7 @@
 @import "selectors/forms";
 @import "selectors/gradients";
 @import "selectors/headers";
+@import "selectors/layout";
 @import "selectors/media";
 @import "selectors/modals";
 @import "selectors/navigation";
@@ -72,6 +76,7 @@
   @include base-body-copy;
   @include font-feature-settings("kern", "liga", "frac", "pnum");
   -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   background-color: $base-background-color;
   color: $text-color-grey;

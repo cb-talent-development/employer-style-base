@@ -1,0 +1,1 @@
+The `text-image-panels--full-bleed-image` mixin generates a background image url with the Rails `asset_path` method. To see the image in the example, inspect the `.text-image-panels--full-bleed-image__panel--image` element and correct the `background-image` url from `url(asset_path("http://via.placeholder.com/350x150"))` to `url("http://via.placeholder.com/350x150")` (for now)

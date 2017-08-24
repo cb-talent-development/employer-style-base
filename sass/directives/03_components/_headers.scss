@@ -137,6 +137,48 @@
   }
 }
 
+@mixin header--extra-large($background-image-large: nil, $background-image-medium: nil, $gradient-variable: $cb) {
+  @include header-hero;
+  min-height: $header-height-xl;
+  background-image: url(asset_path(#{$background-image-large}));
+  background-size: auto $header-height-xl;
+  background-position: right bottom;
+  background-repeat: repeat no-repeat;
+
+  @media only screen and (max-width: $medium-screen-max) {
+    background-image: url(asset_path(#{$background-image-medium}));
+  }
+
+  @media only screen and (max-width: $small-screen-max) {
+    min-height: unset;
+  }
+
+  @media only screen and (max-width: $small-screen-max) {
+    background-image: none;
+    padding: $base-spacing-xlarge 0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include gradientTransparent(map-get($gradient-variable, dark), map-get($gradient-variable, medium), map-get($gradient-variable, light));
+
+    @media only screen and (max-width: $small-screen-max) {
+      @include gradient(map-get($gradient-variable, dark), map-get($gradient-variable, medium), map-get($gradient-variable, light));
+    }
+  }
+
+  &__text {
+    @include heading--hero--xl;
+    text-align: center;
+    align-items: center;
+  }
+}
+
 @mixin header--large--side-image {
   @include heading--hero;
   @include cbGradient;
@@ -217,6 +259,28 @@
   }
 }
 
+@mixin header--small {
+  max-height: $header-height-small;
+
+  &__headline {
+    padding: $header-padding 0;
+    max-width: $header-width-normal;
+    position: relative;
+
+    @include heading--small;
+
+    @media only screen and (min-width: $mobile-nav-max) {
+      max-height: $header-height-small;
+    }
+
+    @media only screen and (max-width: $medium-screen-max) {
+      padding: $section-padding--mobile 0;
+    }
+  }
+}
+
+// Text alignment
+
 @mixin header--large--left {
   &__text {
     p {
@@ -244,26 +308,6 @@
 
     p {
       max-width: 65ch;
-    }
-  }
-}
-
-@mixin header--small {
-  max-height: $header-height-small;
-
-  &__headline {
-    padding: $header-padding 0;
-    max-width: $header-width-normal;
-    position: relative;
- 
-    @include heading--small;
-
-    @media only screen and (min-width: $mobile-nav-max) {
-      max-height: $header-height-small;
-    }
-
-    @media only screen and (max-width: $medium-screen-max) {
-      padding: $section-padding--mobile 0;
     }
   }
 }

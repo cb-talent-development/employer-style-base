@@ -1,6 +1,7 @@
 // Mobile breakpoints
 // Breakpoints used by Zurb Foundation
 // Zurb has breakpoints for XL and XXL, not used here.
+// TODO: the 'min' values should be 1px higher; will do after VRT is implemented
 $small-screen-max: 40em; // (640px)
 $medium-screen-min: $small-screen-max;
 $medium-screen-max: 64em; // (1024px)

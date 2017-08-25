@@ -1,0 +1,25 @@
+@mixin card-group-gate {
+  // Only show the hover state on things that aren't the iPhone, because Apple hates web devs
+  html:not([data-platform='iPhone']):not([data-platform='iPad']) {
+    .card-group__card {
+      &:hover {
+        .card-group__card__logo {
+          display: none;
+        }
+
+        .card-group__card__logo--hover {
+          display: inline;
+          height: $interactive-card-logo-height;
+        }
+      }
+    }
+  }
+
+  // Style the body with a pointer, to deactivate the cards if a user clicks out of the area
+  // Again, because Safari is terrible
+  html[data-platform='iPhone'], html[data-platform='iPad'] {
+    body.small_biz {
+      cursor: pointer;
+    }
+  }
+}

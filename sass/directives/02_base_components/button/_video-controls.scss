@@ -3,7 +3,7 @@
 $_ripple-diameter: 24em;
 $_play-button-size: 4em;
 $_ripple-color: white;
-$_ripple-hover-color: $azure-blue-dark;
+$_ripple-hover-color: $sky-blue;
 
 @function ripple-animation-delay($duration, $count, $index) {
   $increment: $duration/$count;

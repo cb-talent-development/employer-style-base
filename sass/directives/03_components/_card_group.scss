@@ -1,5 +1,3 @@
-$_card-group-box-shadow-flipped: -1px 2px 1px 0px rgba(0, 0, 0, 0.25);
-
 @mixin card-group {
   .card-group__items {
     @include card-deck--centered;
@@ -10,9 +8,9 @@ $_card-group-box-shadow-flipped: -1px 2px 1px 0px rgba(0, 0, 0, 0.25);
   .card-group__card {
     @include card--tile($include_strip: false);
     // Restore the original box-shadow since it is lost when adding layers. This is not the same as $base-box-shadow-hover
-    box-shadow: $_card-group-box-shadow-flipped;
+    box-shadow: $card-group-box-shadow-flipped;
     // Restore the height of the cards due to absolute positioning (with flexbox)
-    height: $_fixed-card-height;
+    height: $fixed-card-height;
     cursor: pointer;
     position: relative;
 
@@ -134,7 +132,7 @@ $_card-group-box-shadow-flipped: -1px 2px 1px 0px rgba(0, 0, 0, 0.25);
   // Show the back and front side of the cards when the page is in edit mode, and prevent animations
   #card-group__edit-mode {
     &.card-group__card {
-      height: $_fixed-card-height-editmode;
+      height: $fixed-card-height-editmode;
 
       &.card-group__card--flipped {
         animation-duration: 0ms;

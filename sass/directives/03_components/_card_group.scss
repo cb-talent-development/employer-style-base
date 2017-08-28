@@ -161,6 +161,7 @@ $_card-group-box-shadow-flipped: -1px 2px 1px 0px rgba(0, 0, 0, 0.25);
 }
 
 // Include this mixin if you plan to show a logo in the card with a hover state. This prevents the doubletap bug expressed on the iPad and iPhone.
+// 'data-platform' can be an attribute appeneded to your opening <html> tag using User Agent / Platform detection via Javascript
 @mixin card-group-hover-gate {
   html:not([data-platform='iPhone']):not([data-platform='iPad']) {
     .card-group__card {

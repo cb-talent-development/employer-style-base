@@ -1,3 +1,5 @@
+$_card-group-box-shadow-flipped: -1px 2px 1px 0px rgba(0, 0, 0, 0.25);
+
 @mixin card-group {
   .card-group__items {
     @include card-deck--centered;
@@ -8,7 +10,7 @@
   .card-group__card {
     @include card--tile($include_strip: false);
     // Restore the original box-shadow since it is lost when adding layers. This is not the same as $base-box-shadow-hover
-    box-shadow: -1px 2px 1px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: $_card-group-box-shadow-flipped;
     // Restore the height of the cards due to absolute positioning (with flexbox)
     height: $_fixed-card-height;
     cursor: pointer;
@@ -154,6 +156,24 @@
 
     .card-group__card--back {
       transform: none;
+    }
+  }
+}
+
+// Include this mixin if you plan to show a logo in the card with a hover state. This prevents the doubletap bug expressed on the iPad and iPhone.
+@mixin card-group-hover-gate {
+  html:not([data-platform='iPhone']):not([data-platform='iPad']) {
+    .card-group__card {
+      &:hover {
+        .card-group__card__logo {
+          display: none;
+        }
+
+        .card-group__card__logo--hover {
+          display: inline;
+          height: $interactive-card-logo-height;
+        }
+      }
     }
   }
 }

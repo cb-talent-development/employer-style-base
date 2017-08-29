@@ -111,10 +111,18 @@
     }
   }
 
+  .card-group__card__external-link {
+    position: absolute;
+    bottom: $base-spacing-large;
+    left: 0;
+    right: 0;
+  }
+
   .card-group__card__button {
     @include card--tile__button;
     @include font-style--med-bold-uppercase;
     display: inline-block;
+    margin-top: 0px;
   }
 
   .card-group__card--back--azure-blue:after {

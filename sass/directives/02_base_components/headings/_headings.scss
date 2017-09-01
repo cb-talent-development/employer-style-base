@@ -37,6 +37,12 @@
   }
 }
 
+@mixin heading--section--small {
+  @include font-style--med-bold-uppercase;
+  margin-bottom: $type-margin;
+  color: $header-text-color;
+}
+
 @mixin heading--section--w-subhead {
   margin-bottom: $type-margin;
 

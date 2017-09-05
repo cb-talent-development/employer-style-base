@@ -1,8 +1,6 @@
 @mixin card-group {
   .card-group__items {
     @include card-deck--centered;
-
-    margin: -($base-spacing-medium / 2);
   }
 
   .card-group__card {

@@ -83,7 +83,6 @@
 
   .card-group__card__logo {
     @include card--tile__logo;
-    height: $interactive-card-logo-height;
   }
 
   .card-group__card__logo--hover {

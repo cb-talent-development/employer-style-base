@@ -99,9 +99,10 @@ $gradient-angle: 135deg;
     url($img-url);
   background-blend-mode: $blend-mode;
 
+  // Our convention is to use a blend mode and fixed attachment for gradients + patterned image, not for gradient + photo image. This applies the appropriate attachment and image fallback based on whether or not a blend mode was intended and unsets blend mode for browsers/devices where it doesn't work.
+  $is-blend-mode-unset: $blend-mode == unset or $blend-mode == 'unset' or $blend-mode == none or $blend-mode == 'none';
 
-  // Our convention is to use a blend mode and fixed attachment for gradients + patterned image, not for gradient + photo image. This explicitly unsets blend mode and applies the appropriate fallback based on whether or not a blend mode was intended.
-  @if $blend-mode == unset or $blend-mode == 'unset' or $blend-mode == none or $blend-mode == 'none' {
+  @if $is-blend-mode-unset {
     background-attachment: inherit;
   } @else {
     background-attachment: fixed;
@@ -110,9 +111,7 @@ $gradient-angle: 135deg;
   html[data-useragent*='Windows NT']:not([data-useragent*='Edge']) &,
   html[data-useragent*='iPhone'] & {
     background-blend-mode: unset;
-    @if $blend-mode == unset or $blend-mode == 'unset' or $blend-mode == none or $blend-mode == 'none' {
-      background-image: url($img-url);
-    } @else {
+    @if not($is-blend-mode-unset) {
       background-image: linear-gradient($gradient-angle, $dark 0%, $medium 35%, $light 100%);
     }
   }

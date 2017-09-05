@@ -1,0 +1,49 @@
+// Layout
+@mixin features-list-layout {
+	@include quad-layout;
+	justify-content: space-between;
+
+	.features__item {
+		width: calc(50% - (#{$base-spacing-medium} / 2));
+		padding-right: 0;
+
+		@media screen and (max-width: $_quad-layout-breakpoint) {
+			width: 100%;
+			padding-left: 0;
+		}
+	}
+
+	.features__item__heading {
+		@include display(flex);
+		@include align-items(center);
+		@include heading--item;
+
+		@media screen and (max-width: $_quad-layout-breakpoint) {
+			flex-direction: column;
+		}
+	}
+}
+
+// Content
+@mixin features-list-content {
+	.features__item__img {
+  		position: absolute;
+ 		top: 0;
+  		left: $base-spacing-xlarge / 2;
+  		transform: translateX(-50%);
+  		width: 3.4em; // ~44px
+  		height: 3.4em; // ~44px
+
+  		@media screen and (max-width: $_quad-layout-breakpoint) {
+    			position: static;
+    			margin-bottom: $base-spacing-small;
+    			transform: translateX(0);
+  		}
+	}
+
+	.features__item__text {
+ 		@media screen and (max-width: $_quad-layout-breakpoint) {
+    			text-align: center;
+  		}
+	}
+}

@@ -1,8 +1,6 @@
 @mixin card-group {
   .card-group__items {
     @include card-deck--centered;
-
-    margin: -($base-spacing-medium / 2);
   }
 
   .card-group__card {
@@ -85,7 +83,6 @@
 
   .card-group__card__logo {
     @include card--tile__logo;
-    height: $interactive-card-logo-height;
   }
 
   .card-group__card__logo--hover {
@@ -119,7 +116,6 @@
   }
 
   .card-group__card__button {
-    @include card--tile__button;
     @include font-style--med-bold-uppercase;
     display: inline-block;
     margin-top: 0px;

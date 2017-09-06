@@ -68,11 +68,15 @@
 }
 
 @mixin card--tile__logo {
+  height: $interactive-card-logo-height;
   margin-bottom: $base-spacing-small;
 }
 
 @mixin card--tile__button {
-  margin-top: $base-spacing-medium; // TODO standardize new button top margins
+  margin-top: $type-margin--small;
+  @include button;
+  @include tertiary-button;
+  @include small-button;
 }
 
 @mixin card--tile__text {
@@ -98,6 +102,8 @@
   @include flex-direction(row);
   @include justify-content(space-between);
   @include align-items(stretch);
+
+  margin: -($base-spacing-medium / 2);
 
   @media only screen and (max-width: $medium-screen-max) {
     max-width: 100%;

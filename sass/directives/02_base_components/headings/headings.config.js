@@ -30,6 +30,15 @@ module.exports = {
         'heading-class': 'heading--section'
       }
     },
+    },
+    {
+      'name': 'headingsectionsmall',
+      'context': {
+        'order': 1,
+        'heading-type': 'Heading - Section - Small',
+        'heading-class': 'heading--section--small'
+      }
+    },
     {
       'name': 'headingsectionwsubhead',
       'context': {

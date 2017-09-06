@@ -136,6 +136,10 @@ cite {
   @include heading--section;
 }
 
+.heading--section--small {
+  @include heading--section--small;
+}
+
 .heading--section--w-subhead {
   @include heading--section--w-subhead;
 }

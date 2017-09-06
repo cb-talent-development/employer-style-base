@@ -24,10 +24,9 @@
     @if $overlay-gradient == null {
       background-image: url(asset_path($image-url));
     } @else {
-      @include imageGradientBlend(asset_path($image-url), map-get($overlay-gradient, dark), map-get($overlay-gradient, medium), map-get($overlay-gradient, light), $mode: unset);
+      @include imageGradientBlend(asset_path($image-url), map-get($overlay-gradient, dark), map-get($overlay-gradient, medium), map-get($overlay-gradient, light), $blend-mode: unset);
     }
 
-    background-attachment: unset;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -43,10 +42,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: $base-spacing-xlarge;
 
     @media only screen and (max-width: $small-screen-max) {
+      align-items: center;
       padding: $section-padding--mobile $base-spacing-medium;
     }
 

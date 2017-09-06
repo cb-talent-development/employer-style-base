@@ -25,3 +25,18 @@ $_quad-layout-breakpoint--min: calc(#{$_quad-layout-breakpoint} + 1px);
     }
   }
 }
+
+@mixin quad-layout-short {
+	@include quad-layout;
+	justify-content: space-between;
+
+	li {
+		width: calc(50% - (#{$base-spacing-medium} / 2));
+		padding-right: 0;
+
+		@media screen and (max-width: $_quad-layout-breakpoint) {
+      width: 100%;
+			padding-left: 0;
+		}
+	}
+}

@@ -73,7 +73,10 @@
 }
 
 @mixin card--tile__button {
-  margin-top: $base-spacing-medium; // TODO standardize new button top margins
+  margin-top: $type-margin--small;
+  @include button;
+  @include tertiary-button;
+  @include small-button;
 }
 
 @mixin card--tile__text {

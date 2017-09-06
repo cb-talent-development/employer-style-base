@@ -116,7 +116,6 @@
   }
 
   .card-group__card__button {
-    @include card--tile__button;
     @include font-style--med-bold-uppercase;
     display: inline-block;
     margin-top: 0px;

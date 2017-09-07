@@ -1,4 +1,4 @@
-@mixin card--tile($scale: true, $include_strip: true) {
+@mixin card--tile($scale: true, $include_strip: true, $strip-color: $lime-dark) {
   @include component-box;
   @include display(flex);
   @include flex-direction(column);
@@ -14,7 +14,7 @@
     padding-top: calc(#{$base-spacing-medium} + #{$small-strip-height});
 
     &:before {
-      @include bs__small-strip;
+      @include small-strip($strip-color);
     }
   }
 

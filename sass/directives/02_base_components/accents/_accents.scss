@@ -2,12 +2,12 @@
 //   box-shadow: 0 (2px * $z) (2px * $z) rgba(0, 0, 0, 0.2);
 // }
 
-@mixin small-strip {
+@mixin small-strip($strip-color: $anchor-blue) {
   content: '';
   height: $small-strip-height;
   border-top-right-radius: $minor-border-radius;
   border-top-left-radius: $minor-border-radius;
-  background-color: $anchor-blue;
+  background-color: $strip-color;
   position: absolute;
   top: 0;
   right: 0;
@@ -20,19 +20,6 @@
   margin: auto;
   margin-top: $type-margin;
   margin-bottom: $type-margin;
-}
-
-// The small strip changes for brand simplification
-@mixin bs__small-strip { // TODO we shouldn't need this anymore; if anything, add a background color parameter to @mixin small-strip
-  content: '';
-  height: $small-strip-height;
-  border-top-right-radius: $minor-border-radius;
-  border-top-left-radius: $minor-border-radius;
-  background-color: $lime-dark;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
 }
 
 @mixin column-flag {

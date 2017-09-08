@@ -6,6 +6,10 @@
   @include sticky-box;
 }
 
+.cta-box {
+  @include cta-box;
+}
+
 .item-bar__list {
   @include item-bar__list;
 }

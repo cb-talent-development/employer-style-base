@@ -5,13 +5,17 @@
   box-shadow: $base-box-shadow;
 }
 
-@mixin sticky-box($breakpoint: $small-screen-max) {
+// Sticky Box - A component box that is fixed to one side of the viewport. Used for buy boxes and may be used for other calls to action
+@mixin sticky-box($breakpoint: $small-screen-max, $side: right, $z-index: 1) {
   @include component-box;
+  @include container-edge-calc(right);
   box-shadow: $base-box-shadow;
   position: fixed;
+  z-index: $z-index;
 
   @media only screen and (max-width: $breakpoint) {
-    position: static;
+    position: static !important; // !importants overrride the sticky_box.js behavior on small screens
+    margin: auto !important;
   }
 
   p {

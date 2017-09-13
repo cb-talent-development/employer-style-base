@@ -15,9 +15,15 @@
   }
 
   p {
-    color: $text-color-grey;
     font-size: $font-size-small;
   }
+}
+
+// Call to action box with gradient background and text
+@mixin cta-box($gradient: $cb) {
+  border-radius: $minor-border-radius;
+  padding: $base-spacing-medium;
+  @include gradient(map-get($gradient, dark), map-get($gradient, medium), map-get($gradient, light));
 }
 
 // Ecom Table Boxes

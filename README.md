@@ -60,7 +60,17 @@ Our projects prefer semantic (BEM) class names that are specific to their use an
 
 #### Adding Directives
 
+When adding a new directive, make sure to document it in the pattern library. In addition to the new code, you should have:
+
+- [ ] [Example output](http://fractal.build/guide/components/preview-layouts)
+- [ ] [Notes](http://fractal.build/guide/components/notes), which might include
+* Description of how to use the directive
+* Examples of where the directive is currently used
+* Notes on the source or how the pattern was created
+
 After adding a new directive to [`sass/directives/`](sass/directives/), remember to `@import` it into the [`_base.scss`](sass/_base.scss) file.
+
+If appropriate, add a corresponding selector to the [`sass/selectors/`](sass/selectors/) directory, so that the styles are available to users who are using our [CSS output](dist/css/employer_style_base.css).
 
 #### Updating the Version
 
@@ -111,7 +121,3 @@ git subtree push --prefix build origin gh-pages
 ```
 
 Fractal views are built using the [Handlebars](http://handlebarsjs.com/) templating framework.
-
-### Future
-
-- Implement build process to compile CSS into `dist` for easy consumption

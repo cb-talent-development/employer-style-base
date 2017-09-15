@@ -5,6 +5,7 @@ title: Employer Style Base Pattern Library
 
 # Overview and Base Variables
 
+These patterns are based on our [style guide](documentation/style_guide.pdf)
 
 ## Breakpoints
 

@@ -28,20 +28,20 @@
 @import "directives/02_base_components/forms/forms";
 
 // 03 Components - large components and features
-@import "directives/03_components/accordion";
-@import "directives/03_components/card_group";
-@import "directives/03_components/cards";
-@import "directives/03_components/carousels";
-@import "directives/03_components/flyout";
-@import "directives/03_components/headers";
-@import "directives/03_components/media";
+@import "directives/03_components/accordion/accordion";
+@import "directives/03_components/card_group/card_group";
+@import "directives/03_components/cards/cards";
+@import "directives/03_components/carousels/carousels";
+@import "directives/03_components/features_list/features_list";
+@import "directives/03_components/flyout/flyout";
+@import "directives/03_components/headers/headers";
 @import "directives/03_components/layout_quad/layout_quad";
 @import "directives/03_components/layout_split/layout_split";
-@import "directives/03_components/speech_bubble";
-@import "directives/03_components/tables";
-@import "directives/03_components/tooltips";
-@import "directives/03_components/visual-guides";
-@import "directives/03_components/features_list";
+@import "directives/03_components/media/media";
+@import "directives/03_components/speech_bubble/speech_bubble";
+@import "directives/03_components/tables/tables";
+@import "directives/03_components/tooltips/tooltips";
+@import "directives/03_components/visual_guides/visual_guides";
 
 // 04 Utilities - helper classes and overrides
 @import "directives/04_utilities/visibility";

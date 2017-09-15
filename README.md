@@ -49,6 +49,19 @@ sass/ >> The bulk of the styling itself
 └── selectors/ >> Classes and element selectors which implement directives
 ```
 
+### Browser Testing
+
+Employer supports the following browsers
+
+| Browser  | Version |
+| ------------- | ------------- |
+| Internet Explorer  | 11+  |
+| Edge  | 13+  |
+| Chrome  | 52+  |
+| Firefox  | 48+  |
+| Safari  | 9+  |
+
+
 ### Contributing
 
 #### Mixins over Extends and Classes
@@ -113,13 +126,13 @@ to both compile and watch the `.scss` files. If you've already started the Fract
 
 This step will generate updated CSS. **Remember to commit the updated files.**
 
-Now start the pattern library locally with
+Now in a new tab, start the pattern library locally with
 
 ```
 yarn run fractal
 ```
 
-This will give you a URL where you can view the local copy of the pattern library and it will watch the files for changes.
+This will start the fractal server and give you a URL for viewing the local copy of the pattern library. It will also watch the files for changes to the documentation.
 
 After your changes are committed and merged, update the production build of the pattern library, then push the changes to the `gh-pages` branch with the following commands:
 
@@ -129,3 +142,9 @@ git subtree push --prefix build origin gh-pages
 ```
 
 Fractal views are built using the [Handlebars](http://handlebarsjs.com/) templating framework.
+
+The current iteration of this style library has been influenced by (but does not strictly adhere to) the following:
+
+- [TableXI's Implementation of ITCSS](https://github.com/wtfluckey/delightful-stylesheets/blob/master/delightful-stylesheets.pdf)
+- [Atomic Design](http://atomicdesign.bradfrost.com/chapter-2/)
+- [Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css)

@@ -63,10 +63,17 @@ Our projects prefer semantic (BEM) class names that are specific to their use an
 When adding a new directive, make sure to document it in the pattern library. In addition to the new code, you should have:
 
 - [ ] [Example output](http://fractal.build/guide/components/preview-layouts)
+  - Your example HTML is created in a Handlebars (`.hbs`) file.
+    - This can be very straightforward. You might only need plain HTML that uses a CSS selector from the `/selectors` directory, like our [boxes](sass/directives/02_base_components/boxes/boxes.hbs).
+    - For components that are more complex or that require multiple variations, you might need a `config.js` file to dictate all of the modifiers and a `.hbs` template for rendering each modifier, like our buttons ([`config.js`](sass/directives/02_base_components/button/button.config.js), [`.hbs` template](sass/directives/02_base_components/button/button.hbs))
+  - Read more about creating [configuration files](http://fractal.build/guide/components/variants)
+  - Read more about [handlebarsjs.com/](http://handlebarsjs.com/)
 - [ ] [Notes](http://fractal.build/guide/components/notes), which might include
-* Description of how to use the directive
-* Examples of where the directive is currently used
-* Notes on the source or how the pattern was created
+  - Description of how to use the directive
+  - Examples of where the directive is currently used
+  - Notes on the source or how the pattern was created
+
+Directives that don't have a corresponding HTML example, such as Sass functions, can be described in Markdown documentation in the `/docs` directory. See our [Overview](docs/index.md) and [Tools](docs/tools.md) for examples.
 
 After adding a new directive to [`sass/directives/`](sass/directives/), remember to `@import` it into the [`_base.scss`](sass/_base.scss) file.
 
@@ -74,7 +81,7 @@ If appropriate, add a corresponding selector to the [`sass/selectors/`](sass/sel
 
 #### Updating the Version
 
-After your PR is merged, update the [semantic version number appropriately](http://semver.org/), add a [release](https://github.com/cb-talent-development/employer-style-base/releases) and `publish` via Yarn or npm.
+After your PR is merged, update the [semantic version number appropriately](http://semver.org/), add a [release](releases) and `publish` via Yarn or npm.
 
 Then update the `package.json` file in your project with the new version:
 

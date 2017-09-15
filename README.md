@@ -104,6 +104,7 @@ yarn run dev
 
 to both compile and watch the `.scss` files. If you've already started the Fractal server you may need to restart it.
 
+This step will generate updated CSS. **Remember to commit the updated files.**
 
 Now start the pattern library locally with
 

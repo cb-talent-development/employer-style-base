@@ -68,8 +68,8 @@ $visual-guide-breakpoint-small: 750px;
     display: none;
 
     @media only screen and (min-width: $visual-guide-breakpoint-small) {
-      @include align-self(center);
-      @include justify-content(center);
+      align-self: center;
+      justify-content: center;
     }
   }
 
@@ -113,7 +113,7 @@ $visual-guide-breakpoint-small: 750px;
     }
 
     @media only screen and (min-width: $visual-guide-breakpoint-small) {
-      @include align-self(center);
+      align-self: center;
 
       h3 {
         margin-bottom: $type-margin;
@@ -139,12 +139,12 @@ $visual-guide-breakpoint-small: 750px;
     }
 
     @media only screen and (min-width: $visual-guide-breakpoint-small) {
-      @include align-items(center);
+      align-items: center;
       bottom: 0;
-      @include display(flex);
-      @include justify-content(center);
+      display: flex;
+      justify-content: center;
       left: 0;
-      @include order(2);
+      order: 2;
       position: absolute;
       right: 0;
       top: 0;
@@ -152,33 +152,33 @@ $visual-guide-breakpoint-small: 750px;
   }
 
   @media only screen and (min-width: $visual-guide-breakpoint-small) {
-    @include display(flex);
+    display: flex;
 
     .visual-guide__content, .visual-guide__image {
-      @include display(flex);
+      display: flex;
       width: 50%;
     }
 
     &:nth-child(odd) {
       .visual-guide__content {
-        @include justify-content(flex-end);
+        justify-content: flex-end;
         margin-right: $base-spacing-xlarge;
-        @include order(1);
+        order: 1;
       }
       .visual-guide__image {
         margin-left: $base-spacing-xlarge;
-        @include order(3);
+        order: 3;
       }
     }
 
     &:nth-child(even) {
       .visual-guide__content {
         margin-left: $base-spacing-xlarge;
-        @include order(3);
+        order: 3;
       }
       .visual-guide__image {
         margin-right: $base-spacing-xlarge;
-        @include order(1);
+        order: 1;
       }
     }
   }

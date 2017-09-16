@@ -112,12 +112,12 @@ $_item-bar-breakpoint: 46.8em; // ~750px
 }
 
 @mixin item-bar__list($breakpoint: $small-screen-max) {
-  @include display(flex);
-  @include justify-content(center);
+  display: flex;
+  justify-content: center;
   padding: $base-spacing-medium 0;
 
   @media only screen and (max-width: $breakpoint) {
-    @include flex-direction(column);
+    flex-direction: column;
     padding: 0;
   }
 }

@@ -200,8 +200,8 @@
 // Testimonial Carousels
 @mixin testimonial__carousel__item-container {
   @include media__item(400px, $medium-screen-max);
-  @include justify-content(center);
-  @include align-items(center);
+  justify-content: center;
+  align-items: center;
 
   @media only screen and (max-width: $medium-screen-max) {
     img {
@@ -229,9 +229,9 @@
   @media only screen and (min-width: $medium-screen-max) {
     padding-right: $base-padding;
     width: 130px;
-    @include flex-grow(0);
-    @include flex-shrink(0);
-    @include flex-basis(auto);
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
   }
 
   img {

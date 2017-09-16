@@ -107,16 +107,16 @@ form button {
 // Full-width field
 
 .fieldset--large {
-  @include display(flex);
-  @include flex-wrap(nowrap);
-  @include align-items(stretch);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
 
   & #{$all-text-inputs},
   & select,
   & .select {
-    @include flex-grow(1);
-    @include flex-shrink(1);
-    @include flex-basis(auto);
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
     width: 100%;
     margin-bottom: 0;
 
@@ -129,9 +129,9 @@ form button {
   &__button.button {
     box-shadow: $form-input-box-shadow;
     width: auto;
-    @include flex-grow(0);
-    @include flex-shrink(0);
-    @include flex-basis(auto);
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
 
     @media only screen and (min-width: $small-screen-max) {
       border-top-left-radius: 0;
@@ -147,9 +147,9 @@ form button {
   }
 
   @media only screen and (max-width: $small-screen-max) {
-    @include flex-wrap(wrap);
-    @include flex-direction(column);
-    @include align-items(flex-start);
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 

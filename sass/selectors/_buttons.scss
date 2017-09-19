@@ -58,11 +58,3 @@ input[type="submit"] {
     @include disabled;
   }
 }
-
-.button-group-vertical {
-  @extend %button-group-vertical;
-}
-
-.button-group {
-  @extend %button-group;
-}

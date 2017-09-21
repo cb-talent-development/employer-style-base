@@ -1,0 +1,196 @@
+@mixin nav_flyout($top, $flyout-offset-value, $flyout-offset-direction: 'left') { // TODO may not need any params
+  position: relative;
+
+  ul {
+    @include component-box;
+    @include transition($base-transition);
+    position: absolute;
+    top: $top;
+    #{$flyout-offset-direction}: $flyout-offset-value;
+    text-align: left;
+    z-index: z($z-context, navigation, $navigation, top-bar--primary__flyout__ul);
+    width: auto;
+    height: auto;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 0;
+    display: none;
+
+    @media only screen and (max-width: $mobile-nav-max) {
+      position: relative;
+      top: 0;
+      left: 0;
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+  }
+
+  // Hover and Click behavior above hamburger menu range
+
+  &:hover ul,
+  &.hover ul {
+    @media only screen and (min-width: $mobile-nav-max) {
+      display: block;
+    }
+  }
+
+  ul li {
+    list-style-type: none;
+  }
+
+  ul li a {
+    display: block;
+    padding: $base-spacing-small $base-spacing-medium;
+    color: $base-link-color;
+    font-size: $top-bar-font-size;
+    font-weight: $font-weight-bold;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      background-color: $grey-lightest;
+    }
+
+    @media only screen and (max-width: $mobile-nav-max) {
+      padding: 10px 24px; // TODO when we update mobile nav update these numbers; currently sizes shouldn't change, so don't want to use the spacing variables that will change before mobile nav
+      color: $base-link-color;
+      text-indent: $type-indent;
+    }
+  }
+
+  ul li:last-of-type a {
+    &:hover,
+    &:active,
+    &:focus {
+      border-bottom-left-radius: $minor-border-radius;
+      border-bottom-right-radius: $minor-border-radius;
+    }
+  }
+
+  > a:after {
+    font-family: FontAwesome;
+    font-size: $top-bar-angle-size;
+    margin-left: $base-spacing-smallest;
+    color: $base-link-color;
+    content: '\f107';
+    transition: $element-spin-base-transition;
+  }
+
+  &:hover,
+  &.hover {
+    > a:after {
+      transform: $element-spin-rotation-half;
+      color: $header-text-hover-color;
+    }
+  }
+}
+
+// Use the mobile-subnav mixin for the subnav bars that appear on our subscription / product pages
+// Displays a single link with a flyout
+@mixin mobile-subnav-flyout {
+  @media only screen and (max-width: $small-screen-max) {
+    &:hover {
+      ul {
+        display: block;
+      }
+
+      .mobile-subnav__top-link {
+        &:after {
+          content: '\f106';
+        }
+      }
+    }
+
+    ul {
+      display: none;
+      background-color: white;
+      border-bottom: $base-border;
+      position: absolute;
+      top: $product_subnav--height;
+      left: 0;
+      right: 0;
+      width: 100%;
+
+      > li {
+        display: block;
+        line-height: $product_subnav--height;
+        width: 100%;
+
+        &:hover {
+          background-color: $base-link-color;
+        }
+
+        a {
+          display: block;
+          float: none;
+          border: none;
+          color: $primary-nav-link-color;
+          margin: 0 $container-edge-padding;
+
+          &.active {
+            border-bottom: none;
+          }
+
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-subnav__top-link {
+    display: block;
+
+    @media only screen and (min-width: $medium-screen-min) {
+      display: none;
+    }
+  }
+
+  .mobile-subnav__top-link {
+    line-height: $product_subnav--height;
+    color: $primary-nav-link-color;
+    padding-left: $container-edge-padding;
+    text-transform: uppercase;
+    position: relative;
+
+    &:after {
+      font-family: FontAwesome;
+      font-size: $top-bar-angle-size;
+      color: $base-link-color;
+      content: '\f107';
+      position: absolute;
+      right: $container-edge-padding;
+    }
+  }
+
+  .mobile-subnav__close {
+    display: none;
+
+    &:after {
+      font-family: FontAwesome;
+      font-size: $top-bar-angle-size;
+      color: $base-link-color;
+      content: '\f107';
+      transform: rotate(180deg);
+      position: absolute;
+      right: $container-edge-padding;
+    }
+  }
+
+  // Mainly for mobile
+  &.mobile-subnav__wrap--hidden {
+    ul {
+      display: none;
+    }
+
+    .mobile-subnav__top-link {
+      &:after {
+        content: '\f107';
+      }
+    }
+  }
+}

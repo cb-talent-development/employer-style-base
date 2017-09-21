@@ -1,0 +1,98 @@
+// @mixin shadow($z: 1) {
+//   box-shadow: 0 (2px * $z) (2px * $z) rgba(0, 0, 0, 0.2);
+// }
+
+@mixin small-strip($strip-color: $anchor-blue) {
+  content: '';
+  height: $small-strip-height;
+  border-top-right-radius: $minor-border-radius;
+  border-top-left-radius: $minor-border-radius;
+  background-color: $strip-color;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+@mixin divider_line($divider-line-size: 3em) {
+  max-width: $divider-line-size;
+  border-bottom: 2px solid white;
+  margin: auto;
+  margin-top: $type-margin;
+  margin-bottom: $type-margin;
+}
+
+@mixin column-flag {
+  color: white;
+  text-align: center;
+  background-color: $anchor-blue;
+  margin-bottom: 0;
+  width: 75%;
+  margin: auto;
+}
+
+@mixin table-flag($background-color) {
+  @include display(flex);
+  @include justify-content(center);
+  @include align-items(center);
+  height: $table-flag-height;
+  width: calc(100% - (#{$table-flag-offset} * 2));
+  position: absolute;
+  bottom: 100%;
+  left: $table-flag-offset;
+  color: white;
+  background-color: $background-color;
+}
+
+$return-to-top-z-index: 9001 !default;
+
+@mixin return-to-top { // TODO does this belong somewhere other than accents?
+  position: fixed;
+  bottom: 1.25em;
+  right: 1.25em;
+  background: $grey-darkest;
+  opacity: 0.6;
+  width: 3.125em;
+  height: 3.125em;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: $return-to-top-z-index;
+
+  i {
+    color: white;
+    margin: 0;
+    position: relative;
+    left: 30%;
+    top: 10%;
+    font-size: $back-to-top-icon-size;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    background: black;
+    opacity: 0.8;
+    cursor: pointer;
+
+    i {
+      color: white;
+      top: 0;
+    }
+  }
+
+  @media only screen and (max-width: $small-screen-max) {
+    bottom: 3em;
+  }
+}

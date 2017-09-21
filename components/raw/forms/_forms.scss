@@ -1,0 +1,205 @@
+// TODO Determine any styles to keep and reactivate
+// input,
+// label,
+// select {
+//   display: block;
+// }
+//
+// label {
+//   margin-bottom: $base-spacing / 4;
+//   font-weight: $font-weight-bold;
+//
+//   &.required:after {
+//     // TODO: Make this an icon on an input field, instead
+//     content: "*";
+//   }
+//
+//   abbr {
+//     display: none;
+//   }
+// }
+//
+// textarea,
+// #{$all-text-inputs},
+// select[multiple=multiple] {
+//   @include box-sizing(border-box);
+//   @include transition(border-color);
+//   background-color: white;
+//   border-radius: $form-border-radius;
+//   border: $base-input-border-size solid $form-border-color;
+//   box-shadow: $form-box-shadow;
+//   font-family: $form-font-family;
+//   font-size: $form-input-font-size;
+//   line-height: $base-input-line-height;
+//   padding: $base-input-vertical-padding $base-input-horizontal-padding;
+//   margin-bottom: 3px; // Just enough margin to expose the 'glow'
+//
+//   &:hover {
+//     border-color: $form-border-color-hover;
+//   }
+//
+//   &:focus {
+//     border-color: $form-border-color-focus;
+//     box-shadow: $form-box-shadow-focus;
+//     outline: none;
+//   }
+// }
+//
+// textarea {
+//   resize: vertical;
+// }
+//
+// input[type="radio"] {
+//   @extend %visuallyHidden;
+// }
+//
+// input[type="radio"] + label {
+//   position: relative;
+//
+//   &:before {
+//     left: 0;
+//     top: 0;
+//     content: " ";
+//     background-color: white;
+//     box-shadow: $base-radio-box-shadow;
+//     padding: $base-font-size;
+//     margin-right: $base-spacing / 4;
+//     border-radius: $radio-border-radius;
+//     float: left;
+//     display: inline-block;
+//     position: relative;
+//   }
+// }
+//
+// input[type="radio"]:hover + label {
+//   &:before {
+//     box-shadow: $hover-radio-box-shadow;
+//     @include transition(box-shadow 0.5s linear);
+//   }
+// }
+//
+// input[type="radio"]:checked + label {
+//   &:before {
+//     box-shadow: $checked-radio-box-shadow;
+//   }
+// }
+//
+// input[type="radio"]:active + label {
+//   &:before {
+//     box-shadow: $active-radio-box-shadow;
+//   }
+// }
+//
+// select {
+//   margin-bottom: $base-spacing;
+//   max-width: 100%;
+//   width: auto;
+// }
+//
+// .form-header {
+//   color: $header-text-color;
+//   display: block;
+//   font-weight: bold;
+//   margin-bottom: $base-spacing / 4;
+// }
+//
+// div.group {
+//   overflow: auto; // Push height even when form elements float
+//   margin-top: $base-spacing / 2;
+// }
+//
+// table {
+//   @include font-feature-settings("kern", "liga", "tnum");
+// }
+
+// Forms Type Styles
+$form-font-family: $base-font-family;
+$form-label-font-weight: $font-weight-bold;
+$form-input-font-weight: $font-weight-regular;
+
+// Borders
+$form-border-color: $grey-light;
+$form-border: 1px solid $form-border-color;
+$form-border-color-hover: darken($base-border-primary-color, 10);
+$form-border-color-focus: $alert-primary;
+$form-border-radius: $minor-border-radius;
+
+// Input Styles
+$form-background-color: white;
+$form-input-color: $text-color-grey;
+$form-placeholder-color: $grey-light;
+
+$form-box-shadow: inset 0 1px 3px rgba(black, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+
+$base-radio-box-shadow: 0 0 0 1px $grey-light inset, 0 0 0 9px white inset, 0 0 0 10px $grey-light inset;
+$hover-radio-box-shadow: 0 0 0 1px $alert-primary-active inset, 0 0 0 9px white inset, 0 0 0 16px $alert-primary-active inset;
+$checked-radio-box-shadow: 0 0 0 1px $grey-light inset, 0 0 0 9px white inset, 0 0 0 16px $alert-primary inset;
+$active-radio-box-shadow: 0 0 0 8px $alert-primary-active inset, 0 0 0 16px white inset;
+
+// Input Sizes
+$form-input-font-size: $base-font-size;
+
+$form-input-vertical-padding: $form-input-font-size * 0.6;
+$form-input-horizontal-padding: $form-input-font-size * 1.25;
+$base-input-border-size: 1px;
+$base-input-line-height: $base-line-height;
+
+$large-input-width: 100%;
+
+$medium-input-font-size: $form-input-font-size;
+$medium-input-vertical-padding: $form-input-vertical-padding;
+$medium-input-horizontal-padding: $form-input-horizontal-padding;
+
+$small-input-font-size: $form-input-font-size * 0.875;
+$small-input-vertical-padding: $form-input-font-size * 0.438;
+$small-input-horizontal-padding: $form-input-font-size * 0.625;
+
+$large-input-font-size: $form-input-font-size * 1.5;
+$large-input-vertical-padding: $form-input-font-size * 0.625;
+$large-input-horizontal-padding: $form-input-font-size * 0.938;
+
+$form-fieldset-margin: 10px;
+
+$select-arrow-width: 3em;
+
+// Autocomplete Dropdown
+
+@mixin autocomplete-dropdown($list-z-index: 1) {
+  position: relative;
+
+  input[type="search"] {
+    margin-bottom: 0;
+  }
+
+  input[type="search"]:focus {
+    border: 1px solid $sky-blue;
+    outline: 0;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    z-index: $list-z-index;
+  }
+
+  li {
+    list-style-type: none;
+    border-left: 1px solid $sky-blue;
+    border-right: 1px solid $sky-blue;
+  }
+
+  .eac-item {
+    padding: $form-input-vertical-padding $form-input-horizontal-padding;
+  }
+
+  li:last-child {
+    border-bottom: 1px solid $sky-blue;
+  }
+
+  li:hover {
+    background-color: $sky-blue;
+    color: white;
+  }
+}

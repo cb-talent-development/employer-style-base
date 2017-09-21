@@ -1,0 +1,182 @@
+@mixin card-group {
+  .card-group__items {
+    @include card-deck--centered;
+  }
+
+  .card-group__card {
+    @include card--tile($include_strip: false);
+    // Restore the original box-shadow since it is lost when adding layers. This is not the same as $base-box-shadow-hover
+    box-shadow: $card-group-box-shadow-flipped;
+    // Restore the height of the cards due to absolute positioning (with flexbox)
+    height: $fixed-card-height;
+    cursor: pointer;
+    position: relative;
+
+    h3 {
+      font-size: $font-size-xxl;
+    }
+
+    &.card-group__card--flipped {
+      animation-duration: .55s;
+      animation-name: flipcard;
+      outline-width: 0;
+
+      .card-group__card--front {
+        -webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+      }
+
+      .card-group__card--back {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+      }
+    }
+  }
+
+  @keyframes flipcard {
+    from {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    50% {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    to {
+      background-color: white;
+      box-shadow: $base-box-shadow-hover;
+    }
+  }
+
+  .card-group__card--front, .card-group__card--back {
+    @include component-box;
+
+    background-color: white;
+    padding-bottom: 0;
+    box-shadow: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform 0.3s;
+  }
+
+  .card-group__card--back {
+    transform: rotateY(-180deg);
+
+    &:after {
+      @include small-strip;
+    }
+
+    .card-group__card__text {
+      .employer-section__header--subhead__heading {
+        font-size: $font-size-med;
+      }
+    }
+  }
+
+  .card-group__card__logo {
+    @include card--tile__logo;
+  }
+
+  .card-group__card__logo--hover {
+    @include card--tile__logo;
+    display: none;
+  }
+
+  .card-group__card__text {
+    @include card--tile__text;
+  }
+
+  .card-group__card__list {
+    padding-top: $base-spacing-large;
+    padding-bottom: $base-spacing-large;
+
+    li {
+      margin-bottom: $base-spacing-smallest;
+      list-style-type: none;
+
+      :last-of-type {
+        margin-bottom: none;
+      }
+    }
+  }
+
+  .card-group__card__external-link {
+    position: absolute;
+    bottom: $base-spacing-large;
+    left: 0;
+    right: 0;
+  }
+
+  .card-group__card__button {
+    @include font-style--med-bold-uppercase;
+    display: inline-block;
+    margin-top: 0px;
+  }
+
+  .card-group__card--back--azure-blue:after {
+    background-color: $azure-blue;
+  }
+
+  .card-group__card--back--marigold:after {
+    background-color: $marigold;
+  }
+
+  .card-group__card--back--emerald:after {
+    background-color: $emerald;
+  }
+
+  // Show the back and front side of the cards when the page is in edit mode, and prevent animations
+  #card-group__edit-mode {
+    &.card-group__card {
+      height: $fixed-card-height-editmode;
+
+      &.card-group__card--flipped {
+        animation-duration: 0ms;
+        animation-name: none;
+
+        .card-group__card--front {
+          transform: none;
+        }
+
+        .card-group__card--back {
+          transform: none;
+        }
+      }
+    }
+
+    .card-group__card--front, .card-group__card--back {
+      position: relative;
+    }
+
+    .card-group__card--back {
+      transform: none;
+    }
+  }
+}
+
+// Include this mixin if you plan to show a logo in the card with a hover state. This prevents the doubletap bug expressed on the iPad and iPhone.
+// 'data-platform' can be an attribute appeneded to your opening <html> tag using User Agent / Platform detection via Javascript
+@mixin card-group-hover-gate {
+  html:not([data-platform='iPhone']):not([data-platform='iPad']) {
+    .card-group__card {
+      &:hover {
+        .card-group__card__logo {
+          display: none;
+        }
+
+        .card-group__card__logo--hover {
+          display: inline;
+          height: $interactive-card-logo-height;
+        }
+      }
+    }
+  }
+}

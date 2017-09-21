@@ -1,0 +1,292 @@
+@mixin table {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 $table-margin 0;
+  padding: 0;
+}
+
+@mixin table__cell($columns) {
+  @include calc(width, "100% / #{$columns}");
+
+  border-bottom: $table-row-divider-width solid $table-row-divider-color;
+  padding: $table-cell-padding-top-and-bottom $table-cell-padding-sides;
+  box-sizing: border-box;
+  flex-grow: 1;
+  overflow: hidden; // Or flex might break
+  list-style: none;
+  > h1, > h2, > h3, > h4, > h5, > h6 { margin: 0; }
+}
+
+@mixin table__row--last {
+  border-bottom: none !important;
+}
+
+@mixin table__header($columns) {
+  @include table__cell($columns);
+  background-color: $table-header-background-color;
+  padding: $table-header-padding;
+  border-bottom: none;
+}
+
+@mixin table__header--first($columns) {
+  @include table__header($columns);
+  border-top-left-radius: $table-header-corner-radius;
+}
+
+@mixin table__header--last($columns) {
+  @include table__header($columns);
+  border-top-right-radius: $table-header-corner-radius;
+}
+
+
+// Compare Charts
+
+@mixin table--row-column-headers($table-caption-z-index: 2) {
+  border-collapse: collapse;
+  border-spacing: $table-border-spacing;
+  table-layout: fixed;
+  width: 100%;
+
+  caption {
+    position: relative;
+    z-index: $table-caption-z-index;
+    background: $panel-primary;
+    text-align: left;
+  }
+
+  th, td {
+    border: $base-border;
+  }
+
+  th {
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    font-size: 0.9375rem;
+  }
+
+  thead th:first-of-type {
+    border: 0;
+    background-color: transparent;
+
+    @media only screen and (max-width: $medium-screen-max) {
+      width: 14ch;
+    }
+  }
+
+  th[scope='col'] {
+    padding: $base-spacing-medium;
+    color: white;
+    text-align: center;
+    position: relative;
+    background-clip: padding-box;
+  }
+
+  th[scope='row'] {
+    @include font-style--small-bold-uppercase;
+    color: $text-color-dark;
+    padding: $table--row-column-headers--row-top-bottom-padding $base-spacing-medium;
+    background-color: $table-row-th--background;
+    text-align: left;
+
+    small {
+      display: block;
+      font-size: $font-size-smallest;
+      font-weight: $font-weight-regular;
+      text-transform: none;
+    }
+  }
+
+  td {
+    position: relative;
+    padding: $table--row-column-headers--row-top-bottom-padding 1.5rem;
+    color: $grey-demon;
+    text-align: center;
+    font-size: $font-size-small;
+  }
+
+  .button {
+    font-size: $font-size-small;
+  }
+}
+
+
+/* table--row-column-headers--mobile: Adds 100vw wrap for mobile, calculates table width based on number of columns, adjusts pixels due to border-collapse: collapse. For use with Tab component. Expects Tab component is adjacent to table and reflects selected tab with class in .selectedTab--0 format
+*/
+@mixin table--row-column-headers--mobile($columns) {
+  $length: $columns - 1;
+
+  width: calc((#{$columns} * 100%) - (#{$length} * 1px));
+  margin-left: -$container-edge-padding;
+  position: relative;
+
+
+  @for $i from 0 through $length {
+    .selectedTab--#{$i} + & {
+      left: calc((#{$i} * -100%) + #{$container-edge-padding} + (#{$i} * 1px));
+    }
+  }
+
+  &__wrap {
+    width: calc(100vw - (#{$container-edge-padding} * 2));
+    overflow: hidden;
+  }
+}
+
+@mixin table--alternating-row-colors {
+  tr:nth-child(odd) {
+    th, td {
+      background-color: $table-row-light;
+    }
+  }
+
+  tr:nth-child(even) {
+    th, td {
+      background-color: $table-row-dark;
+    }
+  }
+}
+
+@mixin table--alternating-row-colors--darkened-column {
+  tbody tr:nth-child(odd) {
+    .darken {
+      background-color: $table-row-light-promo;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  tbody tr:nth-child(even) {
+    .darken {
+      background-color: $table-row-dark-promo;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+@mixin table__column-highlight($highlight-content, $table-highlight-z-index) {
+  overflow: hidden;
+
+  th, td {
+    &:hover:after,
+    &:active:after,
+    &:focus:after {
+      content: $highlight-content;
+      position: absolute;
+      background-color: rgba($grey-darkest, 0.1);
+      left: 0;
+      top: -5000px;
+      height: 10000px;
+      width: 100%;
+      z-index: $table-highlight-z-index;
+      pointer-events: none;
+    }
+
+    .button {
+      margin-bottom: 1px; // overflow: hidden cuts off bottom of bottom-row buttons in Safari
+    }
+  }
+
+  // Remove column highlight on first column
+  th[scope='row'],
+  thead th:first-of-type {
+    &:hover:after,
+    &:active:after,
+    &:focus:after {
+      content: none;
+      display: none;
+    }
+  }
+}
+
+@mixin table__buttons-row {
+  td {
+    background-color: transparent;
+    border: 0;
+    padding: $base-spacing-medium 0 0;
+
+    &:hover:after,
+    &:active:after,
+    &:focus:after {
+      content: none !important;
+      display: none;
+    }
+  }
+}
+
+@mixin table-data-icon {
+  position: relative;
+  right: 9999px;
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    right: -9999px;
+    width: 100%;
+    font-size: $table-data-icon-size;
+    line-height: 0;
+    font-family: FontAwesome;
+    color: $lime-dark;
+  }
+
+  &--no:after {
+    content: '\f00d'; // X icon
+  }
+
+  &--yes:after {
+    content: '\f00c'; // Checkmark icon
+  }
+}
+
+// Comapre Chart Modifiers
+
+@mixin table--product($table-caption-z-index: 2) {
+  @include table--row-column-headers($table-caption-z-index);
+
+  thead {
+    th:nth-of-type(3n+2) {
+      background-color: $table-column-heading-1;
+    }
+
+    th:nth-of-type(3n+3) {
+      background-color: $table-column-heading-2;
+    }
+
+    th:nth-of-type(3n+4) {
+      background-color: $table-column-heading-3;
+    }
+
+    th:nth-of-type(3n+5) {
+      background-color: $table-column-heading-4;
+    }
+  }
+}
+
+@mixin table--ecom($table-caption-z-index: 2) {
+  @include table--row-column-headers($table-caption-z-index);
+
+  thead {
+    th {
+      background-color: $ecom-table-heading;
+    }
+
+    .darken {
+      background-color: $ecom-table-promo-heading;
+    }
+  }
+}
+
+@mixin section-bar($breakpoint) {
+  @include font-style--med-bold-uppercase;
+  border-radius: $minor-border-radius;
+  margin-bottom: $section-padding;
+  padding: $base-margin;
+  background-color: $table-row-light;
+  line-height: normal;
+
+  @media only screen and (max-width: $breakpoint) {
+    margin-bottom: 0;
+  }
+
+  @media only screen and (max-width: $small-screen-max) {
+    margin-bottom: $section-padding--mobile;
+  }
+}

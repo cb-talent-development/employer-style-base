@@ -1,0 +1,44 @@
+@mixin speech_bubble($direction: up, $pointer-offset: 25%, $pointer-triangle-size: 28px) {
+  $pointer-triangle-foreground-size: $pointer-triangle-size - 1;
+  $base-position: null;
+  $offset-position: null;
+
+  @if $direction == up {
+   $base-position: bottom;
+   $offset-position: left;
+  }
+  @if $direction == down {
+   $base-position: top;
+   $offset-position: left;
+  }
+  @if $direction == left {
+   $base-position: right;
+   $offset-position: top;
+  }
+  @if $direction == right {
+   $base-position: left;
+   $offset-position: top;
+  }
+
+  border: $base-border;
+  border-radius: $base-border-radius;
+  padding: $base-spacing / 2 $base-spacing;
+  background-color: $panel-primary;
+
+  &:after, &:before {
+    content: '';
+    position: absolute;
+    #{$base-position}: 100%;
+    pointer-events: none;
+  }
+
+  &:before {
+    @include triangle($pointer-triangle-size $pointer-triangle-size/2, $base-border-primary-color, $direction);
+    #{$offset-position}: $pointer-offset;
+  }
+
+  &:after {
+    @include triangle($pointer-triangle-foreground-size $pointer-triangle-foreground-size/2, $header-flyout-color, $direction);
+    #{$offset-position}: calc(#{$pointer-offset} + 1px);
+  }
+}

@@ -34,7 +34,7 @@ Markup might look like this, with the mixin applied to the `.resource-block__ima
 
 This is in use on the images on the resource carousel cards:
 
-![Resource carousel cards]({{ path '/images__documentation/aspect-ratio.png' }})
+![Resource carousel cards]({{ path '/documentation/images/aspect-ratio.png' }})
 
 
 ## Z-Index Calculator

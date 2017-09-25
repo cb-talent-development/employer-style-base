@@ -30,7 +30,6 @@ module.exports = {
         'heading-class': 'heading--section'
       }
     },
-    },
     {
       'name': 'headingsectionsmall',
       'context': {

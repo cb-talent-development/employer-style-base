@@ -2,9 +2,9 @@
   @include carousel-dots;
 }
 
-.carousel-arrow {
-  @include carousel-arrow; // TODO requires z-index
-}
+// .carousel-arrow {
+//   @include carousel-arrow; // TODO requires z-index
+// }
 
 .resource-carousel-arrow {
   @include resource-carousel-arrow;

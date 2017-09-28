@@ -1,46 +1,49 @@
 // 00 Variables - Re-usable color and sizing variables (Order is specific)
 @import "directives/00_variables/breakpoints.scss";
-@import "directives/00_variables/colors";
+@import "directives/00_variables/colors/colors";
 @import "directives/00_variables/sizing";
 @import "directives/00_variables/animations/animations";
-@import "directives/00_variables/typography";
+@import "directives/00_variables/typography/typography";
+@import "directives/00_variables/typography/type_styles";
 @import "directives/00_variables/top_bar";
 
 // 01 Tools - globally used mixins and functions
 @import "directives/01_tools/aspect_ratio";
-@import "directives/01_tools/flashes";
+@import "directives/01_tools/container_edge";
+@import "directives/01_tools/flashes/flashes";
 @import "directives/01_tools/z_index";
 
 // 02 Base Components - small components that are typically used in larger components
-@import "directives/02_base_components/type_styles";
-
-@import "directives/02_base_components/accents";
-@import "directives/02_base_components/boxes";
+@import "directives/02_base_components/accents/accents";
+@import "directives/02_base_components/boxes/boxes";
 @import "directives/02_base_components/button/button";
-@import "directives/02_base_components/ellipsis";
-@import "directives/02_base_components/gradients";
-@import "directives/02_base_components/groups";
-@import "directives/02_base_components/headings";
-@import "directives/02_base_components/pagination";
-@import "directives/02_base_components/modals";
-@import "directives/02_base_components/tabs";
-@import "directives/02_base_components/toggles";
-@import "directives/02_base_components/forms";
+@import "directives/02_base_components/button/video_controls";
+@import "directives/02_base_components/gradients/gradients";
+@import "directives/02_base_components/headings/headings";
+@import "directives/02_base_components/modals/modals";
+@import "directives/02_base_components/pagination/pagination";
+@import "directives/02_base_components/price_per_time/price_per_time";
+@import "directives/02_base_components/tabs/tabs";
+@import "directives/02_base_components/toggles/toggles";
+@import "directives/02_base_components/forms/forms";
 
 // 03 Components - large components and features
-@import "directives/03_components/accordion";
-@import "directives/03_components/cards";
-@import "directives/03_components/carousels";
-@import "directives/03_components/flyout";
-@import "directives/03_components/headers";
-@import "directives/03_components/media";
-@import "directives/03_components/speech_bubble";
-@import "directives/03_components/tables";
-@import "directives/03_components/tooltips";
-@import "directives/03_components/visual-guides";
+@import "directives/03_components/accordion/accordion";
+@import "directives/03_components/card_group/card_group";
+@import "directives/03_components/cards/cards";
+@import "directives/03_components/carousels/carousels";
+@import "directives/03_components/features_list/features_list";
+@import "directives/03_components/flyout/flyout";
+@import "directives/03_components/headers/headers";
+@import "directives/03_components/layout_quad/layout_quad";
+@import "directives/03_components/layout_split/layout_split";
+@import "directives/03_components/media/media";
+@import "directives/03_components/speech_bubble/speech_bubble";
+@import "directives/03_components/tables/tables";
+@import "directives/03_components/tooltips/tooltips";
+@import "directives/03_components/visual_guides/visual_guides";
 
 // 04 Utilities - helper classes and overrides
-@import "directives/04_utilities/clearfix";
 @import "directives/04_utilities/visibility";
 
 
@@ -57,9 +60,11 @@
 @import "selectors/forms";
 @import "selectors/gradients";
 @import "selectors/headers";
+@import "selectors/layout";
 @import "selectors/media";
 @import "selectors/modals";
 @import "selectors/navigation";
+@import "selectors/price_per_time";
 @import "selectors/read_more";
 @import "selectors/speech_bubble";
 @import "selectors/tables";
@@ -73,6 +78,7 @@
   @include base-body-copy;
   @include font-feature-settings("kern", "liga", "frac", "pnum");
   -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   background-color: $base-background-color;
   color: $text-color-grey;

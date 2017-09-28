@@ -1,0 +1,231 @@
+// Color Definitions
+
+// CB Main Branding Colors
+$anchor-blue: #182642;
+$anchor-blue-light: #747d8e;
+
+$azure-blue: #287ab9;
+$azure-blue-dark: #1e5c8b;
+$azure-light: #7eafd5;
+
+$emerald: #009b74;
+$emerald-dark: #007457;
+$emerald-light: #66c3ac;
+
+$marigold: #fcb716;
+$marigold-dark: #f79c25;
+$marigold-light: #fed473;
+
+$grey-darkest: #333;
+$grey-demon: #666;
+$grey-dark: #999999;
+$grey-light: #BBBBBB;
+$grey-lighter: #d8d8d8; // border color, home featured heading background
+$grey-lightest: #F4F4F4;
+
+// CB Secondary
+
+$sky-blue: #0097d1;
+$sky-blue-dark: #0a7aaa;
+$sky-blue-light: #6bc6e9;
+
+$teal: #63c0b9;
+$teal-dark: #54a1a1;
+$teal-light: #a1d9d5;
+
+$aqua: #0195a3;
+$aqua-dark: #006064;
+$aqua-light: #50c5cd;
+
+$lime: #85ce3f;
+$lime-dark: #66a52a;
+$lime-light: #b6e28c;
+
+$orange: #e78523;
+$orange-dark: #be7229;
+$orange-light: #f1b67b;
+
+$purple: #662d91;
+$purple-dark: #311b92;
+$purple-medium: #673ab7;
+$purple-light: #b389ff;
+
+$red: #DD2C00;
+
+// CB Gradient
+$cb-gradient-dark: #0A3A68;
+$cb-gradient-medium: #0E759E;
+$cb-gradient-light: #58A9A2;
+
+$dayAfterTomorrow-dark: white;
+$dayAfterTomorrow-medium: #f0f0f0;
+$dayAfterTomorrow-light: #f0f0f0;
+
+
+// Color Usage
+
+// Product Branding
+
+$brand-color--candidate-marketplace: $marigold;
+$brand-color--sourcing-technologies: $lime;
+$brand-color--recruitment-software: $azure-blue;
+$brand-color--recruitment-analytics: $emerald;
+
+// Resources
+$resources__carousel-continue__background: #fcfcfc;
+$resources__carousel-continue__background--hover: #f8f8f8;
+$resources__carousel-continue__border: #EEEEEE;
+
+// Backgrounds
+$base-background-color: white;
+$secondary-background-color: $grey-lightest;
+$panel-primary: white;
+$panel-secondary: $grey-lightest;
+
+// Alerts
+$alert-primary: $sky-blue;
+$alert-primary-active: $sky-blue-light;
+$alert-danger: $red;
+$alert-warning: $marigold;
+$alert-success: $lime-dark;
+
+// Header/Footer
+$header-background-color--account-nav: $anchor-blue;
+$header-background-color--site-nav: white;
+$header-background-color--mobile-nav: white;
+$header-background-color: white; // mobile?
+$header-mobile-icon-color: $anchor-blue;
+$header-mobile-text-hover-color: white;
+$header-text-color: $anchor-blue;
+$header-text-hover-color: white;
+$header-background-secondary-color: $grey-lightest;
+$header-flyout-color: $header-background-color;
+$header-subtitle-color: $grey-demon;
+$footer-background-color: $anchor-blue;
+// $footer-accent-color: $header-accent-color;
+// $footer-text-color: white;
+// $footer-link-color: white;
+
+// Navigation / Subnavigation
+$primary-nav-link-color: $anchor-blue;
+
+// Buttons
+$base-button-color: $lime-dark;
+$base-button-text-color: white;
+$base-button-border-color: $base-button-color;
+$base-hover-button-color: $lime;
+$base-hover-button-text-color: $base-button-text-color;
+$base-hover-button-border-color: $base-hover-button-color;
+$base-active-button-color: $base-hover-button-color;
+$base-active-button-text-color: $base-button-text-color;
+$base-active-button-border-color: $base-active-button-color;
+
+$primary-button-color: $base-button-color;
+$primary-button-text-color: $base-button-text-color;
+$primary-button-border-color: $primary-button-color;
+$primary-hover-button-color: $base-hover-button-color;
+$primary-hover-button-text-color: $primary-button-text-color;
+$primary-hover-button-border-color: $primary-hover-button-color;
+$primary-active-button-color: $primary-hover-button-color;
+$primary-active-button-text-color: $primary-button-text-color;
+$primary-active-button-border-color: $primary-active-button-color;
+
+$secondary-button-color: $sky-blue;
+$secondary-button-text-color: white;
+$secondary-button-border-color: $secondary-button-color;
+$secondary-hover-button-color: $azure-blue-dark;
+$secondary-hover-button-text-color: $secondary-button-text-color;
+$secondary-hover-button-border-color: $secondary-hover-button-color;
+$secondary-active-button-color: $secondary-hover-button-color;
+$secondary-active-button-text-color: $secondary-hover-button-text-color;
+$secondary-active-button-border-color: $secondary-active-button-color;
+
+$tertiary-button-color: transparent;
+$tertiary-button-text-color: $sky-blue;
+$tertiary-button-border-color: $tertiary-button-text-color;
+$tertiary-hover-button-color: $sky-blue;
+$tertiary-hover-button-text-color: white;
+$tertiary-hover-button-border-color: $tertiary-hover-button-color;
+$tertiary-active-button-color: $tertiary-hover-button-color;
+$tertiary-active-button-text-color: $tertiary-hover-button-text-color;
+$tertiary-active-button-border-color: $tertiary-active-button-color;
+
+$quarternary-button-color: transparent;
+$quarternary-button-text-color: white;
+$quarternary-button-border-color: $sky-blue;
+$quarternary-hover-button-color: $quarternary-button-border-color;
+$quarternary-hover-button-text-color: white;
+$quarternary-hover-button-border-color: $quarternary-hover-button-color;
+$quarternary-active-button-color: $quarternary-hover-button-color;
+$quarternary-active-button-text-color: $quarternary-hover-button-text-color;
+$quarternary-active-button-border-color: $quarternary-active-button-color;
+
+$quinary-button-color: transparent;
+$quinary-button-text-color: white;
+$quinary-button-border-color: $quinary-button-text-color;
+$quinary-hover-button-color: $quinary-button-border-color;
+$quinary-hover-button-text-color: $sky-blue;
+$quinary-hover-button-border-color: $quinary-hover-button-color;
+$quinary-active-button-color: $quinary-hover-button-color;
+$quinary-active-button-text-color: $quinary-hover-button-text-color;
+$quinary-active-button-border-color: $quinary-active-button-color;
+
+$text-button-color: transparent;
+$text-button-text-color: $sky-blue;
+$text-button-border-color: transparent;
+$text-hover-button-color: $text-button-color;
+$text-hover-button-text-color: $sky-blue;
+$text-hover-button-border-color: currentColor;
+$text-active-button-color: $text-hover-button-color;
+$text-active-button-text-color: $text-hover-button-text-color;
+$text-active-button-border-color: currentColor;
+
+$negative-button-color: $grey-dark;
+$negative-button-text-color: white;
+$negative-button-border-color: $negative-button-color;
+$negative-hover-button-color: $grey-light;
+$negative-hover-button-text-color: $negative-button-text-color;
+$negative-hover-button-border-color: $grey-dark;
+$negative-active-button-color: $negative-hover-button-color;
+$negative-active-button-text-color: $negative-hover-button-text-color;
+$negative-active-button-border-color: $negative-hover-button-border-color;
+
+// Tabs
+$active-tab-color: $anchor-blue;
+$inactive-tab-color: $anchor-blue-light;
+
+// Carousel
+$active-carousel-button-color: $grey-demon;
+$inactive-carousel-button-color: $grey-light;
+$inactive-carousel-button-opacity: 1;
+$active-carousel-button-opacity: 1;
+$inverse-active-carousel-button-color: $grey-lightest;
+$inverse-inactive-carousel-button-color: $grey-lightest;
+$inverse-inactive-carousel-button-opacity: 0.35;
+$inverse-active-carousel-button-opacity: 1;
+
+// Border
+$base-border-primary-color: $grey-lighter;
+$base-border: 1px solid $base-border-primary-color;
+
+// Tables
+$table-row-divider-color: $grey-light;
+$table-header-background-color: $grey-light;
+
+$table-row-th--background: $grey-lightest;
+
+$table-row-dark: $grey-lighter;
+$table-row-light: $grey-lightest;
+$table-row-light-promo: $grey-light;
+$table-row-dark-promo: $grey-light;
+
+$table-column-heading-1: $azure-blue;
+$table-column-heading-2: $azure-blue-dark;
+$table-column-heading-3: $aqua-dark;
+$table-column-heading-4: $aqua;
+
+$ecom-table-heading: $table-column-heading-2;
+$ecom-table-promo-heading: darken($table-column-heading-2, 10);
+
+// Visual Guides
+$visual-guide-step-border: 2px solid $azure-blue;

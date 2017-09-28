@@ -31,6 +31,8 @@ $base-spacing-xlarge: 70px;
 $section-padding: 70px;
 $section-padding--mobile: 50px;
 $header-padding: 70px;
+
+$container-width: 1200px;
 $container-edge-padding: 20px; // Use this if using an unconventional body container and still need the default left /right padding our .containers have (20px)
 
 // The following are old spacing values. *Do not use*
@@ -74,14 +76,19 @@ $feature-modal-maxheight: 570px;
 $feature-modal-maxwidth: 975px;
 $feature-modal-img-maxwidth: 650px;
 $feature-modal-controls-size: 25px;
+$interactive-card-logo-height: 80px;
+$card-group-box-shadow-flipped: -1px 2px 1px 0px rgba(0, 0, 0, 0.25);
+$fixed-card-height: 400px;
+$fixed-card-height-editmode: 800px;
 
 // Header
 $header-height-home: 445px;
+$header-height-xl: 540px;
 $header-height-large: 455px;
+$header-height-small: 300px;
 $header-top-bottom-padding: 32px;
 $header-headline-bottom-margin: 15px;
 $header-width-normal: 650px;
-$header-height-small: 300px;
 
 // Tables
 $table-margin: $base-margin;

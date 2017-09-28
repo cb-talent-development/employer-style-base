@@ -1,0 +1,8 @@
+@mixin container-edge-calc($side, $property: margin, $offset: 0px) {
+  #{$property}-#{$side}: $container-edge-padding;
+  #{$side}: 0;
+
+  @media only screen and (min-width: $container-width) {
+    #{$property}-#{$side}: calc(50% - (#{$container-width} / 2) + #{$container-edge-padding} + #{$offset});
+  }
+}

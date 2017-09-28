@@ -1,0 +1,17 @@
+@mixin price-per-time {
+  &--currency {
+    font-size: 0.9375rem;
+    vertical-align: super;
+  }
+
+  &--amount {
+    font-weight: $font-weight-regular;
+    font-size: 1.875rem;
+  }
+
+  &--time {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-small;
+    text-transform: lowercase;
+  }
+}

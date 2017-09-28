@@ -1,0 +1,192 @@
+// ## Gradient Color Sets ##
+
+$cb: (
+  dark: $cb-gradient-dark,
+  medium: $cb-gradient-medium,
+  light: $cb-gradient-light
+);
+
+$rogueOne: (
+  dark: $anchor-blue,
+  medium: $azure-blue-dark,
+  light: $azure-blue
+);
+
+$dayAfterTomorrow: (
+  dark: $dayAfterTomorrow-dark,
+  medium: $dayAfterTomorrow-medium,
+  light: $dayAfterTomorrow-light
+);
+
+$cloverfield: (
+  dark: $cb-gradient-dark,
+  medium: $emerald,
+  light: $emerald-light
+);
+
+$soylentGreen: (
+  dark: $lime-dark,
+  medium: $lime,
+  light:  $teal-light
+);
+
+$gobletOfFire: (
+  dark: $orange-dark,
+  medium: $marigold-dark,
+  light:  $marigold-light
+);
+
+$purpleRain: (
+  dark: $purple-dark,
+  medium: $purple-medium,
+  light: $purple-light
+);
+
+$moonlight: (
+  dark: $purple-dark,
+  medium: $purple-medium,
+  light: $teal
+);
+
+$lostWorld: (
+  dark: $emerald-dark,
+  medium: $emerald,
+  light: $lime
+);
+
+$gradient_name_list: (
+  cb,
+  rogueOne,
+  dayAfterTomorrow,
+  cloverfield,
+  soylentGreen,
+  gobletOfFire,
+  purpleRain,
+  moonlight,
+  lostWorld,
+);
+
+$gradient_var_list: (
+  $cb,
+  $rogueOne,
+  $dayAfterTomorrow,
+  $cloverfield,
+  $soylentGreen,
+  $gobletOfFire,
+  $purpleRain,
+  $moonlight,
+  $lostWorld,
+);
+
+$gradient-angle: 135deg;
+
+// ## Gradient Mixins ##
+
+@mixin gradient($dark, $medium, $light) {
+  background: $dark; // Old browsers
+  background: linear-gradient($gradient-angle, $dark 0%, $medium 35%, $light 100%);
+}
+
+@mixin gradientTransparent($dark, $medium, $light, $transparency: 0.9) {
+  background: $dark; // Old browsers
+  background: linear-gradient($gradient-angle, $dark 0%, $medium 35%, transparentize($light, $transparency) 100%);
+}
+
+@mixin imageGradientBlend($img-url, $dark, $medium, $light, $blend-mode: multiply) {
+  background-color: $light;
+  background-image:
+    linear-gradient($gradient-angle, rgba($dark, 0.8), rgba($medium, 0.75), rgba($light, 0.2)),
+    url($img-url);
+  background-blend-mode: $blend-mode;
+
+  // Our convention is to use a blend mode and fixed attachment for gradients + patterned image, not for gradient + photo image. This applies the appropriate attachment and image fallback based on whether or not a blend mode was intended and unsets blend mode for browsers/devices where it doesn't work.
+  $is-blend-mode-unset: $blend-mode == unset or $blend-mode == 'unset' or $blend-mode == none or $blend-mode == 'none';
+
+  @if $is-blend-mode-unset {
+    background-attachment: inherit;
+  } @else {
+    background-attachment: fixed;
+  }
+
+  html[data-useragent*='Windows NT']:not([data-useragent*='Edge']) &,
+  html[data-useragent*='iPhone'] & {
+    background-blend-mode: unset;
+    @if not($is-blend-mode-unset) {
+      background: linear-gradient($gradient-angle, $dark 0%, $medium 35%, $light 100%);
+    }
+  }
+}
+
+// ## Gradient Implementation ##
+
+@mixin cbGradient {
+  @include gradient(map-get($cb, dark), map-get($cb, medium), map-get($cb, light));
+}
+
+@mixin cbGradientTransparent {
+  @include gradientTransparent(map-get($cb, dark), map-get($cb, medium), map-get($cb, light));
+}
+
+@mixin rogueOneGradient {
+  @include gradient(map-get($rogueOne, dark), map-get($rogueOne, medium), map-get($rogueOne, light));
+}
+
+@mixin rogueOneGradientTransparent {
+  @include gradientTransparent(map-get($rogueOne, dark), map-get($rogueOne, medium), map-get($rogueOne, light));
+}
+
+@mixin cloverfieldGradient {
+  @include gradient(map-get($cloverfield, dark), map-get($cloverfield, medium), map-get($cloverfield, light));
+}
+
+@mixin cloverfieldGradientTransparent {
+  @include gradientTransparent(map-get($cloverfield, dark), map-get($cloverfield, medium), map-get($cloverfield, light));
+}
+
+@mixin gobletOfFireGradient {
+  @include gradient(map-get($gobletOfFire, dark), map-get($gobletOfFire, medium), map-get($gobletOfFire, light));
+}
+
+@mixin gobletOfFireGradientTransparent {
+  @include gradientTransparent(map-get($gobletOfFire, dark), map-get($gobletOfFire, medium), map-get($gobletOfFire, light));
+}
+
+@mixin soylentGreenGradient {
+  @include gradient(map-get($soylentGreen, dark), map-get($soylentGreen, medium), map-get($soylentGreen, light));
+}
+
+@mixin soylentGreenGradientTransparent {
+  @include gradientTransparent(map-get($soylentGreen, dark), map-get($soylentGreen, medium), map-get($soylentGreen, light));
+}
+
+@mixin purpleRainGradient {
+  @include gradient(map-get($purpleRain, dark), map-get($purpleRain, medium), map-get($purpleRain, light));
+}
+
+@mixin purpleRainGradientTransparent {
+  @include gradientTransparent(map-get($purpleRain, dark), map-get($purpleRain, medium), map-get($purpleRain, light));
+}
+
+@mixin dayAfterTomorrowGradient {
+  @include gradient(map-get($dayAfterTomorrow, dark), map-get($dayAfterTomorrow, medium), map-get($dayAfterTomorrow, light));
+}
+
+@mixin dayAfterTomorrowGradientTransparent {
+  @include gradientTransparent(map-get($dayAfterTomorrow, dark), map-get($dayAfterTomorrow, medium), map-get($dayAfterTomorrow, light));
+}
+
+@mixin moonlightGradient {
+  @include gradient(map-get($moonlight, dark), map-get($moonlight, medium), map-get($moonlight, light));
+}
+
+@mixin moonlightGradientTransparent {
+  @include gradientTransparent(map-get($moonlight, dark), map-get($moonlight, medium), map-get($moonlight, light));
+}
+
+@mixin lostWorldGradient {
+  @include gradient(map-get($lostWorld, dark), map-get($lostWorld, medium), map-get($lostWorld, light));
+}
+
+@mixin lostWorldGradientTransparent {
+  @include gradientTransparent(map-get($lostWorld, dark), map-get($lostWorld, medium), map-get($lostWorld, light));
+}

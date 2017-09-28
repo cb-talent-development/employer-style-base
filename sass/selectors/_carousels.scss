@@ -45,3 +45,29 @@
 .logos-carousel {
   @include logos-carousel;
 }
+
+/* arrow_fade transition classes */
+
+.carousel__arrow__transitions {
+  @include transition(all 0.3s ease-in 0s);
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &.invisible {
+    opacity: 0;
+  }
+}
+
+.slick-mobile {
+  box-sizing: border-box;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+
+  img {
+    user-drag: none;
+  }
+}

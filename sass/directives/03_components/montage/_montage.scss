@@ -1,0 +1,504 @@
+// Applicant Tracking - Stories
+// Use typography mixin - font-style--small-bold for small / bold fonts
+// TODO: Update Fractal
+
+$_montage-highlight: $azure-blue;
+$_montage_spacing-small: $base-spacing-smallest / 2;
+$_montage_cell_grey-lightest: $grey-lightest;
+$_montage_cell_blue: $azure-blue;
+$_montage_cell_blue-dark: $azure-blue-dark;
+$_montage_cell_emerald: $emerald;
+$_montage_global_font_color: $grey-dark;
+$_montage_carousel_font_color: white;
+$_montage_carousel_item_toppadding_tablet: 40px;
+$_montage_winglet_width: 15px;
+$_montage_winglet_offset: 15%;
+$_montage_mobile_bp: 750px;
+$_montage_tablet_bp: 1145px;
+
+@mixin montage-subheader {
+  color: $_montage-highlight;
+  text-transform: uppercase;
+  margin-bottom: $_montage_spacing-small;
+
+  align-self: center;
+  text-align: center;
+
+ @media only screen and (min-width: $_montage_mobile_bp) {
+    align-self: auto;
+    text-align: left;
+  }
+}
+
+@mixin montage__centered-style {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: center;
+  height: 100%;
+
+  @media only screen and (min-width: $_montage_mobile_bp) {
+    align-items: center;
+  }
+}
+
+@mixin montage {
+  display: flex;
+  flex-direction: column;
+
+  // The standard grid in desktop is 4 cells wide and 2 rows deep.
+  @media only screen and (min-width: $_montage_mobile_bp) {
+    @include font-style--small-bold;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: [first] 1fr [track-1] 1fr [track-2] 1fr [track-3] 1fr [end];
+    -ms-grid-rows: 200px 200px;
+        grid-template-rows: [first] 200px [middle] 200px [end];
+  }
+
+  // Defaults
+  color: $_montage_global_font_color;
+  @include font-style--med-bold-uppercase;
+  text-transform: none;
+
+  // Modifiers
+  .montage__cell--grey {
+    background-color: $grey-lightest;
+  }
+
+  .montage__cell--blue {
+    background-color: $_montage_cell_blue;
+  }
+
+  .montage__cell--light-blue {
+    background-color: $_montage_cell_blue-dark;
+  }
+
+  .montage__cell--aqua {
+    background-color: $aqua;
+  }
+
+  .montage__cell--padded {
+    padding: $base-spacing-medium;
+  }
+
+  // Elements
+  .montage__cell {
+    min-height: 200px;
+
+    @media only screen and (max-width: $_montage_mobile_bp) {
+      @include montage__centered-style;
+    }
+
+    @media only screen and (min-width: $_montage_mobile_bp) {
+      min-height: auto;
+    }
+  }
+
+  // For IE 11
+  .montage__cell--ie-spot-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .montage__cell--ie-spot-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+
+  .montage__cell--ie-spot-3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .montage__cell--ie-spot-4 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+
+  .montage__cell--ie-spot-5 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+
+  .montage__cell--ie-spot-6 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+
+  .montage__cell--ie-spot-7 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+
+  .montage__cell--ie-spot-8 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+
+  .montage__list {
+    align-self: center;
+    text-align: center;
+
+    li {
+      list-style-type: none;
+      margin-bottom: $_montage_spacing-small;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &:before {
+        color: $_montage-highlight;
+        font-family: FontAwesome;
+        font-weight: $font-weight-regular;
+        font-size: $font-size-smallest;
+        content: "\f067 \00a0 \00a0";
+      }
+    }
+
+    @media only screen and (min-width: $_montage_mobile_bp) {
+      align-self: auto;
+      text-align: left;
+    }
+  }
+
+  .montage__jumboheader {
+    @include font-style--xxl-light;
+    text-transform: none;
+
+    @media only screen and (min-width: $_montage_mobile_bp) {
+      font-size: 3.8vw; // TODO: Create new font style mixin to include vw units
+    }
+
+    @media only screen and (min-width: $_montage_tablet_bp) {
+      font-size: $font-size-xxl;
+    }
+  }
+
+  .montage__winglets {
+    position: relative;
+
+    &:before, &:after {
+      position: absolute;
+      content: '';
+      width: $_montage_winglet_width;
+      background-color: white;
+      height: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:before {
+      left: $_montage_winglet_offset;
+    }
+
+    &:after {
+      right: $_montage_winglet_offset;
+    }
+  }
+
+  .montage__subheader {
+    @include montage-subheader;
+  }
+
+  .montage__centered-wrapper {
+    @media only screen and (min-width: $_montage_mobile_bp) {
+      @include montage__centered-style;
+    }
+  }
+
+  // Order modifiers of the items on mobile
+  .montage__cell--mobile-order-1 {
+    @media only screen and (max-width: $_montage_mobile_bp) {
+      order: 1;
+    }
+  }
+
+  .montage__cell--mobile-order-2 {
+    @media only screen and (max-width: $_montage_mobile_bp) {
+      order: 2;
+    }
+  }
+
+  .montage__cell--mobile-order-3 {
+    @media only screen and (max-width: $_montage_mobile_bp) {
+      order: 3;
+    }
+  }
+
+  .montage__cell--mobile-order-4 {
+    @media only screen and (max-width: $_montage_mobile_bp) {
+      order: 4;
+    }
+  }
+
+  .montage__cell--mobile-order-5 {
+    @media only screen and (max-width: $_montage_mobile_bp) {
+      order: 5;
+    }
+  }
+
+  // Montage cell span
+  // A 4 column cell, takes up one entire row
+  .montage__cell--4 {
+    @media only screen and (min-width: $_montage_mobile_bp) {
+      -ms-grid-column-span: 4;
+      grid-column-start: span 4;
+    }
+  }
+
+  // 3 columns - 75% of one row
+  .montage__cell--3 {
+    @media only screen and (min-width: $_montage_mobile_bp) {
+      -ms-grid-column-span: 3;
+      grid-column-start: span 3;
+    }
+  }
+
+  // 2 columns - 50% of one row
+  .montage__cell--2 {
+    @media only screen and (min-width: $_montage_mobile_bp) {
+      -ms-grid-column-span: 2;
+      grid-column-start: span 2;
+    }
+  }
+  // End montage cell span
+
+  // -- Features -- //
+  // Montage Logo
+  .montage__company-logo {
+    position: relative;
+    flex: 1;
+
+    @media only screen and (min-width: $_montage_mobile_bp) {
+      flex: none;
+      height: 100%;
+    }
+  }
+
+  .montage__company-logo__title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 3;
+
+    img {
+      margin: 0 auto;
+      display: block;
+      fill: white;
+      width: 50%;
+
+      @media only screen and (min-width: $_montage_mobile_bp) {
+        width: 80%;
+      }
+    }
+  }
+
+  // TODO: Refactor to use image gradient blend to remove layered divs
+  .montage__company-logo__gradient {
+    @include cbGradient;
+    opacity: .75;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .montage__company-logo__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .montage__company-logo--background {
+    object-fit: cover;
+  }
+
+  // Montage Feature
+  .montage__feature__item {
+    margin-bottom: $base-spacing-small;
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .montage__subheader {
+      @media only screen and (min-width: $_montage_mobile_bp) {
+        align-self: center;
+        text-align: center;
+      }
+    }
+  }
+
+  // Montage Testimonial
+  .montage-testimonial {
+    text-align: center;
+
+    @media only screen and (min-width: $_montage_mobile_bp) {
+      text-align: left;
+    }
+  }
+
+  // TODO: Create a new style mixin to cover italic fonts using vw units
+  .montage__testimonial__quote {
+    font-size: $font-size-large;
+    font-style: italic;
+    width: 100%;
+
+    // Tablet to desktop
+    @media only screen and (min-width: $_montage_mobile_bp) {
+      font-size: 1.9vw;
+    }
+
+    // Desktop and over
+    @media only screen and (min-width: $_montage_tablet_bp) {
+      font-size: $font-size-large;
+    }
+  }
+
+  .montage__testimonial__credit {
+    text-transform: uppercase;
+    align-self: flex-start;
+
+    span {
+      display: block;
+
+      @media only screen and (min-width: $_montage_mobile_bp) {
+        display: inline;
+      }
+    }
+  }
+
+  .montage__testimonial__credit--name {
+    @include montage-subheader;
+    display: inline;
+    margin-left: $_montage_spacing-small;
+  }
+
+  // Montage Carousel
+  .montage__carousel--mobile {
+    @media only screen and (min-width: $_montage_mobile_bp) {
+      display: none;
+    }
+  }
+
+  .montage__carousel--desktop {
+    display: none;
+
+    @media only screen and (min-width: $_montage_mobile_bp) {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+     }
+  }
+
+  .montage__carousel__item {
+    color: $_montage_carousel_font_color;
+    padding: ($base-spacing-medium - 10) $base-spacing-medium $base-spacing-medium;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $font-size-med;
+
+    flex: 1;
+    justify-content: center;
+
+    @media only screen and (max-width: $_montage_mobile_bp) {
+      flex-direction: column;
+    }
+
+    snippet {
+      @media only screen and (min-width: $_montage_mobile_bp) {
+        width: 100%;
+      }
+    }
+
+    .montage__jumboheader {
+      height: 50%;
+      display: flex;
+      flex: 0 0 auto;
+      justify-content: flex-end;
+      flex-direction: column;
+
+      @media only screen and (min-width: $_montage_mobile_bp) {
+        width: 100%;
+      }
+    }
+
+    .montage__jumboheader-subtext {
+      height: 50%;
+      display: flex;
+      flex: 1 0 auto;
+      justify-content: flex-start;
+      flex-direction: column;
+
+      @media only screen and (min-width: $_montage_mobile_bp) {
+        width: 100%;
+      }
+    }
+
+    // Tablet to desktop
+    @media only screen and (min-width: $_montage_mobile_bp) {
+      padding: 0 $base-spacing-medium;
+      font-size: $font-size-small;
+    }
+
+    // Desktop and over
+    @media only screen and (min-width: $_montage_tablet_bp) {
+      font-size: $font-size-med;
+    }
+  }
+
+  .montage__carousel-dots {
+    background-color: $_montage_cell_blue;
+    text-align: center;
+    padding-bottom: $base-spacing-small;
+
+    li {
+      display: inline-block;
+      list-style-type: none;
+      margin-right: $base-spacing-small;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      button {
+        font-size: 0;
+        background-color: transparent;
+        border: none;
+
+        &:before {
+          color: $grey-light;
+          font-family: FontAwesome;
+          font-weight: $font-weight-regular;
+          font-size: $font-size-smallest;
+          content: "\f111";
+        }
+      }
+    }
+
+    .slick-active {
+      button {
+        &:before {
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -6,11 +6,8 @@
   overflow: hidden;
   opacity: 0;
   border-bottom: $accordion-bottom-border solid $grey-lightest;
-
-  p {
-    color: $text-color-grey;
-    padding-bottom: $base-padding;
-  }
+  color: $text-color-grey;
+  padding-bottom: $base-padding;
 }
 
 @mixin accordion__active_panel {

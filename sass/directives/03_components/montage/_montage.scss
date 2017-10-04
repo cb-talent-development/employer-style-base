@@ -393,6 +393,14 @@ $_montage_tablet_bp: 1145px;
 
   // Montage Carousel
   .montage__carousel--mobile {
+    .carousel__item-wrap {
+      padding: 0;
+
+      .slick-list {
+        background-color: transparent;
+      }
+    }
+
     @media only screen and (min-width: $_montage_mobile_bp) {
       display: none;
     }

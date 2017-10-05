@@ -382,6 +382,10 @@ $_montage_tablet_bp: 1145px;
       @media only screen and (min-width: $_montage_mobile_bp) {
         display: inline;
       }
+
+      &:first-of-type {
+        margin-right: $base-spacing-smallest;
+      }
     }
   }
 
@@ -475,37 +479,18 @@ $_montage_tablet_bp: 1145px;
   .montage__carousel-dots {
     background-color: $_montage_cell_blue;
     text-align: center;
-    padding-bottom: $base-spacing-small;
+    margin-bottom: $base-spacing-small * 2;
+    margin-top: $base-spacing-small * 2;
 
-    li {
-      display: inline-block;
-      list-style-type: none;
-      margin-right: $base-spacing-small;
+    @include carousel-dots;
 
-      &:last-of-type {
-        margin-right: 0;
-      }
-
-      button {
-        font-size: 0;
-        background-color: transparent;
-        border: none;
-
-        &:before {
-          color: $grey-light;
-          font-family: FontAwesome;
-          font-weight: $font-weight-regular;
-          font-size: $font-size-smallest;
-          content: "\f111";
-        }
-      }
+    button {
+      background-color: $grey-light;
     }
 
     .slick-active {
       button {
-        &:before {
-          color: white;
-        }
+        background-color: white;
       }
     }
   }

@@ -116,8 +116,7 @@
   }
 }
 
-// Galleries with filter
-@mixin card--tile__gallery-item {
+@mixin card--tile--basic {
   @include transform(scale(1));
   @include transition(transform 0.4s ease-in);
 
@@ -161,7 +160,7 @@
   }
 }
 
-@mixin card--tile__gallery-image {
+@mixin card--tile__image($include_box-shadow: true) {
   @include component-box;
   border-radius: 0;
   padding: 0;
@@ -172,7 +171,7 @@
   }
 }
 
-@mixin card--tile__gallery-subtext {
+@mixin card--tile__caption {
 
   margin-top: $base-spacing-medium;
 
@@ -187,7 +186,7 @@
   }
 }
 
-@mixin card-deck--controls {
+@mixin card--deck__filters {
   @include font-style--med-bold-uppercase;
   text-align: center;
   margin-bottom: $base-spacing-medium;
@@ -209,48 +208,5 @@
       padding-bottom: $base-spacing-smallest;
       border-bottom: 2px solid $base-link-color;
     }
-  }
-}
-
-@mixin card--deck__popup {
-  padding: $base-spacing-smallest;
-  position: relative;
-  overflow: visible !important;
-
-  &--image {
-    height: 100%;
-    overflow-y: scroll;
-
-    img {
-      display: block;
-      width: 100%;
-    }
-  }
-
-  &--link {
-    background-color: $grey-darkest;
-    opacity: .9;
-    text-align: center;
-    position: absolute;
-    left: $base-spacing-smallest;
-    right: $base-spacing-smallest;
-    bottom: $base-spacing-smallest;
-    padding: $base-spacing-smallest;
-
-    a,
-    a:hover,
-    a:visited,
-    a:focus {
-      color: white;
-      @include font-style--med-regular;
-    }
-  }
-
-  @media only screen and (max-width: $small-screen-max) {
-    height: 70vw;
-  }
-
-  .mfp-close {
-    @include close-x-overflow;
   }
 }

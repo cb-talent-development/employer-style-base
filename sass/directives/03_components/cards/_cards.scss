@@ -1,3 +1,47 @@
+@mixin card--tile--basic {
+  @include transform(scale(1));
+  @include transition(transform 0.4s ease-in);
+
+  flex: 1;
+  margin: $base-spacing-medium / 2;
+  text-align: center;
+  font-weight: $font-weight-regular;
+
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+  }
+
+  @media only screen and (min-width: $medium-screen-min) {
+    flex: 1 0 46%;
+  }
+
+  @media only screen and (min-width: $large-screen-min) {
+    flex: 1 0 25%;
+  }
+
+  @media only screen and (min-width: $small-screen-max) { // TODO turning off the fanciness on mobile but should there still be some sort of state for usability?
+    &:hover {
+      @include transform(scale(1.06));
+      @include transition(transform 550ms ease-out);
+    }
+  }
+
+  @media only screen and (max-width: $small-screen-max) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 @mixin card--tile($scale: true, $include_strip: true, $strip-color: $lime-dark) {
   @include component-box;
   @include display(flex);
@@ -113,50 +157,6 @@
   @media only screen and (max-width: $small-screen-max) {
     @include flex-direction(column);
     @include flex-wrap(nowrap);
-  }
-}
-
-@mixin card--tile--basic {
-  @include transform(scale(1));
-  @include transition(transform 0.4s ease-in);
-
-  flex: 1;
-  margin: $base-spacing-medium / 2;
-  text-align: center;
-  font-weight: $font-weight-regular;
-
-  a:hover,
-  a:focus,
-  a:active {
-    text-decoration: none;
-  }
-
-  @media only screen and (min-width: $medium-screen-min) {
-    flex: 1 0 46%;
-  }
-
-  @media only screen and (min-width: $large-screen-min) {
-    flex: 1 0 25%;
-  }
-
-  @media only screen and (min-width: $small-screen-max) { // TODO turning off the fanciness on mobile but should there still be some sort of state for usability?
-    &:hover {
-      @include transform(scale(1.06));
-      @include transition(transform 550ms ease-out);
-    }
-  }
-
-  @media only screen and (max-width: $small-screen-max) {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-
-    &:first-child {
-      margin-top: 0;
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 }
 

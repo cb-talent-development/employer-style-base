@@ -1,3 +1,47 @@
+@mixin card--tile--basic {
+  @include transform(scale(1));
+  @include transition(transform 0.4s ease-in);
+
+  flex: 1;
+  margin: $base-spacing-medium / 2;
+  text-align: center;
+  font-weight: $font-weight-regular;
+
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+  }
+
+  @media only screen and (min-width: $medium-screen-min) {
+    flex: 1 0 46%;
+  }
+
+  @media only screen and (min-width: $large-screen-min) {
+    flex: 1 0 25%;
+  }
+
+  @media only screen and (min-width: $small-screen-max) { // TODO turning off the fanciness on mobile but should there still be some sort of state for usability?
+    &:hover {
+      @include transform(scale(1.06));
+      @include transition(transform 550ms ease-out);
+    }
+  }
+
+  @media only screen and (max-width: $small-screen-max) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 @mixin card--tile($scale: true, $include_strip: true, $strip-color: $lime-dark) {
   @include component-box;
   @include display(flex);
@@ -113,5 +157,56 @@
   @media only screen and (max-width: $small-screen-max) {
     @include flex-direction(column);
     @include flex-wrap(nowrap);
+  }
+}
+
+@mixin card--tile__image($include_box-shadow: true) {
+  @include component-box;
+  border-radius: 0;
+  padding: 0;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+@mixin card--tile__caption {
+
+  margin-top: $base-spacing-medium;
+
+  &--header {
+    @include font-style--small-bold-uppercase;
+    margin-bottom: $base-spacing-small;
+  }
+
+  &--text {
+    color: $text-color-grey;
+    font-style: italic;
+  }
+}
+
+@mixin card--deck__filters {
+  @include font-style--med-bold-uppercase;
+  text-align: center;
+  margin-bottom: $base-spacing-medium;
+
+  a {
+    margin-right: $base-spacing-medium;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &.active {
+      padding-bottom: $base-spacing-smallest;
+      border-bottom: 2px solid $base-link-color;
+    }
   }
 }

@@ -44,3 +44,46 @@
   right: -$close-x-overflow-size / 2;
   top: -$close-x-overflow-size / 2;
 }
+
+@mixin sample-product--modal {
+  padding: $base-spacing-smallest;
+  position: relative;
+  overflow: visible !important;
+
+  &--image {
+    height: 100%;
+    overflow-y: scroll;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &--link {
+    background-color: $grey-darkest;
+    opacity: .9;
+    text-align: center;
+    position: absolute;
+    left: $base-spacing-smallest;
+    right: $base-spacing-smallest;
+    bottom: $base-spacing-smallest;
+    padding: $base-spacing-smallest;
+
+    a,
+    a:hover,
+    a:visited,
+    a:focus {
+      color: white;
+      @include font-style--med-regular;
+    }
+  }
+
+  @media only screen and (max-width: $small-screen-max) {
+    height: 70vw;
+  }
+
+  .mfp-close {
+    @include close-x-overflow;
+  }
+}

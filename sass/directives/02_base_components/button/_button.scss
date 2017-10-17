@@ -193,6 +193,27 @@ $massive-button-horizontal-padding: $base-input-font-size * 2;
   }
 }
 
+@mixin signup-button {
+  background-color: $signup-button-color;
+  color: $signup-button-text-color;
+  border-color: $signup-button-border-color;
+  text-transform: uppercase;
+
+  &:visited {
+    color: $signup-button-text-color;
+  }
+
+  &:hover, &:active, &:focus {
+    background-color: $signup-hover-button-color;
+    color: $signup-hover-button-text-color;
+    border-color: $signup-hover-button-border-color;
+  }
+
+  &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
+    @include disabled;
+  }
+}
+
 @mixin text-button {
   background-color: $text-button-color;
   color: $text-button-text-color;

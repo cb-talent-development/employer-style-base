@@ -27,6 +27,10 @@ button {
   @include quinary-button;
 }
 
+.button.button--signup {
+  @include signup-button;
+}
+
 .button.button--negative {
   @include negative-button;
 }

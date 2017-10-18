@@ -8,6 +8,8 @@ Quarternary Button usage:
 
 Quinary Button usage: on blue or dark backgrounds
 
+Senary Button usage: for now, for signup forms
+
 Small Button usage:
 
 Medium Button usage:

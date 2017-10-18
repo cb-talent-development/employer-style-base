@@ -172,6 +172,27 @@ $massive-button-horizontal-padding: $base-input-font-size * 2;
   }
 }
 
+@mixin senary-button {
+  background-color: $senary-button-color;
+  color: $senary-button-text-color;
+  border-color: $senary-button-border-color;
+  text-transform: uppercase;
+
+  &:visited {
+    color: $senary-button-text-color;
+  }
+
+  &:hover, &:active, &:focus {
+    background-color: $senary-hover-button-color;
+    color: $senary-hover-button-text-color;
+    border-color: $senary-hover-button-border-color;
+  }
+
+  &:disabled, &[disabled]:hover, &[disabled]:active, &.disabled, &.disabled:hover, &.disabled:active {
+    @include disabled;
+  }
+}
+
 @mixin negative-button {
   background-color: $negative-button-color;
   color: $negative-button-text-color;

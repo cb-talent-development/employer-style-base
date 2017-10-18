@@ -55,9 +55,17 @@ module.exports = {
       }
     },
     {
-      'name': 'Small Button',
+      'name': 'Senary Button',
       'context': {
         'order': 7,
+        'modifier': 'senary',
+        'label': 'Senary Button'
+      }
+    },
+    {
+      'name': 'Small Button',
+      'context': {
+        'order': 8,
         'modifier': 'small',
         'label': 'Small Button'
       }
@@ -65,7 +73,7 @@ module.exports = {
     {
       'name': 'Medium Button',
       'context': {
-        'order': 8,
+        'order': 9,
         'modifier': 'medium',
         'label': 'Medium Button'
       }
@@ -73,7 +81,7 @@ module.exports = {
     {
       'name': 'Large Button',
       'context': {
-        'order': 9,
+        'order': 10,
         'modifier': 'large',
         'label': 'Large Button'
       }
@@ -81,7 +89,7 @@ module.exports = {
     {
       'name': 'Massive Button',
       'context': {
-        'order': 10,
+        'order': 11,
         'modifier': 'massive',
         'label': 'Massive Button'
       }
@@ -89,7 +97,7 @@ module.exports = {
     {
       'name': 'Negative Button',
       'context': {
-        'order': 11,
+        'order': 12,
         'modifier': 'negative',
         'label': 'Negative Button'
       }
@@ -97,7 +105,7 @@ module.exports = {
     {
       'name': 'Disabled Button',
       'context': {
-        'order': 12,
+        'order': 13,
         'modifier': 'disabled',
         'label': 'Disabled Button'
       }

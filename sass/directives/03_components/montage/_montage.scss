@@ -15,6 +15,8 @@ $_montage_winglet_width: 15px;
 $_montage_winglet_offset: 15%;
 $_montage_mobile_bp: 750px;
 $_montage_tablet_bp: 1145px;
+$_montage_external-cta_bottom-position: 18px;
+$_montage_external-cta_bottom-position_tablet: 5px;
 
 @mixin montage-subheader {
   color: $_montage-highlight;
@@ -85,6 +87,7 @@ $_montage_tablet_bp: 1145px;
 
   // Elements
   .montage__cell {
+    position: relative;
     min-height: 200px;
 
     @media only screen and (max-width: $_montage_mobile_bp) {
@@ -343,6 +346,22 @@ $_montage_tablet_bp: 1145px;
         align-self: center;
         text-align: center;
       }
+    }
+  }
+
+  .montage__external-link {
+    display: block;
+    margin-top: $base-spacing-smallest;
+    text-align: center;
+
+    @media only screen and (min-width: $_montage_mobile_bp) {
+      margin-top: auto;
+      position: absolute;
+      bottom: $_montage_external-cta_bottom-position;
+    }
+
+    .fa-angle-double-right {
+      font-size: $font-size-med;
     }
   }
 

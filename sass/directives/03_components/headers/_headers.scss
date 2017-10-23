@@ -281,11 +281,13 @@
 
 // Text alignment
 
-@mixin header--large--left {
+@mixin header--large--left($hide-description-mobile: true) {
   &__text {
-    p {
-      @media only screen and (max-width: $small-screen-max) {
-        display: none;
+    @if $hide-description-mobile {
+      p {
+        @media only screen and (max-width: $small-screen-max) {
+          display: none;
+        }
       }
     }
   }

@@ -1,0 +1,10 @@
+@mixin reset-paragraph {
+  p {
+    color: inherit !important;
+    margin:0 !important;
+    padding: 0 !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    display: inline !important;
+  }
+}

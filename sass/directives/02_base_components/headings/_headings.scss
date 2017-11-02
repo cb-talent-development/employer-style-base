@@ -44,7 +44,7 @@
 }
 
 @mixin heading--section--w-subhead {
-  margin-bottom: $type-margin;
+  margin-bottom: $type-margin-xlarge;
 
   &__heading {
     @include font-style--med-bold-uppercase;

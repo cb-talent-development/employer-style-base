@@ -63,6 +63,8 @@
   @include font-style--small-bold-uppercase;
   margin-bottom: $type-margin--small;
   color: $header-text-color;
+
+  @include reset-paragraph;
 }
 
 @mixin heading--small {

@@ -124,11 +124,25 @@ $header-hero-carousel-dot-top: -50px;
     width: 100%;
     margin: 0 auto;
 
-    .button {
+    .button, .header-hero--carousel-link--cta {
       width: 100%;
       margin-top: $base-spacing-medium;
       margin-right: auto;
       text-align: center;
+
+      @media only screen and (min-width: $medium-screen-min) {
+        width: $fixed-button-width;
+        margin-right: $base-spacing-medium;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .header-hero--carousel-link--cta {
+      display: inline-block;
+      font-size: $font-size-large;
     }
   }
 

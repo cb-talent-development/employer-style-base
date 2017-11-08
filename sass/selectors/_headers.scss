@@ -2,8 +2,24 @@
   @include header-hero;
 }
 
+.header-hero--carousel {
+  @include header-hero--carousel;
+}
+
+.header-hero--carousel-item {
+  @include header-hero--carousel-item;
+}
+
 .header-hero--home {
   @include header-hero--home;
+}
+
+.header-hero--left {
+  @include header-hero--left;
+}
+
+.header-hero--centered {
+  @include header-hero--centered;
 }
 
 .header--large--background-image {

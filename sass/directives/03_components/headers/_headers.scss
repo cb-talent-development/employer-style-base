@@ -47,6 +47,98 @@
   }
 }
 
+@mixin header-hero--carousel {
+  &--mobile {
+    @media only screen and (min-width: $medium-screen-min) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+   display: none;
+
+   @media only screen and (min-width: $medium-screen-min) {
+    display: block;
+   }
+  }
+
+  .carousel__item-wrap {
+    padding: 0;
+  }
+
+  .carousel-dots {
+    position: absolute;
+    margin-top: -50px;
+    left: 0;
+    right: 0;
+  }
+}
+
+@mixin header-hero--carousel-item {
+  @include header-hero;
+  @include heading--hero;
+
+  position: relative;
+  min-height: $header-height-large !important;
+
+  @media only screen and (max-width: $small-screen-max) {
+    min-height: unset;
+  }
+
+  &__text {
+    padding: 0 calc(24px + 2em);
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@mixin header-hero--left {
+  h1 {
+    max-width: 28ch;
+  }
+
+  p {
+    max-width: 47ch;
+
+    @media only screen and (max-width: $medium-screen-max) {
+      max-width: 36ch;
+    }
+  }
+}
+
+@mixin header-hero--centered {
+  text-align: center;
+
+  h1, p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    max-width: 38ch;
+  }
+}
+
 @mixin header-hero--home($background-image-large: nil, $background-image-medium: nil) {
   @include heading--hero;
   position: relative;

@@ -1,3 +1,6 @@
+$mobile-header-hero-carousel-font-size: 18px;
+$header-hero-carousel-dot-top: -50px;
+
 @mixin header-hero {
   position: relative;
   overflow: hidden;
@@ -49,6 +52,14 @@
 
 @mixin header-hero--carousel {
   &--mobile {
+    padding-top: $base-spacing-medium;
+    padding-bottom: $base-spacing-medium;
+
+    @media only screen and (min-width: $mobile-nav-max) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
     @media only screen and (min-width: $medium-screen-min) {
       display: none;
     }
@@ -68,7 +79,7 @@
 
   .carousel-dots {
     position: absolute;
-    margin-top: -50px;
+    margin-top: $header-hero-carousel-dot-top;
     left: 0;
     right: 0;
   }
@@ -82,11 +93,17 @@
   min-height: $header-height-large !important;
 
   @media only screen and (max-width: $small-screen-max) {
-    min-height: unset;
+    min-height: $header-hero-height-mobile !important;
   }
 
   &__text {
     padding: 0 calc(24px + 2em);
+
+    p {
+      @media only screen and (max-width: $small-screen-max) {
+        font-size: $mobile-header-hero-carousel-font-size;
+      }
+    }
   }
 
   &__image {
@@ -100,6 +117,18 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+
+  &__buttons {
+    width: 100%;
+    margin: 0 auto;
+
+    .button {
+      width: 100%;
+      margin-top: $base-spacing-medium;
+      margin-right: auto;
+      text-align: center;
     }
   }
 
@@ -118,10 +147,8 @@
   }
 
   p {
-    max-width: 47ch;
-
-    @media only screen and (max-width: $medium-screen-max) {
-      max-width: 36ch;
+    @media only screen and (min-width: $medium-screen-min) {
+      max-width: 47ch;
     }
   }
 }
@@ -135,7 +162,9 @@
   }
 
   h1 {
-    max-width: 38ch;
+    @media only screen and (min-width: $medium-screen-min) {
+      max-width: 38ch;
+    }
   }
 }
 

@@ -52,16 +52,18 @@ $header-hero-carousel-dot-top: -50px;
 
 @mixin header-hero--carousel {
   &--mobile {
-    padding-top: $base-spacing-medium;
-    padding-bottom: $base-spacing-medium;
-
-    @media only screen and (min-width: $mobile-nav-max) {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-
     @media only screen and (min-width: $medium-screen-min) {
       display: none;
+    }
+
+    .header-hero--carousel-item__text {
+      padding-top: $base-spacing-medium;
+      padding-bottom: $base-spacing-medium;
+
+      @media only screen and (min-width: $mobile-nav-max) {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
     }
   }
 

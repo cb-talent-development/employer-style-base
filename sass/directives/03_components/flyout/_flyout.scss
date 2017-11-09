@@ -95,6 +95,7 @@
     &:hover {
       ul {
         display: block;
+        z-index: z($z-context, sticky-nav, $sticky-nav, sticky-nav);
       }
 
       .mobile-subnav__top-link {

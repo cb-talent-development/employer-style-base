@@ -84,6 +84,10 @@ $header-hero-carousel-dot-top: -50px;
     margin-top: $header-hero-carousel-dot-top;
     left: 0;
     right: 0;
+
+    button {
+      cursor: pointer;
+    }
   }
 }
 
@@ -128,13 +132,14 @@ $header-hero-carousel-dot-top: -50px;
 
     .button, .header-hero--carousel-link--cta {
       width: 100%;
-      margin-top: $base-spacing-medium;
+      margin-top: $base-spacing-small;
       margin-right: auto;
       text-align: center;
 
       @media only screen and (min-width: $medium-screen-min) {
         width: $fixed-button-width;
         margin-right: $base-spacing-medium;
+        margin-top: $base-spacing-medium;
 
         &:last-child {
           margin-right: 0;

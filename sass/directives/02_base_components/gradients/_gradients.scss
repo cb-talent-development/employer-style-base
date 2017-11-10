@@ -6,6 +6,12 @@ $cb: (
   light: $cb-gradient-light
 );
 
+$cbAlternate: (
+  dark: $azure-medium,
+  medium: $azure-blue,
+  light: $anchor-blue
+);
+
 $rogueOne: (
   dark: $anchor-blue,
   medium: $azure-blue-dark,
@@ -56,6 +62,7 @@ $lostWorld: (
 
 $gradient_name_list: (
   cb,
+  cbAlternate,
   rogueOne,
   dayAfterTomorrow,
   cloverfield,
@@ -68,6 +75,7 @@ $gradient_name_list: (
 
 $gradient_var_list: (
   $cb,
+  $cbAlternate,
   $rogueOne,
   $dayAfterTomorrow,
   $cloverfield,
@@ -125,6 +133,14 @@ $gradient-angle: 135deg;
 
 @mixin cbGradientTransparent {
   @include gradientTransparent(map-get($cb, dark), map-get($cb, medium), map-get($cb, light));
+}
+
+@mixin cbGradient2017 {
+  @include gradient(map-get($cbAlternate, dark), map-get($cbAlternate, medium), map-get($cbAlternate, light));
+}
+
+@mixin cbGradient2017Tranparent {
+  @include gradientTransparent(map-get($cbAlternate, dark), map-get($cbAlternate, medium), map-get($cbAlternate, light));
 }
 
 @mixin rogueOneGradient {

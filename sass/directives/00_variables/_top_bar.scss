@@ -1,9 +1,14 @@
 // Top Bar
-$top-bar--height: 56px;
-$top-bar--height-combined: 56px * 2;
+$top-bar--max-width: 1400px;
+$top-bar--padding: 10px;
 $top-bar--height--mobile: 42px;
 $top-bar--logo-width: 192px;
 $top-bar--logo-height: 20px;
+
+// These affect positioning of the hero, subnav, buy box, search modal
+$top-bar--height: $top-bar--logo-height + ($top-bar--padding * 2);
+$top-bar--height-combined: $top-bar--height * 2;
+
 $top-bar-font-size: $font-size-small;
 $top-bar-icon-size: 0.75rem; // 12px
 $top-bar-angle-size: 1rem; // 16px

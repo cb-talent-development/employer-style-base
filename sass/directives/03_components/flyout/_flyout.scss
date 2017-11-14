@@ -83,7 +83,6 @@
   &.hover {
     > a:after {
       transform: $element-spin-rotation-half;
-      color: $header-text-hover-color;
     }
   }
 }

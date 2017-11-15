@@ -2,8 +2,9 @@
 $top-bar--max-width: 1400px;
 $top-bar--padding: 10px;
 $top-bar--height--mobile: 42px;
-$top-bar--logo-width: 192px;
-$top-bar--logo-height: 20px;
+$top-bar--logo-width: 209px;
+$top-bar--logo-height: 22px;
+$top-bar--subnav-offset: 44px;
 
 // These affect positioning of the hero, subnav, buy box, search modal
 $top-bar--height: $top-bar--logo-height + ($top-bar--padding * 2);

@@ -1,3 +1,6 @@
+$mobile-header-hero-carousel-font-size: 18px;
+$header-hero-carousel-dot-top: -50px;
+
 @mixin header-hero {
   position: relative;
   overflow: hidden;
@@ -43,6 +46,146 @@
       max-width: 28em;
       margin-bottom: 0;
       color: $hero-text-color-light;
+    }
+  }
+}
+
+@mixin header-hero--carousel {
+  &--mobile {
+    @media only screen and (min-width: $medium-screen-min) {
+      display: none;
+    }
+
+    .header-hero--carousel-item__text {
+      padding-top: $base-spacing-medium;
+      padding-bottom: $base-spacing-medium;
+
+      @media only screen and (min-width: $mobile-nav-max) {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &--desktop {
+   display: none;
+
+   @media only screen and (min-width: $medium-screen-min) {
+    display: block;
+   }
+  }
+
+  .carousel__item-wrap {
+    padding: 0;
+  }
+
+  .carousel-dots {
+    position: absolute;
+    margin-top: $header-hero-carousel-dot-top;
+    left: 0;
+    right: 0;
+
+    button {
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin header-hero--carousel-item {
+  @include header-hero;
+  @include heading--hero;
+
+  position: relative;
+  min-height: $header-height-large !important;
+
+  @media only screen and (max-width: $small-screen-max) {
+    min-height: $header-hero-height-mobile !important;
+  }
+
+  &__text {
+    padding: 0 calc(24px + 2em);
+
+    p {
+      @media only screen and (max-width: $small-screen-max) {
+        font-size: $mobile-header-hero-carousel-font-size;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__buttons {
+    width: 100%;
+    margin: 0 auto;
+
+    .button, .header-hero--carousel-link--cta {
+      width: 100%;
+      margin-top: $base-spacing-small;
+      margin-right: auto;
+      text-align: center;
+
+      @media only screen and (min-width: $medium-screen-min) {
+        width: auto;
+        min-width: $fixed-button-width;
+        margin-right: $base-spacing-medium;
+        margin-top: $base-spacing-medium;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .header-hero--carousel-link--cta {
+      display: inline-block;
+      font-size: $font-size-large;
+    }
+  }
+
+  &__gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@mixin header-hero--left {
+  h1 {
+    max-width: 28ch;
+  }
+
+  p {
+    @media only screen and (min-width: $medium-screen-min) {
+      max-width: 47ch;
+    }
+  }
+}
+
+@mixin header-hero--centered {
+  text-align: center;
+
+  h1, p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    @media only screen and (min-width: $medium-screen-min) {
+      max-width: 38ch;
     }
   }
 }

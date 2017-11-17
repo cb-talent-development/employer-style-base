@@ -324,7 +324,7 @@ $header-hero-carousel-dot-top: -50px;
 
 @mixin header--large--side-image {
   @include heading--hero;
-  @include cbGradient;
+  @include cbGradient2017;
   position: relative;
   overflow: hidden;
   min-height: $header-height-large;
@@ -448,7 +448,7 @@ $header-hero-carousel-dot-top: -50px;
 
   &:before {
     @media only screen and (max-width: $small-screen-max) {
-      @include cbGradient;
+      @include cbGradient2017;
     }
   }
 }

@@ -16,6 +16,14 @@ module.exports = {
       }
     },
     {
+      'name': 'cb2017',
+      'context': {
+        'order': 1,
+        'gradient-name': 'CareerBuilder Brand 2017',
+        'gradient-class': 'cbGradient2017'
+      }
+    },
+    {
       'name': 'rogueOne',
       'context': {
         'order': 1,

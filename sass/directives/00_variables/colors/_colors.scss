@@ -19,6 +19,7 @@ $marigold-light: #fed473;
 
 $grey-darkest: #333;
 $grey-demon: #666;
+$grey-darker: #767676;
 $grey-dark: #999999;
 $grey-light: #BBBBBB;
 $grey-lighter: #d8d8d8; // border color, home featured heading background
@@ -91,14 +92,14 @@ $alert-warning: $marigold;
 $alert-success: $lime-dark;
 
 // Header/Footer
-$header-background-color--account-nav: $anchor-blue;
+$header-background-color--account-nav: white;
 $header-background-color--site-nav: white;
 $header-background-color--mobile-nav: white;
 $header-background-color: white; // mobile?
 $header-mobile-icon-color: $anchor-blue;
 $header-mobile-text-hover-color: white;
 $header-text-color: $anchor-blue;
-$header-text-hover-color: white;
+$header-text-hover-color: $grey-lighter;
 $header-background-secondary-color: $grey-lightest;
 $header-flyout-color: $header-background-color;
 $header-subtitle-color: $grey-demon;

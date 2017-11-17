@@ -1,12 +1,20 @@
 // Top Bar
-$top-bar--height: 56px;
-$top-bar--height-combined: 56px * 2;
+$top-bar--max-width: 1430px;
+$top-bar--padding: 10px;
 $top-bar--height--mobile: 42px;
-$top-bar--logo-width: 192px;
-$top-bar--logo-height: 20px;
+$top-bar--logo-width: 209px;
+$top-bar--logo-height: 22px;
+$top-bar--subnav-offset: 44px;
+
+// These affect positioning of the hero, subnav, buy box, search modal
+$top-bar--height: $top-bar--logo-height + ($top-bar--padding * 2);
+$top-bar--height-combined: $top-bar--height * 2;
+
 $top-bar-font-size: $font-size-small;
-$top-bar-icon-size: 0.75rem; // 12px
+$top-bar-icon-size: $font-size-small; // 13px
 $top-bar-angle-size: 1rem; // 16px
+$top-bar-link-color: $anchor-blue;
+$top-bar-account-icon-color: $sky-blue;
 
 // TODO move to sizing? This file is much more specific than it's siblings.
 // The file is broken out so that it renders after typography because it uses $font-size-small

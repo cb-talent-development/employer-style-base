@@ -6,6 +6,14 @@
   @include cbGradientTransparent;
 }
 
+.cbGradient2017 {
+  @include cbGradient2017;
+}
+
+.cbGradient2017Transparent {
+  @include cbGradient2017Tranparent;
+}
+
 .rogueOneGradient {
   @include rogueOneGradient;
 }

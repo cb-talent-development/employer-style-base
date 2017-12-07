@@ -38,6 +38,29 @@ select,
   }
 }
 
+.radio-group {
+  display: flex;
+  flex-direction: row;
+
+  input[type="radio"] {
+    display: block;
+    width: 5%;
+  }
+
+  label {
+    @include font-style--med-regular;
+
+    display: block !important;
+    text-transform: none !important;
+    width: 95%;
+  }
+}
+
+.submit-group {
+  display: flex;
+  flex-direction: row;
+}
+
 .select {
   @include transition($base-transition);
   user-select: none;

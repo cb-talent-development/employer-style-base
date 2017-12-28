@@ -1,6 +1,7 @@
 // Provides layout split into thirds for __text-wrap and __img wrappers. Does not speicify small screen styless
 @mixin layout-thirds($image-side: left, $image-thirds: 1, $offset: 0px) {
   position: relative;
+  overflow: hidden;
 
   &__text-wrap {
     padding-#{$image-side}: calc(((#{$image-thirds} / 3) * 100%) + #{$base-spacing-medium});

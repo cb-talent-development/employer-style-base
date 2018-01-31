@@ -58,6 +58,10 @@
     }
 
   }
+
+  &__content__text {
+    width: 100%;
+  }
 }
 
 @mixin text-image-panels-content {

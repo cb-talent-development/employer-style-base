@@ -183,25 +183,14 @@ form button {
 // Demo Form Layouts
 .horizontal-flip {
   flex-direction: row-reverse;
-  .demo-form__wrapper {
-    padding-left: 0;
-    padding-right: $base-spacing-medium;
-  }
 }
 
 .vertical-stack {
-  padding-top: 0;
   flex-direction: column;
-  .demo-form__wrapper {
-    padding: 10px 0;
-  }
 }
 
 .vertical-stack--inverse {
   flex-direction: column;
-  .demo-form__wrapper {
-    padding: 0;
-  }
 }
 
 // Demo Form Inline Fields

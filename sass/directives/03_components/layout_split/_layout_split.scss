@@ -33,7 +33,7 @@
 
     @media only screen and (max-width: $small-screen-max) {
       order: 1;
-      height: 200px;
+      height: $mobile-panel-image-height;
     }
   }
 
@@ -57,6 +57,10 @@
       @include container-edge-calc(right, padding);
     }
 
+  }
+
+  &__content__text {
+    width: 100%;
   }
 }
 

@@ -179,3 +179,38 @@ form button {
 .autocomplete-dropdown {
   @include autocomplete-dropdown;
 }
+
+// Demo Form Layouts
+.horizontal-flip {
+  flex-direction: row-reverse;
+}
+
+.vertical-stack {
+  flex-direction: column;
+}
+
+.vertical-stack--inverse {
+  flex-direction: column-reverse;
+}
+
+// Demo Form Inline Fields
+.inline-fields-row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.inline-field-item {
+  width: 50%;
+  margin: 0 6px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.radio-collection {
+  display: flex;
+  justify-content: space-around;
+}

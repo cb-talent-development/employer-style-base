@@ -55,6 +55,10 @@ button {
   @include massive-button;
 }
 
+.button.button--negative {
+  @include negative-button;
+}
+
 .disabled {
   @include disabled;
 

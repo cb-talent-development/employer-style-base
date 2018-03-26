@@ -203,3 +203,9 @@ $select-arrow-width: 3em;
     color: white;
   }
 }
+
+@mixin error-message {
+  @include font-style--smallest-regular;
+  margin-top: $base-spacing-smallest;
+  color: $red;
+}

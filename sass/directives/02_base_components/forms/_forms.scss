@@ -209,3 +209,35 @@ $select-arrow-width: 3em;
   margin-top: $base-spacing-smallest;
   color: $red;
 }
+
+// Styling for an incrementers with +/- buttons and an input
+@mixin incrementer_group {
+  display: flex;
+  align-items: stretch;
+  box-shadow: $base-box-shadow;
+  border-radius: $base-border-radius;
+
+  &__incrementer {
+    flex: 0 0 $buy-header-qty-button-width;
+    color: $grey-dark;
+    cursor: pointer;
+    background-color: $grey-lighter;
+    border: none;
+
+    &:hover {
+      color: white;
+      background-color: $sky-blue;
+      border-color: $sky-blue;
+    }
+
+    &:first-child {
+      border-top-left-radius: $base-border-radius;
+      border-bottom-left-radius: $base-border-radius;
+    }
+
+    &:last-child {
+      border-top-right-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+    }
+  }
+}

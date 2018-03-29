@@ -240,4 +240,8 @@ $select-arrow-width: 3em;
       border-bottom-right-radius: $base-border-radius;
     }
   }
+
+  &__incrementer-input {
+    min-width: 0;
+  }
 }

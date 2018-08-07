@@ -38,6 +38,7 @@
 
   ul li {
     list-style-type: none;
+    list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7); // IE / Edge Hack since the browser 'forgets' to apply the style to hidden <li> elements
   }
 
   ul li a {

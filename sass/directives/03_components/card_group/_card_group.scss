@@ -133,6 +133,10 @@
     background-color: $emerald;
   }
 
+  .card-group__card--back--purple:after {
+    background-color: $purple;
+  }
+
   // Show the back and front side of the cards when the page is in edit mode, and prevent animations
   #card-group__edit-mode {
     &.card-group__card {

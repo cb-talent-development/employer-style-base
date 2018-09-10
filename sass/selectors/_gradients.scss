@@ -78,18 +78,18 @@
   @include lostWorldGradientTransparent;
 }
 
-.deviant {
+.deviantGradient {
   @include deviantGradient;
 }
 
-.deviantTransparent {
+.deviantGradientTransparent {
   @include deviantGradientTransparent;
 }
 
-.deviant-2 {
+.deviantGradient-2 {
   @include deviantGradient-2;
 }
 
-.deviant-2Transparent {
+.deviantGradient-2Transparent {
   @include deviantGradient-2Transparent;
 }

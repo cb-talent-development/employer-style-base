@@ -77,3 +77,19 @@
 .lostWorldGradientTransparent {
   @include lostWorldGradientTransparent;
 }
+
+.deviant {
+  @include deviantGradient;
+}
+
+.deviantTransparent {
+  @include deviantGradientTransparent;
+}
+
+.deviant-2 {
+  @include deviantGradient-2;
+}
+
+.deviant-2Transparent {
+  @include deviantGradient-2Transparent;
+}

@@ -60,6 +60,19 @@ $lostWorld: (
   light: $lime
 );
 
+// New CB Brand Gradient - To replace old gradient
+$deviant: (
+  dark: $anchor-blue-dark,
+  medium: $anchor-blue,
+  light: $azure-blue
+);
+
+$deviant-2: (
+  dark: $anchor-blue-dark,
+  medium: $anchor-blue,
+  light: $transparent
+);
+
 $gradient_name_list: (
   cb,
   cbAlternate,
@@ -71,6 +84,8 @@ $gradient_name_list: (
   purpleRain,
   moonlight,
   lostWorld,
+  deviant,
+  deviant-2
 );
 
 $gradient_var_list: (
@@ -84,6 +99,8 @@ $gradient_var_list: (
   $purpleRain,
   $moonlight,
   $lostWorld,
+  $deviant,
+  $deviant-2
 );
 
 $gradient-angle: 135deg;
@@ -205,4 +222,20 @@ $gradient-angle: 135deg;
 
 @mixin lostWorldGradientTransparent {
   @include gradientTransparent(map-get($lostWorld, dark), map-get($lostWorld, medium), map-get($lostWorld, light));
+}
+
+@mixin deviantGradient {
+  @include gradient(map-get($deviant, dark), map-get($deviant, medium), map-get($deviant, light));
+}
+
+@mixin deviantGradientTransparent {
+  @include gradientTransparent(map-get($deviant, dark), map-get($deviant, medium), map-get($deviant, light));
+}
+
+@mixin deviantGradient-2 {
+  @include gradient(map-get($deviant-2, dark), map-get($deviant-2, medium), map-get($deviant-2, light));
+}
+
+@mixin deviantGradient-2Transparent {
+  @include gradientTransparent(map-get($deviant-2, dark), map-get($deviant-2, medium), map-get($deviant-2, light));
 }

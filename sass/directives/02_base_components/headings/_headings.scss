@@ -60,7 +60,7 @@
 }
 
 @mixin heading--item {
-  @include font-style--small-bold-uppercase;
+  @include font-style--med-bold-uppercase ;
   margin-bottom: $type-margin--small;
   color: $header-text-color;
 

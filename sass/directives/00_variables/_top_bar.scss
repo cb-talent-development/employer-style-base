@@ -1,14 +1,15 @@
 // Top Bar
 $top-bar--max-width: 1430px;
 $top-bar--padding: 12px;
-$top-bar--height--mobile: 42px;
-$top-bar--logo-width: 209px;
-$top-bar--logo-height: 22px;
-$top-bar--subnav-offset: 47px;
+$top-bar--height--mobile: 55px;
+$top-bar--logo-width: 232px;
+$top-bar--logo-height: 45px;
+$top-bar--subnav-offset: 66px;
+$top-bar--body-offset: 50px;
 
 // These affect positioning of the hero, subnav, buy box, search modal
 $top-bar--height: $top-bar--logo-height + ($top-bar--padding * 2);
-$top-bar--height-combined: $top-bar--height * 2;
+$top-bar--height-combined: $top-bar--height + $top-bar--body-offset;
 
 $top-bar-font-size: $font-size-base;
 $top-bar-icon-size: $font-size-base; // 13px

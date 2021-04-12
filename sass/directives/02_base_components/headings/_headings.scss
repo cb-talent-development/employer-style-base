@@ -1,11 +1,11 @@
 @mixin heading--hero {
   h1 {
-    @include font-style--xxl-light;
+    @include font-style--xxl-bold;
     margin-bottom: 0;
   }
 
   p {
-    @include font-style--large-regular;
+    @include font-style--large-bold;
     margin-top: $type-margin-large;
   }
 }
@@ -18,7 +18,7 @@
   }
 
   p {
-    @include font-style--xl-light;
+    @include font-style--xl-bold;
     line-height: normal;
     margin-top: $type-margin;
   }

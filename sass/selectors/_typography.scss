@@ -12,7 +12,7 @@ h2 {
 
 h3 {
   @include base-heading-copy;
-  @include font-style--large-regular;
+  @include font-style-med-small-bold;
 }
 
 h4 {

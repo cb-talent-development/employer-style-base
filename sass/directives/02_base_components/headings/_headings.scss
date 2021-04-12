@@ -38,8 +38,7 @@
 }
 
 @mixin heading--section--small {
-  @include font-style--med-bold-uppercase;
-  margin-bottom: $type-margin;
+  @include font-style--xl-bold;
   color: $header-text-color;
 }
 
@@ -49,12 +48,12 @@
   &__heading {
     @include font-style--med-bold-uppercase;
     color: $header-text-color-grey;
-    margin-bottom: 0;
-    letter-spacing: 1px;
+    margin-bottom: $type-margin;
+    letter-spacing: $letter-spacing-small;
+    margin-bottom: $type-margin;
   }
 
   &__subheading {
-    margin-top: $type-margin;
     margin-bottom: $type-margin;
     @include font-style--xl-bold;
     color: $header-text-color;
@@ -62,9 +61,10 @@
 }
 
 @mixin heading--item {
-  @include font-style--med-bold-uppercase ;
+  @include font-style--med-bold;
   margin-bottom: $type-margin--small;
   color: $header-text-color;
+  font-size: $font-size-med-small;
 
   @include reset-paragraph;
 }

@@ -35,6 +35,12 @@
   text-transform: uppercase;
 }
 
+@mixin font-style--med-bold { // Style 4 (capitalize): section headers, buttons
+  font-size: $font-size-med;
+  font-weight: $font-weight-bold;
+  text-transform: capitalize;
+}
+
 @mixin font-style--small-bold-uppercase { // Style 5: navigation, labels
   font-size: $font-size-small;
   font-weight: $font-weight-bold;
@@ -54,6 +60,11 @@
 @mixin font-style--smallest-regular { // Style 8: table captions, other table elements
   font-size: $font-size-smallest;
   font-weight: $font-weight-regular;
+}
+
+@mixin font-style-med-small-bold {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-med-small;
 }
 
 @mixin base-body-copy {

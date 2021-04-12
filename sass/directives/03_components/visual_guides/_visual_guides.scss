@@ -104,7 +104,7 @@ $visual-guide-breakpoint-small: 750px;
   .visual-guide__item-description {
     h3 {
       font-size: 1.875rem;
-      font-weight: $font-weight-light;
+      font-weight: $font-weight-bold;
       margin-bottom: $base-spacing;
     }
 
@@ -136,6 +136,7 @@ $visual-guide-breakpoint-small: 750px;
 
     &:after {
       content: counter(overview-count);
+      font-weight: $font-weight-bold;
     }
 
     @media only screen and (min-width: $visual-guide-breakpoint-small) {

@@ -25,8 +25,6 @@
 }
 
 @mixin heading--section {
-  margin-bottom: $type-margin;
-
   &__heading {
     @include font-style--xl-bold;
     @include base-heading-copy;
@@ -43,7 +41,11 @@
 }
 
 @mixin heading--section--w-subhead {
-  margin-bottom: $type-margin-xlarge;
+  margin-bottom: $type-margin-super;
+
+  @media only screen and (max-width: $small-screen-max) {
+    margin-bottom: $type-margin-xlarge + 10;
+  }
 
   &__heading {
     @include font-style--med-bold-uppercase;

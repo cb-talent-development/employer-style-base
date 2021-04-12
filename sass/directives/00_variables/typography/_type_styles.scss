@@ -19,6 +19,15 @@
   font-weight: $font-weight-bold;
 }
 
+@mixin font-style-xl-bold-responsive {
+  letter-spacing: $letter-spacing-small;
+  font-size: $font-size-27;
+  
+  @media only screen and (min-width: $medium-screen-min) {
+    font-size: $font-size-xl-base;
+  }
+}
+
 @mixin font-style--large-regular {  // Style 3: hero subheaders
   font-size: $font-size-large;
   font-weight: $font-weight-regular;

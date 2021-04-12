@@ -7,7 +7,7 @@ h1 {
 
 h2 {
   @include base-heading-copy;
-  @include font-style--xl-bold;
+  @include font-style-xl-bold-responsive;
 }
 
 h3 {

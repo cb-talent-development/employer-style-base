@@ -7,7 +7,7 @@ h1 {
 
 h2 {
   @include base-heading-copy;
-  @include font-style--xl-light;
+  @include font-style--xl-bold;
 }
 
 h3 {
@@ -34,10 +34,6 @@ h6 {
 
 p {
   margin-bottom: $type-margin;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 // Other Default Typography
@@ -81,6 +77,10 @@ cite {
 
 .font-style--xl-light {  // Style 2: section headers and subheaders
   @include font-style--xl-light;
+}
+
+.font-style--xl-bold {  // Style 2 (bold): section headers and subheaders
+  @include font-style--xl-bold;
 }
 
 .font-style--large-regular {  // Style 3: hero subheaders

@@ -9,6 +9,11 @@
   font-weight: $font-weight-light;
 }
 
+@mixin font-style--xl-bold {  // Style 2 (bold): section headers and subheaders
+  font-size: $font-size-xl-base;
+  font-weight: $font-weight-bold;
+}
+
 @mixin font-style--large-regular {  // Style 3: hero subheaders
   font-size: $font-size-large;
   font-weight: $font-weight-regular;
@@ -32,7 +37,7 @@
 }
 
 @mixin font-style--med-regular { // Style 7: body copy
-  font-size: $font-size-med-large;
+  font-size: $font-size-med;
   font-weight: $font-weight-regular;
 }
 

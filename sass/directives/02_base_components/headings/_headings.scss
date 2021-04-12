@@ -28,7 +28,7 @@
   margin-bottom: $type-margin;
 
   &__heading {
-    @include font-style--xl-light;
+    @include font-style--xl-bold;
     @include base-heading-copy;
   }
 
@@ -48,13 +48,15 @@
 
   &__heading {
     @include font-style--med-bold-uppercase;
+    color: $header-text-color-grey;
     margin-bottom: 0;
-    color: $header-text-color;
+    letter-spacing: 1px;
   }
 
   &__subheading {
     margin-top: $type-margin;
-    @include font-style--xl-light;
+    margin-bottom: $type-margin;
+    @include font-style--xl-bold;
     color: $header-text-color;
   }
 }

@@ -22,6 +22,7 @@
 @mixin font-style-xl-bold-responsive {
   letter-spacing: $letter-spacing-small;
   font-size: $font-size-27;
+  font-weight: $font-weight-bold;
   
   @media only screen and (min-width: $medium-screen-min) {
     font-size: $font-size-xl-base;

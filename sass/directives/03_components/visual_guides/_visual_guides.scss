@@ -103,7 +103,7 @@ $visual-guide-breakpoint-small: 750px;
 
   .visual-guide__item-description {
     h3 {
-      font-size: 1.875rem;
+      @include font-style-xl-bold-responsive;
       font-weight: $font-weight-bold;
       margin-bottom: $base-spacing;
     }

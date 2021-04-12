@@ -18,7 +18,7 @@
   }
 
   p {
-    @include font-style--xl-bold;
+    @include font-style-xl-bold-responsive;
     line-height: normal;
     margin-top: $type-margin;
   }
@@ -26,7 +26,7 @@
 
 @mixin heading--section {
   &__heading {
-    @include font-style--xl-bold;
+    @include font-style-xl-bold-responsive;
     @include base-heading-copy;
   }
 
@@ -36,7 +36,7 @@
 }
 
 @mixin heading--section--small {
-  @include font-style--xl-bold;
+  @include font-style-xl-bold-responsive;
   color: $header-text-color;
 }
 
@@ -57,7 +57,7 @@
 
   &__subheading {
     margin-bottom: $type-margin;
-    @include font-style--xl-bold;
+    @include font-style-xl-bold-responsive;
     color: $header-text-color;
   }
 }

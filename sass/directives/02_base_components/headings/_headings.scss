@@ -1,6 +1,6 @@
 @mixin heading--hero {
   h1 {
-    @include font-style--xxl-bold;
+    @include font-style-xl-bold-responsive;
     margin-bottom: 0;
   }
 

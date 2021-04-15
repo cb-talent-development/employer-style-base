@@ -2,7 +2,7 @@
 
 h1 {
   @include base-heading-copy;
-  @include font-style--xxl-light;
+  @include font-style-xl-bold-responsive;
 }
 
 h2 {

@@ -73,7 +73,7 @@
 
 @mixin heading--small {
   h1 {
-    @include font-style--xxl-light;
+    @include font-style-xl-bold-responsive;
     margin-bottom: 0;
   }
 

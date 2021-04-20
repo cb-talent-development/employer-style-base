@@ -5,7 +5,8 @@ $top-bar--height--mobile: 70px;
 $top-bar--logo-width: 295px;
 $top-bar--logo-height: 68px;
 $top-bar--subnav-offset: 90px;
-$top-bar--body-offset: 50px;
+$top-bar--body-offset: 68px;
+$top-bar--body-offset-tablet: 45px;
 
 // These affect positioning of the hero, subnav, buy box, search modal
 $top-bar--height: $top-bar--logo-height + ($top-bar--padding * 2);

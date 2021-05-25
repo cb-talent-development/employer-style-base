@@ -71,7 +71,7 @@ $massive-button-horizontal-padding: $base-input-font-size * 2;
   background-color: $primary-button-color;
   color: $primary-button-text-color;
   border-color: $primary-button-border-color;
-  text-transform: uppercase;
+  text-transform: capitalize;
 
   &:visited {
     color: $primary-button-text-color;
@@ -92,7 +92,7 @@ $massive-button-horizontal-padding: $base-input-font-size * 2;
   background-color: $secondary-button-color;
   color: $secondary-button-text-color;
   border-color: $secondary-button-border-color;
-  text-transform: uppercase;
+  text-transform: capitalize;
 
   &:visited {
     color: $secondary-button-text-color;
@@ -113,7 +113,7 @@ $massive-button-horizontal-padding: $base-input-font-size * 2;
   background-color: $tertiary-button-color;
   color: $tertiary-button-text-color;
   border-color: $tertiary-button-border-color;
-  text-transform: uppercase;
+  text-transform: capitalize;
 
   &:visited {
     color: $tertiary-button-text-color;
@@ -134,7 +134,7 @@ $massive-button-horizontal-padding: $base-input-font-size * 2;
   background-color: $quarternary-button-color;
   color: $quarternary-button-text-color;
   border-color: $quarternary-button-border-color;
-  text-transform: uppercase;
+  text-transform: capitalize;
 
   &:visited {
     color: $quarternary-button-text-color;
@@ -155,7 +155,7 @@ $massive-button-horizontal-padding: $base-input-font-size * 2;
   background-color: $quinary-button-color;
   color: $quinary-button-text-color;
   border-color: $quinary-button-border-color;
-  text-transform: uppercase;
+  text-transform: capitalize;
 
   &:visited {
     color: $quinary-button-text-color;
@@ -176,7 +176,7 @@ $massive-button-horizontal-padding: $base-input-font-size * 2;
   background-color: $senary-button-color;
   color: $senary-button-text-color;
   border-color: $senary-button-border-color;
-  text-transform: uppercase;
+  text-transform: capitalize;
 
   &:visited {
     color: $senary-button-text-color;
@@ -197,7 +197,7 @@ $massive-button-horizontal-padding: $base-input-font-size * 2;
   background-color: $negative-button-color;
   color: $negative-button-text-color;
   border-color: $negative-button-border-color;
-  text-transform: uppercase;
+  text-transform: capitalize;
 
   &:visited {
     color: $negative-button-text-color;
@@ -224,7 +224,7 @@ $massive-button-horizontal-padding: $base-input-font-size * 2;
   padding-right: 0;
   margin-left: $base-button-horizontal-padding;
   margin-right: $base-button-horizontal-padding;
-  text-transform: uppercase;
+  text-transform: capitalize;
   white-space: pre-line;
 
   &:visited {

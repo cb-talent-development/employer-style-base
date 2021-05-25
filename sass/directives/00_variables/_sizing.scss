@@ -30,10 +30,12 @@ $base-spacing-medium-small: 20px;
 $base-spacing-medium: 30px;
 $base-spacing-large: 50px;
 $base-spacing-xlarge: 70px;
+$base-spacing-xxlarge-small: 100px;
+$base-spacing-xxlarge: 130px;
 
-$section-padding: 70px;
+$section-padding: 80px;
 $section-padding--mobile: 50px;
-$header-padding: 70px;
+$header-padding: 80px;
 
 $container-width: 1200px;
 $container-edge-padding: 20px; // Use this if using an unconventional body container and still need the default left /right padding our .containers have (20px)

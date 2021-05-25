@@ -4,9 +4,29 @@
   font-weight: $font-weight-light;
 }
 
+@mixin font-style--xxl-bold { // Style 1 (bold): hero headers
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+}
+
 @mixin font-style--xl-light {  // Style 2: section headers and subheaders
   font-size: $font-size-xl-base;
   font-weight: $font-weight-light;
+}
+
+@mixin font-style--xl-bold {  // Style 2 (bold): section headers and subheaders
+  font-size: $font-size-xl-base;
+  font-weight: $font-weight-bold;
+}
+
+@mixin font-style-xl-bold-responsive {
+  letter-spacing: $letter-spacing-small;
+  font-size: $font-size-27;
+  font-weight: $font-weight-bold;
+  
+  @media only screen and (min-width: $medium-screen-min) {
+    font-size: $font-size-xl-base;
+  }
 }
 
 @mixin font-style--large-regular {  // Style 3: hero subheaders
@@ -14,10 +34,31 @@
   font-weight: $font-weight-regular;
 }
 
+@mixin font-style--large-bold {  // Style 3.1 (bold): hero subheaders
+  font-size: $font-size-large;
+  font-weight: $font-weight-bold;
+}
+
+@mixin font-style--med-small-light { // Style 3.2 (medium): hero subheaders
+  font-size: $font-size-med-small;
+  font-weight: $font-weight-regular;
+}
+
+@mixin font-style-med-small-bold { // Style 3.3 (medium, bold): hero subheaders
+  font-weight: $font-weight-bold;
+  font-size: $font-size-med-small;
+}
+
 @mixin font-style--med-bold-uppercase { // Style 4: section headers, buttons
   font-size: $font-size-med;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
+}
+
+@mixin font-style--med-bold { // Style 4 (capitalize): section headers, buttons
+  font-size: $font-size-med;
+  font-weight: $font-weight-bold;
+  text-transform: capitalize;
 }
 
 @mixin font-style--small-bold-uppercase { // Style 5: navigation, labels
@@ -32,7 +73,7 @@
 }
 
 @mixin font-style--med-regular { // Style 7: body copy
-  font-size: $font-size-med-large;
+  font-size: $font-size-med;
   font-weight: $font-weight-regular;
 }
 

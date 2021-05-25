@@ -1,11 +1,11 @@
 @mixin heading--hero {
   h1 {
-    @include font-style--xxl-light;
+    @include font-style-xl-bold-responsive;
     margin-bottom: 0;
   }
 
   p {
-    @include font-style--large-regular;
+    @include font-style--med-small-light;
     margin-top: $type-margin-large;
   }
 }
@@ -18,17 +18,15 @@
   }
 
   p {
-    @include font-style--xl-light;
+    @include font-style-xl-bold-responsive;
     line-height: normal;
     margin-top: $type-margin;
   }
 }
 
 @mixin heading--section {
-  margin-bottom: $type-margin;
-
   &__heading {
-    @include font-style--xl-light;
+    @include font-style-xl-bold-responsive;
     @include base-heading-copy;
   }
 
@@ -38,38 +36,44 @@
 }
 
 @mixin heading--section--small {
-  @include font-style--med-bold-uppercase;
-  margin-bottom: $type-margin;
+  @include font-style-xl-bold-responsive;
   color: $header-text-color;
 }
 
 @mixin heading--section--w-subhead {
-  margin-bottom: $type-margin-xlarge;
+  margin-bottom: $type-margin-super;
+
+  @media only screen and (max-width: $small-screen-max) {
+    margin-bottom: $type-margin-xlarge + 10;
+  }
 
   &__heading {
     @include font-style--med-bold-uppercase;
-    margin-bottom: 0;
-    color: $header-text-color;
+    color: $header-text-color-grey;
+    margin-bottom: $type-margin;
+    letter-spacing: $letter-spacing-small;
+    margin-bottom: $type-margin;
   }
 
   &__subheading {
-    margin-top: $type-margin;
-    @include font-style--xl-light;
+    margin-bottom: $type-margin;
+    @include font-style-xl-bold-responsive;
     color: $header-text-color;
   }
 }
 
 @mixin heading--item {
-  @include font-style--med-bold-uppercase ;
+  @include font-style--med-bold;
   margin-bottom: $type-margin--small;
   color: $header-text-color;
+  font-size: $font-size-med-small;
 
   @include reset-paragraph;
 }
 
 @mixin heading--small {
   h1 {
-    @include font-style--xxl-light;
+    @include font-style-xl-bold-responsive;
     margin-bottom: 0;
   }
 

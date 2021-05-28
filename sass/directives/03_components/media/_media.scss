@@ -1,13 +1,13 @@
 @mixin media__wrapper {
-  @include display(flex);
-  @include flex-direction(column);
+  display: flex;
+  flex-direction: column;
 }
 
 @mixin media__item ($image-wrap-width: 4em, $breakpoint: $small-screen-max) {
-  @include display(flex);
-  @include flex-grow(1);
-  @include flex-shrink(1);
-  @include flex-basis(auto);
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
   margin-bottom: $base-spacing;
 
   &:last-child {
@@ -15,15 +15,15 @@
   }
 
   @media only screen and (max-width: $breakpoint) {
-    @include flex-direction(column);
+    flex-direction: column;
     margin-bottom: $base-spacing * 2;
     text-align: center;
   }
 
   &__img-wrap {
-    @include flex-grow(0);
-    @include flex-shrink(0);
-    @include flex-basis(auto);
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
     width: $image-wrap-width;
     margin-right: $base-spacing;
 
@@ -35,12 +35,12 @@
   }
 
   &__text {
-    @include flex-grow(1);
-    @include flex-shrink(1);
-    @include flex-basis(auto);
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
 
     @media only screen and (max-width: $breakpoint) {
-      @include flex-shrink(0);
+      flex-shrink: 0;
     }
 
     &--headline {
@@ -65,7 +65,7 @@
   }
 
   .site-search__results__item-link { // li a
-    @include display(flex);
+    display: flex;
 
     &:hover,
     &:active,
@@ -75,9 +75,9 @@
   }
 
   .site-search__results__item-thumb { // div
-    @include flex-grow(0);
-    @include flex-shrink(0);
-    @include flex-basis(auto);
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
     margin-right: $base-spacing-medium;
     width: $search__thumbnail-width;
     height: $search__thumbnail-height;
@@ -99,9 +99,9 @@
   }
 
   .site-search__results__item-text { // div
-    @include flex-grow(1);
-    @include flex-shrink(1);
-    @include flex-basis(auto);
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
   }
 
   .site-search__results__item-header { // div h#

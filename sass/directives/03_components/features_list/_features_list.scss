@@ -1,8 +1,8 @@
 // Content
 @mixin features-list-content {
   &__heading {
-		@include display(flex);
-		@include align-items(center);
+		display: flex;
+		align-items: center;
 		@include heading--item;
 
 		@media screen and (max-width: $_quad-layout-breakpoint) {

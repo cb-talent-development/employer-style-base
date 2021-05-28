@@ -1,8 +1,8 @@
 .image-grid {
-  @include display(flex);
-  @include flex-wrap(wrap);
-  @include justify-content(space-around);
-  @include align-content(space-around);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
 }
 
 .image-grid__item {

@@ -4,14 +4,14 @@ $_quad-layout-breakpoint--min: calc(#{$_quad-layout-breakpoint} + 1px);
 @mixin quad-layout {
   // used for content configured in sets of 2x2 (small biz benefits, why-cb difference)
   // markup is a list element with li's in multiples of 4
-  @include display(flex);
-  @include flex-wrap(wrap);
-  @include align-content(stretch);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
   padding: 0;
 
   @media only screen and (max-width: $_quad-layout-breakpoint) {
-    @include flex-direction(column);
-    @include flex-wrap(nowrap);
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
 
   li {

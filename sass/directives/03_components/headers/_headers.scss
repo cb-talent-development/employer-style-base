@@ -308,10 +308,9 @@ $header-hero-carousel-dot-top: -50px;
     right: 0;
     bottom: 0;
     left: 0;
-    @include gradientTransparent(map-get($gradient-variable, dark), map-get($gradient-variable, medium), map-get($gradient-variable, light));
 
     @media only screen and (max-width: $small-screen-max) {
-      @include gradient(map-get($gradient-variable, dark), map-get($gradient-variable, medium), map-get($gradient-variable, light));
+      background-color: $navy-blue-regular;
     }
   }
 

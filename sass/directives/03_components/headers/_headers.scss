@@ -252,17 +252,19 @@ $header-hero-carousel-dot-top: -50px;
   }
 }
 
-@mixin header--large--background-image($background-image-large: nil, $background-image-medium: nil) {
+@mixin header--large--background-image($background-image-large: nil, $background-image-medium: nil, $background-color-var: nil) {
   @include header-hero;
   @include heading--hero;
   min-height: $header-height-large;
   background-image: url(asset_path(#{$background-image-large}));
-  background-size: auto $header-height-large;
-  background-position: right bottom;
-  background-repeat: repeat no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #{$background-color-var};
 
   @media only screen and (max-width: $medium-screen-max) {
-    background-image: url(asset_path(#{$background-image-medium}));
+   background-color: #{$background-color-var};
+   background-image: none;
   }
 
   @media only screen and (max-width: $small-screen-max) {
@@ -276,7 +278,6 @@ $header-hero-carousel-dot-top: -50px;
     right: 0;
     bottom: 0;
     left: 0;
-    @include cbGradientTransparent;
   }
 }
 
@@ -445,11 +446,11 @@ $header-hero-carousel-dot-top: -50px;
     }
   }
 
-  &:before {
+  /*&:before {
     @media only screen and (max-width: $small-screen-max) {
       @include cbGradient2017;
     }
-  }
+  }*/
 }
 
 @mixin header--large--centered {

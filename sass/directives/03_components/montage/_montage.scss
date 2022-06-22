@@ -2,10 +2,10 @@
 // Use typography mixin - font-style--small-bold for small / bold fonts
 // TODO: Update Fractal
 
-$_montage-highlight: $azure-blue;
+$_montage-highlight: $navy-blue-light;
 $_montage_spacing-small: $base-spacing-smallest / 2;
 $_montage_cell_grey-lightest: $grey-lightest;
-$_montage_cell_blue: $azure-blue;
+$_montage_cell_blue: $navy-blue-light;
 $_montage_cell_blue-dark: $azure-blue-dark;
 $_montage_cell_emerald: $emerald;
 $_montage_global_font_color: $grey-dark;
@@ -153,7 +153,7 @@ $_montage_external-cta_bottom-position_tablet: 5px;
       }
 
       &:before {
-        color: $_montage-highlight;
+        color: $navy-blue-light;
         font-family: FontAwesome;
         font-weight: $font-weight-regular;
         font-size: $font-size-smallest;

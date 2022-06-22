@@ -85,6 +85,7 @@
 @mixin base-body-copy {
   @include font-style--med-regular;
   line-height: $base-line-height;
+  font-family: $roboto;
 }
 
 @mixin base-heading-copy {
@@ -92,12 +93,15 @@
   line-height: $header-line-height;
   text-decoration: none;
   margin-bottom: $type-margin;
+  font-family: $barlow;
+  text-transform: uppercase;
 }
 
 @mixin link {
   color: $base-link-color;
   text-decoration: none;
   font-weight: $font-weight-bold;
+  font-family: $barlow;
   cursor: pointer;
 
   &:hover,

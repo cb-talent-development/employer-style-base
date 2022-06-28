@@ -19,7 +19,7 @@
 @mixin accordion {
   @include font-style--med-bold-uppercase;
   background-color: $panel-primary;
-  color: $header-text-color;
+  color: $navy-blue-light;
   padding: $type-margin $base-padding;
   width: 100%;
   text-align: left;
@@ -34,7 +34,7 @@
   &:hover,
   &:active,
   &:focus {
-    color: $base-link-color;
+    color: $navy-blue-light;
     background-color: $panel-primary;
     border-bottom: $accordion-bottom-border solid $grey-lightest;
   }
@@ -46,7 +46,7 @@
     float: right;
     font-size: $accordion-angle-size;
     font-weight: $font-weight-regular;
-    color: $base-link-color;
+    color: $navy-blue-light;
     display: inline-block;
     text-align: center;
     line-height: $accordion-line-height;

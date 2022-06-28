@@ -59,6 +59,8 @@
     margin-bottom: $type-margin;
     @include font-style-xl-bold-responsive;
     color: $header-text-color;
+    text-transform: uppercase;
+    font-family: $barlow;
   }
 }
 

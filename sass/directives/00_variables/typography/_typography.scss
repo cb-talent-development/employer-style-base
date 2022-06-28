@@ -1,15 +1,59 @@
+// Typefaces
 @import url(https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i);
 
-// Typefaces
+@font-face {
+  font-family: Barlow;
+  src: url(asset_path('cb_global/fonts/Barlow/Barlow-Regular.ttf'));
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url(asset_path('cb_global/fonts/Barlow/Barlow-Bold.ttf'));
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url(asset_path('cb_global/fonts/Barlow/Barlow-Light.ttf'));
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url(asset_path('cb_global/fonts/Barlow/Barlow-Italic.ttf'));
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(asset_path('cb_global/fonts/Roboto/Roboto-Regular.ttf'));
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(asset_path('cb_global/fonts/Roboto/Roboto-Bold.ttf'));
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(asset_path('cb_global/fonts/Roboto/Roboto-Italic.ttf'));
+  font-style: italic;
+}
+
+$barlow: Barlow, Arial, sans-serif;
+$roboto: Roboto, Arial, sans-serif;
+
 $lato: Lato, 'Lato', Helvetica, Arial, sans-serif;
 
-$base-font-family: $lato;
-$header-font-family: $lato;
+$base-font-family: $roboto;
+$header-font-family: $barlow;
+$link-font-family: $barlow;
 
 // Font Sizes - Standard
-$font-size-xxl: 2.75rem; // 44px
+//$font-size-xxl: 2.75rem; // 44px
 $font-size-xl-base: 2rem;
-$font-size-xl: 1.875rem; // 30px
+//$font-size-xl: 1.875rem; // 30px
 $font-size-large: 1.375rem; // 22px
 $font-size-med-large: 1.25rem;
 $font-size-med-small: 1.2rem;
@@ -19,6 +63,13 @@ $font-size-smallest: 0.6875rem; // 11px
 $font-size-base: 1rem;
 $font-size-27: 1.7rem;
 $font-size-24: 1.5rem;
+
+$font-size-xxl: 60px;
+$font-size-xl: 40px;
+$font-size--medium: 16px;
+$font-size--base: 14px;
+$font-size--small: 12px;
+$font-size--x-small:10px;
 
 // Font Sizes - Non-Standard
   // NOTE: Use namespacing so usage is clear.
@@ -45,8 +96,8 @@ $base-accent-color: $emerald;  // TODO check whether this is still in use. Used 
 $text-highlight: $lime-dark; // price/discount elements
 
 // Text Colors - Links
-$base-link-color: $sky-blue;
-$hover-link-color: $sky-blue-light;
+$base-link-color: $dark-normal;
+$hover-link-color: $dark-normal;
 $visited-link-color: $purple;
 
 // Line height

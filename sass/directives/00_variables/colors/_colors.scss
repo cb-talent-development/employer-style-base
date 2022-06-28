@@ -5,6 +5,16 @@ $anchor-blue-dark: #1C202A;
 $anchor-blue: #182642;
 $anchor-blue-light: #747d8e;
 
+$navy-blue-regular: #2E4B9F;
+$navy-blue-light:#2F4BA0;
+$teal-normal: #00B2A3;
+$yellow-normal: #E8C80D;
+$dark-normal: #0E0E24;
+$dark-lighter: #182642;
+$dark-lightest: #5D677A;
+$magenta: #EE3959;
+$grey-lightest: #CFCFD3;
+
 $azure-blue: #287ab9;
 $azure-blue-dark: #1e5c8b;
 $azure-medium: #236BA2;
@@ -108,12 +118,9 @@ $header-background-secondary-color: $grey-lightest;
 $header-flyout-color: $header-background-color;
 $header-subtitle-color: $grey-demon;
 $footer-background-color: $anchor-blue;
-// $footer-accent-color: $header-accent-color;
-// $footer-text-color: white;
-// $footer-link-color: white;
 
 // Navigation / Subnavigation
-$primary-nav-link-color: $anchor-blue;
+$primary-nav-link-color: $dark-normal;
 
 // Buttons
 $base-button-color: $lime-dark;

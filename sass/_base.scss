@@ -86,4 +86,12 @@
   background-color: $base-background-color;
   color: $text-color-grey;
   font-family: $base-font-family;
+
+  a {
+    font-family: $link-font-family;
+
+    &:hover, &:visited {
+      font-family: $link-font-family;
+    }
+  }
 }

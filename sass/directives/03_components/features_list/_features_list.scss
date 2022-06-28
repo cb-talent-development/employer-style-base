@@ -15,8 +15,8 @@
     top: 2px;
     left: $base-spacing-xlarge / 2;
     transform: translateX(-50%);
-    width: 3.4em; // ~44px
-    height: 3.4em; // ~44px
+    width: 4em; // ~44px
+    height: 4em; // ~44px
 
     @media screen and (max-width: $_quad-layout-breakpoint) {
       position: static;

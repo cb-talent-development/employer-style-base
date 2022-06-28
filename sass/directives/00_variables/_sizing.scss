@@ -46,6 +46,16 @@ $base-margin: $base-spacing / 2; // 12px
 $base-margin--small: $base-margin / 2; // 6px
 $base-padding: $base-spacing;
 
+$padding-base: 12px;
+$padding-10: 10px;
+$padding-15: 15px;
+$padding-16: 16px;
+$padding-20: 20px;
+$padding-25: 25px;
+$padding-30: 30px;
+$padding-35: 35px;
+$padding-50: 50px;
+
 
 // UI components
   // TODO work with Susan to convert all of these vaules to ems (see commit notes)
@@ -81,7 +91,7 @@ $feature-modal-maxheight: 570px;
 $feature-modal-maxwidth: 975px;
 $feature-modal-img-maxwidth: 650px;
 $feature-modal-controls-size: 25px;
-$interactive-card-logo-height: 80px;
+$interactive-card-logo-height: 100px;
 $card-group-box-shadow-flipped: -1px 2px 1px 0px rgba(0, 0, 0, 0.25);
 $fixed-card-height: 400px;
 $fixed-card-height-editmode: 800px;

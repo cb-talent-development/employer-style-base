@@ -34,7 +34,6 @@ $header-hero-carousel-dot-top: -50px;
     h1 {
       margin-top: 0;
       margin-bottom: $header-headline-bottom-margin;
-      color: $hero-text-color-light;
 
       @media only screen and (max-width: $small-screen-max) {
         margin-bottom: 0;
@@ -368,8 +367,6 @@ $header-hero-carousel-dot-top: -50px;
     h1 {
       margin-top: 0;
       margin-bottom: $header-headline-bottom-margin;
-      line-height: normal;
-      color: $hero-text-color-light;
 
       @media only screen and (max-width: $small-screen-max) {
         margin-bottom: 0;

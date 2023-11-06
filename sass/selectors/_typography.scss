@@ -1,10 +1,4 @@
 // Defaults Type Styles - overridden by classes or mixins
-
-/*h1 {
-  @include base-heading-copy;
-  @include font-style-xl-bold-responsive;
-}*/
-
 h2 {
   @include base-heading-copy;
   @include font-style-xl-bold-responsive;

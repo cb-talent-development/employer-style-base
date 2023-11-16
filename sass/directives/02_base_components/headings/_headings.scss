@@ -1,6 +1,5 @@
 @mixin heading--hero {
   h1 {
-    @include font-style-xl-bold-responsive;
     margin-bottom: 0;
   }
 
@@ -75,7 +74,6 @@
 
 @mixin heading--small {
   h1 {
-    @include font-style-xl-bold-responsive;
     margin-bottom: 0;
   }
 

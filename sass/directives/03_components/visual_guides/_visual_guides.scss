@@ -102,17 +102,6 @@ $visual-guide-breakpoint-small: 750px;
   }
 
   .visual-guide__item-description {
-    h3 {
-      letter-spacing: $letter-spacing-small;
-      font-size: $font-size-base;
-      font-weight: $font-weight-bold;
-      margin-bottom: $base-spacing;
-
-      @media only screen and (min-width: $medium-screen-min) {
-        font-size: $font-size-med-small;
-      }
-    }
-
     p {
       color: $text-color-grey;
     }

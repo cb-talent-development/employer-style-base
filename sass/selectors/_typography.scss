@@ -1,14 +1,4 @@
 // Defaults Type Styles - overridden by classes or mixins
-h2 {
-  @include base-heading-copy;
-  @include font-style-xl-bold-responsive;
-}
-
-h3 {
-  @include base-heading-copy;
-  @include font-style-med-small-bold;
-}
-
 h4 {
   @include base-heading-copy;
   @include font-style--med-bold-uppercase;
@@ -24,10 +14,6 @@ h5 {
 h6 {
   @include base-heading-copy;
   @include font-style--small-bold;
-}
-
-p {
-  margin-bottom: $type-margin;
 }
 
 // Other Default Typography
